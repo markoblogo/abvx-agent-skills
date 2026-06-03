@@ -1,0 +1,4 @@
+interface:
+  display_name: "Shell Output Compaction"
+  short_description: "Reduce token waste from shell output, logs, diffs, and CI noise."
+  default_prompt: "Handle this task with compact shell-output shaping."

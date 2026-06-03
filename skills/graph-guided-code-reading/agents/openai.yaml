@@ -1,0 +1,4 @@
+interface:
+  display_name: "Graph Guided Code Reading"
+  short_description: "Read codebases through symbols, edges, and blast radius instead of broad scans."
+  default_prompt: "Handle this task with graph-guided code reading."
