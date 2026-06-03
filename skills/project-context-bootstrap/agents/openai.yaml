@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Context Bootstrap"
+  short_description: "Detect stack, ask the right project questions, and build compact durable context."
+  default_prompt: "Bootstrap durable project context before deep implementation work."

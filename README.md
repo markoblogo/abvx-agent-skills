@@ -14,6 +14,7 @@ This repository publishes opinionated ABVX skillpacks: compact `SKILL.md` workfl
 - **Need to debug a repo?** Start with `diagnose`, `repo-debugging-ledger`, and `graph-guided-code-reading`.
 - **Need to build frontend?** Start with `frontend-product-builder`, `designmd-brand-kit`, and `browser-verification`.
 - **Need long-session continuity?** Start with `handoff`, `compaction-survival`, and `token-usage-audit`.
+- **Need to onboard a new repo?** Start with `project-context-bootstrap` and follow with `durable-context-maintenance`.
 - **Need a full multi-track workflow?** Start with `dynamic-workflow-packets`.
 
 ## Skills
@@ -53,6 +54,13 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 | `browser-verification` | Verifies real browser rendering, responsive layout, and interaction behavior instead of trusting static code inspection. | experimental | ABVX adapted |
 | `web-quality-audit` | Audits accessibility, performance, UX, privacy, and browser security as one practical web quality pass. | experimental | ABVX adapted |
 | `prototype-lab` | Rapid throwaway builds for testing interaction, logic, and product direction before committing to heavier implementation. | experimental | ABVX adapted |
+
+### Project Context & Onboarding
+
+| Skill | What It Does | Status | Origin |
+|---|---|---|---|
+| `project-context-bootstrap` | Detects the stack, asks the right project questions, and turns a weakly documented repo into a compact, agent-usable context surface. | experimental | ABVX adapted |
+| `durable-context-maintenance` | Keeps repo-local context current after architecture, workflow, and test-flow changes so agents stop rediscovering the same facts. | experimental | ABVX adapted |
 
 ### Research, Knowledge & Reusable Methods
 

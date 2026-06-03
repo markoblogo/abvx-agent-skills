@@ -19,6 +19,7 @@ ABVX Agent Skills are original or adapted workflow artifacts informed by public 
 - tirth8205 `code-review-graph`: graph-guided code reading, targeted review context, and blast-radius-first repo navigation. https://github.com/tirth8205/code-review-graph
 - rtk-ai `rtk`: shell-command rewriting and compact output filtering for high-noise developer commands. https://github.com/rtk-ai/rtk
 - alexgreensh `token-optimizer`: token-waste categorization, compaction survival, and measurement-driven optimization loops. https://github.com/alexgreensh/token-optimizer
+- withkynam `vibecode-pro-max-kit`: approval-gated project setup, context generation, and durable context-maintenance patterns for long-running agent work. https://github.com/withkynam/vibecode-pro-max-kit
 - Local ABVX workflow skills: diagnosis, handoff, complexity optimization, frontend product building, architecture deepening review, browser verification, agent harness design, prototyping, and web quality audit patterns.
 - Modern web platform guidance: accessibility, performance, user experience, privacy, and browser-security patterns were condensed into the `web-quality-audit` skill.
 

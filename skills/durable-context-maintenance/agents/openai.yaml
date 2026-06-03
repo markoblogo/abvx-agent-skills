@@ -1,0 +1,4 @@
+interface:
+  display_name: "Durable Context Maintenance"
+  short_description: "Refresh repo-local durable context after code and workflow drift."
+  default_prompt: "Refresh durable repo context and keep the read order compact."
