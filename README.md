@@ -1,7 +1,7 @@
 # ABVX Agent Skills
 
 <p>
-  <img src="assets/skillslogo.png" alt="ABVX Agent Skills logo" width="709" height="352">
+  <img src="assets/skillslogo.png" alt="ABVX Agent Skills logo" width="1536" height="1024">
 </p>
 
 Small, reviewable, validation-gated agent skills for Codex-style project work.
