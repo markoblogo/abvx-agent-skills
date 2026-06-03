@@ -1,0 +1,4 @@
+interface:
+  display_name: "Spreadsheet Workbook Forensics"
+  short_description: "Edit workbooks with verified outputs."
+  default_prompt: "Modify this spreadsheet while preserving structure and verifying results."

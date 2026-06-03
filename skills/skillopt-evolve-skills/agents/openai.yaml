@@ -1,0 +1,4 @@
+interface:
+  display_name: "SkillOpt Evolve Skills"
+  short_description: "Evolve local skills with validation-gated edits."
+  default_prompt: "Improve a local skill using a SkillOpt-style validation loop."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Evidence Ledger Research"
+  short_description: "Research with source, unit, date, and operand discipline."
+  default_prompt: "Research this with an evidence ledger and exact-source discipline."

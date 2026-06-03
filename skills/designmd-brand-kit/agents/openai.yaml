@@ -1,0 +1,4 @@
+interface:
+  display_name: "DesignMD Brand Kit"
+  short_description: "Use DESIGN.md for brand-aware UI work."
+  default_prompt: "Create or apply a DESIGN.md brand kit for this task."

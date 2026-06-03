@@ -1,0 +1,4 @@
+interface:
+  display_name: "Repo Debugging Ledger"
+  short_description: "Debug repositories with checked hypotheses and loop breakers."
+  default_prompt: "Debug this issue using a hypothesis and evidence ledger."

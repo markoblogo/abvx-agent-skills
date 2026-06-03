@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dynamic Workflow Packets"
+  short_description: "Run big Codex tasks with bounded packets."
+  default_prompt: "Plan and run this task with dynamic workflow packets."
