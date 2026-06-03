@@ -8,6 +8,14 @@ Small, reviewable, validation-gated agent skills for Codex-style project work.
 
 This repository publishes opinionated ABVX skillpacks: compact `SKILL.md` workflows with clear triggers, attribution, risk notes, and validation. These are not prompt dumps. They are portable, versioned agent capabilities meant to be loaded on demand through the Agent Skills progressive-disclosure model.
 
+## Start Here
+
+- **Need to save tokens?** Start with `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution`, and `lean-context-layout`. Add `compaction-survival` if your sessions run long enough to forget their own state.
+- **Need to debug a repo?** Start with `diagnose`, `repo-debugging-ledger`, and `graph-guided-code-reading`.
+- **Need to build frontend?** Start with `frontend-product-builder`, `designmd-brand-kit`, and `browser-verification`.
+- **Need long-session continuity?** Start with `handoff`, `compaction-survival`, and `token-usage-audit`.
+- **Need a full multi-track workflow?** Start with `dynamic-workflow-packets`.
+
 ## Skills
 
 These skills are grouped by the job they do. The token-economy layer is intentionally visible first: for many teams, the easiest win is not “a smarter prompt”, but less wasted context.
