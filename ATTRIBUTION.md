@@ -17,6 +17,8 @@ ABVX Agent Skills are original or adapted workflow artifacts informed by public 
 - nadimtuhin `claude-token-optimizer`: startup-context minimization via small always-loaded core files and on-demand documentation. https://github.com/nadimtuhin/claude-token-optimizer
 - Mibayy `token-savior`: Bash output compaction, persistent memory, and reduced tool-surface ideas for token-efficient coding-agent loops. https://github.com/Mibayy/token-savior
 - tirth8205 `code-review-graph`: graph-guided code reading, targeted review context, and blast-radius-first repo navigation. https://github.com/tirth8205/code-review-graph
+- rtk-ai `rtk`: shell-command rewriting and compact output filtering for high-noise developer commands. https://github.com/rtk-ai/rtk
+- alexgreensh `token-optimizer`: token-waste categorization, compaction survival, and measurement-driven optimization loops. https://github.com/alexgreensh/token-optimizer
 - Local ABVX workflow skills: diagnosis, handoff, complexity optimization, frontend product building, architecture deepening review, browser verification, agent harness design, prototyping, and web quality audit patterns.
 - Modern web platform guidance: accessibility, performance, user experience, privacy, and browser-security patterns were condensed into the `web-quality-audit` skill.
 

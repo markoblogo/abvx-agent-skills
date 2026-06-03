@@ -23,12 +23,15 @@ This repository publishes opinionated ABVX skillpacks: compact `SKILL.md` workfl
 | `evidence-ledger-research` | Source-sensitive research, document QA, calculations, citation checks | experimental | ABVX original |
 | `frontend-product-builder` | Frontend apps, landing pages, pitch pages, dashboards, and prototypes | experimental | ABVX adapted |
 | `graph-guided-code-reading` | Repo reading through symbols, dependencies, and blast radius instead of broad scans | experimental | ABVX adapted |
+| `rtk-assisted-shell` | RTK-style filtering for shell-heavy coding, logs, git, and test workflows | experimental | ABVX adapted |
 | `handoff` | Compact continuation briefs for long-running work and agent handoffs | experimental | ABVX adapted |
 | `lean-context-layout` | Shrinking always-loaded agent context and moving the rest on demand | experimental | ABVX adapted |
 | `prototype-lab` | Throwaway prototypes for UI, logic, data-model, or integration questions | experimental | ABVX adapted |
 | `repo-debugging-ledger` | Debugging with hypotheses, checked locations, and loop breakers | experimental | ABVX original |
+| `compaction-survival` | Preserving resumable working state across long sessions and compaction | experimental | ABVX adapted |
 | `shell-output-compaction` | Reducing token waste from shell output, logs, diffs, and command noise | experimental | ABVX adapted |
 | `skillopt-evolve-skills` | Improving skills or AGENTS.md-style instructions after real task experience | experimental | ABVX adapted |
+| `token-usage-audit` | Auditing waste categories across startup context, shell output, and compaction | experimental | ABVX adapted |
 | `spreadsheet-workbook-forensics` | Excel/workbook edits where structure and cell verification matter | experimental | ABVX original |
 | `token-efficient-execution` | Reducing repeated reads, rewrites, and low-value narration in long tasks | experimental | ABVX adapted |
 | `token-frugal-mode` | Compressing answers to save output tokens without losing accuracy | experimental | ABVX adapted |

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Token Usage Audit"
+  short_description: "Audit where token budget is being wasted and apply the smallest fix."
+  default_prompt: "Audit this setup for token waste and apply the narrowest useful fix."

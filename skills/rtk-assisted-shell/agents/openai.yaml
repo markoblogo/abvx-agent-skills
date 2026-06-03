@@ -1,0 +1,4 @@
+interface:
+  display_name: "RTK Assisted Shell"
+  short_description: "Use RTK-style filtering before shell output reaches the model."
+  default_prompt: "Handle this task with RTK-assisted shell output filtering."

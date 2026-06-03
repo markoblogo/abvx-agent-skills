@@ -1,0 +1,4 @@
+interface:
+  display_name: "Compaction Survival"
+  short_description: "Preserve compact resumable state across long sessions and compaction."
+  default_prompt: "Handle this task with compaction-survival checkpoints."
