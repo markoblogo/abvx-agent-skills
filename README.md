@@ -10,32 +10,61 @@ This repository publishes opinionated ABVX skillpacks: compact `SKILL.md` workfl
 
 ## Skills
 
-| Skill | Use When | Status | Origin |
+These skills are grouped by the job they do. The token-economy layer is intentionally visible first: for many teams, the easiest win is not “a smarter prompt”, but less wasted context.
+
+### Token Economy & Context Control
+
+| Skill | What It Does | Status | Origin |
 |---|---|---|---|
-| `agents-best-practices` | Agent harness design, tool permissions, context, evals, and safety | experimental | ABVX adapted |
-| `architecture-deepening-review` | Architecture audits for deeper modules, seams, and testability | experimental | ABVX adapted |
-| `book-to-skill` | Turning books, papers, or long docs into reusable agent skills | experimental | ABVX adapted |
-| `browser-verification` | Browser-rendered verification for frontend changes and responsive flows | experimental | ABVX adapted |
-| `complexity-optimizer` | Complexity/performance audits and safe behavior-preserving optimizations | experimental | ABVX adapted |
-| `designmd-brand-kit` | Brand-aware frontend work, landing pages, pitch pages, redesigns, client audits | experimental | ABVX adapted |
-| `diagnose` | Feedback-loop-first debugging for bugs, regressions, flakes, and slow paths | experimental | ABVX adapted |
-| `dynamic-workflow-packets` | Large multi-track coding, research, audit, or job/client-search workflows | experimental | ABVX adapted |
-| `evidence-ledger-research` | Source-sensitive research, document QA, calculations, citation checks | experimental | ABVX original |
-| `frontend-product-builder` | Frontend apps, landing pages, pitch pages, dashboards, and prototypes | experimental | ABVX adapted |
-| `graph-guided-code-reading` | Repo reading through symbols, dependencies, and blast radius instead of broad scans | experimental | ABVX adapted |
-| `rtk-assisted-shell` | RTK-style filtering for shell-heavy coding, logs, git, and test workflows | experimental | ABVX adapted |
-| `handoff` | Compact continuation briefs for long-running work and agent handoffs | experimental | ABVX adapted |
-| `lean-context-layout` | Shrinking always-loaded agent context and moving the rest on demand | experimental | ABVX adapted |
-| `prototype-lab` | Throwaway prototypes for UI, logic, data-model, or integration questions | experimental | ABVX adapted |
-| `repo-debugging-ledger` | Debugging with hypotheses, checked locations, and loop breakers | experimental | ABVX original |
-| `compaction-survival` | Preserving resumable working state across long sessions and compaction | experimental | ABVX adapted |
-| `shell-output-compaction` | Reducing token waste from shell output, logs, diffs, and command noise | experimental | ABVX adapted |
-| `skillopt-evolve-skills` | Improving skills or AGENTS.md-style instructions after real task experience | experimental | ABVX adapted |
-| `token-usage-audit` | Auditing waste categories across startup context, shell output, and compaction | experimental | ABVX adapted |
-| `spreadsheet-workbook-forensics` | Excel/workbook edits where structure and cell verification matter | experimental | ABVX original |
-| `token-efficient-execution` | Reducing repeated reads, rewrites, and low-value narration in long tasks | experimental | ABVX adapted |
-| `token-frugal-mode` | Compressing answers to save output tokens without losing accuracy | experimental | ABVX adapted |
-| `web-quality-audit` | Accessibility, performance, UX, privacy, and browser-security web audits | experimental | ABVX adapted |
+| `rtk-assisted-shell` | Routes noisy shell workflows through RTK-style filtering. On shell-heavy tasks this can cut command-output tokens dramatically, often in the same range as RTK's reported 60-90% savings on common dev commands. | experimental | ABVX adapted |
+| `shell-output-compaction` | Shrinks logs, diffs, and repo search output into counts, slices, and error-first excerpts. Usually the fastest way to turn multi-screen stdout into a small, usable artifact. | experimental | ABVX adapted |
+| `graph-guided-code-reading` | Replaces broad repo reading with entrypoints, symbols, dependencies, and blast radius. On large codebases this can turn “read everything” into a much smaller focus set. | experimental | ABVX adapted |
+| `token-efficient-execution` | Cuts waste from repeated reads, broad rewrites, and low-value narration. Best for long coding sessions where the loop, not the final answer, is burning the budget. | experimental | ABVX adapted |
+| `token-frugal-mode` | Compresses final answers without dropping the decisive technical signal. Useful when the session is tight and you want shorter replies without caveman-style degradation. | experimental | ABVX adapted |
+| `lean-context-layout` | Shrinks always-loaded agent docs into a compact startup core and pushes the rest on demand. Best for bloated `AGENTS.md`, `CLAUDE.md`, and repo runbooks. | experimental | ABVX adapted |
+| `compaction-survival` | Preserves the high-value working state before long sessions collapse into compaction. Saves the turns you would otherwise spend reconstructing “what were we doing?”. | experimental | ABVX adapted |
+| `token-usage-audit` | Diagnoses where the budget is really going: startup bloat, shell noise, repeated reads, oversized summaries, or compaction loss. Use this before over-optimizing the wrong layer. | experimental | ABVX adapted |
+
+### Coding, Debugging & Architecture
+
+| Skill | What It Does | Status | Origin |
+|---|---|---|---|
+| `diagnose` | Runs a disciplined debugging loop around one reproducible signal, ranked hypotheses, and narrow verification. | experimental | ABVX adapted |
+| `repo-debugging-ledger` | Keeps a checked-location ledger so debugging does not keep reopening the same code and repeating the same dead ends. | experimental | ABVX original |
+| `complexity-optimizer` | Finds safe complexity and performance simplifications without turning the codebase into a refactor festival. | experimental | ABVX adapted |
+| `architecture-deepening-review` | Reviews deeper module seams, coupling, change surfaces, and testability, not just top-level architecture slogans. | experimental | ABVX adapted |
+| `agents-best-practices` | Hardens agent harnesses around permissions, context shape, safety, and evaluation discipline. | experimental | ABVX adapted |
+| `skillopt-evolve-skills` | Improves agent instructions and skills from real task evidence rather than from theory alone. | experimental | ABVX adapted |
+
+### Frontend, UX & Product Surfaces
+
+| Skill | What It Does | Status | Origin |
+|---|---|---|---|
+| `frontend-product-builder` | Builds usable frontends, landing pages, pitch pages, dashboards, and prototypes with a product-first interaction model. | experimental | ABVX adapted |
+| `designmd-brand-kit` | Turns a website or brand surface into an agent-usable design system: structure, identity, and reusable UI cues. | experimental | ABVX adapted |
+| `browser-verification` | Verifies real browser rendering, responsive layout, and interaction behavior instead of trusting static code inspection. | experimental | ABVX adapted |
+| `web-quality-audit` | Audits accessibility, performance, UX, privacy, and browser security as one practical web quality pass. | experimental | ABVX adapted |
+| `prototype-lab` | Rapid throwaway builds for testing interaction, logic, and product direction before committing to heavier implementation. | experimental | ABVX adapted |
+
+### Research, Knowledge & Reusable Methods
+
+| Skill | What It Does | Status | Origin |
+|---|---|---|---|
+| `evidence-ledger-research` | Keeps claims, sources, calculations, and open questions in a disciplined evidence ledger. | experimental | ABVX original |
+| `book-to-skill` | Converts books, papers, and long documents into reusable, progressive-disclosure agent skills. | experimental | ABVX adapted |
+
+### Workflow, Handoffs & Multi-Track Work
+
+| Skill | What It Does | Status | Origin |
+|---|---|---|---|
+| `dynamic-workflow-packets` | Orchestrates large coding, research, audit, or client-search tracks without losing verification and risk gates. | experimental | ABVX adapted |
+| `handoff` | Produces compact continuation briefs for long-running work, agent resumes, and human handoffs. | experimental | ABVX adapted |
+
+### Structured Data & Spreadsheet Work
+
+| Skill | What It Does | Status | Origin |
+|---|---|---|---|
+| `spreadsheet-workbook-forensics` | Repairs and edits spreadsheets where workbook structure, formulas, and cell-level verification matter. | experimental | ABVX original |
 
 ## Install
 
