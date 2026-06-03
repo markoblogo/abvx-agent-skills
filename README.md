@@ -1,5 +1,9 @@
 # ABVX Agent Skills
 
+<p>
+  <img src="assets/skillslogo.png" alt="ABVX Agent Skills logo" width="709" height="352">
+</p>
+
 Small, reviewable, validation-gated agent skills for Codex-style project work.
 
 This repository publishes opinionated ABVX skillpacks: compact `SKILL.md` workflows with clear triggers, attribution, risk notes, and validation. These are not prompt dumps. They are portable, versioned agent capabilities meant to be loaded on demand through the Agent Skills progressive-disclosure model.
