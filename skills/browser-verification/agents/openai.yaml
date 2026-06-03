@@ -1,0 +1,4 @@
+interface:
+  display_name: "Browser Verification"
+  short_description: "Verify web changes with real browser automation."
+  default_prompt: "Verify this page in desktop and mobile browser viewports."

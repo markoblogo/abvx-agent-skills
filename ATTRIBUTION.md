@@ -12,6 +12,8 @@ ABVX Agent Skills are original or adapted workflow artifacts informed by public 
 - context-dot-dev `designmd-supply`: `DESIGN.md` as a machine-readable brand/design-system artifact for agents. https://github.com/context-dot-dev/designmd-supply
 - virgiliojr94 `book-to-skill`: converting long-form documents into progressive-disclosure skills. https://github.com/virgiliojr94/book-to-skill
 - s3rgeym `hh-applicant-tool`: dry-run, scoring, skip-reason, and local-history ideas for job-search workflows. https://github.com/s3rgeym/hh-applicant-tool
+- Local ABVX workflow skills: diagnosis, handoff, complexity optimization, frontend product building, architecture deepening review, browser verification, agent harness design, prototyping, and web quality audit patterns.
+- Modern web platform guidance: accessibility, performance, user experience, privacy, and browser-security patterns were condensed into the `web-quality-audit` skill.
 
 ## Notes
 

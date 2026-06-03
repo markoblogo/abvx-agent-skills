@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agents Best Practices"
+  short_description: "Design and audit provider-neutral agent harnesses."
+  default_prompt: "Design a safe MVP agent harness for this domain."

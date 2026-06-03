@@ -1,0 +1,4 @@
+interface:
+  display_name: "Architecture Deepening Review"
+  short_description: "Find deeper modules, clearer seams, and testability gains."
+  default_prompt: "Review this codebase for architecture deepening opportunities."

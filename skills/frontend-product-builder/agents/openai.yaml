@@ -1,0 +1,4 @@
+interface:
+  display_name: "Frontend Product Builder"
+  short_description: "Build frontend experiences with hierarchy, assets, and verification."
+  default_prompt: "Build this frontend workflow with responsive design and browser verification."

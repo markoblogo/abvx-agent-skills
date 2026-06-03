@@ -1,0 +1,4 @@
+interface:
+  display_name: "Web Quality Audit"
+  short_description: "Audit accessibility, performance, UX, privacy, and browser security."
+  default_prompt: "Audit this web app and fix low-risk quality issues."

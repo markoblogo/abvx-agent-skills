@@ -1,0 +1,4 @@
+interface:
+  display_name: "Handoff"
+  short_description: "Write compact continuation briefs for future agents."
+  default_prompt: "Create a compact handoff for the next session."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prototype Lab"
+  short_description: "Build throwaway prototypes that answer one question."
+  default_prompt: "Prototype this quickly and make the learning explicit."

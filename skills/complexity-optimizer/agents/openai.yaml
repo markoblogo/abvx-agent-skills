@@ -1,0 +1,4 @@
+interface:
+  display_name: "Complexity Optimizer"
+  short_description: "Audit and improve complexity without behavior drift."
+  default_prompt: "Audit this code for complexity hotspots and recommend safe fixes."

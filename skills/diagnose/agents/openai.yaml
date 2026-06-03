@@ -1,0 +1,4 @@
+interface:
+  display_name: "Diagnose"
+  short_description: "Debug with feedback loops, hypotheses, and regression checks."
+  default_prompt: "Diagnose this issue with a reproducible feedback loop and evidence ledger."

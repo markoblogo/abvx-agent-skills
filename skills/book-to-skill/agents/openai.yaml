@@ -1,0 +1,4 @@
+interface:
+  display_name: "Book To Skill"
+  short_description: "Convert long-form documents into reusable agent skills."
+  default_prompt: "Convert this source into a compact reusable skill with risk gates."
