@@ -1,0 +1,4 @@
+interface:
+  display_name: "Token Frugal Mode"
+  short_description: "Compress answers without losing technical accuracy."
+  default_prompt: "Answer in a token-frugal way while preserving technical accuracy."

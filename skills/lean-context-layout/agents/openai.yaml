@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lean Context Layout"
+  short_description: "Shrink always-loaded agent context and move the rest on demand."
+  default_prompt: "Optimize this repo's agent-facing context for lower startup token usage."

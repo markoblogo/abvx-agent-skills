@@ -1,0 +1,4 @@
+interface:
+  display_name: "Token Efficient Execution"
+  short_description: "Reduce repeated reads, broad rewrites, and low-value narration."
+  default_prompt: "Handle this task with a token-efficient execution loop."
