@@ -1,0 +1,4 @@
+interface:
+  display_name: "Repo Issue Triage"
+  short_description: "Move issues through a compact state machine toward real action."
+  default_prompt: "Triage these issues and recommend the next state for each."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rapid Grilling"
+  short_description: "Fast one-question-at-a-time alignment for vague ideas and plans."
+  default_prompt: "Grill this idea quickly until the next concrete artifact is obvious."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan To Issues"
+  short_description: "Break plans into thin end-to-end slices with blockers and criteria."
+  default_prompt: "Break this plan into issue-ready vertical slices."

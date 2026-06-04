@@ -1,0 +1,4 @@
+interface:
+  display_name: "Doc Grounded Grilling"
+  short_description: "Sharpen a plan against repo docs, ADRs, and domain language."
+  default_prompt: "Stress-test this plan against the repo's existing docs and terminology."

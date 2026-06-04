@@ -1,0 +1,4 @@
+interface:
+  display_name: "Test Driven Execution"
+  short_description: "Build one behavior at a time with a red-green-refactor loop."
+  default_prompt: "Handle this coding task with a test-driven execution loop."

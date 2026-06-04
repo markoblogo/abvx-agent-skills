@@ -1,0 +1,4 @@
+interface:
+  display_name: "Spec To PRD"
+  short_description: "Turn current discovery into a durable product requirements document."
+  default_prompt: "Turn the current context into a PRD."

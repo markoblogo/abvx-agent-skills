@@ -1,0 +1,4 @@
+interface:
+  display_name: "System Zoom Out"
+  short_description: "Explain how a local area fits into the larger system."
+  default_prompt: "Zoom out and map this area of the system."

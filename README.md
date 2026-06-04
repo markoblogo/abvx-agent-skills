@@ -15,6 +15,8 @@ This repository publishes opinionated ABVX skillpacks: compact `SKILL.md` workfl
 - **Need to build frontend?** Start with `frontend-product-builder`, `designmd-brand-kit`, and `browser-verification`.
 - **Need long-session continuity?** Start with `handoff`, `compaction-survival`, and `token-usage-audit`.
 - **Need to onboard a new repo?** Start with `project-context-bootstrap` and follow with `durable-context-maintenance`.
+- **Need discovery or product shaping?** Start with `rapid-grilling`, `doc-grounded-grilling`, and `spec-to-prd`.
+- **Need to turn plans into execution?** Start with `plan-to-issues`, `repo-issue-triage`, and `test-driven-execution`.
 - **Need a full multi-track workflow?** Start with `dynamic-workflow-packets`.
 
 ## Skills
@@ -42,6 +44,8 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 | `repo-debugging-ledger` | Keeps a checked-location ledger so debugging does not keep reopening the same code and repeating the same dead ends. | experimental | ABVX original |
 | `complexity-optimizer` | Finds safe complexity and performance simplifications without turning the codebase into a refactor festival. | experimental | ABVX adapted |
 | `architecture-deepening-review` | Reviews deeper module seams, coupling, change surfaces, and testability, not just top-level architecture slogans. | experimental | ABVX adapted |
+| `test-driven-execution` | Builds features and fixes through one-behavior-at-a-time red-green-refactor loops instead of broad speculative implementation. | experimental | ABVX adapted |
+| `system-zoom-out` | Pulls a local code area back into its wider system map so you can reason about callers, modules, boundaries, and blast radius. | experimental | ABVX adapted |
 | `agents-best-practices` | Hardens agent harnesses around permissions, context shape, safety, and evaluation discipline. | experimental | ABVX adapted |
 | `skillopt-evolve-skills` | Improves agent instructions and skills from real task evidence rather than from theory alone. | experimental | ABVX adapted |
 
@@ -61,6 +65,16 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 |---|---|---|---|
 | `project-context-bootstrap` | Detects the stack, asks the right project questions, and turns a weakly documented repo into a compact, agent-usable context surface. | experimental | ABVX adapted |
 | `durable-context-maintenance` | Keeps repo-local context current after architecture, workflow, and test-flow changes so agents stop rediscovering the same facts. | experimental | ABVX adapted |
+
+### Discovery, Planning & Delivery
+
+| Skill | What It Does | Status | Origin |
+|---|---|---|---|
+| `rapid-grilling` | Quickly sharpens vague ideas through one-question-at-a-time alignment before heavier planning starts. | experimental | ABVX adapted |
+| `doc-grounded-grilling` | Stress-tests a plan against repo docs, ADRs, design assets, and domain language so discovery stays grounded in reality. | experimental | ABVX adapted |
+| `spec-to-prd` | Turns clarified context into a durable PRD for product, client, and internal roadmap work. | experimental | ABVX adapted |
+| `plan-to-issues` | Breaks PRDs and plans into thin end-to-end slices that agents or humans can actually pick up. | experimental | ABVX adapted |
+| `repo-issue-triage` | Moves bugs and enhancements through a compact state machine so backlog items become actionable instead of vague. | experimental | ABVX adapted |
 
 ### Research, Knowledge & Reusable Methods
 
