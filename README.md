@@ -19,6 +19,7 @@ This repository publishes opinionated ABVX skillpacks: compact `SKILL.md` workfl
 - **Need to turn plans into execution?** Start with `plan-to-issues`, `repo-issue-triage`, and `test-driven-execution`.
 - **Need safer long delivery runs?** Start with `delivery-preflight-gate`, `phase-spec-execution`, `recovery-loop-3strike`, and `delivery-baseline-audit`.
 - **Need a full multi-track workflow?** Start with `dynamic-workflow-packets`.
+- **Need to build reusable assistant packs?** Start with `role-skill-pack-design`, `workflow-policy-layering`, `brief-first-execution`, and `private-vs-publishable-skill-audit`.
 
 ## Skills
 
@@ -83,6 +84,10 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 |---|---|---|---|
 | `evidence-ledger-research` | Keeps claims, sources, calculations, and open questions in a disciplined evidence ledger. | experimental | ABVX original |
 | `book-to-skill` | Converts books, papers, and long documents into reusable, progressive-disclosure agent skills. | experimental | ABVX adapted |
+| `role-skill-pack-design` | Designs compact role/workflow skill packs with base layers, difference layers, boundaries, and rollout order. | experimental | ABVX original |
+| `workflow-policy-layering` | Separates workflow from authority, escalation, forbidden actions, and validation so assistant specs stop contradicting themselves. | experimental | ABVX original |
+| `brief-first-execution` | Starts non-trivial work with one live brief for scope, non-goals, risks, verification, and done criteria. | experimental | ABVX original |
+| `private-vs-publishable-skill-audit` | Audits private skill packs before publication and extracts only the reusable layer. | experimental | ABVX original |
 
 ### Workflow, Handoffs & Multi-Track Work
 

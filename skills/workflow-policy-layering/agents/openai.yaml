@@ -1,0 +1,4 @@
+interface:
+  display_name: "Workflow Policy Layering"
+  short_description: "Split workflow, authority, escalation, and validation into clean layers."
+  default_prompt: "Separate this assistant spec into workflow, policy, escalation, and validation layers."

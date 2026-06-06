@@ -1,0 +1,4 @@
+interface:
+  display_name: "Private Vs Publishable Skill Audit"
+  short_description: "Classify private skill-pack content before publishing any of it."
+  default_prompt: "Audit this private skill pack and separate private, mixed, and reusable layers."

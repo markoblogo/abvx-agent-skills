@@ -1,0 +1,4 @@
+interface:
+  display_name: "Brief First Execution"
+  short_description: "Create one live brief before substantial work starts."
+  default_prompt: "Create a compact working brief before starting this non-trivial task."

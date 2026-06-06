@@ -1,0 +1,4 @@
+interface:
+  display_name: "Role Skill Pack Design"
+  short_description: "Design compact role and workflow skill packs with base and difference layers."
+  default_prompt: "Design a compact reusable role or workflow skill pack."
