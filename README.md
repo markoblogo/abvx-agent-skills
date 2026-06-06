@@ -17,6 +17,7 @@ This repository publishes opinionated ABVX skillpacks: compact `SKILL.md` workfl
 - **Need to onboard a new repo?** Start with `project-context-bootstrap` and follow with `durable-context-maintenance`.
 - **Need discovery or product shaping?** Start with `rapid-grilling`, `doc-grounded-grilling`, and `spec-to-prd`.
 - **Need to turn plans into execution?** Start with `plan-to-issues`, `repo-issue-triage`, and `test-driven-execution`.
+- **Need safer long delivery runs?** Start with `delivery-preflight-gate`, `phase-spec-execution`, `recovery-loop-3strike`, and `delivery-baseline-audit`.
 - **Need a full multi-track workflow?** Start with `dynamic-workflow-packets`.
 
 ## Skills
@@ -89,6 +90,15 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 |---|---|---|---|
 | `dynamic-workflow-packets` | Orchestrates large coding, research, audit, or client-search tracks without losing verification and risk gates. | experimental | ABVX adapted |
 | `handoff` | Produces compact continuation briefs for long-running work, agent resumes, and human handoffs. | experimental | ABVX adapted |
+
+### Long-Run Delivery Control
+
+| Skill | What It Does | Status | Origin |
+|---|---|---|---|
+| `delivery-preflight-gate` | Runs the minimum useful baseline checks before a long implementation loop starts, so pre-existing breakage does not poison later verification. | experimental | ABVX adapted |
+| `phase-spec-execution` | Breaks larger delivery into explicit phases with acceptance criteria, verification commands, and lightweight state updates. | experimental | ABVX adapted |
+| `recovery-loop-3strike` | Bounds execution failure handling to one evidence-bearing retry, one focused fix-spec, and then an honest blocker handoff. | experimental | ABVX adapted |
+| `delivery-baseline-audit` | Re-checks declared deliverables and final verification against the starting baseline and full working tree before calling the task complete. | experimental | ABVX adapted |
 
 ### Structured Data & Spreadsheet Work
 

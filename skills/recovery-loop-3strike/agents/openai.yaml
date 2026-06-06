@@ -1,0 +1,4 @@
+interface:
+  display_name: "Recovery Loop 3-Strike"
+  short_description: "Retry once, fix-spec once, then hand off honestly."
+  default_prompt: "Handle this failure with a bounded three-strike recovery loop."

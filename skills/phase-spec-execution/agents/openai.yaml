@@ -1,0 +1,4 @@
+interface:
+  display_name: "Phase Spec Execution"
+  short_description: "Split large delivery into explicit verified phases."
+  default_prompt: "Handle this task with explicit phase specs and per-phase verification."

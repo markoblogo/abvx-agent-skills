@@ -1,0 +1,4 @@
+interface:
+  display_name: "Delivery Preflight Gate"
+  short_description: "Check the baseline before a long delivery loop starts."
+  default_prompt: "Handle this task with a preflight gate before multi-step execution."

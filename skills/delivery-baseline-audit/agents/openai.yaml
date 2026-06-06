@@ -1,0 +1,4 @@
+interface:
+  display_name: "Delivery Baseline Audit"
+  short_description: "Audit deliverables against the starting baseline."
+  default_prompt: "Handle this task with a final delivery audit against the starting baseline."
