@@ -1,0 +1,57 @@
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "abvx-agent-skills"
+version = "0.8.0"
+description = "Small, reviewable, validation-gated agent skills for Codex-style project work."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+  { name = "markoblogo" }
+]
+dependencies = [
+  "PyYAML>=6.0",
+]
+keywords = ["agents", "skills", "codex", "llm", "prompts"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Software Development",
+  "Topic :: Text Processing",
+]
+
+[project.urls]
+Homepage = "https://github.com/markoblogo/abvx-agent-skills"
+Repository = "https://github.com/markoblogo/abvx-agent-skills"
+Issues = "https://github.com/markoblogo/abvx-agent-skills/issues"
+
+[project.scripts]
+abvx-skills = "abvx_agent_skills.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/abvx_agent_skills"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"skills" = "src/abvx_agent_skills/skills"
+"docs" = "src/abvx_agent_skills/docs"
+"LICENSE" = "src/abvx_agent_skills/LICENSE"
+"ATTRIBUTION.md" = "src/abvx_agent_skills/ATTRIBUTION.md"
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/src",
+  "/skills",
+  "/docs",
+  "/scripts",
+  "/README.md",
+  "/LICENSE",
+  "/ATTRIBUTION.md",
+]

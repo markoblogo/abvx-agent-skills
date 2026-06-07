@@ -129,6 +129,26 @@ cp -R abvx-agent-skills/skills/* ~/.codex/skills/
 
 Start a new agent session after installation so the skill descriptions are discovered.
 
+Install via PyPI:
+
+```bash
+pip install abvx-agent-skills
+abvx-skills list
+abvx-skills install
+```
+
+Install one packaged skill into Codex:
+
+```bash
+abvx-skills install dynamic-workflow-packets
+```
+
+Install to a custom destination:
+
+```bash
+abvx-skills install --destination ./tmp-skills
+```
+
 ## Repository Profile
 
 Each public skill includes:
@@ -145,7 +165,35 @@ The project follows the open Agent Skills shape: `SKILL.md` plus optional `scrip
 python scripts/validate.py
 ```
 
+Or validate the packaged skills through the CLI:
+
+```bash
+abvx-skills validate
+```
+
+Validate a local skills directory:
+
+```bash
+abvx-skills validate ~/.codex/skills
+```
+
 The validator checks required files, frontmatter, directory/name alignment, TODO placeholders, cards, UI metadata, and basic secret patterns.
+
+## Release
+
+Build and check the package locally:
+
+```bash
+python -m pip install --upgrade build twine
+python -m build
+python -m twine check dist/*
+```
+
+Publish flow:
+
+- Run the `publish` GitHub Actions workflow with `repository=testpypi` for a dry run against TestPyPI.
+- Create a GitHub release, or run the same workflow with `repository=pypi`, to publish to PyPI.
+- Configure trusted publishing for both `pypi` and `testpypi` environments in the package index before the first release.
 
 ## Philosophy
 
