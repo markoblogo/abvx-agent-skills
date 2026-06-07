@@ -137,6 +137,11 @@ abvx-skills list
 abvx-skills install
 ```
 
+Published package pages:
+
+- PyPI: <https://pypi.org/project/abvx-agent-skills/>
+- TestPyPI: <https://test.pypi.org/project/abvx-agent-skills/>
+
 Install one packaged skill into Codex:
 
 ```bash
@@ -147,6 +152,17 @@ Install to a custom destination:
 
 ```bash
 abvx-skills install --destination ./tmp-skills
+```
+
+Smoke-test the published package from PyPI:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install abvx-agent-skills
+abvx-skills list
+abvx-skills validate
 ```
 
 ## Repository Profile
@@ -194,6 +210,7 @@ Publish flow:
 - Run the `publish` GitHub Actions workflow with `repository=testpypi` for a dry run against TestPyPI.
 - Create a GitHub release, or run the same workflow with `repository=pypi`, to publish to PyPI.
 - Configure trusted publishing for both `pypi` and `testpypi` environments in the package index before the first release.
+- As of 2026-06-07, version `0.8.0` has been published to both PyPI and TestPyPI through the `publish.yml` GitHub Actions workflow.
 
 ## Philosophy
 
