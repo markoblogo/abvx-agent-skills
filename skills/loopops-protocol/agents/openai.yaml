@@ -1,0 +1,4 @@
+interface:
+  display_name: "LoopOps Protocol"
+  short_description: "Turn reusable agent work into bounded loops."
+  default_prompt: "Decide whether this repeated agent method should become a prompt, skill, checklist, script, workflow, or loop."
