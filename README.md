@@ -235,7 +235,7 @@ Publish flow:
 - Run the `publish` GitHub Actions workflow with `repository=testpypi` for a dry run against TestPyPI.
 - Create a GitHub release, or run the same workflow with `repository=pypi`, to publish to PyPI.
 - Configure trusted publishing for both `pypi` and `testpypi` environments in the package index before the first release.
-- As of 2026-06-07, version `0.8.0` has been published to both PyPI and TestPyPI through the `publish.yml` GitHub Actions workflow.
+- The next release after this update is version `0.9.0`, covering SkillSpector-backed security audit flows and the new frontend design skills.
 
 ## Philosophy
 
