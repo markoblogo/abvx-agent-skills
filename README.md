@@ -15,6 +15,7 @@ The newer bet in this pack is **LoopOps**: useful skills should not compete with
 - **Need to save tokens?** Start with `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution`, and `lean-context-layout`. Add `compaction-survival` if your sessions run long enough to forget their own state.
 - **Need to debug a repo?** Start with `diagnose`, `repo-debugging-ledger`, and `graph-guided-code-reading`.
 - **Need to build frontend?** Start with `frontend-product-builder`, `designmd-brand-kit`, and `browser-verification`.
+- **Need stronger UI taste or design setup?** Start with `design-register-bootstrap`, `frontend-taste-layer`, and `design-critique-polish`.
 - **Need long-session continuity?** Start with `handoff`, `compaction-survival`, and `token-usage-audit`.
 - **Need to onboard a new repo?** Start with `project-context-bootstrap` and follow with `durable-context-maintenance`.
 - **Need discovery or product shaping?** Start with `rapid-grilling`, `doc-grounded-grilling`, and `spec-to-prd`.
@@ -58,6 +59,9 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 
 | Skill | What It Does | Status | Origin |
 |---|---|---|---|
+| `design-register-bootstrap` | Establishes compact design context before implementation: `brand` vs `product` register, audience, anti-references, color strategy, and PRODUCT.md / DESIGN.md direction. | experimental | ABVX adapted |
+| `frontend-taste-layer` | Adds a stronger anti-slop design layer to frontend work so outputs stop looking templated, generic, or visually under-committed. | experimental | ABVX adapted |
+| `design-critique-polish` | Runs a focused critique-and-polish pass to rank frontend issues, identify ship blockers, and tighten hierarchy, typography, color, and states. | experimental | ABVX adapted |
 | `frontend-product-builder` | Builds usable frontends, landing pages, pitch pages, dashboards, and prototypes with a product-first interaction model. | experimental | ABVX adapted |
 | `designmd-brand-kit` | Turns a website or brand surface into an agent-usable design system: structure, identity, and reusable UI cues. | experimental | ABVX adapted |
 | `browser-verification` | Verifies real browser rendering, responsive layout, and interaction behavior instead of trusting static code inspection. | experimental | ABVX adapted |
@@ -68,6 +72,7 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 
 | Skill | What It Does | Status | Origin |
 |---|---|---|---|
+| `design-register-bootstrap` | Detects whether a surface is `brand` or `product`, then writes the compact design context needed to keep later frontend work coherent. | experimental | ABVX adapted |
 | `project-context-bootstrap` | Detects the stack, asks the right project questions, and turns a weakly documented repo into a compact, agent-usable context surface. | experimental | ABVX adapted |
 | `durable-context-maintenance` | Keeps repo-local context current after architecture, workflow, and test-flow changes so agents stop rediscovering the same facts. | experimental | ABVX adapted |
 

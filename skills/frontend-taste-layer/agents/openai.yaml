@@ -1,0 +1,4 @@
+interface:
+  display_name: "Frontend Taste Layer"
+  short_description: "Add anti-slop taste to frontend work."
+  default_prompt: "Improve this frontend with stronger design taste and less template-looking output."
