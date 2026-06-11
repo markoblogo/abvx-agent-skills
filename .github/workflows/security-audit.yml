@@ -1,0 +1,36 @@
+name: security-audit
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  security-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install .
+      - run: python -m pip install skillspector
+
+      - run: abvx-skills audit-security ./skills --no-llm --output-dir artifacts/skillspector
+
+      - run: >-
+          python scripts/evaluate_skillspector.py
+          --reports-dir artifacts/skillspector
+          --policy .abvx/skillspector-policy.yaml
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: skillspector-json-reports
+          path: artifacts/skillspector/*.json

@@ -191,13 +191,20 @@ Or validate the packaged skills through the CLI:
 abvx-skills validate
 ```
 
+Run a static security audit with SkillSpector:
+
+```bash
+pip install skillspector
+abvx-skills audit-security ./skills --no-llm
+```
+
 Validate a local skills directory:
 
 ```bash
 abvx-skills validate ~/.codex/skills
 ```
 
-The validator checks required files, frontmatter, directory/name alignment, TODO placeholders, cards, UI metadata, and basic secret patterns.
+Structural validation and security audit are separate gates. The validator checks required files, frontmatter, directory/name alignment, TODO placeholders, cards, UI metadata, and basic secret patterns.
 
 ## Release
 
