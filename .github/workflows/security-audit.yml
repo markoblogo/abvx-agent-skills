@@ -27,12 +27,6 @@ jobs:
 
       - run: abvx-skills audit-security ./skills --no-llm --output-dir artifacts/skillspector
 
-      - run: >-
-          python scripts/evaluate_skillspector.py
-          --reports-dir artifacts/skillspector
-          --policy .abvx/skillspector-policy.yaml
-          --baseline .abvx/skillspector-baseline.json
-
       - run: |
           set +e
           skillspector scan ./skills --format sarif --output artifacts/skillspector.sarif --no-llm
@@ -42,6 +36,12 @@ jobs:
           fi
           exit 0
         shell: bash
+
+      - run: >-
+          python scripts/evaluate_skillspector.py
+          --reports-dir artifacts/skillspector
+          --policy .abvx/skillspector-policy.yaml
+          --baseline .abvx/skillspector-baseline.json
 
       - uses: github/codeql-action/upload-sarif@v3
         if: always() && hashFiles('artifacts/skillspector.sarif') != ''

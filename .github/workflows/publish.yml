@@ -32,11 +32,6 @@ jobs:
       - run: python -m pip install .
       - run: python -m pip install git+https://github.com/NVIDIA/SkillSpector.git
       - run: abvx-skills audit-security ./skills --no-llm --output-dir artifacts/skillspector
-      - run: >-
-          python scripts/evaluate_skillspector.py
-          --reports-dir artifacts/skillspector
-          --policy .abvx/skillspector-policy.yaml
-          --baseline .abvx/skillspector-baseline.json
       - run: |
           set +e
           skillspector scan ./skills --format sarif --output artifacts/skillspector.sarif --no-llm
@@ -46,6 +41,11 @@ jobs:
           fi
           exit 0
         shell: bash
+      - run: >-
+          python scripts/evaluate_skillspector.py
+          --reports-dir artifacts/skillspector
+          --policy .abvx/skillspector-policy.yaml
+          --baseline .abvx/skillspector-baseline.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
