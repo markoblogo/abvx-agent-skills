@@ -194,7 +194,7 @@ abvx-skills validate
 Run a static security audit with SkillSpector:
 
 ```bash
-pip install skillspector
+pip install git+https://github.com/NVIDIA/SkillSpector.git
 abvx-skills audit-security ./skills --no-llm
 ```
 

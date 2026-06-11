@@ -23,7 +23,7 @@ jobs:
 
       - run: python -m pip install --upgrade pip
       - run: python -m pip install .
-      - run: python -m pip install skillspector
+      - run: python -m pip install git+https://github.com/NVIDIA/SkillSpector.git
 
       - run: abvx-skills audit-security ./skills --no-llm --output-dir artifacts/skillspector
 
