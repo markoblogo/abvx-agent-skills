@@ -198,6 +198,15 @@ pip install skillspector
 abvx-skills audit-security ./skills --no-llm
 ```
 
+Evaluate reports against the repo policy and baseline:
+
+```bash
+python scripts/evaluate_skillspector.py \
+  --reports-dir artifacts/skillspector \
+  --policy .abvx/skillspector-policy.yaml \
+  --baseline .abvx/skillspector-baseline.json
+```
+
 Validate a local skills directory:
 
 ```bash
