@@ -86,17 +86,24 @@ def iter_findings(reports_dir: Path) -> tuple[list[Finding], dict[str, int]]:
         max_scores[skill] = int(risk.get("score", 0))
 
         for issue in data.get("issues", []):
-            rel_file = str(issue.get("file", "")).lstrip("./")
+            location = issue.get("location", {}) or {}
+            rel_file = str(location.get("file") or issue.get("file") or "").lstrip("./")
             repo_path = f"skills/{skill}/{rel_file}" if rel_file else f"skills/{skill}/SKILL.md"
             findings.append(
                 Finding(
                     skill=skill,
-                    rule_id=str(issue.get("rule_id", "UNKNOWN")),
+                    rule_id=str(issue.get("rule_id") or issue.get("id") or "UNKNOWN"),
                     severity=str(issue.get("severity", "LOW")).upper(),
                     path=repo_path,
-                    start_line=int(issue.get("start_line", 1) or 1),
-                    end_line=int(issue.get("end_line", issue.get("start_line", 1)) or 1),
-                    message=str(issue.get("message", "")),
+                    start_line=int(location.get("start_line") or issue.get("start_line", 1) or 1),
+                    end_line=int(
+                        location.get("end_line")
+                        or issue.get("end_line")
+                        or location.get("start_line")
+                        or issue.get("start_line", 1)
+                        or 1
+                    ),
+                    message=str(issue.get("message") or issue.get("finding") or ""),
                 )
             )
 

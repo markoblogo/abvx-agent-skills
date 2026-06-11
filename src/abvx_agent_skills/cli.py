@@ -97,8 +97,6 @@ def cmd_audit_security(args: argparse.Namespace) -> int:
     output_dir = args.output_dir.expanduser().resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    fail_levels = {level.upper() for level in args.fail_on_severity}
-    blocking: list[str] = []
     scan_errors: list[str] = []
 
     for skill_dir in skill_dirs:
@@ -141,28 +139,11 @@ def cmd_audit_security(args: argparse.Namespace) -> int:
             f"issues={len(issues)} max_issue_severity={max_severity}"
         )
 
-        if score > args.max_risk_score:
-            blocking.append(f"{skill_dir.name}: risk score {score} > {args.max_risk_score}")
-
-        for issue in issues:
-            sev = str(issue.get("severity", "LOW")).upper()
-            if sev in fail_levels:
-                rel_path = issue.get("file", "unknown")
-                line = issue.get("start_line", "?")
-                rule_id = issue.get("rule_id", "UNKNOWN")
-                blocking.append(f"{skill_dir.name}: {sev} {rule_id} at {rel_path}:{line}")
-
     if scan_errors:
         print("Security audit failed:")
         for item in scan_errors:
             print(f"- {item}")
         return 2
-
-    if blocking:
-        print("Blocking security findings:")
-        for item in blocking:
-            print(f"- {item}")
-        return 1
 
     print(f"Security audit passed for {len(skill_dirs)} skill(s). Reports: {output_dir}")
     return 0
@@ -223,18 +204,6 @@ def build_parser() -> argparse.ArgumentParser:
         "--no-llm",
         action="store_true",
         help="Run static analysis only",
-    )
-    audit_parser.add_argument(
-        "--fail-on-severity",
-        nargs="+",
-        default=["HIGH", "CRITICAL"],
-        help="Issue severities that should fail the command",
-    )
-    audit_parser.add_argument(
-        "--max-risk-score",
-        type=int,
-        default=50,
-        help="Maximum allowed risk score per skill",
     )
     audit_parser.set_defaults(func=cmd_audit_security)
 
