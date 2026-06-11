@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "findings": [
+    {
+      "fingerprint": "RA1:skills/loopops-protocol/SKILL.md:96:96",
+      "reason": "This skill intentionally describes controlled post-loop skill evolution as part of its protocol.",
+      "expires_on": "2026-12-31"
+    },
+    {
+      "fingerprint": "RA1:skills/loopops-protocol/SKILL_CARD.md:30:30",
+      "reason": "The skill card documents the same controlled skill-evolution behavior for reviewer context.",
+      "expires_on": "2026-12-31"
+    }
+  ]
+}

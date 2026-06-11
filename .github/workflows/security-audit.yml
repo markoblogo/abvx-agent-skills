@@ -1,0 +1,57 @@
+name: security-audit
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  security-audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install .
+      - run: python -m pip install git+https://github.com/NVIDIA/SkillSpector.git
+
+      - run: abvx-skills audit-security ./skills --no-llm --output-dir artifacts/skillspector
+
+      - run: |
+          set +e
+          skillspector scan ./skills --format sarif --output artifacts/skillspector.sarif --no-llm
+          status=$?
+          if [ "$status" -ne 0 ] && [ "$status" -ne 1 ]; then
+            exit "$status"
+          fi
+          exit 0
+        shell: bash
+
+      - run: >-
+          python scripts/evaluate_skillspector.py
+          --reports-dir artifacts/skillspector
+          --policy .abvx/skillspector-policy.yaml
+          --baseline .abvx/skillspector-baseline.json
+
+      - uses: github/codeql-action/upload-sarif@v3
+        if: always() && hashFiles('artifacts/skillspector.sarif') != ''
+        with:
+          sarif_file: artifacts/skillspector.sarif
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: skillspector-reports
+          path: |
+            artifacts/skillspector/*.json
+            artifacts/skillspector.sarif

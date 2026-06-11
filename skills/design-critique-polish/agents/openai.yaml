@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Critique Polish"
+  short_description: "Critique and polish a frontend surface before shipping."
+  default_prompt: "Critique this frontend surface and identify the highest-leverage polish fixes."

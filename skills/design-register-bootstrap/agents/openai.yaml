@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Register Bootstrap"
+  short_description: "Set brand vs product register before frontend work."
+  default_prompt: "Create or refresh compact design context for this frontend surface."

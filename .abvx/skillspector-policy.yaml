@@ -1,0 +1,19 @@
+version: 1
+
+thresholds:
+  fail_on_severity:
+    - HIGH
+    - CRITICAL
+  max_risk_score: 50
+
+paths:
+  include:
+    - "skills/**"
+  exclude:
+    - "skills/**/assets/**"
+    - "skills/**/references/**"
+
+suppressions:
+  - rule_id: "P2"
+    path: "skills/*/references/**"
+    reason: "Quoted hostile samples are allowed in references."
