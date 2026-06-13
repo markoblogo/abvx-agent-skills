@@ -88,6 +88,7 @@ GROUP_SPECS: list[tuple[str, str, tuple[str, ...]]] = [
             "workflow-policy-layering",
             "brief-first-execution",
             "private-vs-publishable-skill-audit",
+            "skill-effectiveness-audit",
         ),
     ),
     (
@@ -96,6 +97,7 @@ GROUP_SPECS: list[tuple[str, str, tuple[str, ...]]] = [
         (
             "dynamic-workflow-packets",
             "handoff",
+            "session-retrospective",
         ),
     ),
     (

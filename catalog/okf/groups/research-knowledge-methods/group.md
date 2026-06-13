@@ -22,4 +22,5 @@ kind: "skill-group"
 * [LoopOps Protocol](../../skills/loopops-protocol.md) - Designs reusable agent behavior as the smallest reliable artifact: prompt, skill, checklist, script, workflow, or cost-bounded loop.
 * [Private Vs Publishable Skill Audit](../../skills/private-vs-publishable-skill-audit.md) - Audits private skill packs before publication by classifying content as private, mixed, or reusable and gating release on real decontextualization.
 * [Role Skill Pack Design](../../skills/role-skill-pack-design.md) - Designs compact role-specific or workflow-specific skill packs with explicit base layers, difference layers, references, boundaries, and rollout order.
+* [Skill Effectiveness Audit](../../skills/skill-effectiveness-audit.md) - Reads skill reflection artifacts and turns them into a bounded audit of which skills to keep, tighten, split, or de-emphasize.
 * [Workflow Policy Layering](../../skills/workflow-policy-layering.md) - Separates workflow steps from authority, forbidden actions, escalation paths, and validation gates so assistant specs stop contradicting themselves.

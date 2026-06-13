@@ -41,6 +41,7 @@ Video context: [I scraped AI skills from GitHub, clustered them, and tested whet
 - **Need a standalone HTML artifact?** Start with `html-diagram-artifact` for SVG-first architecture explainers, or `html-brief-artifact` for plans, summaries, reports, and research notes.
 - **Need stronger UI taste or design setup?** Start with `design-register-bootstrap`, `frontend-taste-layer`, and `design-critique-polish`.
 - **Need long-session continuity?** Start with `handoff`, `compaction-survival`, and `token-usage-audit`.
+- **Need to learn from recent sessions?** Start with `session-retrospective`, then use `skill-effectiveness-audit` when you already have skill reflection artifacts.
 - **Need to onboard a new repo?** Start with `project-context-bootstrap` and follow with `durable-context-maintenance`.
 - **Need discovery or product shaping?** Start with `rapid-grilling`, `doc-grounded-grilling`, and `spec-to-prd`.
 - **Need to turn plans into execution?** Start with `plan-to-issues`, `repo-issue-triage`, and `test-driven-execution`.
@@ -128,6 +129,7 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 | `workflow-policy-layering` | Separates workflow from authority, escalation, forbidden actions, and validation so assistant specs stop contradicting themselves. | experimental | ABVX original |
 | `brief-first-execution` | Starts non-trivial work with one live brief for scope, non-goals, risks, verification, and done criteria. | experimental | ABVX original |
 | `private-vs-publishable-skill-audit` | Audits private skill packs before publication and extracts only the reusable layer. | experimental | ABVX original |
+| `skill-effectiveness-audit` | Reads reflection artifacts to decide which skills to keep, tighten, split, or de-emphasize before adding more instruction surface. | experimental | ABVX original |
 
 ### Workflow, Handoffs & Multi-Track Work
 
@@ -135,6 +137,7 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 |---|---|---|---|
 | `dynamic-workflow-packets` | Orchestrates large coding, research, audit, or client-search tracks without losing verification and risk gates. | experimental | ABVX adapted |
 | `handoff` | Produces compact continuation briefs for long-running work, agent resumes, and human handoffs. | experimental | ABVX adapted |
+| `session-retrospective` | Reads session reflection artifacts and extracts the few patterns and workflow changes worth carrying into the next run. | experimental | ABVX original |
 
 ### Long-Run Delivery Control
 

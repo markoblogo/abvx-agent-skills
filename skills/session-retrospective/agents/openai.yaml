@@ -1,0 +1,4 @@
+interface:
+  display_name: "Session Retrospective"
+  short_description: "Read session reflection artifacts and extract the few changes worth carrying forward."
+  default_prompt: "Review the available session reflection artifacts and produce a compact retrospective with concrete next-session changes."

@@ -16,8 +16,8 @@ status: "active"
 * [HTML Artifacts & Visual Deliverables](groups/html-artifacts-visual-deliverables/index.md) - 2 skills
 * [Project Context & Onboarding](groups/project-context-onboarding/index.md) - 2 skills
 * [Discovery, Planning & Delivery](groups/discovery-planning-delivery/index.md) - 5 skills
-* [Research, Knowledge & Reusable Methods](groups/research-knowledge-methods/index.md) - 7 skills
-* [Workflow, Handoffs & Multi-Track Work](groups/workflow-handoffs-multitrack/index.md) - 2 skills
+* [Research, Knowledge & Reusable Methods](groups/research-knowledge-methods/index.md) - 8 skills
+* [Workflow, Handoffs & Multi-Track Work](groups/workflow-handoffs-multitrack/index.md) - 3 skills
 * [Long-Run Delivery Control](groups/long-run-delivery-control/index.md) - 4 skills
 * [Structured Data & Spreadsheet Work](groups/structured-data-spreadsheet-work/index.md) - 1 skills
 
@@ -59,7 +59,9 @@ status: "active"
 * [Repo Issue Triage](skills/repo-issue-triage.md) - Moves bugs and enhancements through a compact state machine so backlog items become actionable instead of lingering in vague limbo.
 * [Role Skill Pack Design](skills/role-skill-pack-design.md) - Designs compact role-specific or workflow-specific skill packs with explicit base layers, difference layers, references, boundaries, and rollout order.
 * [RTK Assisted Shell](skills/rtk-assisted-shell.md) - Applies RTK-style output filtering to shell-heavy coding and debugging workflows to reduce context waste.
+* [Session Retrospective](skills/session-retrospective.md) - Reads session reflection artifacts and turns them into a compact retrospective with concrete next-session changes.
 * [Shell Output Compaction](skills/shell-output-compaction.md) - Reduces shell and tool-output token waste by shaping commands toward narrow, high-signal output.
+* [Skill Effectiveness Audit](skills/skill-effectiveness-audit.md) - Reads skill reflection artifacts and turns them into a bounded audit of which skills to keep, tighten, split, or de-emphasize.
 * [SkillOpt Evolve Skills](skills/skillopt-evolve-skills.md) - Improves local skills, AGENTS.md rules, and reusable agent workflows through validation-gated edits.
 * [Spec To PRD](skills/spec-to-prd.md) - Turns current discovery and repo understanding into a durable PRD for product, client, and internal roadmap work.
 * [Spreadsheet Workbook Forensics](skills/spreadsheet-workbook-forensics.md) - Edits and verifies spreadsheet workbooks while preserving structure, formatting, and target-cell correctness.
