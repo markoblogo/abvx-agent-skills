@@ -202,6 +202,15 @@ brew install abvx-agent-skills
 
 `homebrew-core` is not the current install path for this project. The upstream submission was closed under the repository's notability policy, so the maintained Homebrew channel is the ABVX tap.
 
+Export the skill catalog as an experimental OKF bundle:
+
+```bash
+abvx-skills export-okf .
+abvx-skills export-okf . --check --format json
+```
+
+This writes a derived `catalog/okf/` bundle with grouped skill indexes and one concept document per skill. `SKILL.md` and `SKILL_CARD.md` remain the source of truth.
+
 Smoke-test the published package from PyPI:
 
 ```bash
@@ -235,6 +244,12 @@ Or validate the packaged skills through the CLI:
 
 ```bash
 abvx-skills validate
+```
+
+Run the OKF export smoke test:
+
+```bash
+PYTHONPATH=src .venv/bin/python -m unittest tests/test_export_okf.py
 ```
 
 Run a static security audit with SkillSpector:
