@@ -37,7 +37,7 @@ Outputs: clarified language, resolved trade-offs, explicit open questions, and d
 - Risk: terminological confusion. Mitigation: force canonical terms early.
 
 # Metadata
-* Group: [Discovery, Planning & Delivery](/groups/discovery-planning-delivery/index.md)
+* Group: [Discovery, Planning & Delivery](../groups/discovery-planning-delivery/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.7.0`

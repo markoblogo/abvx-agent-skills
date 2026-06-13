@@ -37,7 +37,7 @@ Outputs: bounded retries, focused fix-spec escalation, or a blocked handoff with
 - Risk: vague blocker reports. Mitigation: require a per-strike failure record.
 
 # Metadata
-* Group: [Long-Run Delivery Control](/groups/long-run-delivery-control/index.md)
+* Group: [Long-Run Delivery Control](../groups/long-run-delivery-control/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.1.0`

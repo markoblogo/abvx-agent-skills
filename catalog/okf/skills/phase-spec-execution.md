@@ -37,7 +37,7 @@ Outputs: ordered phases, phase-level acceptance criteria, verification commands,
 - Risk: stale state. Mitigation: update status only after each verification pass.
 
 # Metadata
-* Group: [Long-Run Delivery Control](/groups/long-run-delivery-control/index.md)
+* Group: [Long-Run Delivery Control](../groups/long-run-delivery-control/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.1.0`

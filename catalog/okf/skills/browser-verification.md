@@ -37,7 +37,7 @@ Outputs: browser observations, screenshot paths if captured, failures, verificat
 - Risk: unintended side effects. Mitigation: gate authenticated, paid, or destructive flows.
 
 # Metadata
-* Group: [Frontend, UX & Product Surfaces](/groups/frontend-ux-product/index.md)
+* Group: [Frontend, UX & Product Surfaces](../groups/frontend-ux-product/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.2.0`

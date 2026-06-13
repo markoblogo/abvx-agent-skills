@@ -37,7 +37,7 @@ Outputs: bounded skill edits, rejected-edit notes, validation reports.
 - Risk: weakening guardrails. Mitigation: validation gate and rejected-edit buffer.
 
 # Metadata
-* Group: [Coding, Debugging & Architecture](/groups/coding-debugging-architecture/index.md)
+* Group: [Coding, Debugging & Architecture](../groups/coding-debugging-architecture/index.md)
 * Status: `experimental`
 * Origin: `original`
 * Version: `0.1.0`

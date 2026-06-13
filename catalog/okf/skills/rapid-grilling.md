@@ -36,7 +36,7 @@ Outputs: a clarified idea, resolved core questions, and a recommended next artif
 - Risk: endless questioning. Mitigation: stop when the next concrete artifact is obvious.
 
 # Metadata
-* Group: [Discovery, Planning & Delivery](/groups/discovery-planning-delivery/index.md)
+* Group: [Discovery, Planning & Delivery](../groups/discovery-planning-delivery/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.7.0`

@@ -37,7 +37,7 @@ Outputs: behavior-focused tests, minimal implementation slices, and safer refact
 - Risk: overtesting. Mitigation: confirm priority behaviors before writing tests.
 
 # Metadata
-* Group: [Coding, Debugging & Architecture](/groups/coding-debugging-architecture/index.md)
+* Group: [Coding, Debugging & Architecture](../groups/coding-debugging-architecture/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.7.0`

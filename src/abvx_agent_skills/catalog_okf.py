@@ -313,7 +313,7 @@ def _render_concept(record: SkillRecord) -> str:
         [
             "",
             "# Metadata",
-            f"* Group: [{record.group_title}](/groups/{record.group_slug}/index.md)",
+            f"* Group: [{record.group_title}](../groups/{record.group_slug}/index.md)",
             f"* Status: `{record.status}`",
             f"* Origin: `{record.origin}`",
             f"* Version: `{record.version or 'unspecified'}`",
@@ -369,12 +369,17 @@ def _render_group_index(group_slug: str, group_title: str, records: list[SkillRe
 
 
 def _render_group_concept(group_slug: str, group_title: str, records: list[SkillRecord]) -> str:
+    description = f"Catalog grouping for {group_title.lower()}."
+    resource = (
+        "https://github.com/markoblogo/abvx-agent-skills/tree/main/"
+        f"catalog/okf/groups/{group_slug}"
+    )
     lines = [
         "---",
         f'type: {_yaml_quote("Skill Group")}',
         f"title: {_yaml_quote(group_title)}",
-        f"description: {_yaml_quote(f"Catalog grouping for {group_title.lower()}.")}",
-        f"resource: {_yaml_quote(f"https://github.com/markoblogo/abvx-agent-skills/tree/main/catalog/okf/groups/{group_slug}")}",
+        f"description: {_yaml_quote(description)}",
+        f"resource: {_yaml_quote(resource)}",
         "tags:",
         '  - "skill-group"',
         f"  - {_yaml_quote(group_slug)}",

@@ -37,7 +37,7 @@ Outputs: delivery audit record, gap list, and a complete-or-fix verdict.
 - Risk: stale verification. Mitigation: re-run final commands once at the end.
 
 # Metadata
-* Group: [Long-Run Delivery Control](/groups/long-run-delivery-control/index.md)
+* Group: [Long-Run Delivery Control](../groups/long-run-delivery-control/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.1.0`

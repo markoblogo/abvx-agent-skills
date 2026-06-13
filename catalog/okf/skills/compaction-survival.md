@@ -37,7 +37,7 @@ Outputs: compact checkpoints, resumable state summaries, and explicit artifact p
 - Risk: false confidence. Mitigation: keep verification and blockers explicit.
 
 # Metadata
-* Group: [Token Economy & Context Control](/groups/token-economy-context-control/index.md)
+* Group: [Token Economy & Context Control](../groups/token-economy-context-control/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.5.0`

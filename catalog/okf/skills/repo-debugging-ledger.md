@@ -37,7 +37,7 @@ Outputs: hypotheses, probes, checked-location ledger, scoped fixes, verification
 - Risk: false confidence. Mitigation: rerun original repro and project checks.
 
 # Metadata
-* Group: [Coding, Debugging & Architecture](/groups/coding-debugging-architecture/index.md)
+* Group: [Coding, Debugging & Architecture](../groups/coding-debugging-architecture/index.md)
 * Status: `experimental`
 * Origin: `original`
 * Version: `0.1.0`

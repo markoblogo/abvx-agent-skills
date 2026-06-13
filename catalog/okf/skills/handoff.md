@@ -37,7 +37,7 @@ Outputs: compact handoff document and next-step summary.
 - Risk: stale handoff. Mitigation: include concrete timestamps or commit IDs.
 
 # Metadata
-* Group: [Workflow, Handoffs & Multi-Track Work](/groups/workflow-handoffs-multitrack/index.md)
+* Group: [Workflow, Handoffs & Multi-Track Work](../groups/workflow-handoffs-multitrack/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.2.0`

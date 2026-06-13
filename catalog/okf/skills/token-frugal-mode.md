@@ -37,7 +37,7 @@ Outputs: shorter answers with preserved code, commands, errors, risks, and verif
 - Risk: meme mode overtaking utility. Mitigation: default to terse professional compression, not roleplay.
 
 # Metadata
-* Group: [Token Economy & Context Control](/groups/token-economy-context-control/index.md)
+* Group: [Token Economy & Context Control](../groups/token-economy-context-control/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.3.0`

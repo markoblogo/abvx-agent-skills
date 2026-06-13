@@ -37,7 +37,7 @@ Outputs: category/state recommendations, triage notes, and readiness decisions.
 - Risk: premature delegation. Mitigation: verify reproduction or clarification before `ready-for-agent`.
 
 # Metadata
-* Group: [Discovery, Planning & Delivery](/groups/discovery-planning-delivery/index.md)
+* Group: [Discovery, Planning & Delivery](../groups/discovery-planning-delivery/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.7.0`

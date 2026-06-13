@@ -37,7 +37,7 @@ Outputs: ranked architecture candidates, migration suggestions, testability note
 - Risk: ignoring domain language. Mitigation: read glossary/docs first when available.
 
 # Metadata
-* Group: [Coding, Debugging & Architecture](/groups/coding-debugging-architecture/index.md)
+* Group: [Coding, Debugging & Architecture](../groups/coding-debugging-architecture/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.2.0`

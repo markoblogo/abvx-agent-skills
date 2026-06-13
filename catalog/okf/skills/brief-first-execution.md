@@ -37,7 +37,7 @@ Outputs: a compact task brief that can be updated as the work evolves.
 - Risk: verification added too late. Mitigation: define checks before deep implementation starts.
 
 # Metadata
-* Group: [Research, Knowledge & Reusable Methods](/groups/research-knowledge-methods/index.md)
+* Group: [Research, Knowledge & Reusable Methods](../groups/research-knowledge-methods/index.md)
 * Status: `experimental`
 * Origin: `original`
 * Version: `0.1.0`

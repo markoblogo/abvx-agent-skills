@@ -37,7 +37,7 @@ Outputs: issue-ready vertical slices with acceptance criteria and blockers.
 - Risk: wrong dependency graph. Mitigation: review blockers before publishing.
 
 # Metadata
-* Group: [Discovery, Planning & Delivery](/groups/discovery-planning-delivery/index.md)
+* Group: [Discovery, Planning & Delivery](../groups/discovery-planning-delivery/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.7.0`

@@ -37,7 +37,7 @@ Outputs: one self-contained HTML brief plus an honest verification summary.
 - Risk: unnecessary bloat. Mitigation: keep sections and visual devices proportional to source material.
 
 # Metadata
-* Group: [HTML Artifacts & Visual Deliverables](/groups/html-artifacts-visual-deliverables/index.md)
+* Group: [HTML Artifacts & Visual Deliverables](../groups/html-artifacts-visual-deliverables/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.1.0`

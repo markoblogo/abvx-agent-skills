@@ -37,7 +37,7 @@ Outputs: runnable prototype, observed learning, decision note, cleanup/absorb pl
 - Risk: wrong prototype type. Mitigation: choose logic, UI, or integration branch first.
 
 # Metadata
-* Group: [Frontend, UX & Product Surfaces](/groups/frontend-ux-product/index.md)
+* Group: [Frontend, UX & Product Surfaces](../groups/frontend-ux-product/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.2.0`

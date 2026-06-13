@@ -38,7 +38,7 @@ Outputs: artifact-level decision, supervisor contract, loop budget, memory polic
 - Risk: skill bloat. Mitigation: update skills only with procedural, reusable, testable lessons.
 
 # Metadata
-* Group: [Research, Knowledge & Reusable Methods](/groups/research-knowledge-methods/index.md)
+* Group: [Research, Knowledge & Reusable Methods](../groups/research-knowledge-methods/index.md)
 * Status: `experimental`
 * Origin: `original`
 * Version: `0.1.0`

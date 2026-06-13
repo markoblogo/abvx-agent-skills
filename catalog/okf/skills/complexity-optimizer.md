@@ -37,7 +37,7 @@ Outputs: ranked findings, scoped patches, before/after complexity estimates, ver
 - Risk: unsafe batching. Mitigation: recheck authorization, ordering, pagination, and filters.
 
 # Metadata
-* Group: [Coding, Debugging & Architecture](/groups/coding-debugging-architecture/index.md)
+* Group: [Coding, Debugging & Architecture](../groups/coding-debugging-architecture/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.2.0`

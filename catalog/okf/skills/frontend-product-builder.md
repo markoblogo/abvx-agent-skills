@@ -37,7 +37,7 @@ Outputs: frontend changes, responsive UI, asset usage, browser verification note
 - Risk: inaccessible controls. Mitigation: include focus, labels, states, and semantic controls.
 
 # Metadata
-* Group: [Frontend, UX & Product Surfaces](/groups/frontend-ux-product/index.md)
+* Group: [Frontend, UX & Product Surfaces](../groups/frontend-ux-product/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.2.0`

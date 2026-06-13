@@ -37,7 +37,7 @@ Outputs: a compact retrospective, strongest patterns, proposed next-session chan
 - Risk: vague recommendations. Mitigation: tie each change to one observed signal.
 
 # Metadata
-* Group: [Workflow, Handoffs & Multi-Track Work](/groups/workflow-handoffs-multitrack/index.md)
+* Group: [Workflow, Handoffs & Multi-Track Work](../groups/workflow-handoffs-multitrack/index.md)
 * Status: `experimental`
 * Origin: `original`
 * Version: `0.1.0`

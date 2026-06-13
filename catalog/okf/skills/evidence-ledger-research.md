@@ -37,7 +37,7 @@ Outputs: evidence ledgers, sourced claims, calculations, concise final answers.
 - Risk: arithmetic drift. Mitigation: confirm operands before calculating.
 
 # Metadata
-* Group: [Research, Knowledge & Reusable Methods](/groups/research-knowledge-methods/index.md)
+* Group: [Research, Knowledge & Reusable Methods](../groups/research-knowledge-methods/index.md)
 * Status: `experimental`
 * Origin: `original`
 * Version: `0.1.0`

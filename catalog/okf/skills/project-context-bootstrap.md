@@ -37,7 +37,7 @@ Outputs: confirmed project understanding, compact context entrypoints, and appro
 - Risk: clobbering good repo docs. Mitigation: study existing context first and ask before reorganizing.
 
 # Metadata
-* Group: [Project Context & Onboarding](/groups/project-context-onboarding/index.md)
+* Group: [Project Context & Onboarding](../groups/project-context-onboarding/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.6.0`

@@ -37,7 +37,7 @@ Outputs: tighter work loop, smaller diffs, reduced repeated reads, concise progr
 - Risk: false savings from skipped validation. Mitigation: verification remains mandatory.
 
 # Metadata
-* Group: [Token Economy & Context Control](/groups/token-economy-context-control/index.md)
+* Group: [Token Economy & Context Control](../groups/token-economy-context-control/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.3.0`

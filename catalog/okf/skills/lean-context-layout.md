@@ -37,7 +37,7 @@ Outputs: leaner context layout, explicit on-demand references, smaller always-lo
 - Risk: optimizing the wrong thing. Mitigation: measure before and after.
 
 # Metadata
-* Group: [Token Economy & Context Control](/groups/token-economy-context-control/index.md)
+* Group: [Token Economy & Context Control](../groups/token-economy-context-control/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.3.0`

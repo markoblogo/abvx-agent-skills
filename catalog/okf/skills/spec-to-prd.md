@@ -37,7 +37,7 @@ Outputs: a PRD as markdown, issue body, or another durable planning artifact.
 - Risk: fuzzy scope. Mitigation: require explicit out-of-scope and testing sections.
 
 # Metadata
-* Group: [Discovery, Planning & Delivery](/groups/discovery-planning-delivery/index.md)
+* Group: [Discovery, Planning & Delivery](../groups/discovery-planning-delivery/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.7.0`

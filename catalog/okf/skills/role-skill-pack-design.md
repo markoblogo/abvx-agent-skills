@@ -37,7 +37,7 @@ Outputs: pack structure, initial skill set, role layering model, and rollout ord
 - Risk: burying details in one giant file. Mitigation: keep `SKILL.md` short and push detail into references.
 
 # Metadata
-* Group: [Research, Knowledge & Reusable Methods](/groups/research-knowledge-methods/index.md)
+* Group: [Research, Knowledge & Reusable Methods](../groups/research-knowledge-methods/index.md)
 * Status: `experimental`
 * Origin: `original`
 * Version: `0.1.0`

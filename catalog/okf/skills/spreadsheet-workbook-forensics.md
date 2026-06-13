@@ -37,7 +37,7 @@ Outputs: modified workbooks, Python scripts, verification notes, representative 
 - Risk: key mismatch. Mitigation: normalize IDs, text, dates, and numbers deliberately.
 
 # Metadata
-* Group: [Structured Data & Spreadsheet Work](/groups/structured-data-spreadsheet-work/index.md)
+* Group: [Structured Data & Spreadsheet Work](../groups/structured-data-spreadsheet-work/index.md)
 * Status: `experimental`
 * Origin: `original`
 * Version: `0.1.0`

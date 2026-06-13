@@ -37,7 +37,7 @@ Outputs: a compact focus set, narrow reads around relevant nodes, and a smaller 
 - Risk: stale focus set. Mitigation: keep a checked-location ledger and refresh only when a new hypothesis appears.
 
 # Metadata
-* Group: [Token Economy & Context Control](/groups/token-economy-context-control/index.md)
+* Group: [Token Economy & Context Control](../groups/token-economy-context-control/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.4.0`

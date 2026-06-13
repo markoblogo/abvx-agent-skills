@@ -37,7 +37,7 @@ Outputs: layered spec with explicit workflow, authority, escalation, and validat
 - Risk: policy hidden in prose. Mitigation: split layers before rewriting.
 
 # Metadata
-* Group: [Research, Knowledge & Reusable Methods](/groups/research-knowledge-methods/index.md)
+* Group: [Research, Knowledge & Reusable Methods](../groups/research-knowledge-methods/index.md)
 * Status: `experimental`
 * Origin: `original`
 * Version: `0.1.0`

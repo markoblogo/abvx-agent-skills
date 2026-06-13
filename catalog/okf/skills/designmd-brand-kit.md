@@ -37,7 +37,7 @@ Outputs: brand constraints, DESIGN.md files, Tailwind v4 theme tokens, CSS varia
 - Risk: privacy in client research. Mitigation: do not store private contacts or sensitive notes in reusable skills.
 
 # Metadata
-* Group: [Frontend, UX & Product Surfaces](/groups/frontend-ux-product/index.md)
+* Group: [Frontend, UX & Product Surfaces](../groups/frontend-ux-product/index.md)
 * Status: `experimental`
 * Origin: `original`
 * Version: `0.1.0`

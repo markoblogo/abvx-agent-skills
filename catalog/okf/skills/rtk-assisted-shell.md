@@ -37,7 +37,7 @@ Outputs: RTK-style commands or manual compact equivalents, shorter shell artifac
 - Risk: format mismatch. Mitigation: keep raw command path when exact formatting matters.
 
 # Metadata
-* Group: [Token Economy & Context Control](/groups/token-economy-context-control/index.md)
+* Group: [Token Economy & Context Control](../groups/token-economy-context-control/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.5.0`

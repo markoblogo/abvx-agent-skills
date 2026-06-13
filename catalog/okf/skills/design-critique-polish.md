@@ -37,7 +37,7 @@ Outputs: ranked critique findings, high-leverage fix list, ship blockers, and po
 - Risk: hiding structural issues behind visual tweaks. Mitigation: call out wrong core design language explicitly.
 
 # Metadata
-* Group: [Frontend, UX & Product Surfaces](/groups/frontend-ux-product/index.md)
+* Group: [Frontend, UX & Product Surfaces](../groups/frontend-ux-product/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.1.0`

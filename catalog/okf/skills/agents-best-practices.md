@@ -37,7 +37,7 @@ Outputs: MVP blueprint, harness review, permission matrix, eval plan, launch pat
 - Risk: context bloat. Mitigation: progressive disclosure and compaction.
 
 # Metadata
-* Group: [Coding, Debugging & Architecture](/groups/coding-debugging-architecture/index.md)
+* Group: [Coding, Debugging & Architecture](../groups/coding-debugging-architecture/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.2.0`

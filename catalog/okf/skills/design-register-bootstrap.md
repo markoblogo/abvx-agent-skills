@@ -37,7 +37,7 @@ Outputs: compact design register, updated `PRODUCT.md` and/or `DESIGN.md`, downs
 - Risk: reinvention. Mitigation: preserve coherent existing design systems and document them before changing them.
 
 # Metadata
-* Group: [Frontend, UX & Product Surfaces](/groups/frontend-ux-product/index.md)
+* Group: [Frontend, UX & Product Surfaces](../groups/frontend-ux-product/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.1.0`

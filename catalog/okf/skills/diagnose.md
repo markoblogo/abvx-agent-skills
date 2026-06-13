@@ -37,7 +37,7 @@ Outputs: repro loop, hypotheses, probes, scoped fix, regression evidence.
 - Risk: leaked debug code. Mitigation: tagged instrumentation cleanup.
 
 # Metadata
-* Group: [Coding, Debugging & Architecture](/groups/coding-debugging-architecture/index.md)
+* Group: [Coding, Debugging & Architecture](../groups/coding-debugging-architecture/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.2.0`

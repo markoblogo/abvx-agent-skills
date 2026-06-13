@@ -37,7 +37,7 @@ Outputs: deduplicated baseline commands, green/red classification, and a proceed
 - Risk: false confidence from skipped checks. Mitigation: require honest reporting of skipped or unavailable commands.
 
 # Metadata
-* Group: [Long-Run Delivery Control](/groups/long-run-delivery-control/index.md)
+* Group: [Long-Run Delivery Control](../groups/long-run-delivery-control/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.1.0`

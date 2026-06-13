@@ -37,7 +37,7 @@ Outputs: narrower commands, shorter stdout/stderr excerpts, compact summaries, a
 - Risk: unstable debugging loop. Mitigation: keep exact commands and line references when they affect the next action.
 
 # Metadata
-* Group: [Token Economy & Context Control](/groups/token-economy-context-control/index.md)
+* Group: [Token Economy & Context Control](../groups/token-economy-context-control/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.4.0`

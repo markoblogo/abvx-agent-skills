@@ -37,7 +37,7 @@ Outputs: packet plans, workflow artifacts, integration decisions, verification e
 - Risk: raw packet dumps hide conflicts. Mitigation: explicit integration phase.
 
 # Metadata
-* Group: [Workflow, Handoffs & Multi-Track Work](/groups/workflow-handoffs-multitrack/index.md)
+* Group: [Workflow, Handoffs & Multi-Track Work](../groups/workflow-handoffs-multitrack/index.md)
 * Status: `experimental`
 * Origin: `original`
 * Version: `0.1.0`

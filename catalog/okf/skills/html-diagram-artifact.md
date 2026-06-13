@@ -37,7 +37,7 @@ Outputs: one self-contained HTML diagram artifact, optional lightweight interact
 - Risk: visual claims are unverified. Mitigation: require browser checks before completion.
 
 # Metadata
-* Group: [HTML Artifacts & Visual Deliverables](/groups/html-artifacts-visual-deliverables/index.md)
+* Group: [HTML Artifacts & Visual Deliverables](../groups/html-artifacts-visual-deliverables/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.1.0`

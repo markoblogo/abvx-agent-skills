@@ -37,7 +37,7 @@ Outputs: ranked skill findings, likely causes, and a smallest-useful edit set fo
 - Risk: blaming the wrong layer. Mitigation: check trigger wording, startup context, and overlapping instructions before rewriting the skill body.
 
 # Metadata
-* Group: [Research, Knowledge & Reusable Methods](/groups/research-knowledge-methods/index.md)
+* Group: [Research, Knowledge & Reusable Methods](../groups/research-knowledge-methods/index.md)
 * Status: `experimental`
 * Origin: `original`
 * Version: `0.1.0`

@@ -36,7 +36,7 @@ Outputs: a higher-level module map, boundaries, and a broader explanation of the
 - Risk: contradiction with docs. Mitigation: align with existing architecture docs or call the mismatch out.
 
 # Metadata
-* Group: [Coding, Debugging & Architecture](/groups/coding-debugging-architecture/index.md)
+* Group: [Coding, Debugging & Architecture](../groups/coding-debugging-architecture/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.7.0`

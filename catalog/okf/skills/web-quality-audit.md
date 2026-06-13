@@ -37,7 +37,7 @@ Outputs: ranked findings, scoped fixes, verification notes, deferred risk list.
 - Risk: privacy leakage in reports. Mitigation: redact logs and avoid sensitive payload capture.
 
 # Metadata
-* Group: [Frontend, UX & Product Surfaces](/groups/frontend-ux-product/index.md)
+* Group: [Frontend, UX & Product Surfaces](../groups/frontend-ux-product/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.2.0`

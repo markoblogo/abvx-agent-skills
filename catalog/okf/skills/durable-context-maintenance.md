@@ -37,7 +37,7 @@ Outputs: refreshed durable docs, corrected routing entrypoints, and a cleaner re
 - Risk: permanent docs become session logs. Mitigation: keep history out and preserve only durable operational knowledge.
 
 # Metadata
-* Group: [Project Context & Onboarding](/groups/project-context-onboarding/index.md)
+* Group: [Project Context & Onboarding](../groups/project-context-onboarding/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.6.0`

@@ -37,7 +37,7 @@ Outputs: a ranked waste diagnosis, corrective skills or config changes, and expe
 - Risk: audit churn. Mitigation: record only the highest-value findings and interventions.
 
 # Metadata
-* Group: [Token Economy & Context Control](/groups/token-economy-context-control/index.md)
+* Group: [Token Economy & Context Control](../groups/token-economy-context-control/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.5.0`

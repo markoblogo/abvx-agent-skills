@@ -37,7 +37,7 @@ Outputs: extraction report, `SKILL.md`, optional references, skill card, validat
 - Risk: publishing private context. Mitigation: require public/private intent check.
 
 # Metadata
-* Group: [Research, Knowledge & Reusable Methods](/groups/research-knowledge-methods/index.md)
+* Group: [Research, Knowledge & Reusable Methods](../groups/research-knowledge-methods/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.2.0`

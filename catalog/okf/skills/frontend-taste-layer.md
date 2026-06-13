@@ -37,7 +37,7 @@ Outputs: design read, revised frontend direction, anti-slop visual constraints, 
 - Risk: repeated aesthetic clichés. Mitigation: explicitly avoid default gradients, card grids, and reflex font choices.
 
 # Metadata
-* Group: [Frontend, UX & Product Surfaces](/groups/frontend-ux-product/index.md)
+* Group: [Frontend, UX & Product Surfaces](../groups/frontend-ux-product/index.md)
 * Status: `experimental`
 * Origin: `adapted`
 * Version: `0.1.0`

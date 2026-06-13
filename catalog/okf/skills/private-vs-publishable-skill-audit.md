@@ -37,7 +37,7 @@ Outputs: classified inventory, rewritten mixed layer, and a release-safe artifac
 - Risk: publishing too much at once. Mitigation: publish only the release-safe subset.
 
 # Metadata
-* Group: [Research, Knowledge & Reusable Methods](/groups/research-knowledge-methods/index.md)
+* Group: [Research, Knowledge & Reusable Methods](../groups/research-knowledge-methods/index.md)
 * Status: `experimental`
 * Origin: `original`
 * Version: `0.1.0`
