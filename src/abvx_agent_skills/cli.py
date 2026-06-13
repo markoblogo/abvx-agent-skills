@@ -7,6 +7,7 @@ import subprocess
 import sys
 from pathlib import Path
 
+from .catalog_okf import export_okf_catalog
 from .packaged import packaged_skills_root
 from .validator import validate_skills_root
 
@@ -149,6 +150,54 @@ def cmd_audit_security(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_export_okf(args: argparse.Namespace) -> int:
+    skills_root = (
+        args.skills_dir.expanduser().resolve()
+        if args.skills_dir
+        else packaged_skills_root()
+    )
+    output_dir = args.output_dir.expanduser().resolve()
+    dry_run = bool(args.dry_run or args.check)
+    results = export_okf_catalog(
+        skills_root,
+        output_dir,
+        dry_run=dry_run,
+        print_diff=args.print_diff,
+    )
+    drift = any(row.action in {"created", "updated"} and row.changed for row in results)
+    status = "drift" if args.check and drift else "ok"
+    if args.format == "json":
+        payload = {
+            "status": status,
+            "check": bool(args.check),
+            "dry_run": dry_run,
+            "results": [
+                {
+                    "path": str(row.path),
+                    "action": row.action,
+                    "message": row.message,
+                    "changed": bool(row.changed),
+                    "diff": row.diff or "",
+                }
+                for row in results
+            ],
+        }
+        print(json.dumps(payload, indent=2))
+        return 1 if args.check and drift else 0
+
+    for row in results:
+        print(f"{row.action}: {row.path} - {row.message}")
+        if args.print_diff and row.diff:
+            print(row.diff)
+    if args.check and drift:
+        print(
+            "OKF catalog drift detected. Run `abvx-skills export-okf` to update generated files.",
+            file=sys.stderr,
+        )
+        return 1
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="abvx-skills")
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -206,6 +255,44 @@ def build_parser() -> argparse.ArgumentParser:
         help="Run static analysis only",
     )
     audit_parser.set_defaults(func=cmd_audit_security)
+
+    export_okf_parser = subparsers.add_parser(
+        "export-okf", help="Export an OKF-style skill catalog"
+    )
+    export_okf_parser.add_argument(
+        "skills_dir",
+        nargs="?",
+        type=Path,
+        help="Directory containing skills; defaults to packaged skills",
+    )
+    export_okf_parser.add_argument(
+        "--output-dir",
+        type=Path,
+        default=Path("catalog/okf"),
+        help="Output directory for the generated OKF catalog",
+    )
+    export_okf_parser.add_argument(
+        "--check",
+        action="store_true",
+        help="Validate that generated OKF files are up to date",
+    )
+    export_okf_parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Plan the export without writing files",
+    )
+    export_okf_parser.add_argument(
+        "--print-diff",
+        action="store_true",
+        help="Print unified diffs for changed files",
+    )
+    export_okf_parser.add_argument(
+        "--format",
+        choices=("text", "json"),
+        default="text",
+        help="Output format",
+    )
+    export_okf_parser.set_defaults(func=cmd_export_okf)
 
     return parser
 
