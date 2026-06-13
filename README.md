@@ -165,6 +165,14 @@ Published package pages:
 - PyPI: <https://pypi.org/project/abvx-agent-skills/>
 - TestPyPI: <https://test.pypi.org/project/abvx-agent-skills/>
 
+Distribution status:
+
+- PyPI: published
+- TestPyPI: published
+- Homebrew tap: published at <https://github.com/markoblogo/homebrew-tap>
+- conda-forge: recipe PR open at <https://github.com/conda-forge/staged-recipes/pull/33719>
+- homebrew-core: submission attempted; install via the tap for now
+
 Install one packaged skill into Codex:
 
 ```bash
@@ -175,6 +183,13 @@ Install to a custom destination:
 
 ```bash
 abvx-skills install --destination ./tmp-skills
+```
+
+Install via Homebrew tap:
+
+```bash
+brew tap markoblogo/tap
+brew install abvx-agent-skills
 ```
 
 Smoke-test the published package from PyPI:
