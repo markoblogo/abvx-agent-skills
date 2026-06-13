@@ -10,6 +10,12 @@ This repository publishes opinionated ABVX skillpacks: compact `SKILL.md` workfl
 
 The newer bet in this pack is **LoopOps**: useful skills should not compete with stronger base models by restating generic advice. They should capture repo-specific context, tool adapters, verification gates, and supervisor contracts that can promote repeated work into scripts, workflows, and cost-bounded agent loops.
 
+## Context
+
+This repository assumes that many public AI skills are net-negative. The bar here is not novelty or stars. The bar is whether a skill adds usable structure without degrading behavior.
+
+Video context: [I scraped AI skills from GitHub and tested whether they actually help models](https://youtu.be/F73_ofen8rI)
+
 ## Start Here
 
 - **Need to save tokens?** Start with `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution`, and `lean-context-layout`. Add `compaction-survival` if your sessions run long enough to forget their own state.
@@ -159,6 +165,14 @@ Published package pages:
 - PyPI: <https://pypi.org/project/abvx-agent-skills/>
 - TestPyPI: <https://test.pypi.org/project/abvx-agent-skills/>
 
+Distribution status:
+
+- PyPI: published
+- TestPyPI: published
+- Homebrew tap: published at <https://github.com/markoblogo/homebrew-tap>
+- conda-forge: recipe PR open at <https://github.com/conda-forge/staged-recipes/pull/33719>
+- homebrew-core: not accepted for now under the Homebrew core notability policy; use the tap instead
+
 Install one packaged skill into Codex:
 
 ```bash
@@ -170,6 +184,15 @@ Install to a custom destination:
 ```bash
 abvx-skills install --destination ./tmp-skills
 ```
+
+Install via Homebrew tap:
+
+```bash
+brew tap markoblogo/tap
+brew install abvx-agent-skills
+```
+
+`homebrew-core` is not the current install path for this project. The upstream submission was closed under the repository's notability policy, so the maintained Homebrew channel is the ABVX tap.
 
 Smoke-test the published package from PyPI:
 
