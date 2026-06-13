@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Effectiveness Audit"
+  short_description: "Audit which skills appear helpful, noisy, or under-positioned from reflection artifacts."
+  default_prompt: "Use the available skill reflection artifacts to audit which skills to keep, tighten, split, or de-emphasize."

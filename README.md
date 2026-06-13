@@ -14,7 +14,24 @@ The newer bet in this pack is **LoopOps**: useful skills should not compete with
 
 This repository assumes that many public AI skills are net-negative. The bar here is not novelty or stars. The bar is whether a skill adds usable structure without degrading behavior.
 
-Video context: [I scraped AI skills from GitHub and tested whether they actually help models](https://youtu.be/F73_ofen8rI)
+The short version behind this repo:
+
+- good skills can add missing operational structure;
+- bad skills can quietly make the model worse;
+- stars are a weak quality signal;
+- smaller and weaker models benefit more from genuinely good skills.
+
+[![Watch: I scraped AI skills from GitHub and tested whether they actually help models](https://img.youtube.com/vi/F73_ofen8rI/maxresdefault.jpg)](https://youtu.be/F73_ofen8rI)
+
+Video context: [I scraped AI skills from GitHub, clustered them, and tested whether they actually help models](https://youtu.be/F73_ofen8rI)
+
+## Related projects
+
+- `lab.abvx` is the public hub for the stack: https://github.com/markoblogo/lab.abvx
+- `AGENTS.md_generator` is the repo-doc and pack layer: https://github.com/markoblogo/AGENTS.md_generator
+- `SET` is the orchestration layer: https://github.com/markoblogo/SET
+- `ID` is the portable human-context layer: https://github.com/markoblogo/ID
+- `decision-map` is a related protocol repo, not part of the core runtime: https://github.com/markoblogo/decision-map
 
 ## Start Here
 
@@ -24,6 +41,7 @@ Video context: [I scraped AI skills from GitHub and tested whether they actually
 - **Need a standalone HTML artifact?** Start with `html-diagram-artifact` for SVG-first architecture explainers, or `html-brief-artifact` for plans, summaries, reports, and research notes.
 - **Need stronger UI taste or design setup?** Start with `design-register-bootstrap`, `frontend-taste-layer`, and `design-critique-polish`.
 - **Need long-session continuity?** Start with `handoff`, `compaction-survival`, and `token-usage-audit`.
+- **Need to learn from recent sessions?** Start with `session-retrospective`, then use `skill-effectiveness-audit` when you already have skill reflection artifacts.
 - **Need to onboard a new repo?** Start with `project-context-bootstrap` and follow with `durable-context-maintenance`.
 - **Need discovery or product shaping?** Start with `rapid-grilling`, `doc-grounded-grilling`, and `spec-to-prd`.
 - **Need to turn plans into execution?** Start with `plan-to-issues`, `repo-issue-triage`, and `test-driven-execution`.
@@ -31,6 +49,8 @@ Video context: [I scraped AI skills from GitHub and tested whether they actually
 - **Need a full multi-track workflow?** Start with `dynamic-workflow-packets`.
 - **Need to turn repeated prompts into loops?** Start with `loopops-protocol`, then use `skillopt-evolve-skills` to capture durable lessons.
 - **Need to build reusable assistant packs?** Start with `role-skill-pack-design`, `workflow-policy-layering`, `brief-first-execution`, and `private-vs-publishable-skill-audit`.
+
+For the reflection pair, the current upstream producer is `AGENTS.md_generator`: run `agentsgen reflect sessions .` before `session-retrospective`, and `agentsgen reflect skills .` before `skill-effectiveness-audit`.
 
 ## Skills
 
@@ -111,6 +131,7 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 | `workflow-policy-layering` | Separates workflow from authority, escalation, forbidden actions, and validation so assistant specs stop contradicting themselves. | experimental | ABVX original |
 | `brief-first-execution` | Starts non-trivial work with one live brief for scope, non-goals, risks, verification, and done criteria. | experimental | ABVX original |
 | `private-vs-publishable-skill-audit` | Audits private skill packs before publication and extracts only the reusable layer. | experimental | ABVX original |
+| `skill-effectiveness-audit` | Reads reflection artifacts to decide which skills to keep, tighten, split, or de-emphasize before adding more instruction surface. Current upstream producer: `agentsgen reflect skills .` from `AGENTS.md_generator`. | experimental | ABVX original |
 
 ### Workflow, Handoffs & Multi-Track Work
 
@@ -118,6 +139,7 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 |---|---|---|---|
 | `dynamic-workflow-packets` | Orchestrates large coding, research, audit, or client-search tracks without losing verification and risk gates. | experimental | ABVX adapted |
 | `handoff` | Produces compact continuation briefs for long-running work, agent resumes, and human handoffs. | experimental | ABVX adapted |
+| `session-retrospective` | Reads session reflection artifacts and extracts the few patterns and workflow changes worth carrying into the next run. Current upstream producer: `agentsgen reflect sessions .` from `AGENTS.md_generator`. | experimental | ABVX original |
 
 ### Long-Run Delivery Control
 
@@ -194,6 +216,15 @@ brew install abvx-agent-skills
 
 `homebrew-core` is not the current install path for this project. The upstream submission was closed under the repository's notability policy, so the maintained Homebrew channel is the ABVX tap.
 
+Export the skill catalog as an experimental OKF bundle:
+
+```bash
+abvx-skills export-okf .
+abvx-skills export-okf . --check --format json
+```
+
+This writes a derived `catalog/okf/` bundle with grouped skill indexes and one concept document per skill. `SKILL.md` and `SKILL_CARD.md` remain the source of truth.
+
 Smoke-test the published package from PyPI:
 
 ```bash
@@ -227,6 +258,12 @@ Or validate the packaged skills through the CLI:
 
 ```bash
 abvx-skills validate
+```
+
+Run the OKF export smoke test:
+
+```bash
+PYTHONPATH=src .venv/bin/python -m unittest tests/test_export_okf.py
 ```
 
 Run a static security audit with SkillSpector:
