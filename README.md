@@ -50,6 +50,8 @@ Video context: [I scraped AI skills from GitHub, clustered them, and tested whet
 - **Need to turn repeated prompts into loops?** Start with `loopops-protocol`, then use `skillopt-evolve-skills` to capture durable lessons.
 - **Need to build reusable assistant packs?** Start with `role-skill-pack-design`, `workflow-policy-layering`, `brief-first-execution`, and `private-vs-publishable-skill-audit`.
 
+For the reflection pair, the current upstream producer is `AGENTS.md_generator`: run `agentsgen reflect sessions .` before `session-retrospective`, and `agentsgen reflect skills .` before `skill-effectiveness-audit`.
+
 ## Skills
 
 These skills are grouped by the job they do. The token-economy layer is intentionally visible first: for many teams, the easiest win is not “a smarter prompt”, but less wasted context.
@@ -129,7 +131,7 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 | `workflow-policy-layering` | Separates workflow from authority, escalation, forbidden actions, and validation so assistant specs stop contradicting themselves. | experimental | ABVX original |
 | `brief-first-execution` | Starts non-trivial work with one live brief for scope, non-goals, risks, verification, and done criteria. | experimental | ABVX original |
 | `private-vs-publishable-skill-audit` | Audits private skill packs before publication and extracts only the reusable layer. | experimental | ABVX original |
-| `skill-effectiveness-audit` | Reads reflection artifacts to decide which skills to keep, tighten, split, or de-emphasize before adding more instruction surface. | experimental | ABVX original |
+| `skill-effectiveness-audit` | Reads reflection artifacts to decide which skills to keep, tighten, split, or de-emphasize before adding more instruction surface. Current upstream producer: `agentsgen reflect skills .` from `AGENTS.md_generator`. | experimental | ABVX original |
 
 ### Workflow, Handoffs & Multi-Track Work
 
@@ -137,7 +139,7 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 |---|---|---|---|
 | `dynamic-workflow-packets` | Orchestrates large coding, research, audit, or client-search tracks without losing verification and risk gates. | experimental | ABVX adapted |
 | `handoff` | Produces compact continuation briefs for long-running work, agent resumes, and human handoffs. | experimental | ABVX adapted |
-| `session-retrospective` | Reads session reflection artifacts and extracts the few patterns and workflow changes worth carrying into the next run. | experimental | ABVX original |
+| `session-retrospective` | Reads session reflection artifacts and extracts the few patterns and workflow changes worth carrying into the next run. Current upstream producer: `agentsgen reflect sessions .` from `AGENTS.md_generator`. | experimental | ABVX original |
 
 ### Long-Run Delivery Control
 
