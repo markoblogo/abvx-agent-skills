@@ -1,0 +1,4 @@
+interface:
+  display_name: "HTML Brief Artifact"
+  short_description: "Create a standalone HTML brief for plans, summaries, and reports."
+  default_prompt: "Create a self-contained HTML brief from this plan, report, or summary."
