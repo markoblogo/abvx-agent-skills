@@ -14,7 +14,16 @@ The newer bet in this pack is **LoopOps**: useful skills should not compete with
 
 This repository assumes that many public AI skills are net-negative. The bar here is not novelty or stars. The bar is whether a skill adds usable structure without degrading behavior.
 
-Video context: [I scraped AI skills from GitHub and tested whether they actually help models](https://youtu.be/F73_ofen8rI)
+The short version behind this repo:
+
+- good skills can add missing operational structure;
+- bad skills can quietly make the model worse;
+- stars are a weak quality signal;
+- smaller and weaker models benefit more from genuinely good skills.
+
+[![Watch: I scraped AI skills from GitHub and tested whether they actually help models](https://img.youtube.com/vi/F73_ofen8rI/maxresdefault.jpg)](https://youtu.be/F73_ofen8rI)
+
+Video context: [I scraped AI skills from GitHub, clustered them, and tested whether they actually help models](https://youtu.be/F73_ofen8rI)
 
 ## Related projects
 
