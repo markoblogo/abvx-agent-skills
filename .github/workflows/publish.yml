@@ -11,8 +11,6 @@ on:
         options:
           - testpypi
           - pypi
-  release:
-    types: [published]
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -107,7 +105,7 @@ jobs:
           repository-url: https://test.pypi.org/legacy/
 
   publish-pypi:
-    if: github.event_name == 'release' || (github.event_name == 'workflow_dispatch' && inputs.repository == 'pypi')
+    if: github.event_name == 'workflow_dispatch' && inputs.repository == 'pypi'
     needs: build
     runs-on: ubuntu-latest
     environment:
