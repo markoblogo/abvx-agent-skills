@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import difflib
+import json
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -148,6 +149,9 @@ class FileResult:
     message: str
     changed: bool = False
     diff: str = ""
+
+
+MANIFEST_NAME = ".abvx-okf-manifest.json"
 
 
 def _read_text(path: Path) -> str:
@@ -443,6 +447,42 @@ def _delete_or_report(path: Path, dry_run: bool) -> tuple[str, bool, str]:
     return "deleted", True, ""
 
 
+def _manifest_path(output_dir: Path) -> Path:
+    return output_dir / MANIFEST_NAME
+
+
+def _render_manifest(output_dir: Path, generated_paths: set[Path]) -> str:
+    payload = {
+        "format": "abvx-okf-manifest-v1",
+        "generated_files": sorted(
+            str(path.relative_to(output_dir)).replace("\\", "/")
+            for path in generated_paths
+        ),
+    }
+    return json.dumps(payload, indent=2, sort_keys=True) + "\n"
+
+
+def _load_manifest_generated_paths(output_dir: Path) -> set[Path]:
+    manifest_path = _manifest_path(output_dir)
+    if not manifest_path.is_file():
+        return set()
+    data = json.loads(_read_text(manifest_path))
+    raw_paths = data.get("generated_files", [])
+    if not isinstance(raw_paths, list):
+        return set()
+    paths: set[Path] = set()
+    for raw_path in raw_paths:
+        if not isinstance(raw_path, str):
+            continue
+        path = (output_dir / raw_path).resolve()
+        try:
+            path.relative_to(output_dir.resolve())
+        except ValueError:
+            continue
+        paths.add(path)
+    return paths
+
+
 def export_okf_catalog(
     skills_root: Path,
     output_dir: Path,
@@ -450,6 +490,7 @@ def export_okf_catalog(
     dry_run: bool,
     print_diff: bool,
 ) -> list[FileResult]:
+    output_dir = output_dir.resolve()
     records = load_skill_records(skills_root)
     grouped: dict[str, list[SkillRecord]] = {}
     titles: dict[str, str] = {}
@@ -468,6 +509,10 @@ def export_okf_catalog(
         files.append((output_dir / "groups" / slug / "group.md", _render_group_concept(slug, title, group_records)))
 
     expected_paths = {path.resolve() for path, _content in files}
+    previous_generated_paths = _load_manifest_generated_paths(output_dir)
+    manifest_path = _manifest_path(output_dir)
+    files.append((manifest_path, _render_manifest(output_dir, expected_paths)))
+    expected_paths.add(manifest_path.resolve())
     results: list[FileResult] = []
     for path, content in files:
         action, changed, diff = _write_or_diff(path, content, dry_run, print_diff)
@@ -477,19 +522,18 @@ def export_okf_catalog(
             "skipped": "already up to date",
         }[action]
         results.append(FileResult(path=path, action=action, message=message, changed=changed, diff=diff))
-    if output_dir.exists():
-        stale_paths = sorted(
-            path for path in output_dir.rglob("*.md") if path.resolve() not in expected_paths
-        )
-        for stale_path in stale_paths:
-            action, changed, diff = _delete_or_report(stale_path, dry_run)
-            results.append(
-                FileResult(
-                    path=stale_path,
-                    action=action,
-                    message="stale generated OKF file should be removed" if dry_run else "removed stale generated OKF file",
-                    changed=changed,
-                    diff=diff,
-                )
+    stale_paths = sorted(path for path in previous_generated_paths if path not in expected_paths and path.exists())
+    for stale_path in stale_paths:
+        if stale_path.suffix != ".md":
+            continue
+        action, changed, diff = _delete_or_report(stale_path, dry_run)
+        results.append(
+            FileResult(
+                path=stale_path,
+                action=action,
+                message="stale generated OKF file should be removed" if dry_run else "removed stale generated OKF file",
+                changed=changed,
+                diff=diff,
             )
+        )
     return results

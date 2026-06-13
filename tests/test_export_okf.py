@@ -30,6 +30,7 @@ class ExportOkfTests(unittest.TestCase):
         )
         self.assertTrue(any(row.changed for row in results))
         self.assertTrue((self.output_dir / "index.md").is_file())
+        self.assertTrue((self.output_dir / ".abvx-okf-manifest.json").is_file())
         self.assertTrue((self.output_dir / "skills" / "rtk-assisted-shell.md").is_file())
         self.assertTrue(
             (
@@ -129,8 +130,8 @@ class ExportOkfTests(unittest.TestCase):
             dry_run=False,
             print_diff=False,
         )
-        stale_file = self.output_dir / "skills" / "obsolete.md"
-        stale_file.write_text("# obsolete\n", encoding="utf-8")
+        shutil.rmtree(self.repo / "skills" / "rtk-assisted-shell")
+        stale_file = self.output_dir / "skills" / "rtk-assisted-shell.md"
 
         results = export_okf_catalog(
             self.repo,
@@ -139,11 +140,32 @@ class ExportOkfTests(unittest.TestCase):
             print_diff=False,
         )
 
-        stale_results = [row for row in results if row.path == stale_file]
+        stale_results = [row for row in results if row.path.resolve() == stale_file.resolve()]
         self.assertEqual(1, len(stale_results))
         self.assertEqual("deleted", stale_results[0].action)
         self.assertTrue(stale_results[0].changed)
         self.assertTrue(stale_file.exists())
+
+    def test_manual_markdown_inside_output_dir_is_not_treated_as_stale(self) -> None:
+        export_okf_catalog(
+            self.repo,
+            self.output_dir,
+            dry_run=False,
+            print_diff=False,
+        )
+        manual_file = self.output_dir / "notes" / "README.md"
+        manual_file.parent.mkdir(parents=True, exist_ok=True)
+        manual_file.write_text("# manual notes\n", encoding="utf-8")
+
+        results = export_okf_catalog(
+            self.repo,
+            self.output_dir,
+            dry_run=True,
+            print_diff=False,
+        )
+
+        self.assertFalse(any(row.path == manual_file for row in results))
+        self.assertTrue(manual_file.exists())
 
 
 if __name__ == "__main__":
