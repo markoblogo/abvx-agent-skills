@@ -351,7 +351,9 @@ def _render_root_index(records: list[SkillRecord]) -> str:
     for record in records:
         counts[record.group_slug] = counts.get(record.group_slug, 0) + 1
     for slug, title, _names in GROUP_SPECS:
-        lines.append(f"* [{title}](groups/{slug}/index.md) - {counts.get(slug, 0)} skills")
+        count = counts.get(slug, 0)
+        if count:
+            lines.append(f"* [{title}](groups/{slug}/index.md) - {count} skills")
     if counts["uncategorized"]:
         lines.append(f"* [Uncategorized](groups/uncategorized/index.md) - {counts['uncategorized']} skills")
     lines.extend(["", "## Skills", ""])
