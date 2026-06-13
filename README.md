@@ -243,7 +243,8 @@ python -m twine check dist/*
 Publish flow:
 
 - Run the `publish` GitHub Actions workflow with `repository=testpypi` for a dry run against TestPyPI.
-- Create a GitHub release, or run the same workflow with `repository=pypi`, to publish to PyPI.
+- Run the same workflow with `repository=pypi` to publish to PyPI.
+- Create a GitHub release only after the package is already published, or as a separate metadata step. GitHub releases do not trigger package publication.
 - Configure trusted publishing for both `pypi` and `testpypi` environments in the package index before the first release.
 - Version `0.10.0` is published on PyPI and TestPyPI, adding `html-diagram-artifact` and `html-brief-artifact`.
 
