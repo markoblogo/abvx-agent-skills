@@ -1,0 +1,4 @@
+interface:
+  display_name: "HTML Diagram Artifact"
+  short_description: "Create a standalone HTML/SVG architecture or flow explainer."
+  default_prompt: "Create a self-contained HTML diagram artifact for this architecture or flow."

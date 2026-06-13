@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Implementation Plan Example</title>
+<script>
+  (function () {
+    const saved = localStorage.getItem('theme');
+    const dark = saved ? saved === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.classList.toggle('dark', dark);
+  })();
+</script>
+<style>
+  :root {
+    --bg: #faf9f5;
+    --surface: #ffffff;
+    --surface-2: #f0eee6;
+    --ink: #141413;
+    --body: #3d3d3a;
+    --muted: #87867f;
+    --line: #d1cfc5;
+    --accent: #d97757;
+    --sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+    --serif: Georgia, "Times New Roman", serif;
+    --mono: ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  html.dark {
+    --bg: #141413;
+    --surface: #1f1f1d;
+    --surface-2: #2a2a28;
+    --ink: #faf9f5;
+    --body: #d1cfc5;
+    --muted: #9a988f;
+    --line: #3d3d3a;
+    --accent: #e48a6e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--body);
+    font: 15px/1.6 var(--sans);
+    padding: 40px 20px 80px;
+  }
+  .page { max-width: 980px; margin: 0 auto; }
+  .top {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: start;
+    margin-bottom: 36px;
+  }
+  .eyebrow, .meta-label, .phase-label {
+    color: var(--muted);
+    font: 11px var(--mono);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  h1, h2 {
+    color: var(--ink);
+    font-family: var(--serif);
+    font-weight: 500;
+  }
+  h1 { font-size: 40px; line-height: 1.1; margin: 8px 0 12px; }
+  h2 { font-size: 26px; margin: 0 0 8px; }
+  h3 { margin: 8px 0 0; color: var(--ink); }
+  button {
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--muted);
+    border-radius: 8px;
+    padding: 8px 10px;
+    font: 11px var(--mono);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .lede { max-width: 720px; margin: 0; }
+  .summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin: 0 0 40px;
+  }
+  .cell, .phase {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--surface);
+  }
+  .cell { padding: 16px; }
+  .meta-value {
+    color: var(--ink);
+    font-weight: 600;
+    margin-top: 6px;
+  }
+  .phases {
+    display: grid;
+    gap: 14px;
+  }
+  .phase {
+    padding: 18px;
+    background: linear-gradient(180deg, var(--surface), var(--surface-2));
+  }
+  .phase p, .phase ul { margin: 0; }
+  .phase ul { padding-left: 18px; margin-top: 10px; }
+  @media (max-width: 860px) {
+    .summary { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 640px) {
+    .top { flex-direction: column; }
+    .summary { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="top">
+      <div>
+        <div class="eyebrow">Implementation plan</div>
+        <h1>Introduce structured HTML artifact delivery</h1>
+        <p class="lede">This format keeps the plan shareable, reviewable, and easier to scan than plain markdown while staying single-file and dependency-light.</p>
+      </div>
+      <button id="themeToggle" type="button">Theme</button>
+    </div>
+    <section class="summary" aria-label="Summary metrics">
+      <div class="cell"><div class="meta-label">Scope</div><div class="meta-value">2 skills</div></div>
+      <div class="cell"><div class="meta-label">Deliverables</div><div class="meta-value">Skill + card + refs</div></div>
+      <div class="cell"><div class="meta-label">Risk</div><div class="meta-value">Low</div></div>
+      <div class="cell"><div class="meta-label">Verification</div><div class="meta-value">Validation + browser spot check</div></div>
+    </section>
+    <section>
+      <h2>Execution phases</h2>
+      <div class="phases">
+        <article class="phase">
+          <div class="phase-label">Phase 1</div>
+          <h3>Define output contracts</h3>
+          <ul>
+            <li>Separate diagram artifacts from narrative briefs.</li>
+            <li>Keep both single-file and no-build by default.</li>
+          </ul>
+        </article>
+        <article class="phase">
+          <div class="phase-label">Phase 2</div>
+          <h3>Add curated references</h3>
+          <ul>
+            <li>Include one style note and one small exemplar per skill.</li>
+            <li>Keep references compact enough for review.</li>
+          </ul>
+        </article>
+        <article class="phase">
+          <div class="phase-label">Phase 3</div>
+          <h3>Verify and document</h3>
+          <ul>
+            <li>Run structural validation.</li>
+            <li>Update README, attribution, and public catalog copy.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </div>
+<script>
+  const root = document.documentElement;
+  const toggle = document.getElementById('themeToggle');
+  toggle.addEventListener('click', function () {
+    root.classList.toggle('dark');
+    localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
+  });
+</script>
+</body>
+</html>

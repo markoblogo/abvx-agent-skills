@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PR Review Brief Example</title>
+<script>
+  (function () {
+    const saved = localStorage.getItem('theme');
+    const dark = saved ? saved === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.classList.toggle('dark', dark);
+  })();
+</script>
+<style>
+  :root {
+    --bg: #faf9f5;
+    --surface: #ffffff;
+    --ink: #141413;
+    --body: #3d3d3a;
+    --muted: #87867f;
+    --line: #d1cfc5;
+    --accent: #d97757;
+    --ok: #788c5d;
+    --warn: #b04a3f;
+    --sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+    --serif: Georgia, "Times New Roman", serif;
+    --mono: ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  html.dark {
+    --bg: #141413;
+    --surface: #1f1f1d;
+    --ink: #faf9f5;
+    --body: #d1cfc5;
+    --muted: #9a988f;
+    --line: #3d3d3a;
+    --accent: #e48a6e;
+    --ok: #9db07c;
+    --warn: #d67a6c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--body);
+    font: 15px/1.6 var(--sans);
+    padding: 40px 20px 80px;
+  }
+  .page { max-width: 900px; margin: 0 auto; }
+  .head, .section {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--surface);
+  }
+  .head {
+    padding: 24px;
+    margin-bottom: 18px;
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+  }
+  .eyebrow, .chip {
+    font: 11px var(--mono);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .eyebrow { color: var(--muted); }
+  .chip {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    color: var(--muted);
+  }
+  h1, h2 {
+    color: var(--ink);
+    font-family: var(--serif);
+    font-weight: 500;
+  }
+  h1 { margin: 10px 0 14px; font-size: 34px; }
+  h2 { margin: 0 0 10px; font-size: 24px; }
+  button {
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--muted);
+    border-radius: 8px;
+    padding: 8px 10px;
+    font: 11px var(--mono);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .section { padding: 20px; }
+  ul { margin: 0; padding-left: 18px; }
+  li::marker { color: var(--accent); }
+  .risk-high { color: var(--warn); font-weight: 600; }
+  .risk-low { color: var(--ok); font-weight: 600; }
+  @media (max-width: 760px) {
+    .row { flex-direction: column; align-items: start; }
+    .grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <section class="head">
+      <div class="row">
+        <div>
+          <div class="eyebrow">PR summary</div>
+          <h1>Review output as a standalone brief</h1>
+          <div class="chip">4 files changed</div>
+        </div>
+        <button id="themeToggle" type="button">Theme</button>
+      </div>
+    </section>
+    <div class="grid">
+      <section class="section">
+        <h2>What changed</h2>
+        <ul>
+          <li>Added two HTML artifact skills.</li>
+          <li>Updated README and attribution.</li>
+          <li>Added concise local references for each skill.</li>
+        </ul>
+      </section>
+      <section class="section">
+        <h2>Risk scan</h2>
+        <ul>
+          <li><span class="risk-low">Low:</span> no runtime dependency added.</li>
+          <li><span class="risk-low">Low:</span> validator surface unchanged.</li>
+          <li><span class="risk-high">Watch:</span> public docs must not imply a publish already happened.</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+<script>
+  const root = document.documentElement;
+  const toggle = document.getElementById('themeToggle');
+  toggle.addEventListener('click', function () {
+    root.classList.toggle('dark');
+    localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
+  });
+</script>
+</body>
+</html>

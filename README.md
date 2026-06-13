@@ -15,6 +15,7 @@ The newer bet in this pack is **LoopOps**: useful skills should not compete with
 - **Need to save tokens?** Start with `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution`, and `lean-context-layout`. Add `compaction-survival` if your sessions run long enough to forget their own state.
 - **Need to debug a repo?** Start with `diagnose`, `repo-debugging-ledger`, and `graph-guided-code-reading`.
 - **Need to build frontend?** Start with `frontend-product-builder`, `designmd-brand-kit`, and `browser-verification`.
+- **Need a standalone HTML artifact?** Start with `html-diagram-artifact` for SVG-first architecture explainers, or `html-brief-artifact` for plans, summaries, reports, and research notes.
 - **Need stronger UI taste or design setup?** Start with `design-register-bootstrap`, `frontend-taste-layer`, and `design-critique-polish`.
 - **Need long-session continuity?** Start with `handoff`, `compaction-survival`, and `token-usage-audit`.
 - **Need to onboard a new repo?** Start with `project-context-bootstrap` and follow with `durable-context-maintenance`.
@@ -67,6 +68,13 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 | `browser-verification` | Verifies real browser rendering, responsive layout, and interaction behavior instead of trusting static code inspection. | experimental | ABVX adapted |
 | `web-quality-audit` | Audits accessibility, performance, UX, privacy, and browser security as one practical web quality pass. | experimental | ABVX adapted |
 | `prototype-lab` | Rapid throwaway builds for testing interaction, logic, and product direction before committing to heavier implementation. | experimental | ABVX adapted |
+
+### HTML Artifacts & Visual Deliverables
+
+| Skill | What It Does | Status | Origin |
+|---|---|---|---|
+| `html-diagram-artifact` | Creates standalone HTML/SVG diagrams for architecture, request paths, component relationships, and system explainers with minimal prose and browser-verifiable dark mode. | experimental | ABVX adapted |
+| `html-brief-artifact` | Creates standalone HTML briefs for plans, status updates, PR summaries, incident notes, and research explainers without drifting into a full frontend build. | experimental | ABVX adapted |
 
 ### Project Context & Onboarding
 
@@ -184,6 +192,8 @@ Each public skill includes:
 
 The project follows the open Agent Skills shape: `SKILL.md` plus optional `scripts/`, `references/`, and `assets/`. For Codex compatibility, top-level frontmatter is kept conservative: `name`, `description`, `license`, `metadata`, and supported fields only.
 
+The HTML artifact skills intentionally keep their deliverables single-file and dependency-light. Use them for explainers and briefs, not as substitutes for production frontend implementation.
+
 ## Validate
 
 ```bash
@@ -235,7 +245,8 @@ Publish flow:
 - Run the `publish` GitHub Actions workflow with `repository=testpypi` for a dry run against TestPyPI.
 - Create a GitHub release, or run the same workflow with `repository=pypi`, to publish to PyPI.
 - Configure trusted publishing for both `pypi` and `testpypi` environments in the package index before the first release.
-- The next release after this update is version `0.9.0`, covering SkillSpector-backed security audit flows and the new frontend design skills.
+- Repository head is version `0.10.0`, adding `html-diagram-artifact` and `html-brief-artifact`.
+- The latest published package may lag behind repository head until the next PyPI/TestPyPI publish.
 
 ## Philosophy
 
