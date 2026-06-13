@@ -245,8 +245,7 @@ Publish flow:
 - Run the `publish` GitHub Actions workflow with `repository=testpypi` for a dry run against TestPyPI.
 - Create a GitHub release, or run the same workflow with `repository=pypi`, to publish to PyPI.
 - Configure trusted publishing for both `pypi` and `testpypi` environments in the package index before the first release.
-- Repository head is version `0.10.0`, adding `html-diagram-artifact` and `html-brief-artifact`.
-- The latest published package may lag behind repository head until the next PyPI/TestPyPI publish.
+- Version `0.10.0` is published on PyPI and TestPyPI, adding `html-diagram-artifact` and `html-brief-artifact`.
 
 ## Philosophy
 
