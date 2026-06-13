@@ -215,12 +215,14 @@ def _group_lookup() -> tuple[dict[str, tuple[str, str]], tuple[str, str]]:
 
 
 def iter_skill_dirs(root: Path) -> list[Path]:
+    if (root / "SKILL.md").is_file():
+        return [root]
     return sorted(path for path in root.iterdir() if path.is_dir() and (path / "SKILL.md").is_file())
 
 
 def resolve_skills_root(path: Path) -> Path:
     if (path / "SKILL.md").is_file():
-        return path.parent
+        return path
     if (path / "skills").is_dir():
         return path / "skills"
     return path
@@ -429,6 +431,18 @@ def _write_or_diff(path: Path, content: str, dry_run: bool, print_diff: bool) ->
     return "created", True, diff
 
 
+def _delete_or_report(path: Path, dry_run: bool) -> tuple[str, bool, str]:
+    if not dry_run:
+        path.unlink()
+        parent = path.parent
+        while parent.exists() and parent != parent.parent:
+            if any(parent.iterdir()):
+                break
+            parent.rmdir()
+            parent = parent.parent
+    return "deleted", True, ""
+
+
 def export_okf_catalog(
     skills_root: Path,
     output_dir: Path,
@@ -453,6 +467,7 @@ def export_okf_catalog(
         files.append((output_dir / "groups" / slug / "index.md", _render_group_index(slug, title, group_records)))
         files.append((output_dir / "groups" / slug / "group.md", _render_group_concept(slug, title, group_records)))
 
+    expected_paths = {path.resolve() for path, _content in files}
     results: list[FileResult] = []
     for path, content in files:
         action, changed, diff = _write_or_diff(path, content, dry_run, print_diff)
@@ -462,4 +477,19 @@ def export_okf_catalog(
             "skipped": "already up to date",
         }[action]
         results.append(FileResult(path=path, action=action, message=message, changed=changed, diff=diff))
+    if output_dir.exists():
+        stale_paths = sorted(
+            path for path in output_dir.rglob("*.md") if path.resolve() not in expected_paths
+        )
+        for stale_path in stale_paths:
+            action, changed, diff = _delete_or_report(stale_path, dry_run)
+            results.append(
+                FileResult(
+                    path=stale_path,
+                    action=action,
+                    message="stale generated OKF file should be removed" if dry_run else "removed stale generated OKF file",
+                    changed=changed,
+                    diff=diff,
+                )
+            )
     return results

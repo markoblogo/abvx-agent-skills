@@ -104,6 +104,47 @@ class ExportOkfTests(unittest.TestCase):
             ).exists()
         )
 
+    def test_single_skill_path_exports_only_requested_skill(self) -> None:
+        single_skill = ROOT / "skills" / "rtk-assisted-shell"
+        output_dir = Path(self._tmpdir.name) / "single-skill-okf"
+
+        export_okf_catalog(
+            single_skill,
+            output_dir,
+            dry_run=False,
+            print_diff=False,
+        )
+
+        self.assertTrue((output_dir / "skills" / "rtk-assisted-shell.md").is_file())
+        self.assertFalse((output_dir / "skills" / "lean-context-layout.md").exists())
+
+        root_index = (output_dir / "index.md").read_text(encoding="utf-8")
+        self.assertIn("skills/rtk-assisted-shell.md", root_index)
+        self.assertNotIn("skills/lean-context-layout.md", root_index)
+
+    def test_check_mode_reports_stale_generated_files(self) -> None:
+        export_okf_catalog(
+            self.repo,
+            self.output_dir,
+            dry_run=False,
+            print_diff=False,
+        )
+        stale_file = self.output_dir / "skills" / "obsolete.md"
+        stale_file.write_text("# obsolete\n", encoding="utf-8")
+
+        results = export_okf_catalog(
+            self.repo,
+            self.output_dir,
+            dry_run=True,
+            print_diff=False,
+        )
+
+        stale_results = [row for row in results if row.path == stale_file]
+        self.assertEqual(1, len(stale_results))
+        self.assertEqual("deleted", stale_results[0].action)
+        self.assertTrue(stale_results[0].changed)
+        self.assertTrue(stale_file.exists())
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -164,7 +164,7 @@ def cmd_export_okf(args: argparse.Namespace) -> int:
         dry_run=dry_run,
         print_diff=args.print_diff,
     )
-    drift = any(row.action in {"created", "updated"} and row.changed for row in results)
+    drift = any(row.changed for row in results)
     status = "drift" if args.check and drift else "ok"
     if args.format == "json":
         payload = {
