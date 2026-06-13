@@ -16,6 +16,14 @@ This repository assumes that many public AI skills are net-negative. The bar her
 
 Video context: [I scraped AI skills from GitHub and tested whether they actually help models](https://youtu.be/F73_ofen8rI)
 
+## Related projects
+
+- `lab.abvx` is the public hub for the stack: https://github.com/markoblogo/lab.abvx
+- `AGENTS.md_generator` is the repo-doc and pack layer: https://github.com/markoblogo/AGENTS.md_generator
+- `SET` is the orchestration layer: https://github.com/markoblogo/SET
+- `ID` is the portable human-context layer: https://github.com/markoblogo/ID
+- `decision-map` is a related protocol repo, not part of the core runtime: https://github.com/markoblogo/decision-map
+
 ## Start Here
 
 - **Need to save tokens?** Start with `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution`, and `lean-context-layout`. Add `compaction-survival` if your sessions run long enough to forget their own state.
