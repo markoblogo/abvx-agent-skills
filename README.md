@@ -318,6 +318,10 @@ This repository is intentionally optimized for inspection before trust: compact 
 - [docs/demos/diagnose.md](docs/demos/diagnose.md)
 - [docs/demos/token-economy.md](docs/demos/token-economy.md)
 
+## Distribution
+
+If you are listing the repo in curated skill directories, agent catalogs, or install surfaces, use [docs/outreach/submission-kit.md](docs/outreach/submission-kit.md) for positioning and [docs/outreach/targets.md](docs/outreach/targets.md) for target tracking.
+
 ## Repository Profile
 
 Each public skill includes:
