@@ -1,6 +1,6 @@
 ---
 name: minimal-diff-builder
-description: Build the smallest correct implementation that solves the requested task without speculative abstractions or avoidable dependencies. Use when the user wants the simplest solution, minimal code, small reviewable diffs, stdlib-first implementation, or a shortest-path fix that still preserves security, accessibility, trust-boundary validation, and data-safety behavior.
+description: Build the smallest correct code diff without overengineering, broad refactors, unnecessary dependencies, or speculative abstractions. Use when the user wants a minimal patch, small reviewable diff, stdlib-first implementation, or shortest-path fix that still preserves security, accessibility, trust-boundary validation, and data safety.
 license: MIT
 metadata:
   abvx_status: experimental

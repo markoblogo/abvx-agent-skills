@@ -1,6 +1,6 @@
 ---
 name: token-efficient-execution
-description: Run coding and research tasks with lower token waste by reducing repeated reads, broad rewrites, unnecessary narration, and avoidable re-analysis. Use on long tasks, heavy repos, multi-file audits, repeated debugging loops, or whenever token budget is a practical constraint.
+description: Reduce token waste in long coding-agent sessions by avoiding repeated reads, noisy output, oversized context, broad rewrites, and unnecessary narration. Use on long tasks, heavy repos, multi-file audits, shell-heavy debugging loops, or whenever token budget is a practical delivery constraint.
 license: MIT
 metadata:
   abvx_status: experimental

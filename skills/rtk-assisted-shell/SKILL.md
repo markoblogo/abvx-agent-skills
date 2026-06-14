@@ -1,6 +1,6 @@
 ---
 name: rtk-assisted-shell
-description: Use RTK-style command filtering to reduce shell-output token waste on git, file reads, searches, test runs, linters, logs, and other noisy developer commands. Use when a task depends on shell commands that may emit large output and runtime output filtering can save context.
+description: Reduce shell output token waste on git, file reads, searches, test runs, linters, logs, and other noisy developer commands with RTK-style filtering. Use when shell-heavy work is flooding the session with logs, diffs, or command output that should be compacted before it reaches the model.
 license: MIT
 metadata:
   abvx_status: experimental
