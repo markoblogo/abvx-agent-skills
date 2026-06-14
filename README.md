@@ -322,6 +322,8 @@ This repository is intentionally optimized for inspection before trust: compact 
 
 If you are listing the repo in curated skill directories, agent catalogs, or install surfaces, use [docs/outreach/submission-kit.md](docs/outreach/submission-kit.md) for positioning and [docs/outreach/targets.md](docs/outreach/targets.md) for target tracking.
 
+For the current first-wave outreach set, use [docs/outreach/first-wave-submissions.md](docs/outreach/first-wave-submissions.md).
+
 ## Repository Profile
 
 Each public skill includes:
