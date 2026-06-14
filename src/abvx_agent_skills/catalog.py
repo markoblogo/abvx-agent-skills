@@ -120,3 +120,30 @@ def dump_catalog(skills_root: Path, readme_path: Path, output_path: Path) -> Non
     payload = build_catalog(skills_root, readme_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(json.dumps(payload, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
+
+
+def render_catalog_markdown(payload: dict[str, Any]) -> str:
+    lines = [
+        "# ABVX Agent Skills Catalog",
+        "",
+        "Generated from `docs/catalog.json`.",
+        "",
+        "| Skill | Category | Use case | Install |",
+        "|---|---|---|---|",
+    ]
+
+    for skill in sorted(payload.get("skills", []), key=lambda item: item["name"]):
+        use_case = skill.get("short_description") or skill.get("description") or skill.get("intended_use") or ""
+        use_case = " ".join(str(use_case).split())
+        install = f"`gh skill install markoblogo/abvx-agent-skills {skill['name']}`"
+        lines.append(
+            f"| `{skill['name']}` | {skill['category']} | {use_case} | {install} |"
+        )
+
+    lines.append("")
+    return "\n".join(lines)
+
+
+def dump_catalog_markdown(skills_root: Path, readme_path: Path, output_path: Path) -> None:
+    payload = build_catalog(skills_root, readme_path)
+    output_path.write_text(render_catalog_markdown(payload), encoding="utf-8")
