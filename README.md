@@ -12,7 +12,29 @@ Small, reviewable, validation-gated agent skills for Codex-style project work.
 ![Catalog live](https://img.shields.io/badge/catalog-live-3b82f6)
 ![gh skill ready](https://img.shields.io/badge/gh%20skill-ready-111827)
 
-This repository publishes opinionated ABVX skillpacks: compact `SKILL.md` workflows with clear triggers, attribution, risk notes, and validation. These are not prompt dumps. They are portable, versioned agent capabilities meant to be loaded on demand through the Agent Skills progressive-disclosure model.
+ABVX Agent Skills is a small, auditable skillpack for coding agents that helps them write smaller diffs, debug from evidence, compact noisy shell output, and verify work before saying done.
+
+These are not prompt dumps. They are compact `SKILL.md` workflows with clear triggers, attribution, risk notes, and validation. They are portable, versioned agent capabilities meant to be previewed, inspected, and loaded on demand through the Agent Skills progressive-disclosure model.
+
+## Try One Skill In 2 Minutes
+
+Preview before installing:
+
+```bash
+gh skill preview markoblogo/abvx-agent-skills minimal-diff-builder
+```
+
+Install one skill:
+
+```bash
+gh skill install markoblogo/abvx-agent-skills minimal-diff-builder --agent codex --scope user
+```
+
+Then ask your coding agent:
+
+```text
+Use minimal-diff-builder. Implement the smallest correct fix for this issue.
+```
 
 The newer bet in this pack is **LoopOps**: useful skills should not compete with stronger base models by restating generic advice. They should capture repo-specific context, tool adapters, verification gates, and supervisor contracts that can promote repeated work into scripts, workflows, and cost-bounded agent loops.
 
@@ -26,13 +48,14 @@ Video context: [I scraped AI skills from GitHub and tested whether they actually
 
 Browse the searchable catalog at [lab.abvx.xyz/tools/abvx-agent-skills/](https://lab.abvx.xyz/tools/abvx-agent-skills/). The page is powered by the generated catalog data in [docs/catalog.json](docs/catalog.json), so the repository remains the source of truth while the published catalog lives on ABVX Lab.
 
-## Top 5 Skills To Start With
+## Start With One Job
 
-- `minimal-diff-builder`: shortest correct implementation path for real coding work
-- `diagnose`: debugging discipline around one signal, one hypothesis ladder, and narrow verification
-- `rtk-assisted-shell`: quickest way to stop shell-heavy sessions from burning tokens
-- `frontend-product-builder`: product-aware frontend work instead of generic UI sludge
-- `handoff`: compact continuation briefs when work spans multiple sessions or operators
+| Job | Install | Use when |
+|---|---|---|
+| Write smaller patches | `minimal-diff-builder` | The agent keeps refactoring too much, widening blast radius, or adding abstractions you did not ask for. |
+| Debug from evidence | `diagnose` | The agent keeps guessing fixes without reproducing the failure and verifying the result. |
+| Save tokens in shell-heavy work | `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution` | Logs, diffs, tests, and command output are burning context and hiding the real signal. |
+| Verify frontend work | `browser-verification`, `design-critique-polish` | The agent says "done" without checking real browser behavior, layout, states, or console errors. |
 
 ## LoopOps
 
@@ -183,13 +206,6 @@ pip install abvx-agent-skills
 abvx-skills install
 ```
 
-Recommended starter packs:
-
-- **Solo dev baseline:** `minimal-diff-builder`, `diagnose`, `rtk-assisted-shell`, `token-efficient-execution`
-- **Frontend build stack:** `frontend-product-builder`, `design-critique-polish`, `browser-verification`, `designmd-brand-kit`
-- **Debugging stack:** `diagnose`, `repo-debugging-ledger`, `graph-guided-code-reading`
-- **Team standardization stack:** `project-context-bootstrap`, `durable-context-maintenance`, `brief-first-execution`, `handoff`
-
 Install with GitHub CLI agent-skills support:
 
 ```bash
@@ -265,6 +281,29 @@ python -m pip install abvx-agent-skills
 abvx-skills list
 abvx-skills validate
 ```
+
+## Safety And Auditability
+
+Before installing a skill, inspect it:
+
+```bash
+gh skill preview markoblogo/abvx-agent-skills minimal-diff-builder
+```
+
+Validate local or packaged skills:
+
+```bash
+abvx-skills validate
+gh skill publish --dry-run
+```
+
+Run the static security audit:
+
+```bash
+abvx-skills audit-security ./skills --no-llm
+```
+
+This repository is intentionally optimized for inspection before trust: compact skill files, reviewable metadata, structural validation, and a publish dry-run that catches naming and metadata drift before release.
 
 ## Onboarding Paths
 
