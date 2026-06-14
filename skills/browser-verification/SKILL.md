@@ -1,6 +1,6 @@
 ---
 name: browser-verification
-description: Verify local or deployed web pages with a real browser using Playwright or equivalent browser automation. Use after frontend changes, visual fixes, responsive work, asset updates, forms, navigation, canvas/3D, screenshots, or when checking console errors, network failures, layout overflow, rendered images, and interaction flows.
+description: Verify frontend changes in a real browser, including layout, console errors, responsive states, network failures, screenshots, and interactions. Use after local or deployed web UI changes, visual fixes, forms, navigation, asset updates, canvas or 3D work, or whenever browser verification should replace static guessing.
 license: MIT
 metadata:
   abvx_status: experimental

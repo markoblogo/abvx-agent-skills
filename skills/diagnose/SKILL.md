@@ -1,6 +1,6 @@
 ---
 name: diagnose
-description: Run a disciplined diagnosis loop for bugs, regressions, flaky behavior, or performance failures. Use when something is broken, failing, slow, throwing, inconsistent, or hard to reproduce and the task needs reproduce-minimize-hypothesize-instrument-fix-regression-test discipline.
+description: Debug coding failures through reproduction, ranked hypotheses, narrow fixes, and verification. Use when a bug, regression, flaky test, performance failure, or inconsistent behavior is broken, slow, throwing, or hard to reproduce and the task needs disciplined diagnosis instead of guessed fixes.
 license: MIT
 metadata:
   abvx_status: experimental
