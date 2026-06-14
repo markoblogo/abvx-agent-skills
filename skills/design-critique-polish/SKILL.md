@@ -1,6 +1,6 @@
 ---
 name: design-critique-polish
-description: Critique and polish frontend interfaces before shipping. Use when a page, component, or app surface feels unclear, inconsistent, flat, awkward, under-tested, or not yet production-grade, and when the next step should be a focused design/UX pass rather than a broad rewrite.
+description: Critique and polish frontend interfaces before shipping, with focused review of hierarchy, typography, spacing, states, color, and UX clarity. Use when a page, component, or app surface feels unclear, inconsistent, flat, awkward, under-tested, or not yet production-grade and needs design verification instead of a broad rewrite.
 license: MIT
 metadata:
   abvx_status: experimental

@@ -48,6 +48,8 @@ Video context: [I scraped AI skills from GitHub and tested whether they actually
 
 Browse the searchable catalog at [lab.abvx.xyz/tools/abvx-agent-skills/](https://lab.abvx.xyz/tools/abvx-agent-skills/). The page is powered by the generated catalog data in [docs/catalog.json](docs/catalog.json), so the repository remains the source of truth while the published catalog lives on ABVX Lab.
 
+If you want a scan-friendly text catalog for browsing or indexing, use [CATALOG.md](CATALOG.md).
+
 ## Start With One Job
 
 | Job | Install | Use when |
@@ -309,6 +311,12 @@ This repository is intentionally optimized for inspection before trust: compact 
 
 - **Solo dev in Codex / Cursor / Claude Code / Gemini CLI:** use [docs/solo-dev-quickstart.md](docs/solo-dev-quickstart.md) for a short install path plus a recommended starter stack.
 - **Team lead standardizing repo work:** use [docs/team-rollout-playbook.md](docs/team-rollout-playbook.md) for the minimum shared-skill rollout and repo hygiene path.
+
+## Demos
+
+- [docs/demos/minimal-diff-builder.md](docs/demos/minimal-diff-builder.md)
+- [docs/demos/diagnose.md](docs/demos/diagnose.md)
+- [docs/demos/token-economy.md](docs/demos/token-economy.md)
 
 ## Repository Profile
 
