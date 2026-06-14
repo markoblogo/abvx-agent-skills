@@ -1,87 +1,93 @@
-<svg width="1600" height="720" viewBox="0 0 1600 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">LoopOps promotion ladder</title>
-  <desc id="desc">A clean horizontal infographic showing how repeated work moves from prompt to checklist, skill, script, or bounded loop.</desc>
+  <desc id="desc">A redesigned LoopOps infographic showing how repeated work should stay a prompt unless there is clear value in promoting it to a checklist, skill, script, or bounded loop.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="720" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
       <stop stop-color="#F8F2FF"/>
-      <stop offset="0.5" stop-color="#F4F8FF"/>
-      <stop offset="1" stop-color="#FFF8ED"/>
+      <stop offset="0.52" stop-color="#F3F8FF"/>
+      <stop offset="1" stop-color="#FFF8EE"/>
     </linearGradient>
     <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
       <stop stop-color="#FFFFFF" stop-opacity="0.98"/>
-      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.86"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.9"/>
     </linearGradient>
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
-      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#8D74D9" flood-opacity="0.13"/>
+      <feDropShadow dx="0" dy="20" stdDeviation="26" flood-color="#8B74D7" flood-opacity="0.14"/>
     </filter>
     <style>
       .eyebrow { font: 700 20px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0.18em; text-transform: uppercase; fill: #7953D2; }
-      .title { font: 700 40px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: -0.04em; fill: #171923; }
-      .lede { font: 500 18px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #44506A; }
-      .tag { font: 700 15px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0.08em; text-transform: uppercase; }
-      .nodeTitle { font: 700 26px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: -0.03em; fill: #172033; }
-      .nodeBody { font: 500 17px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #49556F; }
-      .entryTitle { font: 700 24px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #151D2F; }
+      .title { font: 700 44px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: -0.04em; fill: #181B26; }
+      .lede { font: 500 19px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #44506A; }
+      .tag { font: 700 14px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0.1em; text-transform: uppercase; }
+      .cardTitle { font: 700 28px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: -0.03em; fill: #192132; }
+      .cardBody { font: 500 18px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #4C576F; }
+      .entryTitle { font: 700 30px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: -0.03em; fill: #151D2F; }
       .entryBody { font: 500 18px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #46526C; }
-      .rule { font: 600 16px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #A8550A; }
-      .prompt { font: 700 22px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #4C3B86; }
+      .promptTitle { font: 700 30px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: -0.03em; fill: #41347E; }
+      .promptBody { font: 600 18px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #5C4C99; }
+      .ruleTag { font: 700 14px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0.12em; text-transform: uppercase; fill: #B56409; }
+      .ruleText { font: 600 17px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #A6580A; }
+      .arrow { stroke: #C9B7F0; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; fill: none; }
     </style>
   </defs>
 
-  <rect width="1600" height="720" rx="36" fill="url(#bg)"/>
-  <rect x="28" y="28" width="1544" height="664" rx="30" fill="url(#panel)" stroke="#E7DCF8" filter="url(#shadow)"/>
+  <rect width="1600" height="900" rx="40" fill="url(#bg)"/>
+  <rect x="28" y="28" width="1544" height="844" rx="32" fill="url(#panel)" stroke="#E7DCF8" filter="url(#shadow)"/>
 
   <text x="76" y="98" class="eyebrow">LoopOps</text>
-  <text x="76" y="150" class="title">Promote repeated work only when the next layer adds real leverage.</text>
-  <text x="76" y="184" class="lede">Start with the cheapest useful form. Move right only when sequence, reuse, determinism, or bounded automation actually earns the extra structure.</text>
+  <text x="76" y="152" class="title">Promote repeated work only when the next layer adds real leverage.</text>
+  <text x="76" y="188" class="lede">The ladder is intentionally short. Prompt is the default. Promote only when the next form buys clarity, reuse, determinism, or bounded automation.</text>
 
-  <rect x="76" y="242" width="318" height="188" rx="28" fill="#FFFFFF" stroke="#DCCDF7"/>
-  <rect x="104" y="272" width="122" height="34" rx="17" fill="#F1E8FF"/>
-  <text x="130" y="294" class="tag" fill="#6747B2">Entry signal</text>
-  <text x="104" y="344" class="entryTitle">Repeated task appears</text>
-  <text x="104" y="378" class="entryBody">If it is still one-off and cheap, keep it a prompt and stop there.</text>
-  <text x="104" y="404" class="prompt">Prompt is the default, not the failure state.</text>
+  <rect x="76" y="244" width="376" height="208" rx="30" fill="#FFFFFF" stroke="#DDCEF8"/>
+  <rect x="106" y="276" width="126" height="34" rx="17" fill="#F2E9FF"/>
+  <text x="129" y="298" class="tag" fill="#6848B3">Entry signal</text>
+  <text x="106" y="348" class="entryTitle">Repeated task appears</text>
+  <text x="106" y="384" class="entryBody">Start by asking whether the work is still cheap enough to stay an ordinary prompt.</text>
 
-  <path d="M430 336H1420" stroke="#CDB8F1" stroke-width="8" stroke-linecap="round"/>
+  <rect x="76" y="480" width="376" height="152" rx="30" fill="#F6F0FF" stroke="#D6C5FB"/>
+  <text x="106" y="536" class="promptTitle">Keep it a prompt</text>
+  <text x="106" y="572" class="promptBody">If it is one-off, cheap, and not worth extra structure, stop here.</text>
 
-  <g transform="translate(450 254)">
-    <circle cx="0" cy="82" r="20" fill="#7E57C2"/>
-    <circle cx="0" cy="82" r="9" fill="#FAF7FF"/>
-    <rect x="32" y="0" width="236" height="164" rx="28" fill="#FFFFFF" stroke="#DDCEF8"/>
-    <text x="58" y="38" class="tag" fill="#7652C8">When sequence is the value</text>
-    <text x="58" y="82" class="nodeTitle">Checklist</text>
-    <text x="58" y="116" class="nodeBody">Ordered human steps for repeated work where choreography matters more than abstraction.</text>
+  <path d="M476 348H530" class="arrow"/>
+  <path d="M264 452V480" class="arrow"/>
+  <path d="M530 348H586" class="arrow"/>
+  <path d="M982 348H1038" class="arrow"/>
+  <path d="M530 348C530 454 606 560 724 560H760" class="arrow"/>
+  <path d="M982 348C982 454 1060 560 1176 560H1214" class="arrow"/>
+
+  <g transform="translate(586 238)">
+    <rect width="396" height="220" rx="30" fill="#FFFFFF" stroke="#CCDAFB"/>
+    <rect x="28" y="32" width="212" height="34" rx="17" fill="#EEF4FF"/>
+    <text x="52" y="54" class="tag" fill="#5478CA">When sequence is the value</text>
+    <text x="28" y="114" class="cardTitle">Checklist</text>
+    <text x="28" y="150" class="cardBody">Ordered human steps for repeated work where choreography matters more than abstraction.</text>
   </g>
 
-  <g transform="translate(744 254)">
-    <circle cx="0" cy="82" r="20" fill="#4F7DE6"/>
-    <circle cx="0" cy="82" r="9" fill="#F5F9FF"/>
-    <rect x="32" y="0" width="236" height="164" rx="28" fill="#FFFFFF" stroke="#C9D8FB"/>
-    <text x="58" y="38" class="tag" fill="#5377C9">When guidance is reusable</text>
-    <text x="58" y="82" class="nodeTitle">Skill</text>
-    <text x="58" y="116" class="nodeBody">Portable behavior for cases where a durable instruction layer beats rewriting the same operating model.</text>
+  <g transform="translate(1038 238)">
+    <rect width="396" height="220" rx="30" fill="#FFFFFF" stroke="#BFE8E5"/>
+    <rect x="28" y="32" width="248" height="34" rx="17" fill="#ECFFFD"/>
+    <text x="52" y="54" class="tag" fill="#0F8F89">When guidance is reusable</text>
+    <text x="28" y="114" class="cardTitle">Skill</text>
+    <text x="28" y="150" class="cardBody">Portable behavior for work that keeps reusing the same operating model, boundaries, and quality gates.</text>
   </g>
 
-  <g transform="translate(1038 254)">
-    <circle cx="0" cy="82" r="20" fill="#12A39C"/>
-    <circle cx="0" cy="82" r="9" fill="#F0FFFD"/>
-    <rect x="32" y="0" width="236" height="164" rx="28" fill="#FFFFFF" stroke="#BDEBE8"/>
-    <text x="58" y="38" class="tag" fill="#0F8F89">When a step is deterministic</text>
-    <text x="58" y="82" class="nodeTitle">Script</text>
-    <text x="58" y="116" class="nodeBody">Automate the repeatable part once human judgment is no longer doing meaningful work inside the step.</text>
+  <g transform="translate(760 516)">
+    <rect width="396" height="220" rx="30" fill="#FFFFFF" stroke="#F7D38B"/>
+    <rect x="28" y="32" width="260" height="34" rx="17" fill="#FFF6E8"/>
+    <text x="52" y="54" class="tag" fill="#D78304">When a step is deterministic</text>
+    <text x="28" y="114" class="cardTitle">Script</text>
+    <text x="28" y="150" class="cardBody">Automate the repeatable part once human judgment is no longer doing meaningful work inside the step.</text>
   </g>
 
-  <g transform="translate(1332 254)">
-    <circle cx="0" cy="82" r="20" fill="#F59E0B"/>
-    <circle cx="0" cy="82" r="9" fill="#FFF8EA"/>
-    <rect x="32" y="0" width="212" height="164" rx="28" fill="#FFFFFF" stroke="#F5D48E"/>
-    <text x="58" y="38" class="tag" fill="#D78304">When memory, eval, budget, stop rules matter</text>
-    <text x="58" y="82" class="nodeTitle">Bounded loop</text>
-    <text x="58" y="116" class="nodeBody">Supervisor-controlled automation with explicit constraints, memory shape, and exit conditions.</text>
+  <g transform="translate(1214 516)">
+    <rect width="320" height="220" rx="30" fill="#FFFFFF" stroke="#E1CFF9"/>
+    <rect x="28" y="32" width="232" height="34" rx="17" fill="#F4ECFF"/>
+    <text x="52" y="54" class="tag" fill="#855DD9">When memory, eval, budget, stop rules matter</text>
+    <text x="28" y="114" class="cardTitle">Bounded loop</text>
+    <text x="28" y="150" class="cardBody">Supervisor-controlled automation with explicit limits, feedback, and exit conditions.</text>
   </g>
 
-  <rect x="76" y="494" width="1448" height="126" rx="28" fill="#FFF6E7" stroke="#F1D29A"/>
-  <text x="108" y="546" class="tag" fill="#C16A00">Hard exceptions</text>
-  <text x="108" y="584" class="rule">Security, data loss, accessibility, and trust boundaries can justify skipping the cheapest layer.</text>
-  <text x="108" y="610" class="rule">Non-trivial logic still needs a small verification step, even when the implementation path stays intentionally minimal.</text>
+  <rect x="76" y="764" width="1458" height="76" rx="24" fill="#FFF6E8" stroke="#F0D19A"/>
+  <text x="108" y="806" class="ruleTag">Hard exceptions</text>
+  <text x="286" y="806" class="ruleText">Security, data loss, accessibility, and trust boundaries can justify skipping the cheapest layer. Non-trivial logic still needs a small verification step.</text>
 </svg>
