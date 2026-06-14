@@ -1,0 +1,41 @@
+name: Skill Request
+description: Propose a new skill that should exist in the ABVX pack.
+title: "skill request: "
+labels:
+  - skill-request
+body:
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Repeated workflow
+      description: What repeated task or failure mode should this skill address?
+      placeholder: We keep redoing the same repo onboarding / migration / audit / handoff pattern.
+    validations:
+      required: true
+  - type: textarea
+    id: trigger
+    attributes:
+      label: Trigger and boundary
+      description: When should the skill trigger, and when should it not?
+      placeholder: Trigger when... Do not use when...
+    validations:
+      required: true
+  - type: textarea
+    id: desired_behavior
+    attributes:
+      label: Desired behavior
+      description: What should the skill make the agent do differently?
+      placeholder: Add one live brief, preserve a ledger, verify before completion, etc.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence or examples
+      description: Link issues, PRs, transcripts, or examples that show the pattern is real.
+  - type: textarea
+    id: neighboring
+    attributes:
+      label: Nearby skills
+      description: Which existing skills are adjacent, insufficient, or should compose with this one?
+      placeholder: minimal-diff-builder, handoff, delivery-preflight-gate

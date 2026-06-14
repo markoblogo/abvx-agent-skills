@@ -1,0 +1,41 @@
+name: Skill Autopsy
+description: Dissect a weak, broken, or net-negative skill and turn it into a concrete improvement path.
+title: "skill autopsy: "
+labels:
+  - skill-autopsy
+body:
+  - type: input
+    id: skill_name
+    attributes:
+      label: Skill or source
+      description: Name the skill, repo, gist, or prompt pack being autopsied.
+      placeholder: owner/repo or skill-name
+    validations:
+      required: true
+  - type: textarea
+    id: failure
+    attributes:
+      label: Failure mode
+      description: What went wrong in practice?
+      placeholder: Added abstractions, restated generic advice, hid risk, broke verification, wasted tokens...
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Include outputs, screenshots, diffs, or concrete examples.
+    validations:
+      required: true
+  - type: textarea
+    id: salvageable
+    attributes:
+      label: Salvageable parts
+      description: What, if anything, is still worth keeping?
+      placeholder: Trigger idea, checklist fragment, verification gate, domain language
+  - type: textarea
+    id: rewrite
+    attributes:
+      label: Rewrite direction
+      description: How should this be reduced, split, or redesigned?
+      placeholder: Should become a smaller skill, a checklist, a script, or be dropped entirely

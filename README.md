@@ -169,6 +169,21 @@ pip install abvx-agent-skills
 abvx-skills install
 ```
 
+Install with GitHub CLI agent-skills support:
+
+```bash
+gh skill install markoblogo/abvx-agent-skills minimal-diff-builder
+```
+
+Target a specific host or scope when needed:
+
+```bash
+gh skill install markoblogo/abvx-agent-skills minimal-diff-builder --agent codex --scope user
+gh skill install markoblogo/abvx-agent-skills diagnose --agent cursor --scope project
+```
+
+`gh skill` is currently a GitHub CLI preview feature. Use GitHub CLI `v2.90.0+`. The command set and flags are documented in the official [`gh skill`](https://cli.github.com/manual/gh_skill) manual and the GitHub changelog announcement for [GitHub CLI agent skills](https://github.blog/changelog/2026-04-16-manage-agent-skills-with-github-cli/).
+
 Published package pages:
 
 - PyPI: <https://pypi.org/project/abvx-agent-skills/>
@@ -230,6 +245,11 @@ abvx-skills list
 abvx-skills validate
 ```
 
+## Onboarding Paths
+
+- **Solo dev in Codex / Cursor / Claude Code / Gemini CLI:** use [docs/solo-dev-quickstart.md](docs/solo-dev-quickstart.md) for a short install path plus a recommended starter stack.
+- **Team lead standardizing repo work:** use [docs/team-rollout-playbook.md](docs/team-rollout-playbook.md) for the minimum shared-skill rollout and repo hygiene path.
+
 ## Repository Profile
 
 Each public skill includes:
@@ -241,6 +261,15 @@ Each public skill includes:
 The project follows the open Agent Skills shape: `SKILL.md` plus optional `scripts/`, `references/`, and `assets/`. For Codex compatibility, top-level frontmatter is kept conservative: `name`, `description`, `license`, `metadata`, and supported fields only.
 
 The HTML artifact skills intentionally keep their deliverables single-file and dependency-light. Use them for explainers and briefs, not as substitutes for production frontend implementation.
+
+## Contribute
+
+If you want to add or improve skills:
+
+- Start with [docs/abvx-skillpack-profile.md](docs/abvx-skillpack-profile.md) for the repo format and quality bar.
+- Open a [Skill Request](https://github.com/markoblogo/abvx-agent-skills/issues/new?template=skill-request.yml) if a workflow is missing.
+- Open a [Skill Autopsy](https://github.com/markoblogo/abvx-agent-skills/issues/new?template=skill-autopsy.yml) if an existing or external skill degraded behavior and should be dissected into a better version.
+- Use [docs/solo-dev-quickstart.md](docs/solo-dev-quickstart.md) and [docs/team-rollout-playbook.md](docs/team-rollout-playbook.md) as examples of opinionated packaging for real adoption paths.
 
 ## Validate
 
