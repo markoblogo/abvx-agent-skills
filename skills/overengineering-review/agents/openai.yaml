@@ -1,0 +1,4 @@
+interface:
+  display_name: "Overengineering Review"
+  short_description: "Find what can be deleted, collapsed, or replaced."
+  default_prompt: "Review this diff for over-engineering and rank what should be deleted, simplified, or replaced with stdlib or native behavior."

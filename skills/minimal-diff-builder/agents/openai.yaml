@@ -1,0 +1,4 @@
+interface:
+  display_name: "Minimal Diff Builder"
+  short_description: "Choose the smallest correct implementation path."
+  default_prompt: "Implement this in the smallest correct way, favoring stdlib, native features, and a minimal reviewable diff."
