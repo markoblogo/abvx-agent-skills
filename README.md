@@ -21,6 +21,7 @@ Video context: [I scraped AI skills from GitHub and tested whether they actually
 - **Need to save tokens?** Start with `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution`, and `lean-context-layout`. Add `compaction-survival` if your sessions run long enough to forget their own state.
 - **Need to debug a repo?** Start with `diagnose`, `repo-debugging-ledger`, and `graph-guided-code-reading`.
 - **Need to build frontend?** Start with `frontend-product-builder`, `designmd-brand-kit`, and `browser-verification`.
+- **Need a small Lottie or SVG-driven motion asset?** Start with `lottie-motion-builder`, then pair with `frontend-product-builder` when the animation needs to land inside a real UI surface.
 - **Need a standalone HTML artifact?** Start with `html-diagram-artifact` for SVG-first architecture explainers, or `html-brief-artifact` for plans, summaries, reports, and research notes.
 - **Need stronger UI taste or design setup?** Start with `design-register-bootstrap`, `frontend-taste-layer`, and `design-critique-polish`.
 - **Need long-session continuity?** Start with `handoff`, `compaction-survival`, and `token-usage-audit`.
@@ -70,6 +71,7 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 | `frontend-taste-layer` | Adds a stronger anti-slop design layer to frontend work so outputs stop looking templated, generic, or visually under-committed. | experimental | ABVX adapted |
 | `design-critique-polish` | Runs a focused critique-and-polish pass to rank frontend issues, identify ship blockers, and tighten hierarchy, typography, color, and states. | experimental | ABVX adapted |
 | `frontend-product-builder` | Builds usable frontends, landing pages, pitch pages, dashboards, and prototypes with a product-first interaction model. | experimental | ABVX adapted |
+| `lottie-motion-builder` | Builds small production-ready Lottie assets from SVGs, logos, loaders, and UI states with a local preview harness and output verification. | experimental | ABVX adapted |
 | `designmd-brand-kit` | Turns a website or brand surface into an agent-usable design system: structure, identity, and reusable UI cues. | experimental | ABVX adapted |
 | `browser-verification` | Verifies real browser rendering, responsive layout, and interaction behavior instead of trusting static code inspection. | experimental | ABVX adapted |
 | `web-quality-audit` | Audits accessibility, performance, UX, privacy, and browser security as one practical web quality pass. | experimental | ABVX adapted |

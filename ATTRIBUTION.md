@@ -24,6 +24,7 @@ ABVX Agent Skills are original or adapted workflow artifacts informed by public 
 - withkynam `vibecode-pro-max-kit`: approval-gated project setup, context generation, and durable context-maintenance patterns for long-running agent work. https://github.com/withkynam/vibecode-pro-max-kit
 - robzilla1738 `supergoal`: preflight gating, phase-spec execution, baseline-vs-working-tree audit, and bounded three-strike recovery patterns for long autonomous delivery loops. https://github.com/robzilla1738/supergoal
 - Matt Pocock `skills`: small, composable engineering workflows for grilling, TDD, issue slicing, triage, and zoom-out reasoning. https://github.com/mattpocock/skills
+- diffusionstudio `lottie`: text-to-lottie harness, Skottie preview workflow, control-slot expectations, and Lottie authoring constraints. https://github.com/diffusionstudio/lottie
 - plannotator `effective-html`: standalone HTML artifact packaging for diagrams, plans, and visual explainers. https://github.com/plannotator/effective-html
 - Thariq Shihipar `html-effectiveness`: single-file HTML example corpus for reviews, plans, diagrams, reports, and explainers. https://thariqs.github.io/html-effectiveness
 - Local ABVX workflow skills: diagnosis, handoff, complexity optimization, frontend product building, architecture deepening review, browser verification, agent harness design, prototyping, and web quality audit patterns.

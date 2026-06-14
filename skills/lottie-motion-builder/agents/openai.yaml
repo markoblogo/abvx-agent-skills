@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lottie Motion Builder"
+  short_description: "Build small Lottie assets with preview gates."
+  default_prompt: "Use $lottie-motion-builder to turn this SVG or logo into a small verified Lottie animation."
