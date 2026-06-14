@@ -32,7 +32,7 @@ See:
 - `skillopt-evolve-skills`
 
 <p>
-  <img src="assets/loopops-landscape.svg" alt="LoopOps promotion ladder from prompt to checklist, skill, script, or bounded loop" width="1280">
+  <img src="assets/loopops-landscape.png" alt="LoopOps promotion ladder from prompt to checklist, skill, script, or bounded loop" width="1280">
 </p>
 
 ## Start Here
