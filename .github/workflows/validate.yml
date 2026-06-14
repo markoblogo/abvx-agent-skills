@@ -20,7 +20,7 @@ jobs:
       - run: python -m pip install .
       - run: python scripts/validate.py
       - run: python scripts/generate_catalog.py
-      - run: git diff --exit-code docs/catalog.json
+      - run: git diff --exit-code docs/catalog.json CATALOG.md
       - run: abvx-skills validate
       - run: python -m build
       - run: python -m twine check dist/*
