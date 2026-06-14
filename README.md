@@ -20,6 +20,7 @@ Video context: [I scraped AI skills from GitHub and tested whether they actually
 
 - **Need to save tokens?** Start with `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution`, and `lean-context-layout`. Add `compaction-survival` if your sessions run long enough to forget their own state.
 - **Need to debug a repo?** Start with `diagnose`, `repo-debugging-ledger`, and `graph-guided-code-reading`.
+- **Need the smallest correct implementation path?** Start with `minimal-diff-builder`, then add `delivery-preflight-gate` when the task is long or risky enough that baseline verification matters.
 - **Need to build frontend?** Start with `frontend-product-builder`, `designmd-brand-kit`, and `browser-verification`.
 - **Need a small Lottie or SVG-driven motion asset?** Start with `lottie-motion-builder`, then pair with `frontend-product-builder` when the animation needs to land inside a real UI surface.
 - **Need a standalone HTML artifact?** Start with `html-diagram-artifact` for SVG-first architecture explainers, or `html-brief-artifact` for plans, summaries, reports, and research notes.
@@ -57,6 +58,8 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 | `diagnose` | Runs a disciplined debugging loop around one reproducible signal, ranked hypotheses, and narrow verification. |
 | `repo-debugging-ledger` | Keeps a checked-location ledger so debugging does not keep reopening the same code and repeating the same dead ends. |
 | `complexity-optimizer` | Finds safe complexity and performance simplifications without turning the codebase into a refactor festival. |
+| `minimal-diff-builder` | Builds the smallest correct implementation path using a YAGNI, stdlib-first, native-first, minimal-diff ladder with explicit safety exceptions. |
+| `overengineering-review` | Reviews code specifically for needless abstractions, replaceable dependencies, dead flexibility, and wrappers over stdlib or platform behavior. |
 | `architecture-deepening-review` | Reviews deeper module seams, coupling, change surfaces, and testability, not just top-level architecture slogans. |
 | `test-driven-execution` | Builds features and fixes through one-behavior-at-a-time red-green-refactor loops instead of broad speculative implementation. |
 | `system-zoom-out` | Pulls a local code area back into its wider system map so you can reason about callers, modules, boundaries, and blast radius. |
