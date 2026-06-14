@@ -39,103 +39,103 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 
 ### Token Economy & Context Control
 
-| Skill | What It Does | Status | Origin |
-|---|---|---|---|
-| `rtk-assisted-shell` | Routes noisy shell workflows through RTK-style filtering. On shell-heavy tasks this can cut command-output tokens dramatically, often in the same range as RTK's reported 60-90% savings on common dev commands. | experimental | ABVX adapted |
-| `shell-output-compaction` | Shrinks logs, diffs, and repo search output into counts, slices, and error-first excerpts. Usually the fastest way to turn multi-screen stdout into a small, usable artifact. | experimental | ABVX adapted |
-| `graph-guided-code-reading` | Replaces broad repo reading with entrypoints, symbols, dependencies, and blast radius. On large codebases this can turn “read everything” into a much smaller focus set. | experimental | ABVX adapted |
-| `token-efficient-execution` | Cuts waste from repeated reads, broad rewrites, and low-value narration. Best for long coding sessions where the loop, not the final answer, is burning the budget. | experimental | ABVX adapted |
-| `token-frugal-mode` | Compresses final answers without dropping the decisive technical signal. Useful when the session is tight and you want shorter replies without caveman-style degradation. | experimental | ABVX adapted |
-| `lean-context-layout` | Shrinks always-loaded agent docs into a compact startup core and pushes the rest on demand. Best for bloated `AGENTS.md`, `CLAUDE.md`, and repo runbooks. | experimental | ABVX adapted |
-| `compaction-survival` | Preserves the high-value working state before long sessions collapse into compaction. Saves the turns you would otherwise spend reconstructing “what were we doing?”. | experimental | ABVX adapted |
-| `token-usage-audit` | Diagnoses where the budget is really going: startup bloat, shell noise, repeated reads, oversized summaries, or compaction loss. Use this before over-optimizing the wrong layer. | experimental | ABVX adapted |
+| Skill | What It Does |
+|---|---|
+| `rtk-assisted-shell` | Routes noisy shell workflows through RTK-style filtering. On shell-heavy tasks this can cut command-output tokens dramatically, often in the same range as RTK's reported 60-90% savings on common dev commands. |
+| `shell-output-compaction` | Shrinks logs, diffs, and repo search output into counts, slices, and error-first excerpts. Usually the fastest way to turn multi-screen stdout into a small, usable artifact. |
+| `graph-guided-code-reading` | Replaces broad repo reading with entrypoints, symbols, dependencies, and blast radius. On large codebases this can turn “read everything” into a much smaller focus set. |
+| `token-efficient-execution` | Cuts waste from repeated reads, broad rewrites, and low-value narration. Best for long coding sessions where the loop, not the final answer, is burning the budget. |
+| `token-frugal-mode` | Compresses final answers without dropping the decisive technical signal. Useful when the session is tight and you want shorter replies without caveman-style degradation. |
+| `lean-context-layout` | Shrinks always-loaded agent docs into a compact startup core and pushes the rest on demand. Best for bloated `AGENTS.md`, `CLAUDE.md`, and repo runbooks. |
+| `compaction-survival` | Preserves the high-value working state before long sessions collapse into compaction. Saves the turns you would otherwise spend reconstructing “what were we doing?”. |
+| `token-usage-audit` | Diagnoses where the budget is really going: startup bloat, shell noise, repeated reads, oversized summaries, or compaction loss. Use this before over-optimizing the wrong layer. |
 
 ### Coding, Debugging & Architecture
 
-| Skill | What It Does | Status | Origin |
-|---|---|---|---|
-| `diagnose` | Runs a disciplined debugging loop around one reproducible signal, ranked hypotheses, and narrow verification. | experimental | ABVX adapted |
-| `repo-debugging-ledger` | Keeps a checked-location ledger so debugging does not keep reopening the same code and repeating the same dead ends. | experimental | ABVX original |
-| `complexity-optimizer` | Finds safe complexity and performance simplifications without turning the codebase into a refactor festival. | experimental | ABVX adapted |
-| `architecture-deepening-review` | Reviews deeper module seams, coupling, change surfaces, and testability, not just top-level architecture slogans. | experimental | ABVX adapted |
-| `test-driven-execution` | Builds features and fixes through one-behavior-at-a-time red-green-refactor loops instead of broad speculative implementation. | experimental | ABVX adapted |
-| `system-zoom-out` | Pulls a local code area back into its wider system map so you can reason about callers, modules, boundaries, and blast radius. | experimental | ABVX adapted |
-| `agents-best-practices` | Hardens agent harnesses around permissions, context shape, safety, and evaluation discipline. | experimental | ABVX adapted |
-| `skillopt-evolve-skills` | Improves agent instructions and skills from real task evidence rather than from theory alone. | experimental | ABVX adapted |
+| Skill | What It Does |
+|---|---|
+| `diagnose` | Runs a disciplined debugging loop around one reproducible signal, ranked hypotheses, and narrow verification. |
+| `repo-debugging-ledger` | Keeps a checked-location ledger so debugging does not keep reopening the same code and repeating the same dead ends. |
+| `complexity-optimizer` | Finds safe complexity and performance simplifications without turning the codebase into a refactor festival. |
+| `architecture-deepening-review` | Reviews deeper module seams, coupling, change surfaces, and testability, not just top-level architecture slogans. |
+| `test-driven-execution` | Builds features and fixes through one-behavior-at-a-time red-green-refactor loops instead of broad speculative implementation. |
+| `system-zoom-out` | Pulls a local code area back into its wider system map so you can reason about callers, modules, boundaries, and blast radius. |
+| `agents-best-practices` | Hardens agent harnesses around permissions, context shape, safety, and evaluation discipline. |
+| `skillopt-evolve-skills` | Improves agent instructions and skills from real task evidence rather than from theory alone. |
 
 ### Frontend, UX & Product Surfaces
 
-| Skill | What It Does | Status | Origin |
-|---|---|---|---|
-| `design-register-bootstrap` | Establishes compact design context before implementation: `brand` vs `product` register, audience, anti-references, color strategy, and PRODUCT.md / DESIGN.md direction. | experimental | ABVX adapted |
-| `frontend-taste-layer` | Adds a stronger anti-slop design layer to frontend work so outputs stop looking templated, generic, or visually under-committed. | experimental | ABVX adapted |
-| `design-critique-polish` | Runs a focused critique-and-polish pass to rank frontend issues, identify ship blockers, and tighten hierarchy, typography, color, and states. | experimental | ABVX adapted |
-| `frontend-product-builder` | Builds usable frontends, landing pages, pitch pages, dashboards, and prototypes with a product-first interaction model. | experimental | ABVX adapted |
-| `lottie-motion-builder` | Builds small production-ready Lottie assets from SVGs, logos, loaders, and UI states with a local preview harness and output verification. | experimental | ABVX adapted |
-| `designmd-brand-kit` | Turns a website or brand surface into an agent-usable design system: structure, identity, and reusable UI cues. | experimental | ABVX adapted |
-| `browser-verification` | Verifies real browser rendering, responsive layout, and interaction behavior instead of trusting static code inspection. | experimental | ABVX adapted |
-| `web-quality-audit` | Audits accessibility, performance, UX, privacy, and browser security as one practical web quality pass. | experimental | ABVX adapted |
-| `prototype-lab` | Rapid throwaway builds for testing interaction, logic, and product direction before committing to heavier implementation. | experimental | ABVX adapted |
+| Skill | What It Does |
+|---|---|
+| `design-register-bootstrap` | Establishes compact design context before implementation: `brand` vs `product` register, audience, anti-references, color strategy, and PRODUCT.md / DESIGN.md direction. |
+| `frontend-taste-layer` | Adds a stronger anti-slop design layer to frontend work so outputs stop looking templated, generic, or visually under-committed. |
+| `design-critique-polish` | Runs a focused critique-and-polish pass to rank frontend issues, identify ship blockers, and tighten hierarchy, typography, color, and states. |
+| `frontend-product-builder` | Builds usable frontends, landing pages, pitch pages, dashboards, and prototypes with a product-first interaction model. |
+| `lottie-motion-builder` | Builds small production-ready Lottie assets from SVGs, logos, loaders, and UI states with a local preview harness and output verification. |
+| `designmd-brand-kit` | Turns a website or brand surface into an agent-usable design system: structure, identity, and reusable UI cues. |
+| `browser-verification` | Verifies real browser rendering, responsive layout, and interaction behavior instead of trusting static code inspection. |
+| `web-quality-audit` | Audits accessibility, performance, UX, privacy, and browser security as one practical web quality pass. |
+| `prototype-lab` | Rapid throwaway builds for testing interaction, logic, and product direction before committing to heavier implementation. |
 
 ### HTML Artifacts & Visual Deliverables
 
-| Skill | What It Does | Status | Origin |
-|---|---|---|---|
-| `html-diagram-artifact` | Creates standalone HTML/SVG diagrams for architecture, request paths, component relationships, and system explainers with minimal prose and browser-verifiable dark mode. | experimental | ABVX adapted |
-| `html-brief-artifact` | Creates standalone HTML briefs for plans, status updates, PR summaries, incident notes, and research explainers without drifting into a full frontend build. | experimental | ABVX adapted |
+| Skill | What It Does |
+|---|---|
+| `html-diagram-artifact` | Creates standalone HTML/SVG diagrams for architecture, request paths, component relationships, and system explainers with minimal prose and browser-verifiable dark mode. |
+| `html-brief-artifact` | Creates standalone HTML briefs for plans, status updates, PR summaries, incident notes, and research explainers without drifting into a full frontend build. |
 
 ### Project Context & Onboarding
 
 For design-heavy repos, pair this section with `design-register-bootstrap` from the frontend section.
 
-| Skill | What It Does | Status | Origin |
-|---|---|---|---|
-| `project-context-bootstrap` | Detects the stack, asks the right project questions, and turns a weakly documented repo into a compact, agent-usable context surface. | experimental | ABVX adapted |
-| `durable-context-maintenance` | Keeps repo-local context current after architecture, workflow, and test-flow changes so agents stop rediscovering the same facts. | experimental | ABVX adapted |
+| Skill | What It Does |
+|---|---|
+| `project-context-bootstrap` | Detects the stack, asks the right project questions, and turns a weakly documented repo into a compact, agent-usable context surface. |
+| `durable-context-maintenance` | Keeps repo-local context current after architecture, workflow, and test-flow changes so agents stop rediscovering the same facts. |
 
 ### Discovery, Planning & Delivery
 
-| Skill | What It Does | Status | Origin |
-|---|---|---|---|
-| `rapid-grilling` | Quickly sharpens vague ideas through one-question-at-a-time alignment before heavier planning starts. | experimental | ABVX adapted |
-| `doc-grounded-grilling` | Stress-tests a plan against repo docs, ADRs, design assets, and domain language so discovery stays grounded in reality. | experimental | ABVX adapted |
-| `spec-to-prd` | Turns clarified context into a durable PRD for product, client, and internal roadmap work. | experimental | ABVX adapted |
-| `plan-to-issues` | Breaks PRDs and plans into thin end-to-end slices that agents or humans can actually pick up. | experimental | ABVX adapted |
-| `repo-issue-triage` | Moves bugs and enhancements through a compact state machine so backlog items become actionable instead of vague. | experimental | ABVX adapted |
+| Skill | What It Does |
+|---|---|
+| `rapid-grilling` | Quickly sharpens vague ideas through one-question-at-a-time alignment before heavier planning starts. |
+| `doc-grounded-grilling` | Stress-tests a plan against repo docs, ADRs, design assets, and domain language so discovery stays grounded in reality. |
+| `spec-to-prd` | Turns clarified context into a durable PRD for product, client, and internal roadmap work. |
+| `plan-to-issues` | Breaks PRDs and plans into thin end-to-end slices that agents or humans can actually pick up. |
+| `repo-issue-triage` | Moves bugs and enhancements through a compact state machine so backlog items become actionable instead of vague. |
 
 ### Research, Knowledge & Reusable Methods
 
-| Skill | What It Does | Status | Origin |
-|---|---|---|---|
-| `evidence-ledger-research` | Keeps claims, sources, calculations, and open questions in a disciplined evidence ledger. | experimental | ABVX original |
-| `loopops-protocol` | Chooses when repeated agent work should stay a prompt or be promoted into a skill, checklist, script, workflow, or cost-bounded loop. | experimental | ABVX original |
-| `book-to-skill` | Converts books, papers, and long documents into reusable, progressive-disclosure agent skills. | experimental | ABVX adapted |
-| `role-skill-pack-design` | Designs compact role/workflow skill packs with base layers, difference layers, boundaries, and rollout order. | experimental | ABVX original |
-| `workflow-policy-layering` | Separates workflow from authority, escalation, forbidden actions, and validation so assistant specs stop contradicting themselves. | experimental | ABVX original |
-| `brief-first-execution` | Starts non-trivial work with one live brief for scope, non-goals, risks, verification, and done criteria. | experimental | ABVX original |
-| `private-vs-publishable-skill-audit` | Audits private skill packs before publication and extracts only the reusable layer. | experimental | ABVX original |
+| Skill | What It Does |
+|---|---|
+| `evidence-ledger-research` | Keeps claims, sources, calculations, and open questions in a disciplined evidence ledger. |
+| `loopops-protocol` | Chooses when repeated agent work should stay a prompt or be promoted into a skill, checklist, script, workflow, or cost-bounded loop. |
+| `book-to-skill` | Converts books, papers, and long documents into reusable, progressive-disclosure agent skills. |
+| `role-skill-pack-design` | Designs compact role/workflow skill packs with base layers, difference layers, boundaries, and rollout order. |
+| `workflow-policy-layering` | Separates workflow from authority, escalation, forbidden actions, and validation so assistant specs stop contradicting themselves. |
+| `brief-first-execution` | Starts non-trivial work with one live brief for scope, non-goals, risks, verification, and done criteria. |
+| `private-vs-publishable-skill-audit` | Audits private skill packs before publication and extracts only the reusable layer. |
 
 ### Workflow, Handoffs & Multi-Track Work
 
-| Skill | What It Does | Status | Origin |
-|---|---|---|---|
-| `dynamic-workflow-packets` | Orchestrates large coding, research, audit, or client-search tracks without losing verification and risk gates. | experimental | ABVX adapted |
-| `handoff` | Produces compact continuation briefs for long-running work, agent resumes, and human handoffs. | experimental | ABVX adapted |
+| Skill | What It Does |
+|---|---|
+| `dynamic-workflow-packets` | Orchestrates large coding, research, audit, or client-search tracks without losing verification and risk gates. |
+| `handoff` | Produces compact continuation briefs for long-running work, agent resumes, and human handoffs. |
 
 ### Long-Run Delivery Control
 
-| Skill | What It Does | Status | Origin |
-|---|---|---|---|
-| `delivery-preflight-gate` | Runs the minimum useful baseline checks before a long implementation loop starts, so pre-existing breakage does not poison later verification. | experimental | ABVX adapted |
-| `phase-spec-execution` | Breaks larger delivery into explicit phases with acceptance criteria, verification commands, and lightweight state updates. | experimental | ABVX adapted |
-| `recovery-loop-3strike` | Bounds execution failure handling to one evidence-bearing retry, one focused fix-spec, and then an honest blocker handoff. | experimental | ABVX adapted |
-| `delivery-baseline-audit` | Re-checks declared deliverables and final verification against the starting baseline and full working tree before calling the task complete. | experimental | ABVX adapted |
+| Skill | What It Does |
+|---|---|
+| `delivery-preflight-gate` | Runs the minimum useful baseline checks before a long implementation loop starts, so pre-existing breakage does not poison later verification. |
+| `phase-spec-execution` | Breaks larger delivery into explicit phases with acceptance criteria, verification commands, and lightweight state updates. |
+| `recovery-loop-3strike` | Bounds execution failure handling to one evidence-bearing retry, one focused fix-spec, and then an honest blocker handoff. |
+| `delivery-baseline-audit` | Re-checks declared deliverables and final verification against the starting baseline and full working tree before calling the task complete. |
 
 ### Structured Data & Spreadsheet Work
 
-| Skill | What It Does | Status | Origin |
-|---|---|---|---|
-| `spreadsheet-workbook-forensics` | Repairs and edits spreadsheets where workbook structure, formulas, and cell-level verification matter. | experimental | ABVX original |
+| Skill | What It Does |
+|---|---|
+| `spreadsheet-workbook-forensics` | Repairs and edits spreadsheets where workbook structure, formulas, and cell-level verification matter. |
 
 ## Install
 
