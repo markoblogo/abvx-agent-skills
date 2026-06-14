@@ -36,17 +36,26 @@
 
   <text x="76" y="98" class="eyebrow">LoopOps</text>
   <text x="76" y="152" class="title">Promote repeated work only when the next layer adds real leverage.</text>
-  <text x="76" y="188" class="lede">The ladder is intentionally short. Prompt is the default. Promote only when the next form buys clarity, reuse, determinism, or bounded automation.</text>
+  <text x="76" y="188" class="lede">
+    <tspan x="76" dy="0">The ladder is intentionally short. Prompt is the default.</tspan>
+    <tspan x="76" dy="24">Promote only when the next form buys clarity, reuse, determinism, or bounded automation.</tspan>
+  </text>
 
   <rect x="76" y="244" width="376" height="208" rx="30" fill="#FFFFFF" stroke="#DDCEF8"/>
   <rect x="106" y="276" width="126" height="34" rx="17" fill="#F2E9FF"/>
   <text x="129" y="298" class="tag" fill="#6848B3">Entry signal</text>
   <text x="106" y="348" class="entryTitle">Repeated task appears</text>
-  <text x="106" y="384" class="entryBody">Start by asking whether the work is still cheap enough to stay an ordinary prompt.</text>
+  <text x="106" y="384" class="entryBody">
+    <tspan x="106" dy="0">Start by asking whether the work is still</tspan>
+    <tspan x="106" dy="22">cheap enough to stay an ordinary prompt.</tspan>
+  </text>
 
   <rect x="76" y="480" width="376" height="152" rx="30" fill="#F6F0FF" stroke="#D6C5FB"/>
   <text x="106" y="536" class="promptTitle">Keep it a prompt</text>
-  <text x="106" y="572" class="promptBody">If it is one-off, cheap, and not worth extra structure, stop here.</text>
+  <text x="106" y="572" class="promptBody">
+    <tspan x="106" dy="0">If it is one-off, cheap, and not worth</tspan>
+    <tspan x="106" dy="22">extra structure, stop here.</tspan>
+  </text>
 
   <path d="M476 348H530" class="arrow"/>
   <path d="M264 452V480" class="arrow"/>
@@ -57,34 +66,46 @@
 
   <g transform="translate(586 238)">
     <rect width="396" height="220" rx="30" fill="#FFFFFF" stroke="#CCDAFB"/>
-    <rect x="28" y="32" width="212" height="34" rx="17" fill="#EEF4FF"/>
-    <text x="52" y="54" class="tag" fill="#5478CA">When sequence is the value</text>
+    <rect x="28" y="32" width="196" height="34" rx="17" fill="#EEF4FF"/>
+    <text x="52" y="54" class="tag" fill="#5478CA">Sequence drives value</text>
     <text x="28" y="114" class="cardTitle">Checklist</text>
-    <text x="28" y="150" class="cardBody">Ordered human steps for repeated work where choreography matters more than abstraction.</text>
+    <text x="28" y="150" class="cardBody">
+      <tspan x="28" dy="0">Ordered human steps for repeated work</tspan>
+      <tspan x="28" dy="22">where choreography beats abstraction.</tspan>
+    </text>
   </g>
 
   <g transform="translate(1038 238)">
     <rect width="396" height="220" rx="30" fill="#FFFFFF" stroke="#BFE8E5"/>
-    <rect x="28" y="32" width="248" height="34" rx="17" fill="#ECFFFD"/>
-    <text x="52" y="54" class="tag" fill="#0F8F89">When guidance is reusable</text>
+    <rect x="28" y="32" width="214" height="34" rx="17" fill="#ECFFFD"/>
+    <text x="52" y="54" class="tag" fill="#0F8F89">Guidance repeats cleanly</text>
     <text x="28" y="114" class="cardTitle">Skill</text>
-    <text x="28" y="150" class="cardBody">Portable behavior for work that keeps reusing the same operating model, boundaries, and quality gates.</text>
+    <text x="28" y="150" class="cardBody">
+      <tspan x="28" dy="0">Portable behavior for work that keeps</tspan>
+      <tspan x="28" dy="22">reusing the same model and guardrails.</tspan>
+    </text>
   </g>
 
   <g transform="translate(760 516)">
     <rect width="396" height="220" rx="30" fill="#FFFFFF" stroke="#F7D38B"/>
-    <rect x="28" y="32" width="260" height="34" rx="17" fill="#FFF6E8"/>
-    <text x="52" y="54" class="tag" fill="#D78304">When a step is deterministic</text>
+    <rect x="28" y="32" width="220" height="34" rx="17" fill="#FFF6E8"/>
+    <text x="52" y="54" class="tag" fill="#D78304">Step becomes deterministic</text>
     <text x="28" y="114" class="cardTitle">Script</text>
-    <text x="28" y="150" class="cardBody">Automate the repeatable part once human judgment is no longer doing meaningful work inside the step.</text>
+    <text x="28" y="150" class="cardBody">
+      <tspan x="28" dy="0">Automate the repeatable part once human</tspan>
+      <tspan x="28" dy="22">judgment no longer changes the step.</tspan>
+    </text>
   </g>
 
   <g transform="translate(1214 516)">
     <rect width="320" height="220" rx="30" fill="#FFFFFF" stroke="#E1CFF9"/>
-    <rect x="28" y="32" width="232" height="34" rx="17" fill="#F4ECFF"/>
-    <text x="52" y="54" class="tag" fill="#855DD9">When memory, eval, budget, stop rules matter</text>
+    <rect x="28" y="32" width="244" height="34" rx="17" fill="#F4ECFF"/>
+    <text x="52" y="54" class="tag" fill="#855DD9">Budget, memory, evals matter</text>
     <text x="28" y="114" class="cardTitle">Bounded loop</text>
-    <text x="28" y="150" class="cardBody">Supervisor-controlled automation with explicit limits, feedback, and exit conditions.</text>
+    <text x="28" y="150" class="cardBody">
+      <tspan x="28" dy="0">Supervisor-controlled automation with</tspan>
+      <tspan x="28" dy="22">explicit limits, feedback, and exits.</tspan>
+    </text>
   </g>
 
   <rect x="76" y="764" width="1458" height="76" rx="24" fill="#FFF6E8" stroke="#F0D19A"/>
