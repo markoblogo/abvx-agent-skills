@@ -7,6 +7,7 @@ import subprocess
 import sys
 from pathlib import Path
 
+from .catalog import dump_catalog
 from .packaged import packaged_skills_root
 from .validator import validate_skills_root
 
@@ -149,6 +150,15 @@ def cmd_audit_security(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_catalog(args: argparse.Namespace) -> int:
+    skills_root = args.skills_dir.expanduser().resolve() if args.skills_dir else packaged_skills_root()
+    readme_path = args.readme.expanduser().resolve()
+    output_path = args.output.expanduser().resolve()
+    dump_catalog(skills_root, readme_path, output_path)
+    print(f"Wrote catalog: {output_path}")
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="abvx-skills")
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -206,6 +216,25 @@ def build_parser() -> argparse.ArgumentParser:
         help="Run static analysis only",
     )
     audit_parser.set_defaults(func=cmd_audit_security)
+
+    catalog_parser = subparsers.add_parser("catalog", help="Generate machine-readable skill catalog")
+    catalog_parser.add_argument(
+        "output",
+        type=Path,
+        help="Output JSON path",
+    )
+    catalog_parser.add_argument(
+        "--skills-dir",
+        type=Path,
+        help="Directory containing skills; defaults to packaged skills",
+    )
+    catalog_parser.add_argument(
+        "--readme",
+        type=Path,
+        default=Path("README.md"),
+        help="README path used to infer skill categories",
+    )
+    catalog_parser.set_defaults(func=cmd_catalog)
 
     return parser
 

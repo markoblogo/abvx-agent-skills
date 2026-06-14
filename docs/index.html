@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ABVX Skill Catalog | ABVX Lab</title>
+    <meta
+      name="description"
+      content="Searchable catalog for ABVX Agent Skills: categories, composability, model sensitivity, and anti-patterns."
+    />
+    <link
+      rel="stylesheet"
+      href="https://lab.abvx.xyz/assets/lab-alt-b.css?v20260613a"
+    />
+    <style>
+      .catalog-toolbar {
+        display: grid;
+        gap: 12px;
+        grid-template-columns: 2fr 1fr;
+      }
+      .catalog-toolbar input,
+      .catalog-toolbar select {
+        width: 100%;
+        padding: 12px 14px;
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(14, 18, 28, 0.7);
+        color: #f4f7fb;
+        font: inherit;
+      }
+      .catalog-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 16px;
+      }
+      .catalog-chip {
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.04);
+        font-size: 13px;
+      }
+      .catalog-grid {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
+      .catalog-card {
+        display: grid;
+        gap: 10px;
+      }
+      .catalog-card h3 {
+        margin: 0;
+      }
+      .catalog-card .small {
+        color: var(--lab-b-muted, #aeb9cc);
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      .catalog-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .catalog-pills span {
+        padding: 5px 8px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        font-size: 12px;
+      }
+      .catalog-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .catalog-empty {
+        padding: 18px;
+        border-radius: 18px;
+        border: 1px dashed rgba(255, 255, 255, 0.18);
+        color: var(--lab-b-muted, #aeb9cc);
+      }
+      @media (max-width: 720px) {
+        .catalog-toolbar {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lab-b-shell">
+      <header class="lab-b-topbar">
+        <a class="lab-b-brand" href="https://lab.abvx.xyz/index.html">
+          <img
+            src="https://lab.abvx.xyz/assets/logo.png?v20260319d"
+            alt="ABVX Lab logo"
+            width="278"
+            height="390"
+            decoding="async"
+          />
+          <span>ABVX Lab</span>
+        </a>
+        <nav class="lab-b-nav" aria-label="Primary">
+          <a href="https://lab.abvx.xyz/index.html">Home</a>
+          <a href="https://lab.abvx.xyz/index.html#tools">Tools</a>
+          <a href="https://lab.abvx.xyz/about/">About</a>
+        </nav>
+        <div class="lab-b-mode">skill catalog</div>
+      </header>
+
+      <main class="lab-b-frame">
+        <section class="lab-b-product-hero">
+          <div class="lab-b-product-main">
+            <p class="lab-b-eyebrow">ABVX Lab companion</p>
+            <h1>ABVX Skill Catalog</h1>
+            <p class="lab-b-product-lede">
+              Search the ABVX skillpack by task language, category, composability,
+              model sensitivity, and anti-patterns without scanning the full README.
+            </p>
+            <div class="lab-b-product-cta">
+              <a class="lab-b-product-link primary" href="https://github.com/markoblogo/abvx-agent-skills">GitHub</a>
+              <a class="lab-b-product-link" href="./loopops-guide.md">LoopOps guide</a>
+              <a class="lab-b-product-link" href="./catalog.json">Catalog JSON</a>
+            </div>
+          </div>
+
+          <aside class="lab-b-product-side">
+            <div class="lab-b-side-band" aria-hidden="true">
+              <div></div><div></div><div></div>
+            </div>
+            <div class="lab-b-side-inner">
+              <div class="lab-b-side-metric">
+                <span class="lab-b-metric-label">Purpose</span>
+                <strong>Navigation layer for the skillpack</strong>
+              </div>
+              <div class="lab-b-side-points">
+                <div>
+                  <span class="lab-b-point-label">What it uses</span>
+                  <p>SKILL.md, SKILL_CARD.md, agents/openai.yaml, and README category lanes.</p>
+                </div>
+                <div>
+                  <span class="lab-b-point-label">Why it exists</span>
+                  <p>The repo outgrew a flat README table. This catalog is the faster path to the right skill.</p>
+                </div>
+                <div>
+                  <span class="lab-b-point-label">Current emphasis</span>
+                  <p>Composable workflows, LoopOps framing, and explicit anti-patterns where a skill should not be used.</p>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <section class="lab-b-product-panel">
+          <p class="lab-b-eyebrow">Search</p>
+          <div class="catalog-toolbar">
+            <input id="query" type="search" placeholder="Search skills, intended use, anti-patterns, composability" />
+            <select id="category">
+              <option value="">All categories</option>
+            </select>
+          </div>
+          <div id="stats" class="catalog-meta"></div>
+        </section>
+
+        <section class="lab-b-product-grid" id="results"></section>
+      </main>
+
+      <footer class="footer footer--lab">
+        <div class="footer-inner">
+          <div class="footer-left">
+            <div class="footer-title">ABVX Lab</div>
+            <div class="footer-note">Small, readable, static pages for ABVX developer tools.</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const queryEl = document.getElementById("query");
+      const categoryEl = document.getElementById("category");
+      const statsEl = document.getElementById("stats");
+      const resultsEl = document.getElementById("results");
+
+      let catalog = { skills: [], categories: {}, skill_count: 0 };
+
+      function safeText(value) {
+        return value && String(value).trim() ? String(value).trim() : "Not specified yet.";
+      }
+
+      function skillHaystack(skill) {
+        return [
+          skill.name,
+          skill.display_name,
+          skill.category,
+          skill.description,
+          skill.short_description,
+          skill.intended_use,
+          skill.model_sensitivity,
+          ...(skill.composable_with || []),
+          ...(skill.anti_patterns || []),
+        ].join(" ").toLowerCase();
+      }
+
+      function renderStats(skills) {
+        statsEl.innerHTML = "";
+        const labels = [
+          `${skills.length} shown`,
+          `${catalog.skill_count} total`,
+          categoryEl.value || "All categories",
+        ];
+        for (const label of labels) {
+          const chip = document.createElement("div");
+          chip.className = "catalog-chip";
+          chip.textContent = label;
+          statsEl.appendChild(chip);
+        }
+      }
+
+      function renderSkills(skills) {
+        resultsEl.innerHTML = "";
+        if (!skills.length) {
+          resultsEl.innerHTML = `<article class="lab-b-product-panel catalog-empty">No skills matched this filter. Try broader task language or another category.</article>`;
+          return;
+        }
+
+        for (const skill of skills) {
+          const article = document.createElement("article");
+          article.className = "lab-b-product-panel catalog-card";
+          article.innerHTML = `
+            <p class="lab-b-eyebrow">${skill.category}</p>
+            <h3>${skill.display_name}</h3>
+            <div class="catalog-pills">
+              <span>${skill.name}</span>
+            </div>
+            <p class="lab-b-product-summary">${skill.short_description || skill.description}</p>
+            <div class="small"><strong>Intended use:</strong> ${safeText(skill.intended_use)}</div>
+            <div class="small"><strong>Model sensitivity:</strong> ${safeText(skill.model_sensitivity)}</div>
+            <div class="small"><strong>Composable with:</strong> ${(skill.composable_with || []).length ? skill.composable_with.join("; ") : "Not specified yet."}</div>
+            <div class="small"><strong>Anti-patterns:</strong> ${(skill.anti_patterns || []).length ? skill.anti_patterns.join("; ") : "Not specified yet."}</div>
+            <div class="catalog-links">
+              <a href="${skill.github_skill_url}">SKILL.md</a>
+              <a href="${skill.github_card_url}">SKILL_CARD.md</a>
+            </div>
+          `;
+          resultsEl.appendChild(article);
+        }
+      }
+
+      function applyFilters() {
+        const query = queryEl.value.trim().toLowerCase();
+        const category = categoryEl.value;
+        const skills = catalog.skills.filter((skill) => {
+          if (category && skill.category !== category) return false;
+          if (!query) return true;
+          return skillHaystack(skill).includes(query);
+        });
+        renderStats(skills);
+        renderSkills(skills);
+      }
+
+      async function init() {
+        const response = await fetch("./catalog.json");
+        catalog = await response.json();
+
+        for (const category of Object.keys(catalog.categories).sort()) {
+          const option = document.createElement("option");
+          option.value = category;
+          option.textContent = `${category} (${catalog.categories[category]})`;
+          categoryEl.appendChild(option);
+        }
+
+        queryEl.addEventListener("input", applyFilters);
+        categoryEl.addEventListener("change", applyFilters);
+        applyFilters();
+      }
+
+      init().catch((error) => {
+        resultsEl.innerHTML = `<article class="lab-b-product-panel catalog-empty">Failed to load catalog: ${error.message}</article>`;
+      });
+    </script>
+  </body>
+</html>

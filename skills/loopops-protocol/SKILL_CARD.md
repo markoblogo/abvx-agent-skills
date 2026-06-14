@@ -29,6 +29,20 @@ Outputs: artifact-level decision, supervisor contract, loop budget, memory polic
 - Risk: weak self-evaluation. Mitigation: prefer deterministic evaluators and separate review where feasible.
 - Risk: skill bloat. Mitigation: update skills only with procedural, reusable, testable lessons.
 
+## Model Sensitivity
+Works best on models that reliably follow multi-step procedural instructions and respect explicit budgets and stop rules. Smaller or more improvisational models may over-promote prompts into heavier artifacts unless the boundary language is kept sharp.
+
+## Composable With
+- `dynamic-workflow-packets`
+- `skillopt-evolve-skills`
+- `delivery-preflight-gate`
+- `token-efficient-execution`
+
+## Anti-Patterns
+- using LoopOps for one-off tasks with no repeated failure or cost signal
+- promoting directly from prompt to loop without proving that a checklist, skill, or script is insufficient
+- relying on model judgment where a deterministic test or script already exists
+
 ## Evaluation
 Evaluated by structural validation, manual review, and application to ABVX skill design decisions where prompt-like guidance is promoted only when reliability or reuse justifies it.
 

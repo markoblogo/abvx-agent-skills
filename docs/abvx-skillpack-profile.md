@@ -50,9 +50,21 @@ Keep the description trigger-rich and under 1024 characters.
 - sources and attribution,
 - inputs and outputs,
 - risks and mitigations,
+- model sensitivity,
+- composable with,
+- anti-patterns,
 - evaluation,
 - version,
 - reporting issues.
+
+The last three fields are now recommended for every new or materially revised public skill:
+
+- `Model Sensitivity`:
+  - whether the skill is robust across major coding models or depends on stronger instruction-following / tool discipline
+- `Composable With`:
+  - nearby skills that are natural pairings or escalation paths
+- `Anti-Patterns`:
+  - cases where the skill degrades behavior, adds overhead, or should be replaced by a neighboring skill
 
 ## Quality Bar
 

@@ -16,6 +16,36 @@ This repository assumes that many public AI skills are net-negative. The bar her
 
 Video context: [I scraped AI skills from GitHub and tested whether they actually help models](https://youtu.be/F73_ofen8rI)
 
+## Catalog
+
+Browse the searchable catalog at [docs/index.html](docs/index.html). It is generated from skill metadata and cards, and is designed to be published directly through GitHub Pages when the repository Pages source points at `docs/`.
+
+## LoopOps
+
+LoopOps is the framework layer in this repo: it decides when a repeated prompt should remain a prompt and when it should become a checklist, skill, script, or bounded loop.
+
+See:
+
+- [docs/loopops-guide.md](docs/loopops-guide.md)
+- `loopops-protocol`
+- `dynamic-workflow-packets`
+- `skillopt-evolve-skills`
+
+```mermaid
+flowchart TD
+    A["Repeated task appears"] --> B{"One-off and cheap?"}
+    B -- Yes --> C["Keep it a prompt"]
+    B -- No --> D{"Sequence is the main value?"}
+    D -- Yes --> E["Promote to checklist"]
+    D -- No --> F{"Reusable procedural guidance?"}
+    F -- Yes --> G["Promote to skill"]
+    F -- No --> H{"Deterministic step repeated?"}
+    H -- Yes --> I["Promote to script"]
+    H -- No --> J{"Needs budget, memory, evaluator, stop rules?"}
+    J -- Yes --> K["Promote to bounded loop/workflow"]
+    J -- No --> C
+```
+
 ## Start Here
 
 - **Need to save tokens?** Start with `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution`, and `lean-context-layout`. Add `compaction-survival` if your sessions run long enough to forget their own state.
@@ -258,6 +288,10 @@ abvx-skills validate ~/.codex/skills
 ```
 
 Structural validation and security audit are separate gates. The validator checks required files, frontmatter, directory/name alignment, TODO placeholders, cards, UI metadata, and basic secret patterns.
+
+## Benchmarks
+
+Benchmark scaffolding now lives under [benchmarks/](benchmarks/). It documents how to measure skill impact without publishing fake precision. Until the repo has stable reproducible runs across tasks and models, benchmark numbers should be treated as pending evidence rather than marketing copy.
 
 ## Release
 
