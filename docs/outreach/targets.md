@@ -14,17 +14,17 @@ Star counts below were checked on 2026-06-15 and will drift.
 | [xixu-me/awesome-persona-distill-skills](https://github.com/xixu-me/awesome-persona-distill-skills) | 4,419 | Good | curated public skills | queued | likely needs compact pack description |
 | [0xNyk/awesome-hermes-agent](https://github.com/0xNyk/awesome-hermes-agent) | 3,956 | Strong | skills + tools + integrations | queued | need best Hermes-facing angle |
 | [SamurAIGPT/awesome-hermes-agent](https://github.com/SamurAIGPT/awesome-hermes-agent) | 1,731 | Strong | established Hermes resource list | queued | need non-duplicate wording vs 0xNyk |
-| [Prat011/awesome-llm-skills](https://github.com/Prat011/awesome-llm-skills) | unverified | Excellent | Codex / Claude / Gemini overlap | queued | verify repo shape and placement |
+| [Prat011/awesome-llm-skills](https://github.com/Prat011/awesome-llm-skills) | 1,323 | Excellent | Codex / Claude / Gemini overlap | queued | add under `Development & Code Tools` |
 
 ## Wave 2: Good Fit, Lower Reach
 
 | Target | Stars | Fit | Angle | Status | Blocker |
 |---|---:|---|---|---|---|
-| [kodustech/awesome-agent-skills](https://github.com/kodustech/awesome-agent-skills) | unverified | Excellent | exact agent-skills match | queued | verify activity and structure |
-| [Code-and-Sorts/awesome-copilot-agents](https://github.com/Code-and-Sorts/awesome-copilot-agents) | unverified | Good | verification + coding workflows | queued | verify listing style |
-| [CommandCodeAI/agent-skills](https://github.com/CommandCodeAI/agent-skills) | unverified | Good | workflow customization | queued | may want install-surface angle |
-| [gmh5225/awesome-skills](https://github.com/gmh5225/awesome-skills) | unverified | Good | broad multi-agent skills list | queued | verify maintenance level |
-| [finfin/awesome-frontend-skills](https://github.com/finfin/awesome-frontend-skills) | unverified | Selective | frontend subset only | queued | pitch only `browser-verification` / `design-critique-polish` / `frontend-product-builder` |
+| [kodustech/awesome-agent-skills](https://github.com/kodustech/awesome-agent-skills) | 83 | Excellent | exact agent-skills match | queued | verify section naming before PR |
+| [Code-and-Sorts/awesome-copilot-agents](https://github.com/Code-and-Sorts/awesome-copilot-agents) | 536 | Good | verification + coding workflows | queued | verify listing style |
+| [CommandCodeAI/agent-skills](https://github.com/CommandCodeAI/agent-skills) | 73 | Good | workflow customization | queued | may want install-surface angle |
+| [gmh5225/awesome-skills](https://github.com/gmh5225/awesome-skills) | 38 | Good | broad multi-agent skills list | queued | verify maintenance level |
+| [finfin/awesome-frontend-skills](https://github.com/finfin/awesome-frontend-skills) | 121 | Selective | frontend subset only | queued | pitch only `browser-verification` / `design-critique-polish` / `frontend-product-builder` |
 
 ## Wave 3: Specialized Targets
 
@@ -42,6 +42,13 @@ Star counts below were checked on 2026-06-15 and will drift.
 4. `antfu/skills`
 5. `kodustech/awesome-agent-skills`
 6. both Hermes lists
+
+## Notes From Verification
+
+- `hesreallyhim/awesome-claude-code` is currently in a README reorganization state. Resource intake is still active, but it is issue-first right now, not PR-first.
+- `hesreallyhim/awesome-claude-code` explicitly forbids resource submissions through `gh` CLI in its issue template, so the submission should be posted manually through the GitHub web UI.
+- `VoltAgent/awesome-agent-skills` has a live `Community Skills` area with a `Development and Testing` subsection that fits the ABVX pack well.
+- `Prat011/awesome-llm-skills` currently has the cleanest near-term insertion point under `Development & Code Tools`.
 
 ## Suggested Initial Pitch By Target Type
 
