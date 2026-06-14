@@ -18,6 +18,12 @@ Default to the smallest correct change, not the most expandable design.
 - dependency avoidance matters;
 - the repo already risks overbuilding or abstraction creep.
 
+## Pair With
+
+- Use `delivery-preflight-gate` first when the task is long, autonomous, or the repo baseline may already be broken.
+- Use `test-driven-execution` alongside this skill when the main risk is behavior drift rather than overbuilding.
+- Use `overengineering-review` after implementation when the user wants a separate simplification pass on the resulting diff.
+
 ## Ladder
 
 Stop at the first rung that fully solves the task:

@@ -11,6 +11,12 @@ metadata:
 
 Review only for unnecessary complexity. This skill does not hunt general correctness issues unless they directly affect the simplification recommendation.
 
+## Pair With
+
+- Use `minimal-diff-builder` when the user wants the simplification findings turned into the smallest correct patch.
+- Use `complexity-optimizer` instead when the real question is performance or algorithmic cost rather than architectural bloat.
+- Use `architecture-deepening-review` instead when the code is not overbuilt but the boundary design is still wrong.
+
 ## Review Surface
 
 Look for:
