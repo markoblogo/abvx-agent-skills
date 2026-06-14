@@ -86,9 +86,10 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 
 ### Project Context & Onboarding
 
+For design-heavy repos, pair this section with `design-register-bootstrap` from the frontend section.
+
 | Skill | What It Does | Status | Origin |
 |---|---|---|---|
-| `design-register-bootstrap` | Detects whether a surface is `brand` or `product`, then writes the compact design context needed to keep later frontend work coherent. | experimental | ABVX adapted |
 | `project-context-bootstrap` | Detects the stack, asks the right project questions, and turns a weakly documented repo into a compact, agent-usable context surface. | experimental | ABVX adapted |
 | `durable-context-maintenance` | Keeps repo-local context current after architecture, workflow, and test-flow changes so agents stop rediscovering the same facts. | experimental | ABVX adapted |
 
@@ -138,6 +139,26 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 
 ## Install
 
+Fastest path for most users:
+
+```bash
+pip install abvx-agent-skills
+abvx-skills install
+```
+
+Published package pages:
+
+- PyPI: <https://pypi.org/project/abvx-agent-skills/>
+- TestPyPI: <https://test.pypi.org/project/abvx-agent-skills/>
+
+Current distribution channels:
+
+- PyPI: published
+- TestPyPI: published
+- Homebrew tap: published at <https://github.com/markoblogo/homebrew-tap>
+- conda-forge: staged-recipes submission currently open at <https://github.com/conda-forge/staged-recipes/pull/33719>
+- `homebrew-core`: not accepted for now under the Homebrew core notability policy; use the tap instead
+
 Install one skill into Codex:
 
 ```bash
@@ -153,27 +174,6 @@ cp -R abvx-agent-skills/skills/* ~/.codex/skills/
 ```
 
 Start a new agent session after installation so the skill descriptions are discovered.
-
-Install via PyPI:
-
-```bash
-pip install abvx-agent-skills
-abvx-skills list
-abvx-skills install
-```
-
-Published package pages:
-
-- PyPI: <https://pypi.org/project/abvx-agent-skills/>
-- TestPyPI: <https://test.pypi.org/project/abvx-agent-skills/>
-
-Distribution status:
-
-- PyPI: published
-- TestPyPI: published
-- Homebrew tap: published at <https://github.com/markoblogo/homebrew-tap>
-- conda-forge: recipe PR open at <https://github.com/conda-forge/staged-recipes/pull/33719>
-- homebrew-core: not accepted for now under the Homebrew core notability policy; use the tap instead
 
 Install one packaged skill into Codex:
 
@@ -270,7 +270,7 @@ Publish flow:
 - Run the `publish` GitHub Actions workflow with `repository=testpypi` for a dry run against TestPyPI.
 - Create a GitHub release, or run the same workflow with `repository=pypi`, to publish to PyPI.
 - Configure trusted publishing for both `pypi` and `testpypi` environments in the package index before the first release.
-- Version `0.10.0` is published on PyPI and TestPyPI, adding `html-diagram-artifact` and `html-brief-artifact`.
+- Keep the released version aligned with `pyproject.toml` and the skill inventory documented above.
 
 ## Philosophy
 
