@@ -1,6 +1,7 @@
 ---
 name: evidence-ledger-research
 description: Research and answer evidence-sensitive questions with source, date, unit, and operand discipline. Use for web research, PDF/document QA, policy or finance facts, tables, time series, calculations from retrieved evidence, exact-answer extraction, and any task where wrong source selection, stale facts, nearby table confusion, or formatting errors would matter.
+license: MIT
 ---
 
 # Evidence Ledger Research

@@ -1,6 +1,7 @@
 ---
 name: dynamic-workflow-packets
 description: Plan and run large Codex tasks with compact dynamic workflow packets, risk gates, integration, and verification. Use when the user explicitly asks for dynamic workflows, packets, subagents, swarm, orchestration, long-running audits, multi-track coding/research work, job or client search agent design, migrations, repo-wide reviews, or tasks where independent discovery, implementation, review, and verification tracks would reduce drift.
+license: MIT
 ---
 
 # Dynamic Workflow Packets

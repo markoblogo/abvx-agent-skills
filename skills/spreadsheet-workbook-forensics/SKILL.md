@@ -1,6 +1,7 @@
 ---
 name: spreadsheet-workbook-forensics
 description: Edit, repair, or generate spreadsheet workbooks with structure-preserving Python. Use for Excel or spreadsheet tasks involving .xlsx/.xlsm files, formulas, lookup tables, summaries, formatting preservation, target ranges, workbook QA, or any task where cells must be computed, written, and verified rather than guessed from previews.
+license: MIT
 ---
 
 # Spreadsheet Workbook Forensics

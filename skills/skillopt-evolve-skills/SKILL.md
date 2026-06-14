@@ -1,6 +1,7 @@
 ---
 name: skillopt-evolve-skills
 description: Evolve Codex skills and agent instructions with a SkillOpt-style loop. Use when creating, refining, or auditing local skills, AGENTS.md rules, prompt playbooks, or reusable agent workflows after repeated task experience, especially when the user asks to "improve your skills", "capture this lesson", "make this reusable", or "update agent instructions".
+license: MIT
 ---
 
 # SkillOpt Evolve Skills
