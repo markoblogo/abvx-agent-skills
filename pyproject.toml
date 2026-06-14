@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "abvx-agent-skills"
-version = "0.10.0"
+version = "0.11.0"
 description = "Small, reviewable, validation-gated agent skills for Codex-style project work."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -50,6 +50,7 @@ include = [
   "/src",
   "/skills",
   "/docs",
+  "/benchmarks",
   "/scripts",
   "/README.md",
   "/LICENSE",

@@ -28,6 +28,20 @@ Outputs: packet plans, workflow artifacts, integration decisions, verification e
 - Risk: unsafe delegation. Mitigation: risk gates and disjoint packet ownership.
 - Risk: raw packet dumps hide conflicts. Mitigation: explicit integration phase.
 
+## Model Sensitivity
+Most effective on models that can keep packet boundaries and integration checkpoints stable across longer sessions. Weaker models may need narrower packet scopes and more explicit integration prompts.
+
+## Composable With
+- `loopops-protocol`
+- `delivery-preflight-gate`
+- `delivery-baseline-audit`
+- `handoff`
+
+## Anti-Patterns
+- packetizing work that would be faster as one direct implementation pass
+- delegating tightly coupled edits to separate packets without an integration plan
+- using workflow packets to bypass approval gates on destructive or external actions
+
 ## Evaluation
 Evaluated by structural validation and manual review against multi-track coding, research, and job/client-search scenarios.
 

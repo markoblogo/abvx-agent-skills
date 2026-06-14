@@ -28,6 +28,19 @@ Outputs: ranked simplification findings, deletion/replacement opportunities, and
 - Risk: deleting safety-critical behavior. Mitigation: explicit boundaries for security, accessibility, trust boundaries, and data-loss prevention.
 - Risk: noisy stylistic review. Mitigation: restrict findings to real complexity reductions.
 
+## Model Sensitivity
+Strongest on models that can keep review findings terse, ranked, and replacement-oriented instead of drifting into general style commentary. Weaker models may over-report taste issues unless the boundaries are enforced.
+
+## Composable With
+- `minimal-diff-builder`
+- `complexity-optimizer`
+- `architecture-deepening-review`
+
+## Anti-Patterns
+- using this skill as a generic correctness review
+- recommending deletions without naming the replacement or current-scope rationale
+- flagging one focused self-check or regression test as bloat
+
 ## Evaluation
 Evaluated by structural validation and manual review against simplification-focused code review workflows.
 

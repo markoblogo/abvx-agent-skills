@@ -28,6 +28,19 @@ Outputs: smallest correct patch, skipped-heavier-design note, and concise verifi
 - Risk: simplifying away safety-critical behavior. Mitigation: hard exceptions for trust boundaries, security, accessibility, and data loss.
 - Risk: unreadable tiny patches. Mitigation: prefer the smallest readable local change, not code golf.
 
+## Model Sensitivity
+Works well on strong coding models that can keep the ladder order intact without collapsing into code golf. Weaker models may need firmer reminders that "minimal" does not mean skipping correctness or safety constraints.
+
+## Composable With
+- `delivery-preflight-gate`
+- `test-driven-execution`
+- `overengineering-review`
+
+## Anti-Patterns
+- using this skill when the user explicitly wants a reusable framework or public extension surface
+- shrinking the diff by removing validation, accessibility, or error handling that should remain
+- confusing smallest correct patch with shortest possible code regardless of readability
+
 ## Evaluation
 Evaluated by structural validation and manual review against scoped implementation and simplification workflows.
 
