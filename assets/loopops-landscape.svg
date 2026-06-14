@@ -1,0 +1,81 @@
+<svg width="1600" height="560" viewBox="0 0 1600 560" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">LoopOps promotion ladder</title>
+  <desc id="desc">A horizontal infographic showing how repeated work moves from prompt to checklist, skill, script, or bounded loop.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F2FF"/>
+      <stop offset="0.55" stop-color="#EEF6FF"/>
+      <stop offset="1" stop-color="#FFF8EF"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#FFFFFF" stop-opacity="0.94"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.78"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#8964D8" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .eyebrow { font: 700 18px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0.14em; text-transform: uppercase; fill: #7E57C2; }
+      .title { font: 700 44px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #16181D; }
+      .body { font: 500 18px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #414A5D; }
+      .label { font: 700 18px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #16181D; }
+      .small { font: 600 14px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #6B7280; letter-spacing: 0.04em; text-transform: uppercase; }
+      .chip { font: 600 15px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #5B4A8F; }
+      .outcome { font: 700 20px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #111827; }
+      .rule { font: 600 14px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #B45309; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="560" rx="32" fill="url(#bg)"/>
+  <rect x="28" y="28" width="1544" height="504" rx="28" fill="url(#panel)" stroke="#E6DCF8" filter="url(#shadow)"/>
+
+  <text x="72" y="92" class="eyebrow">LoopOps</text>
+  <text x="72" y="146" class="title">Promote repeated work only when the next layer adds real leverage.</text>
+  <text x="72" y="182" class="body">The ladder is intentionally short: start with the cheapest useful form, then move right only when reuse, determinism, or bounded automation genuinely pays off.</text>
+
+  <rect x="72" y="228" width="146" height="34" rx="17" fill="#F1E8FF"/>
+  <text x="95" y="250" class="chip">entry signal</text>
+  <text x="72" y="300" class="label">Repeated task appears</text>
+  <text x="72" y="328" class="body">If it is one-off and cheap, keep it a prompt.</text>
+
+  <path d="M300 300H1318" stroke="#C7B3EF" stroke-width="6" stroke-linecap="round"/>
+
+  <g transform="translate(312 248)">
+    <circle cx="0" cy="52" r="18" fill="#7E57C2"/>
+    <circle cx="0" cy="52" r="8" fill="#F9F6FF"/>
+    <rect x="34" y="0" width="232" height="108" rx="24" fill="#FFFFFF" stroke="#DCCEF8"/>
+    <text x="58" y="34" class="small">when sequence is the value</text>
+    <text x="58" y="68" class="outcome">Checklist</text>
+    <text x="58" y="92" class="body">Ordered human steps.</text>
+  </g>
+
+  <g transform="translate(590 248)">
+    <circle cx="0" cy="52" r="18" fill="#5B8DEF"/>
+    <circle cx="0" cy="52" r="8" fill="#F3F8FF"/>
+    <rect x="34" y="0" width="232" height="108" rx="24" fill="#FFFFFF" stroke="#C7D9FB"/>
+    <text x="58" y="34" class="small">when guidance is reusable</text>
+    <text x="58" y="68" class="outcome">Skill</text>
+    <text x="58" y="92" class="body">Portable behavior layer.</text>
+  </g>
+
+  <g transform="translate(868 248)">
+    <circle cx="0" cy="52" r="18" fill="#0EA5A4"/>
+    <circle cx="0" cy="52" r="8" fill="#ECFEFF"/>
+    <rect x="34" y="0" width="232" height="108" rx="24" fill="#FFFFFF" stroke="#B7F0EE"/>
+    <text x="58" y="34" class="small">when a step is deterministic</text>
+    <text x="58" y="68" class="outcome">Script</text>
+    <text x="58" y="92" class="body">Automate the repeatable part.</text>
+  </g>
+
+  <g transform="translate(1146 248)">
+    <circle cx="0" cy="52" r="18" fill="#F59E0B"/>
+    <circle cx="0" cy="52" r="8" fill="#FFF7E6"/>
+    <rect x="34" y="0" width="286" height="108" rx="24" fill="#FFFFFF" stroke="#F7D48A"/>
+    <text x="58" y="34" class="small">when budget, memory, eval, stop rules matter</text>
+    <text x="58" y="68" class="outcome">Bounded loop</text>
+    <text x="58" y="92" class="body">Supervisor-controlled workflow.</text>
+  </g>
+
+  <rect x="72" y="410" width="1460" height="74" rx="22" fill="#FFF7E8" stroke="#F4D6A1"/>
+  <text x="102" y="453" class="rule">Hard exceptions: security, data loss, accessibility, and trust boundaries can justify skipping the cheapest layer. Non-trivial logic still needs a small verification step.</text>
+</svg>
