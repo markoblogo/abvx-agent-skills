@@ -1,6 +1,7 @@
 ---
 name: loopops-protocol
 description: Design and evolve agent skills into cost-bounded loops, workflows, scripts, and memory updates. Use when creating or auditing reusable agent methods, converting prompts or skills into workflows, designing open or closed agent loops, defining supervisor/evaluator contracts, or deciding whether repeated agent work should become a skill, checklist, script, workflow, or autonomous loop.
+license: MIT
 ---
 
 # LoopOps Protocol

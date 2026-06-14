@@ -1,6 +1,7 @@
 ---
 name: repo-debugging-ledger
 description: Debug repositories with a hypothesis ledger, checked locations, and loop-breaking discipline. Use when tests fail, CI fails, behavior regresses, local tooling errors, flaky bugs appear, or an investigation risks repeated searches, repeated commands, circular hypotheses, or unverified fixes.
+license: MIT
 ---
 
 # Repo Debugging Ledger
