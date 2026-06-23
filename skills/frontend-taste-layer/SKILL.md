@@ -64,6 +64,13 @@ Use them to keep decisions consistent. Do not expose a pile of disconnected visu
 - Keep one palette family per page and lock the accent.
 - Prefer a deliberate visual anchor over more decorative chrome.
 
+## Motion Taste Rules
+
+- Do not animate just because the surface feels flat; first decide what motion explains or confirms.
+- Avoid motion on high-frequency or keyboard-triggered interactions.
+- Prefer crisp, short, origin-aware motion over broad cinematic transitions in product UI.
+- After implementing meaningful motion, run `motion-review-gate` before calling the surface ship-ready.
+
 ## Brand Versus Product
 
 - For `brand` surfaces, visual identity can lead.
