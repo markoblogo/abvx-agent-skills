@@ -27,8 +27,9 @@ Use a local static or dev server when file URLs would not match production behav
 6. Check desktop and mobile viewports.
 7. Check horizontal overflow: `document.documentElement.scrollWidth <= innerWidth + 1`.
 8. Exercise the primary interaction path.
-9. Capture screenshots only when useful for review or debugging.
-10. Stop local servers before finalizing.
+9. For motion-heavy changes, check reduced-motion behavior and touch versus hover behavior, then pair with `motion-review-gate` for code-level motion review.
+10. Capture screenshots only when useful for review or debugging.
+11. Stop local servers before finalizing.
 
 ## Common Assertions
 
@@ -38,7 +39,8 @@ Use a local static or dev server when file URLs would not match production behav
 - target controls are visible and enabled;
 - form submission or navigation reaches expected state;
 - responsive layout has no text overlap or horizontal scroll;
-- animated/canvas/3D surfaces have nonblank rendered pixels when relevant.
+- animated/canvas/3D surfaces have nonblank rendered pixels when relevant;
+- motion-heavy surfaces still work with `prefers-reduced-motion: reduce`.
 
 ## Guardrails
 
