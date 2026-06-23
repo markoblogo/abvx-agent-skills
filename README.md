@@ -57,7 +57,7 @@ If you want a scan-friendly text catalog for browsing or indexing, use [CATALOG.
 | Write smaller patches | `minimal-diff-builder` | The agent keeps refactoring too much, widening blast radius, or adding abstractions you did not ask for. |
 | Debug from evidence | `diagnose` | The agent keeps guessing fixes without reproducing the failure and verifying the result. |
 | Save tokens in shell-heavy work | `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution` | Logs, diffs, tests, and command output are burning context and hiding the real signal. |
-| Verify frontend work | `browser-verification`, `design-critique-polish` | The agent says "done" without checking real browser behavior, layout, states, or console errors. |
+| Verify frontend work | `browser-verification`, `design-critique-polish`, `motion-review-gate` | The agent says "done" without checking real browser behavior, layout, states, motion, or console errors. |
 
 ## LoopOps
 
@@ -80,10 +80,10 @@ See:
 - **Need to debug a repo?** Start with `diagnose`, `repo-debugging-ledger`, and `graph-guided-code-reading`.
 - **Need the smallest correct implementation path?** Start with `minimal-diff-builder`, then add `delivery-preflight-gate` when the task is long or risky enough that baseline verification matters.
 - **Need to cut bloat from an existing diff or repo slice?** Start with `overengineering-review`, and switch to `minimal-diff-builder` when you want the cuts implemented as the smallest correct patch.
-- **Need to build frontend?** Start with `frontend-product-builder`, `designmd-brand-kit`, and `browser-verification`.
-- **Need a small Lottie or SVG-driven motion asset?** Start with `lottie-motion-builder`, then pair with `frontend-product-builder` when the animation needs to land inside a real UI surface.
+- **Need to build frontend?** Start with `frontend-product-builder`, `designmd-brand-kit`, `browser-verification`, and `motion-review-gate` when interaction motion changes.
+- **Need a small Lottie or SVG-driven motion asset?** Start with `lottie-motion-builder`, pair with `frontend-product-builder` when the animation needs to land inside a real UI surface, then run `motion-review-gate` before shipping.
 - **Need a standalone HTML artifact?** Start with `html-diagram-artifact` for SVG-first architecture explainers, or `html-brief-artifact` for plans, summaries, reports, and research notes.
-- **Need stronger UI taste or design setup?** Start with `design-register-bootstrap`, `frontend-taste-layer`, and `design-critique-polish`.
+- **Need stronger UI taste or design setup?** Start with `design-register-bootstrap`, `frontend-taste-layer`, `design-critique-polish`, and `motion-review-gate` for motion-sensitive surfaces.
 - **Need long-session continuity?** Start with `handoff`, `compaction-survival`, and `token-usage-audit`.
 - **Need to onboard a new repo?** Start with `project-context-bootstrap` and follow with `durable-context-maintenance`.
 - **Need discovery or product shaping?** Start with `rapid-grilling`, `doc-grounded-grilling`, and `spec-to-prd`.
@@ -134,6 +134,7 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 | `design-critique-polish` | Runs a focused critique-and-polish pass to rank frontend issues, identify ship blockers, and tighten hierarchy, typography, color, and states. |
 | `frontend-product-builder` | Builds usable frontends, landing pages, pitch pages, dashboards, and prototypes with a product-first interaction model. |
 | `lottie-motion-builder` | Builds small production-ready Lottie assets from SVGs, logos, loaders, and UI states with a local preview harness and output verification. |
+| `motion-review-gate` | Reviews frontend motion before shipping: purpose, frequency, easing, duration, origin, interruptibility, GPU-safe properties, and reduced-motion support. |
 | `designmd-brand-kit` | Turns a website or brand surface into an agent-usable design system: structure, identity, and reusable UI cues. |
 | `browser-verification` | Verifies real browser rendering, responsive layout, and interaction behavior instead of trusting static code inspection. |
 | `web-quality-audit` | Audits accessibility, performance, UX, privacy, and browser security as one practical web quality pass. |
