@@ -12,6 +12,7 @@ metadata:
 Review motion as a pre-ship gate. This skill does not design a whole interface and does not rewrite unrelated frontend code.
 
 Use it after implementation or during review when the diff includes animation, transitions, gestures, Lottie assets, interaction states, or motion-heavy UI polish.
+Pair it with `browser-verification` when the visual behavior must be checked in a real browser.
 
 ## Use For
 
