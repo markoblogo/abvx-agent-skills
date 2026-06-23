@@ -23,6 +23,12 @@ Inputs: changed files, screenshots or routes when available, browser behavior, a
 
 Outputs: ranked motion findings, concrete fixes, a block/needs-changes/approve decision, and browser verification notes.
 
+## Composable With
+- `browser-verification`
+- `design-critique-polish`
+- `frontend-taste-layer`
+- `lottie-motion-builder`
+
 ## Risks and Mitigations
 - Risk: taste-only criticism. Mitigation: require concrete evidence and user-facing consequences.
 - Risk: deleting useful motion. Mitigation: first check purpose and frequency before recommending removal.
