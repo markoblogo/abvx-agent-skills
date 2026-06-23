@@ -31,6 +31,7 @@ Generated from `docs/catalog.json`.
 | `loopops-protocol` | Research, Knowledge & Reusable Methods | Turn reusable agent work into bounded loops. | `gh skill install markoblogo/abvx-agent-skills loopops-protocol` |
 | `lottie-motion-builder` | Frontend, UX & Product Surfaces | Build small Lottie assets with preview gates. | `gh skill install markoblogo/abvx-agent-skills lottie-motion-builder` |
 | `minimal-diff-builder` | Coding, Debugging & Architecture | Choose the smallest correct implementation path. | `gh skill install markoblogo/abvx-agent-skills minimal-diff-builder` |
+| `motion-review-gate` | Frontend, UX & Product Surfaces | Review frontend motion before shipping. | `gh skill install markoblogo/abvx-agent-skills motion-review-gate` |
 | `overengineering-review` | Coding, Debugging & Architecture | Find what can be deleted, collapsed, or replaced. | `gh skill install markoblogo/abvx-agent-skills overengineering-review` |
 | `phase-spec-execution` | Long-Run Delivery Control | Split large delivery into explicit verified phases. | `gh skill install markoblogo/abvx-agent-skills phase-spec-execution` |
 | `plan-to-issues` | Discovery, Planning & Delivery | Break plans into thin end-to-end slices with blockers and criteria. | `gh skill install markoblogo/abvx-agent-skills plan-to-issues` |
