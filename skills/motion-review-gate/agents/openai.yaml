@@ -1,0 +1,4 @@
+interface:
+  display_name: "Motion Review Gate"
+  short_description: "Review frontend motion before shipping."
+  default_prompt: "Use $motion-review-gate to review this frontend motion or animation diff before shipping."
