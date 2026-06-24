@@ -1,0 +1,64 @@
+name: Regenerate Doc-to-LoRA Catalog Once
+
+on:
+  push:
+    branches:
+      - doc-to-lora-evaluator
+    paths:
+      - '.github/workflows/regenerate-doc2lora-catalog-once.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: doc-to-lora-evaluator
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install package
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install .
+      - name: Update README and regenerate catalog
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('README.md')
+          text = path.read_text()
+
+          text = text.replace(
+              '| Save tokens in shell-heavy work | `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution` | Logs, diffs, tests, and command output are burning context and hiding the real signal. |\n| Verify frontend work |',
+              '| Save tokens in shell-heavy work | `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution` | Logs, diffs, tests, and command output are burning context and hiding the real signal. |\n| Evaluate document memory | `doc-to-lora-evaluator` | You are considering Doc-to-LoRA, generated adapters, RAG, summaries, or long-context prompting for repeated document recall. |\n| Verify frontend work |',
+          )
+
+          text = text.replace(
+              '- **Need to save tokens?** Start with `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution`, and `lean-context-layout`. Add `compaction-survival` if your sessions run long enough to forget their own state.\n- **Need to debug a repo?**',
+              '- **Need to save tokens?** Start with `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution`, and `lean-context-layout`. Add `compaction-survival` if your sessions run long enough to forget their own state.\n- **Need to decide whether documents should become model memory?** Start with `doc-to-lora-evaluator` before building a Doc-to-LoRA wrapper, RAG pipeline, or fine-tune.\n- **Need to debug a repo?**',
+          )
+
+          text = text.replace(
+              '| `evidence-ledger-research` | Keeps claims, sources, calculations, and open questions in a disciplined evidence ledger. |\n| `loopops-protocol` |',
+              '| `evidence-ledger-research` | Keeps claims, sources, calculations, and open questions in a disciplined evidence ledger. |\n| `doc-to-lora-evaluator` | Decides whether Doc-to-LoRA is worth a measured proof-of-concept before building document-to-adapter memory infrastructure. |\n| `loopops-protocol` |',
+          )
+
+          path.write_text(text)
+          PY
+          python scripts/generate_catalog.py
+          python scripts/validate.py
+      - name: Remove one-time workflow
+        run: rm .github/workflows/regenerate-doc2lora-catalog-once.yml
+      - name: Commit generated artifacts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md CATALOG.md docs/catalog.json .github/workflows/regenerate-doc2lora-catalog-once.yml
+          git diff --cached --quiet || git commit -m "Document doc-to-lora evaluator and regenerate catalog"
+          git push
