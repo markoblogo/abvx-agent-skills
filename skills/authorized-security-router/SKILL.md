@@ -15,10 +15,12 @@ Route security work before acting. This skill is for authorized defensive analys
 
 Before selecting a route, establish:
 
-- authorization: own system, internal review, client-approved scope, CTF/lab, or public code review;
+- authorization: own system, internal review, client-approved scope, CTF/lab, or inspect-only public repository/artifact review;
 - target boundary: repository, app, package, binary, API, URL, firmware image, sample hash, or document set;
 - action level: inspect-only, local static analysis, local sandbox analysis, browser verification, report-only, or remediation planning;
 - prohibited actions: no unauthorized access, no destructive testing, no live exploitation, no credential extraction, no persistence, no evasion, no phishing, no C2, no scope expansion.
+
+Public review means inspect-only review of public repositories or static artifacts. It does not authorize interacting with public URLs, third-party apps, production APIs, login flows, or browser-driven security testing. URL, app, API, and browser-facing security routes require own-system, client-approved, internal, or lab/CTF authorization.
 
 If scope is unclear or the request asks for offensive execution, stop and ask for a safer authorized framing.
 
@@ -28,15 +30,24 @@ Use the smallest defensive route that fits the task:
 
 | Target / intent | Route | Pair with |
 |---|---|---|
-| APK or mobile app review | Manifest, permissions, embedded secrets, network endpoints, package metadata, static call-chain notes | `evidence-ledger-research` |
+| APK or mobile app review | Manifest, permissions, redacted secret indicators, network endpoints, package metadata, static call-chain notes | `evidence-ledger-research` |
 | Static binary triage | File metadata, strings, imports, symbols, packer indicators, suspicious capability inventory | `evidence-ledger-research` |
-| Frontend JS security review | Source maps, bundled endpoints, dangerous DOM sinks, token handling, request signing logic, exposed secrets | `browser-verification`, `web-quality-audit` |
-| Firmware or IoT inventory | Filesystem layout, services, hardcoded credentials, exposed configs, SBOM hints, update mechanism notes | `evidence-ledger-research` |
+| Frontend JS security review | Source maps, bundled endpoints, dangerous DOM sinks, token handling, request signing logic, redacted secret indicators | `browser-verification`, `web-quality-audit` |
+| Firmware or IoT inventory | Filesystem layout, services, redacted credential indicators, exposed configs, SBOM hints, update mechanism notes | `evidence-ledger-research` |
 | Malware or suspicious sample triage | Hashes, strings, YARA/Sigma candidate indicators, behavior hypotheses, sandbox-safe report plan | `evidence-ledger-research` |
 | API or GraphQL audit | Auth boundaries, object-level access checks, token handling, schema exposure, unsafe defaults | `web-quality-audit` when browser-facing |
 | LLM or agent security review | Prompt injection surface, tool permission boundaries, data exfil paths, memory poisoning risks | `agents-best-practices` |
-| Supply chain audit | SBOM, dependency risk, secrets, CI/CD exposure, package provenance, release integrity | `delivery-preflight-gate` |
+| Supply chain audit | SBOM, dependency risk, redacted secret indicators, CI/CD exposure, package provenance, release integrity | `delivery-preflight-gate` |
 | Security issue intake | Classify severity, affected surface, evidence needed, next actor, and remediation owner | `repo-issue-triage` |
+
+## Secret Handling
+
+If analysis finds keys, tokens, passwords, cookies, private URLs, or hardcoded credentials:
+
+- do not reproduce full values in comments, reports, logs, issue bodies, or PR reviews;
+- report only the secret type, evidence location, and at most a short fingerprint or redacted prefix/suffix;
+- use an approved private secret-handling channel only when the user explicitly provides one;
+- recommend rotation or revocation when exposure is plausible.
 
 ## Blocked Routes
 
@@ -77,7 +88,7 @@ Start with routing:
 
 ```text
 Route: <allowed route | ROUTE_BLOCKED | ROUTE_UNCLEAR>
-Authorization: <known | missing | lab/CTF | own system | client-approved>
+Authorization: <missing | own system | internal | client-approved | lab/CTF | inspect-only public artifact>
 Target boundary:
 Action level:
 Blocked actions:
@@ -95,6 +106,7 @@ For each finding:
 
 - severity;
 - evidence location;
+- secret handling: redacted unless an approved private channel exists;
 - confidence;
 - affected component;
 - risk in defensive terms;
