@@ -1,8 +1,8 @@
 {
-  "skill_count": 50,
+  "skill_count": 51,
   "categories": {
     "Coding, Debugging & Architecture": 10,
-    "Research, Knowledge & Reusable Methods": 7,
+    "Research, Knowledge & Reusable Methods": 8,
     "Frontend, UX & Product Surfaces": 9,
     "Token Economy & Context Control": 8,
     "Long-Run Delivery Control": 4,
@@ -262,6 +262,29 @@
       "card_path": "skills/doc-grounded-grilling/SKILL_CARD.md",
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/doc-grounded-grilling/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/doc-grounded-grilling/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental"
+    },
+    {
+      "name": "doc-to-lora-evaluator",
+      "display_name": "Doc To LoRA Evaluator",
+      "category": "Research, Knowledge & Reusable Methods",
+      "description": "Evaluate whether Doc-to-LoRA is the right path for turning documents into parametric memory, and guide a safe proof-of-concept before investing in a full plugin or training pipeline. Use when a user wants to internalize long documents, reduce repeated context costs, compare Doc-to-LoRA against RAG or long-context prompting, or assess hardware/model/data risks for document-to-adapter workflows.",
+      "short_description": "Evaluate document-to-adapter memory before building it.",
+      "intended_use": "Use when a user wants to internalize long documents, reduce repeated context costs, compare Doc-to-LoRA against RAG or long-context prompting, or assess hardware/model/data risks for document-to-adapter workflows.",
+      "model_sensitivity": "",
+      "composable_with": [
+        "`book-to-skill`",
+        "`evidence-ledger-research`",
+        "`durable-context-maintenance`",
+        "`token-efficient-execution`"
+      ],
+      "anti_patterns": [],
+      "risks": "- Risk: treating a research demo as production infrastructure. Mitigation: require a small PoC and baseline comparison before plugin work.\n- Risk: losing provenance versus RAG. Mitigation: explicitly decide when citations and retrieved passages are required.\n- Risk: private document leakage through generated adapters. Mitigation: require artifact storage, deletion, and licensing checks.\n- Risk: fake token-savings claims. Mitigation: compare latency, memory, and answer quality against direct context or RAG.",
+      "path": "skills/doc-to-lora-evaluator/SKILL.md",
+      "card_path": "skills/doc-to-lora-evaluator/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/doc-to-lora-evaluator/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/doc-to-lora-evaluator/SKILL_CARD.md",
       "origin": "adapted",
       "status": "experimental"
     },

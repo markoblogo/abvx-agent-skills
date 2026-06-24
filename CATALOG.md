@@ -18,6 +18,7 @@ Generated from `docs/catalog.json`.
 | `designmd-brand-kit` | Frontend, UX & Product Surfaces | Use DESIGN.md for brand-aware UI work. | `gh skill install markoblogo/abvx-agent-skills designmd-brand-kit` |
 | `diagnose` | Coding, Debugging & Architecture | Debug with feedback loops, hypotheses, and regression checks. | `gh skill install markoblogo/abvx-agent-skills diagnose` |
 | `doc-grounded-grilling` | Discovery, Planning & Delivery | Sharpen a plan against repo docs, ADRs, and domain language. | `gh skill install markoblogo/abvx-agent-skills doc-grounded-grilling` |
+| `doc-to-lora-evaluator` | Research, Knowledge & Reusable Methods | Evaluate document-to-adapter memory before building it. | `gh skill install markoblogo/abvx-agent-skills doc-to-lora-evaluator` |
 | `durable-context-maintenance` | Project Context & Onboarding | Refresh repo-local durable context after code and workflow drift. | `gh skill install markoblogo/abvx-agent-skills durable-context-maintenance` |
 | `dynamic-workflow-packets` | Workflow, Handoffs & Multi-Track Work | Run big Codex tasks with bounded packets. | `gh skill install markoblogo/abvx-agent-skills dynamic-workflow-packets` |
 | `evidence-ledger-research` | Research, Knowledge & Reusable Methods | Research with source, unit, date, and operand discipline. | `gh skill install markoblogo/abvx-agent-skills evidence-ledger-research` |

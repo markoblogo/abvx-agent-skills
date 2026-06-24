@@ -57,6 +57,7 @@ If you want a scan-friendly text catalog for browsing or indexing, use [CATALOG.
 | Write smaller patches | `minimal-diff-builder` | The agent keeps refactoring too much, widening blast radius, or adding abstractions you did not ask for. |
 | Debug from evidence | `diagnose` | The agent keeps guessing fixes without reproducing the failure and verifying the result. |
 | Save tokens in shell-heavy work | `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution` | Logs, diffs, tests, and command output are burning context and hiding the real signal. |
+| Evaluate document memory | `doc-to-lora-evaluator` | You are considering Doc-to-LoRA, generated adapters, RAG, summaries, or long-context prompting for repeated document recall. |
 | Verify frontend work | `browser-verification`, `design-critique-polish` | The agent says "done" without checking real browser behavior, layout, states, or console errors. |
 
 ## LoopOps
@@ -77,6 +78,7 @@ See:
 ## Start Here
 
 - **Need to save tokens?** Start with `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution`, and `lean-context-layout`. Add `compaction-survival` if your sessions run long enough to forget their own state.
+- **Need to decide whether documents should become model memory?** Start with `doc-to-lora-evaluator` before building a Doc-to-LoRA wrapper, RAG pipeline, or fine-tune.
 - **Need to debug a repo?** Start with `diagnose`, `repo-debugging-ledger`, and `graph-guided-code-reading`.
 - **Need the smallest correct implementation path?** Start with `minimal-diff-builder`, then add `delivery-preflight-gate` when the task is long or risky enough that baseline verification matters.
 - **Need to cut bloat from an existing diff or repo slice?** Start with `overengineering-review`, and switch to `minimal-diff-builder` when you want the cuts implemented as the smallest correct patch.
@@ -170,6 +172,7 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 | Skill | What It Does |
 |---|---|
 | `evidence-ledger-research` | Keeps claims, sources, calculations, and open questions in a disciplined evidence ledger. |
+| `doc-to-lora-evaluator` | Decides whether Doc-to-LoRA is worth a measured proof-of-concept before building document-to-adapter memory infrastructure. |
 | `loopops-protocol` | Chooses when repeated agent work should stay a prompt or be promoted into a skill, checklist, script, workflow, or cost-bounded loop. |
 | `book-to-skill` | Converts books, papers, and long documents into reusable, progressive-disclosure agent skills. |
 | `role-skill-pack-design` | Designs compact role/workflow skill packs with base layers, difference layers, boundaries, and rollout order. |
