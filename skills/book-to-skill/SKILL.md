@@ -23,6 +23,8 @@ Before generating files, decide whether the source deserves a skill:
 
 If the source is mostly narrative, confidential, low quality OCR, or thin on reusable method, produce an extraction report or notes instead.
 
+If the user wants the source document to become model memory or a generated adapter rather than a reusable instruction artifact, switch to `doc-to-lora-evaluator` before proposing any Doc-to-LoRA, RAG, or fine-tuning workflow.
+
 ## Modes
 
 - Analyze only: extract frameworks, concepts, terms, and candidate workflows for review.
