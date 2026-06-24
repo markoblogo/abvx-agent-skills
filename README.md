@@ -56,6 +56,7 @@ If you want a scan-friendly text catalog for browsing or indexing, use [CATALOG.
 |---|---|---|
 | Write smaller patches | `minimal-diff-builder` | The agent keeps refactoring too much, widening blast radius, or adding abstractions you did not ask for. |
 | Debug from evidence | `diagnose` | The agent keeps guessing fixes without reproducing the failure and verifying the result. |
+| Route authorized security work | `authorized-security-router` | The task involves defensive security review, reverse-analysis triage, or security issue intake and needs clear scope before tools. |
 | Save tokens in shell-heavy work | `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution` | Logs, diffs, tests, and command output are burning context and hiding the real signal. |
 | Verify frontend work | `browser-verification`, `design-critique-polish` | The agent says "done" without checking real browser behavior, layout, states, or console errors. |
 
@@ -78,6 +79,7 @@ See:
 
 - **Need to save tokens?** Start with `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution`, and `lean-context-layout`. Add `compaction-survival` if your sessions run long enough to forget their own state.
 - **Need to debug a repo?** Start with `diagnose`, `repo-debugging-ledger`, and `graph-guided-code-reading`.
+- **Need to route authorized security work?** Start with `authorized-security-router`, then pair it with `evidence-ledger-research`, `repo-issue-triage`, `browser-verification`, or `web-quality-audit` depending on the target.
 - **Need the smallest correct implementation path?** Start with `minimal-diff-builder`, then add `delivery-preflight-gate` when the task is long or risky enough that baseline verification matters.
 - **Need to cut bloat from an existing diff or repo slice?** Start with `overengineering-review`, and switch to `minimal-diff-builder` when you want the cuts implemented as the smallest correct patch.
 - **Need to build frontend?** Start with `frontend-product-builder`, `designmd-brand-kit`, and `browser-verification`.
@@ -170,6 +172,7 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 | Skill | What It Does |
 |---|---|
 | `evidence-ledger-research` | Keeps claims, sources, calculations, and open questions in a disciplined evidence ledger. |
+| `authorized-security-router` | Routes authorized defensive security and reverse-analysis work by scope, target type, intent, and toolchain before taking action. |
 | `loopops-protocol` | Chooses when repeated agent work should stay a prompt or be promoted into a skill, checklist, script, workflow, or cost-bounded loop. |
 | `book-to-skill` | Converts books, papers, and long documents into reusable, progressive-disclosure agent skills. |
 | `role-skill-pack-design` | Designs compact role/workflow skill packs with base layers, difference layers, boundaries, and rollout order. |

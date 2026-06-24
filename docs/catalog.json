@@ -1,8 +1,8 @@
 {
-  "skill_count": 50,
+  "skill_count": 51,
   "categories": {
     "Coding, Debugging & Architecture": 10,
-    "Research, Knowledge & Reusable Methods": 7,
+    "Research, Knowledge & Reusable Methods": 8,
     "Frontend, UX & Product Surfaces": 9,
     "Token Economy & Context Control": 8,
     "Long-Run Delivery Control": 4,
@@ -46,6 +46,30 @@
       "card_path": "skills/architecture-deepening-review/SKILL_CARD.md",
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/architecture-deepening-review/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/architecture-deepening-review/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental"
+    },
+    {
+      "name": "authorized-security-router",
+      "display_name": "Authorized Security Router",
+      "category": "Research, Knowledge & Reusable Methods",
+      "description": "Route authorized defensive security and reverse-analysis tasks by scope, target type, user intent, and available toolchain before taking action. Use for APK review, static binary triage, frontend JavaScript security review, firmware inventory, malware/YARA analysis, API/LLM/supply-chain audit, security report planning, or security issues that need evidence-led classification without offensive exploitation.",
+      "short_description": "Route authorized defensive security work safely.",
+      "intended_use": "Use for APK review, static binary triage, frontend JavaScript security review, firmware inventory, malware/YARA analysis, API/LLM/supply-chain audit, and security issue intake when the task needs evidence-led classification and safe next steps.",
+      "model_sensitivity": "",
+      "composable_with": [
+        "`evidence-ledger-research`",
+        "`delivery-preflight-gate`",
+        "`repo-issue-triage`",
+        "`browser-verification`",
+        "`web-quality-audit`"
+      ],
+      "anti_patterns": [],
+      "risks": "- Risk: sliding from triage into exploitation. Mitigation: require route classification and blocked-action checks before tool use.\n- Risk: unclear authorization. Mitigation: stop at `ROUTE_UNCLEAR` until scope is explicit.\n- Risk: unsupported security claims. Mitigation: require evidence location and confidence per finding.\n- Risk: copying offensive playbooks. Mitigation: route to defensive alternatives only.",
+      "path": "skills/authorized-security-router/SKILL.md",
+      "card_path": "skills/authorized-security-router/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/authorized-security-router/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/authorized-security-router/SKILL_CARD.md",
       "origin": "adapted",
       "status": "experimental"
     },
