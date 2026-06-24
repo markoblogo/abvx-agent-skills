@@ -17,6 +17,8 @@ Prefer the repo's existing Playwright setup. If none exists, install browser too
 
 Use a local static or dev server when file URLs would not match production behavior.
 
+For security review of live targets, request routing through `authorized-security-router` first so scope, allowed actions, and non-destructive boundaries are explicit.
+
 ## Verification Loop
 
 1. Start the app or static server.
