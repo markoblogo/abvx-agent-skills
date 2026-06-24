@@ -18,6 +18,8 @@ Run the smallest useful baseline check before committing the agent to a long imp
 - a broken baseline would waste retries or mislead later verification;
 - the user is about to ask for an autonomous or low-supervision run.
 
+For security-sensitive work, run `authorized-security-router` first when authorization, target boundary, or allowed action level is not already explicit.
+
 ## Core Rules
 
 - Deduplicate checks. Do not run the same command under different names.
