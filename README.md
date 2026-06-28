@@ -284,6 +284,22 @@ abvx-skills list
 abvx-skills validate
 ```
 
+### PyPI Fallback Mirror
+
+Use the official PyPI index by default. If PyPI is temporarily unavailable, GitVerse's PyPI mirror can be used as a one-command fallback without changing global pip or uv configuration:
+
+```bash
+python -m pip install abvx-agent-skills --index-url https://pypi-mirror.gitverse.ru/simple/
+```
+
+For temporary CI or shell use, scope the mirror to one command:
+
+```bash
+PIP_INDEX_URL=https://pypi-mirror.gitverse.ru/simple/ python -m pip install abvx-agent-skills
+```
+
+Do not treat the mirror as a supply-chain security layer; it is only a resilience fallback for registry availability.
+
 ## Safety And Auditability
 
 Before installing a skill, inspect it:

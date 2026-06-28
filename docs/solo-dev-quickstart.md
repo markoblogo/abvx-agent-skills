@@ -9,6 +9,12 @@ pip install abvx-agent-skills
 abvx-skills install
 ```
 
+If PyPI is temporarily unavailable, use GitVerse's PyPI mirror for that install command only:
+
+```bash
+python -m pip install abvx-agent-skills --index-url https://pypi-mirror.gitverse.ru/simple/
+```
+
 If you prefer GitHub CLI agent-skills installation:
 
 ```bash
