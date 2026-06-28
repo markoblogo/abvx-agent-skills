@@ -1,8 +1,8 @@
 {
-  "skill_count": 50,
+  "skill_count": 51,
   "categories": {
     "Coding, Debugging & Architecture": 10,
-    "Research, Knowledge & Reusable Methods": 7,
+    "Research, Knowledge & Reusable Methods": 8,
     "Frontend, UX & Product Surfaces": 9,
     "Token Economy & Context Control": 8,
     "Long-Run Delivery Control": 4,
@@ -452,6 +452,35 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/lean-context-layout/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/lean-context-layout/SKILL_CARD.md",
       "origin": "adapted",
+      "status": "experimental"
+    },
+    {
+      "name": "local-inference-tuning",
+      "display_name": "Local Inference Tuning",
+      "category": "Research, Knowledge & Reusable Methods",
+      "description": "Select and tune a local LLM inference engine for the user's hardware. Use when setting up or auditing local/private model serving, choosing between MLX, llama.cpp, Ollama, and vLLM, estimating model fit, deciding cache/storage policy, tuning batching and KV cache flags, running smoke benchmarks, or exposing an OpenAI-compatible local endpoint.",
+      "short_description": "Tune local LLM engines for hardware, cache, KV, batching, and endpoints.",
+      "intended_use": "Use when setting up local/private model serving, choosing between MLX, llama.cpp, Ollama, and vLLM, estimating model fit, deciding model/cache storage locations, tuning batching and KV cache flags, and validating a local OpenAI-compatible endpoint.",
+      "model_sensitivity": "Works best on models that can reason about systems constraints and command-line tradeoffs. Smaller models may need stronger templates for memory estimates and rejected-engine rationale.",
+      "composable_with": [
+        "`goal-loop-designer`",
+        "`token-efficient-execution`",
+        "`delivery-preflight-gate`",
+        "`web-quality-audit`"
+      ],
+      "anti_patterns": [
+        "choosing vLLM for Apple Silicon laptops",
+        "downloading models before checking the approved storage volume",
+        "treating Ollama model inventory as disposable",
+        "setting global pip, uv, Hugging Face, or shell config when a project-local env is enough",
+        "increasing context and concurrency before measuring memory pressure"
+      ],
+      "risks": "- Risk: model downloads fill the wrong disk. Mitigation: require storage policy and cache env vars before pulling weights.\n- Risk: memory pressure or system instability on unified-memory Macs. Mitigation: estimate working set, keep headroom, and lower concurrency/cache before increasing model size.\n- Risk: unsafe local server exposure. Mitigation: default to `127.0.0.1` and require auth review before `0.0.0.0`.\n- Risk: overfitting to one model. Mitigation: separate engine choice, model fit, and tuning profile.",
+      "path": "skills/local-inference-tuning/SKILL.md",
+      "card_path": "skills/local-inference-tuning/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/local-inference-tuning/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/local-inference-tuning/SKILL_CARD.md",
+      "origin": "original",
       "status": "experimental"
     },
     {

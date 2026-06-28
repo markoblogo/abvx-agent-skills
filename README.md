@@ -171,6 +171,7 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 |---|---|
 | `evidence-ledger-research` | Keeps claims, sources, calculations, and open questions in a disciplined evidence ledger. |
 | `loopops-protocol` | Chooses when repeated agent work should stay a prompt or be promoted into a skill, checklist, script, workflow, or cost-bounded loop. |
+| `local-inference-tuning` | Selects and tunes local LLM serving across MLX, llama.cpp, Ollama, and vLLM with cache policy, KV/batching flags, smoke bench, and endpoint recipe. |
 | `book-to-skill` | Converts books, papers, and long documents into reusable, progressive-disclosure agent skills. |
 | `role-skill-pack-design` | Designs compact role/workflow skill packs with base layers, difference layers, boundaries, and rollout order. |
 | `workflow-policy-layering` | Separates workflow from authority, escalation, forbidden actions, and validation so assistant specs stop contradicting themselves. |

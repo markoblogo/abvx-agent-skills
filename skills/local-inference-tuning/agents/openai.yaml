@@ -1,0 +1,4 @@
+interface:
+  display_name: "Local Inference Tuning"
+  short_description: "Tune local LLM engines for hardware, cache, KV, batching, and endpoints."
+  default_prompt: "Audit this machine and design a local LLM inference setup with engine choice, model fit, cache policy, tuned flags, smoke benchmark, and OpenAI-compatible endpoint recipe."
