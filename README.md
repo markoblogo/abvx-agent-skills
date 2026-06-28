@@ -90,7 +90,7 @@ See:
 - **Need to turn plans into execution?** Start with `plan-to-issues`, `repo-issue-triage`, and `test-driven-execution`.
 - **Need safer long delivery runs?** Start with `delivery-preflight-gate`, `phase-spec-execution`, `recovery-loop-3strike`, and `delivery-baseline-audit`.
 - **Need a full multi-track workflow?** Start with `dynamic-workflow-packets`.
-- **Need to turn repeated prompts into loops?** Start with `loopops-protocol`, then use `skillopt-evolve-skills` to capture durable lessons.
+- **Need to turn repeated prompts into loops?** Start with `goal-loop-designer` when you have a raw `/goal`, use `loopops-protocol` to decide the artifact level, then use `skillopt-evolve-skills` to capture durable lessons.
 - **Need to build reusable assistant packs?** Start with `role-skill-pack-design`, `workflow-policy-layering`, `brief-first-execution`, and `private-vs-publishable-skill-audit`.
 
 ## Skills
@@ -170,6 +170,7 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 | Skill | What It Does |
 |---|---|
 | `evidence-ledger-research` | Keeps claims, sources, calculations, and open questions in a disciplined evidence ledger. |
+| `goal-loop-designer` | Compiles a raw agent `/goal` into a bounded loop harness with improved goal, rubric, judge prompt, budget policy, YAML/JSON, and Mermaid. |
 | `loopops-protocol` | Chooses when repeated agent work should stay a prompt or be promoted into a skill, checklist, script, workflow, or cost-bounded loop. |
 | `book-to-skill` | Converts books, papers, and long documents into reusable, progressive-disclosure agent skills. |
 | `role-skill-pack-design` | Designs compact role/workflow skill packs with base layers, difference layers, boundaries, and rollout order. |

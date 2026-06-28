@@ -1,8 +1,8 @@
 {
-  "skill_count": 50,
+  "skill_count": 51,
   "categories": {
     "Coding, Debugging & Architecture": 10,
-    "Research, Knowledge & Reusable Methods": 7,
+    "Research, Knowledge & Reusable Methods": 8,
     "Frontend, UX & Product Surfaces": 9,
     "Token Economy & Context Control": 8,
     "Long-Run Delivery Control": 4,
@@ -362,6 +362,35 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/frontend-taste-layer/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/frontend-taste-layer/SKILL_CARD.md",
       "origin": "adapted",
+      "status": "experimental"
+    },
+    {
+      "name": "goal-loop-designer",
+      "display_name": "Goal Loop Designer",
+      "category": "Research, Knowledge & Reusable Methods",
+      "description": "Compile a raw agent goal into a bounded loop harness before execution. Use before launching long Codex, Claude Code, MiMo Code, or local-LLM coding loops when the goal needs clearer stop rules, verification rubric, judge prompt, budget policy, retry limits, memory policy, and portable YAML/JSON/Mermaid artifacts.",
+      "short_description": "Compile raw goals into bounded agent loop harnesses.",
+      "intended_use": "Use before starting long Codex, Claude Code, MiMo Code, Ollama/OpenAI-compatible, or generic CLI-agent runs where the goal needs stronger completion criteria, budget controls, and independent evaluation.",
+      "model_sensitivity": "Works best on models that can produce structured artifacts and keep budget boundaries stable. Smaller local models may be useful as judges only after a direct response smoke test passes.",
+      "composable_with": [
+        "`loopops-protocol`",
+        "`delivery-preflight-gate`",
+        "`phase-spec-execution`",
+        "`recovery-loop-3strike`",
+        "`token-efficient-execution`"
+      ],
+      "anti_patterns": [
+        "compiling every one-off prompt into a loop",
+        "using an LLM judge when tests or static checks already decide success",
+        "omitting non-goals and forbidden actions",
+        "allowing retries without a new hypothesis or changed evidence"
+      ],
+      "risks": "- Risk: process overhead for small tasks. Mitigation: classify single-pass work and reject unnecessary loops.\n- Risk: token burn from broad iteration. Mitigation: require iteration, time, model-call, or file-scope limits.\n- Risk: weak self-evaluation. Mitigation: prefer deterministic checks and separate judge models where feasible.\n- Risk: unsafe autonomy. Mitigation: require explicit forbidden actions and human approval gates for destructive, external, credentialed, expensive, or privacy-sensitive steps.",
+      "path": "skills/goal-loop-designer/SKILL.md",
+      "card_path": "skills/goal-loop-designer/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/goal-loop-designer/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/goal-loop-designer/SKILL_CARD.md",
+      "origin": "original",
       "status": "experimental"
     },
     {
