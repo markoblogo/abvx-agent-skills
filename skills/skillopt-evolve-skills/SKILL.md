@@ -8,6 +8,12 @@ license: MIT
 
 Use this skill to improve reusable agent behavior as a versioned artifact, not as a one-off prompt rewrite.
 
+## Layer Check
+
+Before editing a skill, use `agent-learning-layer-triage` when the lesson could instead belong in memory, durable repo docs, a checklist, a script/tool, an eval, or a rejected buffer.
+
+Only continue here when the chosen layer is `SKILL.md`, `AGENTS.md`, or another reusable agent-instruction artifact.
+
 ## Loop
 
 1. Identify the target artifact: `SKILL.md`, `AGENTS.md`, checklist, prompt, or workflow note.
