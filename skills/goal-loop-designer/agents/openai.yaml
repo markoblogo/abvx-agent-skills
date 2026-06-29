@@ -1,0 +1,4 @@
+interface:
+  display_name: "Goal Loop Designer"
+  short_description: "Compile raw goals into bounded agent loop harnesses."
+  default_prompt: "Turn this raw agent goal into a bounded loop harness with rubric, judge prompt, budget, YAML, JSON, and Mermaid."

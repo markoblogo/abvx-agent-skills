@@ -23,6 +23,8 @@ Keep repo-local context accurate, compact, and routable after the codebase chang
 - context entrypoints under `docs/ai/`, `process/context/`, or equivalent;
 - startup guidance in `AGENTS.md` when it describes stable repo behavior.
 
+If durable context is becoming too expensive to resend but still needs repeated factual recall, use `doc-to-lora-evaluator` to decide whether parametric document memory is worth testing instead of simply adding more startup prose.
+
 ## Maintenance Workflow
 
 1. Read the current context entrypoints first.

@@ -15,6 +15,7 @@ Use this skill when the answer must be tied to exact evidence rather than memory
 - Read only the narrow span needed after locating a promising source, then verify entity, period, basis, unit, and version.
 - If a provided document contains the answer, extract from it before searching elsewhere.
 - For volatile facts, verify the latest source before answering.
+- If evaluating Doc-to-LoRA or another document-memory method, pair this with `doc-to-lora-evaluator` and keep the baseline questions, source answers, and negative controls in the ledger.
 
 ## Evidence Ledger
 

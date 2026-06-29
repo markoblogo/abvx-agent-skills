@@ -89,6 +89,11 @@ See:
 - **Need discovery or product shaping?** Start with `rapid-grilling`, `doc-grounded-grilling`, and `spec-to-prd`.
 - **Need to turn plans into execution?** Start with `plan-to-issues`, `repo-issue-triage`, and `test-driven-execution`.
 - **Need safer long delivery runs?** Start with `delivery-preflight-gate`, `phase-spec-execution`, `recovery-loop-3strike`, and `delivery-baseline-audit`.
+- **Need to gate a branch before PR publication?** Start with `delivery-preflight-gate` push-gate mode, then add external tooling such as `no-mistakes` only when the repo benefits from an isolated disposable worktree.
+- **Need to route security work?** Start with `authorized-security-router` before any defensive security review where authorization, target boundary, or allowed action level is not explicit.
+- **Need to evaluate document memory?** Start with `doc-to-lora-evaluator` before proposing Doc-to-LoRA, RAG replacement, or adapter-based document recall.
+- **Need to launch a bounded agent loop?** Start with `goal-loop-designer` before running long Codex, Claude Code, MiMo Code, or local-LLM loops.
+- **Need local model serving?** Start with `local-inference-tuning` before choosing MLX, llama.cpp, Ollama, or vLLM.
 - **Need a full multi-track workflow?** Start with `dynamic-workflow-packets`.
 - **Need to turn repeated prompts into loops?** Start with `loopops-protocol`, then use `skillopt-evolve-skills` to capture durable lessons.
 - **Need to build reusable assistant packs?** Start with `role-skill-pack-design`, `workflow-policy-layering`, `brief-first-execution`, and `private-vs-publishable-skill-audit`.
@@ -122,6 +127,7 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 | `architecture-deepening-review` | Reviews deeper module seams, coupling, change surfaces, and testability, not just top-level architecture slogans. |
 | `test-driven-execution` | Builds features and fixes through one-behavior-at-a-time red-green-refactor loops instead of broad speculative implementation. |
 | `system-zoom-out` | Pulls a local code area back into its wider system map so you can reason about callers, modules, boundaries, and blast radius. |
+| `local-inference-tuning` | Selects and tunes local LLM engines around hardware, model fit, cache policy, KV cache, batching, and OpenAI-compatible endpoints. |
 | `agents-best-practices` | Hardens agent harnesses around permissions, context shape, safety, and evaluation discipline. |
 | `skillopt-evolve-skills` | Improves agent instructions and skills from real task evidence rather than from theory alone. |
 
@@ -173,6 +179,8 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 | `evidence-ledger-research` | Keeps claims, sources, calculations, and open questions in a disciplined evidence ledger. |
 | `loopops-protocol` | Chooses when repeated agent work should stay a prompt or be promoted into a skill, checklist, script, workflow, or cost-bounded loop. |
 | `book-to-skill` | Converts books, papers, and long documents into reusable, progressive-disclosure agent skills. |
+| `doc-to-lora-evaluator` | Evaluates whether document-to-adapter memory is worth a proof-of-concept before building a Doc-to-LoRA plugin or pipeline. |
+| `goal-loop-designer` | Compiles raw agent goals into bounded loop harnesses with stop rules, rubric, judge prompt, budgets, and portable artifacts. |
 | `role-skill-pack-design` | Designs compact role/workflow skill packs with base layers, difference layers, boundaries, and rollout order. |
 | `workflow-policy-layering` | Separates workflow from authority, escalation, forbidden actions, and validation so assistant specs stop contradicting themselves. |
 | `brief-first-execution` | Starts non-trivial work with one live brief for scope, non-goals, risks, verification, and done criteria. |
@@ -189,10 +197,16 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 
 | Skill | What It Does |
 |---|---|
-| `delivery-preflight-gate` | Runs the minimum useful baseline checks before a long implementation loop starts, so pre-existing breakage does not poison later verification. |
+| `delivery-preflight-gate` | Runs the minimum useful baseline checks before a long implementation loop or PR publication, so pre-existing breakage and noisy branches do not poison later verification. |
 | `phase-spec-execution` | Breaks larger delivery into explicit phases with acceptance criteria, verification commands, and lightweight state updates. |
 | `recovery-loop-3strike` | Bounds execution failure handling to one evidence-bearing retry, one focused fix-spec, and then an honest blocker handoff. |
 | `delivery-baseline-audit` | Re-checks declared deliverables and final verification against the starting baseline and full working tree before calling the task complete. |
+
+### Security & Defensive Review
+
+| Skill | What It Does |
+|---|---|
+| `authorized-security-router` | Routes authorized defensive security and reverse-analysis tasks by scope, target type, intent, toolchain, and blocked-action gates. |
 
 ### Structured Data & Spreadsheet Work
 
@@ -207,6 +221,12 @@ Fastest path for most users:
 ```bash
 pip install abvx-agent-skills
 abvx-skills install
+```
+
+If PyPI is temporarily unavailable, use GitVerse's PyPI mirror for that install command only:
+
+```bash
+python -m pip install abvx-agent-skills --index-url https://pypi-mirror.gitverse.ru/simple/
 ```
 
 Install with GitHub CLI agent-skills support:

@@ -1,8 +1,9 @@
 {
-  "skill_count": 51,
+  "skill_count": 55,
   "categories": {
-    "Coding, Debugging & Architecture": 10,
-    "Research, Knowledge & Reusable Methods": 7,
+    "Coding, Debugging & Architecture": 11,
+    "Security & Defensive Review": 1,
+    "Research, Knowledge & Reusable Methods": 9,
     "Frontend, UX & Product Surfaces": 10,
     "Token Economy & Context Control": 8,
     "Long-Run Delivery Control": 4,
@@ -46,6 +47,30 @@
       "card_path": "skills/architecture-deepening-review/SKILL_CARD.md",
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/architecture-deepening-review/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/architecture-deepening-review/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental"
+    },
+    {
+      "name": "authorized-security-router",
+      "display_name": "Authorized Security Router",
+      "category": "Security & Defensive Review",
+      "description": "Route authorized defensive security and reverse-analysis tasks by scope, target type, user intent, and available toolchain before taking action. Use for APK review, static binary triage, frontend JavaScript security review, firmware inventory, malware/YARA analysis, API/LLM/supply-chain audit, security report planning, or security issues that need evidence-led classification without offensive exploitation.",
+      "short_description": "Route authorized defensive security work safely.",
+      "intended_use": "Use for APK review, static binary triage, frontend JavaScript security review, firmware inventory, malware/YARA analysis, API/LLM/supply-chain audit, and security issue intake when the task needs evidence-led classification and safe next steps.",
+      "model_sensitivity": "",
+      "composable_with": [
+        "`evidence-ledger-research`",
+        "`delivery-preflight-gate`",
+        "`repo-issue-triage`",
+        "`browser-verification`",
+        "`web-quality-audit`"
+      ],
+      "anti_patterns": [],
+      "risks": "- Risk: sliding from triage into exploitation. Mitigation: require route classification and blocked-action checks before tool use.\n- Risk: unclear authorization. Mitigation: stop at `ROUTE_UNCLEAR` until scope is explicit.\n- Risk: unsupported security claims. Mitigation: require evidence location and confidence per finding.\n- Risk: copying offensive playbooks. Mitigation: route to defensive alternatives only.",
+      "path": "skills/authorized-security-router/SKILL.md",
+      "card_path": "skills/authorized-security-router/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/authorized-security-router/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/authorized-security-router/SKILL_CARD.md",
       "origin": "adapted",
       "status": "experimental"
     },
@@ -161,13 +186,13 @@
       "name": "delivery-preflight-gate",
       "display_name": "Delivery Preflight Gate",
       "category": "Long-Run Delivery Control",
-      "description": "Run a baseline preflight before long implementation or autonomous execution. Use when a task has multiple phases, mandatory commands, or high risk of thrashing against an already-broken repo state. Deduplicate the minimum useful checks, surface red baseline conditions early, and require an explicit user decision before proceeding past known breakage.",
-      "short_description": "Check the baseline before a long delivery loop starts.",
-      "intended_use": "Use before multi-phase delivery, autonomous execution loops, migrations, or risky feature slices where a broken baseline would distort later verification.",
+      "description": "Run a baseline preflight before long implementation, autonomous execution, or publishing a PR. Use when a task has multiple phases, mandatory commands, high risk of thrashing against an already-broken repo state, or should be checked in an isolated push gate before reaching the real remote. Deduplicate the minimum useful checks, surface red baseline conditions early, and require an explicit user decision before proceeding past known breakage.",
+      "short_description": "Check the baseline before long delivery or PR publication.",
+      "intended_use": "Use before multi-phase delivery, autonomous execution loops, migrations, risky feature slices, or push/PR flows where a broken baseline or noisy branch would distort later verification.",
       "model_sensitivity": "",
       "composable_with": [],
       "anti_patterns": [],
-      "risks": "- Risk: overchecking small tasks. Mitigation: require the smallest useful command set.\n- Risk: treating pre-existing failures as new regressions. Mitigation: classify baseline state before implementation.\n- Risk: false confidence from skipped checks. Mitigation: require honest reporting of skipped or unavailable commands.",
+      "risks": "- Risk: overchecking small tasks. Mitigation: require the smallest useful command set.\n- Risk: treating pre-existing failures as new regressions. Mitigation: classify baseline state before implementation.\n- Risk: false confidence from skipped checks. Mitigation: require honest reporting of skipped or unavailable commands.\n- Risk: auto-fix scope creep before PR publication. Mitigation: isolate push-gate repair work and require approval for behavior changes or broad cleanup.",
       "path": "skills/delivery-preflight-gate/SKILL.md",
       "card_path": "skills/delivery-preflight-gate/SKILL_CARD.md",
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/delivery-preflight-gate/SKILL.md",
@@ -262,6 +287,29 @@
       "card_path": "skills/doc-grounded-grilling/SKILL_CARD.md",
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/doc-grounded-grilling/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/doc-grounded-grilling/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental"
+    },
+    {
+      "name": "doc-to-lora-evaluator",
+      "display_name": "Doc To LoRA Evaluator",
+      "category": "Research, Knowledge & Reusable Methods",
+      "description": "Evaluate whether Doc-to-LoRA is the right path for turning documents into parametric memory, and guide a safe proof-of-concept before investing in a full plugin or training pipeline. Use when a user wants to internalize long documents, reduce repeated context costs, compare Doc-to-LoRA against RAG or long-context prompting, or assess hardware/model/data risks for document-to-adapter workflows.",
+      "short_description": "Evaluate document-to-adapter memory before building it.",
+      "intended_use": "Use when a user wants to internalize long documents, reduce repeated context costs, compare Doc-to-LoRA against RAG or long-context prompting, or assess hardware/model/data risks for document-to-adapter workflows.",
+      "model_sensitivity": "",
+      "composable_with": [
+        "`book-to-skill`",
+        "`evidence-ledger-research`",
+        "`durable-context-maintenance`",
+        "`token-efficient-execution`"
+      ],
+      "anti_patterns": [],
+      "risks": "- Risk: treating a research demo as production infrastructure. Mitigation: require a small PoC and baseline comparison before plugin work.\n- Risk: losing provenance versus RAG. Mitigation: explicitly decide when citations and retrieved passages are required.\n- Risk: private document leakage through generated adapters. Mitigation: require artifact storage, deletion, and licensing checks.\n- Risk: fake token-savings claims. Mitigation: compare latency, memory, and answer quality against direct context or RAG.",
+      "path": "skills/doc-to-lora-evaluator/SKILL.md",
+      "card_path": "skills/doc-to-lora-evaluator/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/doc-to-lora-evaluator/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/doc-to-lora-evaluator/SKILL_CARD.md",
       "origin": "adapted",
       "status": "experimental"
     },
@@ -365,6 +413,35 @@
       "status": "experimental"
     },
     {
+      "name": "goal-loop-designer",
+      "display_name": "Goal Loop Designer",
+      "category": "Research, Knowledge & Reusable Methods",
+      "description": "Compile a raw agent goal into a bounded loop harness before execution. Use before launching long Codex, Claude Code, MiMo Code, or local-LLM coding loops when the goal needs clearer stop rules, verification rubric, judge prompt, budget policy, retry limits, memory policy, and portable YAML/JSON/Mermaid artifacts.",
+      "short_description": "Compile raw goals into bounded agent loop harnesses.",
+      "intended_use": "Use before starting long Codex, Claude Code, MiMo Code, Ollama/OpenAI-compatible, or generic CLI-agent runs where the goal needs stronger completion criteria, budget controls, and independent evaluation.",
+      "model_sensitivity": "Works best on models that can produce structured artifacts and keep budget boundaries stable. Smaller local models may be useful as judges only after a direct response smoke test passes.",
+      "composable_with": [
+        "`loopops-protocol`",
+        "`delivery-preflight-gate`",
+        "`phase-spec-execution`",
+        "`recovery-loop-3strike`",
+        "`token-efficient-execution`"
+      ],
+      "anti_patterns": [
+        "compiling every one-off prompt into a loop",
+        "using an LLM judge when tests or static checks already decide success",
+        "omitting non-goals and forbidden actions",
+        "allowing retries without a new hypothesis or changed evidence"
+      ],
+      "risks": "- Risk: process overhead for small tasks. Mitigation: classify single-pass work and reject unnecessary loops.\n- Risk: token burn from broad iteration. Mitigation: require iteration, time, model-call, or file-scope limits.\n- Risk: weak self-evaluation. Mitigation: prefer deterministic checks and separate judge models where feasible.\n- Risk: unsafe autonomy. Mitigation: require explicit forbidden actions and human approval gates for destructive, external, credentialed, expensive, or privacy-sensitive steps.",
+      "path": "skills/goal-loop-designer/SKILL.md",
+      "card_path": "skills/goal-loop-designer/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/goal-loop-designer/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/goal-loop-designer/SKILL_CARD.md",
+      "origin": "original",
+      "status": "experimental"
+    },
+    {
       "name": "graph-guided-code-reading",
       "display_name": "Graph Guided Code Reading",
       "category": "Token Economy & Context Control",
@@ -452,6 +529,35 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/lean-context-layout/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/lean-context-layout/SKILL_CARD.md",
       "origin": "adapted",
+      "status": "experimental"
+    },
+    {
+      "name": "local-inference-tuning",
+      "display_name": "Local Inference Tuning",
+      "category": "Coding, Debugging & Architecture",
+      "description": "Select and tune a local LLM inference engine for the user's hardware. Use when setting up or auditing local/private model serving, choosing between MLX, llama.cpp, Ollama, and vLLM, estimating model fit, deciding cache/storage policy, tuning batching and KV cache flags, running smoke benchmarks, or exposing an OpenAI-compatible local endpoint.",
+      "short_description": "Tune local LLM engines for hardware, cache, KV, batching, and endpoints.",
+      "intended_use": "Use when setting up local/private model serving, choosing between MLX, llama.cpp, Ollama, and vLLM, estimating model fit, deciding model/cache storage locations, tuning batching and KV cache flags, and validating a local OpenAI-compatible endpoint.",
+      "model_sensitivity": "Works best on models that can reason about systems constraints and command-line tradeoffs. Smaller models may need stronger templates for memory estimates and rejected-engine rationale.",
+      "composable_with": [
+        "`goal-loop-designer`",
+        "`token-efficient-execution`",
+        "`delivery-preflight-gate`",
+        "`web-quality-audit`"
+      ],
+      "anti_patterns": [
+        "choosing vLLM for Apple Silicon laptops",
+        "downloading models before checking the approved storage volume",
+        "treating Ollama model inventory as disposable",
+        "setting global pip, uv, Hugging Face, or shell config when a project-local env is enough",
+        "increasing context and concurrency before measuring memory pressure"
+      ],
+      "risks": "- Risk: model downloads fill the wrong disk. Mitigation: require storage policy and cache env vars before pulling weights.\n- Risk: memory pressure or system instability on unified-memory Macs. Mitigation: estimate working set, keep headroom, and lower concurrency/cache before increasing model size.\n- Risk: unsafe local server exposure. Mitigation: default to `127.0.0.1` and require auth review before `0.0.0.0`.\n- Risk: overfitting to one model. Mitigation: separate engine choice, model fit, and tuning profile.",
+      "path": "skills/local-inference-tuning/SKILL.md",
+      "card_path": "skills/local-inference-tuning/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/local-inference-tuning/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/local-inference-tuning/SKILL_CARD.md",
+      "origin": "original",
       "status": "experimental"
     },
     {

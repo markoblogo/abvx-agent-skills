@@ -26,6 +26,8 @@ State:
 - `ready-for-human`
 - `wontfix`
 
+Security-sensitive reports should first pass through `authorized-security-router` when scope, authorization, exploitability, or allowed verification level is unclear.
+
 ## Workflow
 
 1. Read the full issue or request, including prior notes.

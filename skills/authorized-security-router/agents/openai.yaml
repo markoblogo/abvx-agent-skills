@@ -1,0 +1,4 @@
+interface:
+  display_name: "Authorized Security Router"
+  short_description: "Route authorized defensive security work safely."
+  default_prompt: "Use $authorized-security-router to classify this authorized security task and pick a safe defensive workflow before taking action."

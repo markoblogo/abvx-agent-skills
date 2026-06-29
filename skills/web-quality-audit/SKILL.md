@@ -11,6 +11,8 @@ metadata:
 
 Run a compact cross-functional quality pass. Treat accessibility, performance, UX, privacy, and security as connected product risks.
 
+Use `authorized-security-router` first when the request moves from passive web quality review into security testing, target enumeration, request replay, or any live target with unclear authorization.
+
 ## Audit Tracks
 
 ### Accessibility

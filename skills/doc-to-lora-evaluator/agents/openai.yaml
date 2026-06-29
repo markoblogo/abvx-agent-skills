@@ -1,0 +1,4 @@
+interface:
+  display_name: "Doc To LoRA Evaluator"
+  short_description: "Evaluate document-to-adapter memory before building it."
+  default_prompt: "Use $doc-to-lora-evaluator to decide whether Doc-to-LoRA is the right approach for this document-memory workflow."

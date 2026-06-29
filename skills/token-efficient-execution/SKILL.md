@@ -45,6 +45,7 @@ The biggest waste usually comes from repeated exploration, repeated explanation,
 - Keep an evidence ledger with claims, sources, and open questions.
 - Quote or cite only when needed.
 - Do not re-open sources already summarized unless precision requires it.
+- If the dominant waste is repeatedly loading the same long document, use `doc-to-lora-evaluator` before assuming a Doc-to-LoRA adapter is better than RAG, summaries, or direct context.
 
 ## Anti-Patterns
 
