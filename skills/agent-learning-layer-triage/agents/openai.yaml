@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Learning Layer Triage"
+  short_description: "Route agent lessons into memory, skills, scripts, or evals."
+  default_prompt: "Classify this agent lesson and decide whether it belongs in a prompt, memory note, durable doc, checklist, SKILL.md, script/tool, eval, golden fixture, or rejected buffer."
