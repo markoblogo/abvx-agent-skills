@@ -6,28 +6,32 @@ Generated from `docs/catalog.json`.
 |---|---|---|---|
 | `agents-best-practices` | Coding, Debugging & Architecture | Design and audit provider-neutral agent harnesses. | `gh skill install markoblogo/abvx-agent-skills agents-best-practices` |
 | `architecture-deepening-review` | Coding, Debugging & Architecture | Find deeper modules, clearer seams, and testability gains. | `gh skill install markoblogo/abvx-agent-skills architecture-deepening-review` |
+| `authorized-security-router` | Security & Defensive Review | Route authorized defensive security work safely. | `gh skill install markoblogo/abvx-agent-skills authorized-security-router` |
 | `book-to-skill` | Research, Knowledge & Reusable Methods | Convert long-form documents into reusable agent skills. | `gh skill install markoblogo/abvx-agent-skills book-to-skill` |
 | `brief-first-execution` | Research, Knowledge & Reusable Methods | Create one live brief before substantial work starts. | `gh skill install markoblogo/abvx-agent-skills brief-first-execution` |
 | `browser-verification` | Frontend, UX & Product Surfaces | Verify web changes with real browser automation. | `gh skill install markoblogo/abvx-agent-skills browser-verification` |
 | `compaction-survival` | Token Economy & Context Control | Preserve compact resumable state across long sessions and compaction. | `gh skill install markoblogo/abvx-agent-skills compaction-survival` |
 | `complexity-optimizer` | Coding, Debugging & Architecture | Audit and improve complexity without behavior drift. | `gh skill install markoblogo/abvx-agent-skills complexity-optimizer` |
 | `delivery-baseline-audit` | Long-Run Delivery Control | Audit deliverables against the starting baseline. | `gh skill install markoblogo/abvx-agent-skills delivery-baseline-audit` |
-| `delivery-preflight-gate` | Long-Run Delivery Control | Check the baseline before a long delivery loop starts. | `gh skill install markoblogo/abvx-agent-skills delivery-preflight-gate` |
+| `delivery-preflight-gate` | Long-Run Delivery Control | Check the baseline before long delivery or PR publication. | `gh skill install markoblogo/abvx-agent-skills delivery-preflight-gate` |
 | `design-critique-polish` | Frontend, UX & Product Surfaces | Critique and polish a frontend surface before shipping. | `gh skill install markoblogo/abvx-agent-skills design-critique-polish` |
 | `design-register-bootstrap` | Frontend, UX & Product Surfaces | Set brand vs product register before frontend work. | `gh skill install markoblogo/abvx-agent-skills design-register-bootstrap` |
 | `designmd-brand-kit` | Frontend, UX & Product Surfaces | Use DESIGN.md for brand-aware UI work. | `gh skill install markoblogo/abvx-agent-skills designmd-brand-kit` |
 | `diagnose` | Coding, Debugging & Architecture | Debug with feedback loops, hypotheses, and regression checks. | `gh skill install markoblogo/abvx-agent-skills diagnose` |
 | `doc-grounded-grilling` | Discovery, Planning & Delivery | Sharpen a plan against repo docs, ADRs, and domain language. | `gh skill install markoblogo/abvx-agent-skills doc-grounded-grilling` |
+| `doc-to-lora-evaluator` | Research, Knowledge & Reusable Methods | Evaluate document-to-adapter memory before building it. | `gh skill install markoblogo/abvx-agent-skills doc-to-lora-evaluator` |
 | `durable-context-maintenance` | Project Context & Onboarding | Refresh repo-local durable context after code and workflow drift. | `gh skill install markoblogo/abvx-agent-skills durable-context-maintenance` |
 | `dynamic-workflow-packets` | Workflow, Handoffs & Multi-Track Work | Run big Codex tasks with bounded packets. | `gh skill install markoblogo/abvx-agent-skills dynamic-workflow-packets` |
 | `evidence-ledger-research` | Research, Knowledge & Reusable Methods | Research with source, unit, date, and operand discipline. | `gh skill install markoblogo/abvx-agent-skills evidence-ledger-research` |
 | `frontend-product-builder` | Frontend, UX & Product Surfaces | Build frontend experiences with hierarchy, assets, and verification. | `gh skill install markoblogo/abvx-agent-skills frontend-product-builder` |
 | `frontend-taste-layer` | Frontend, UX & Product Surfaces | Add anti-slop taste to frontend work. | `gh skill install markoblogo/abvx-agent-skills frontend-taste-layer` |
+| `goal-loop-designer` | Research, Knowledge & Reusable Methods | Compile raw goals into bounded agent loop harnesses. | `gh skill install markoblogo/abvx-agent-skills goal-loop-designer` |
 | `graph-guided-code-reading` | Token Economy & Context Control | Read codebases through symbols, edges, and blast radius instead of broad scans. | `gh skill install markoblogo/abvx-agent-skills graph-guided-code-reading` |
 | `handoff` | Workflow, Handoffs & Multi-Track Work | Write compact continuation briefs for future agents. | `gh skill install markoblogo/abvx-agent-skills handoff` |
 | `html-brief-artifact` | HTML Artifacts & Visual Deliverables | Create a standalone HTML brief for plans, summaries, and reports. | `gh skill install markoblogo/abvx-agent-skills html-brief-artifact` |
 | `html-diagram-artifact` | HTML Artifacts & Visual Deliverables | Create a standalone HTML/SVG architecture or flow explainer. | `gh skill install markoblogo/abvx-agent-skills html-diagram-artifact` |
 | `lean-context-layout` | Token Economy & Context Control | Shrink always-loaded agent context and move the rest on demand. | `gh skill install markoblogo/abvx-agent-skills lean-context-layout` |
+| `local-inference-tuning` | Coding, Debugging & Architecture | Tune local LLM engines for hardware, cache, KV, batching, and endpoints. | `gh skill install markoblogo/abvx-agent-skills local-inference-tuning` |
 | `loopops-protocol` | Research, Knowledge & Reusable Methods | Turn reusable agent work into bounded loops. | `gh skill install markoblogo/abvx-agent-skills loopops-protocol` |
 | `lottie-motion-builder` | Frontend, UX & Product Surfaces | Build small Lottie assets with preview gates. | `gh skill install markoblogo/abvx-agent-skills lottie-motion-builder` |
 | `minimal-diff-builder` | Coding, Debugging & Architecture | Choose the smallest correct implementation path. | `gh skill install markoblogo/abvx-agent-skills minimal-diff-builder` |
