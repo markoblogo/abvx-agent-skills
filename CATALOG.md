@@ -4,6 +4,7 @@ Generated from `docs/catalog.json`.
 
 | Skill | Category | Use case | Install |
 |---|---|---|---|
+| `agent-learning-layer-triage` | Research, Knowledge & Reusable Methods | Route agent lessons into memory, skills, scripts, or evals. | `gh skill install markoblogo/abvx-agent-skills agent-learning-layer-triage` |
 | `agents-best-practices` | Coding, Debugging & Architecture | Design and audit provider-neutral agent harnesses. | `gh skill install markoblogo/abvx-agent-skills agents-best-practices` |
 | `architecture-deepening-review` | Coding, Debugging & Architecture | Find deeper modules, clearer seams, and testability gains. | `gh skill install markoblogo/abvx-agent-skills architecture-deepening-review` |
 | `authorized-security-router` | Security & Defensive Review | Route authorized defensive security work safely. | `gh skill install markoblogo/abvx-agent-skills authorized-security-router` |

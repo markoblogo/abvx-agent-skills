@@ -23,6 +23,8 @@ Keep repo-local context accurate, compact, and routable after the codebase chang
 - context entrypoints under `docs/ai/`, `process/context/`, or equivalent;
 - startup guidance in `AGENTS.md` when it describes stable repo behavior.
 
+If a lesson may belong in memory, a checklist, `SKILL.md`, a script, or an eval instead of repo docs, run `agent-learning-layer-triage` first and update durable context only when the chosen layer is repo-local documentation.
+
 If durable context is becoming too expensive to resend but still needs repeated factual recall, use `doc-to-lora-evaluator` to decide whether parametric document memory is worth testing instead of simply adding more startup prose.
 
 ## Maintenance Workflow
