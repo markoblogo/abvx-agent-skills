@@ -1,9 +1,9 @@
 {
-  "skill_count": 55,
+  "skill_count": 56,
   "categories": {
+    "Research, Knowledge & Reusable Methods": 10,
     "Coding, Debugging & Architecture": 11,
     "Security & Defensive Review": 1,
-    "Research, Knowledge & Reusable Methods": 9,
     "Frontend, UX & Product Surfaces": 10,
     "Token Economy & Context Control": 8,
     "Long-Run Delivery Control": 4,
@@ -14,6 +14,36 @@
     "Structured Data & Spreadsheet Work": 1
   },
   "skills": [
+    {
+      "name": "agent-learning-layer-triage",
+      "display_name": "Agent Learning Layer Triage",
+      "category": "Research, Knowledge & Reusable Methods",
+      "description": "Route reusable agent learning after an error, success pattern, review finding, or repeated workflow. Use when deciding whether an improvement belongs in the model prompt, memory/context note, durable docs, SKILL.md, checklist, script/tool, eval, golden fixture, or should be rejected as overfit.",
+      "short_description": "Route agent lessons into memory, skills, scripts, or evals.",
+      "intended_use": "Use after a task reveals a reusable lesson and the team needs to decide where that learning should live without bloating global prompts or over-promoting every note into a skill.",
+      "model_sensitivity": "Works best on models that can separate facts, procedures, deterministic tools, and regression tests. Weaker models may need the output shape filled as a template.",
+      "composable_with": [
+        "`skillopt-evolve-skills`",
+        "`durable-context-maintenance`",
+        "`goal-loop-designer`",
+        "`delivery-preflight-gate`",
+        "`private-vs-publishable-skill-audit`"
+      ],
+      "anti_patterns": [
+        "promoting every lesson into a global skill",
+        "storing repo-local facts in global behavior layers",
+        "creating scripts for judgment-heavy workflows",
+        "using memory as a dumping ground for stale task history",
+        "creating evals without a stable fixture or observable pass/fail"
+      ],
+      "risks": "- Risk: skill bloat. Mitigation: prefer the lowest durable layer that solves the repeated problem.\n- Risk: overfitting a single anecdote. Mitigation: require recurrence or strong expected recurrence.\n- Risk: hiding private context in publishable artifacts. Mitigation: classify private vs publishable before writing.\n- Risk: replacing tests with prose. Mitigation: route regression-prone failures to evals or golden fixtures.",
+      "path": "skills/agent-learning-layer-triage/SKILL.md",
+      "card_path": "skills/agent-learning-layer-triage/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/agent-learning-layer-triage/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/agent-learning-layer-triage/SKILL_CARD.md",
+      "origin": "original",
+      "status": "experimental"
+    },
     {
       "name": "agents-best-practices",
       "display_name": "Agents Best Practices",
