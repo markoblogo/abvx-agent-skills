@@ -4,6 +4,7 @@ Generated from `docs/catalog.json`.
 
 | Skill | Category | Use case | Install |
 |---|---|---|---|
+| `agent-learning-layer-triage` | Research, Knowledge & Reusable Methods | Route agent lessons into memory, skills, scripts, or evals. | `gh skill install markoblogo/abvx-agent-skills agent-learning-layer-triage` |
 | `agents-best-practices` | Coding, Debugging & Architecture | Design and audit provider-neutral agent harnesses. | `gh skill install markoblogo/abvx-agent-skills agents-best-practices` |
 | `architecture-deepening-review` | Coding, Debugging & Architecture | Find deeper modules, clearer seams, and testability gains. | `gh skill install markoblogo/abvx-agent-skills architecture-deepening-review` |
 | `authorized-security-router` | Security & Defensive Review | Route authorized defensive security work safely. | `gh skill install markoblogo/abvx-agent-skills authorized-security-router` |
@@ -33,7 +34,6 @@ Generated from `docs/catalog.json`.
 | `lean-context-layout` | Token Economy & Context Control | Shrink always-loaded agent context and move the rest on demand. | `gh skill install markoblogo/abvx-agent-skills lean-context-layout` |
 | `local-inference-tuning` | Coding, Debugging & Architecture | Tune local LLM engines for hardware, cache, KV, batching, and endpoints. | `gh skill install markoblogo/abvx-agent-skills local-inference-tuning` |
 | `loopops-protocol` | Research, Knowledge & Reusable Methods | Turn reusable agent work into bounded loops. | `gh skill install markoblogo/abvx-agent-skills loopops-protocol` |
-| `agent-learning-layer-triage` | Research, Knowledge & Reusable Methods | Route agent lessons into memory, skills, scripts, or evals. | `gh skill install markoblogo/abvx-agent-skills agent-learning-layer-triage` |
 | `lottie-motion-builder` | Frontend, UX & Product Surfaces | Build small Lottie assets with preview gates. | `gh skill install markoblogo/abvx-agent-skills lottie-motion-builder` |
 | `minimal-diff-builder` | Coding, Debugging & Architecture | Choose the smallest correct implementation path. | `gh skill install markoblogo/abvx-agent-skills minimal-diff-builder` |
 | `motion-review-gate` | Frontend, UX & Product Surfaces | Review frontend motion before shipping. | `gh skill install markoblogo/abvx-agent-skills motion-review-gate` |
