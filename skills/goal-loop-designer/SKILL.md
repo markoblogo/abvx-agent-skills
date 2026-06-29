@@ -54,6 +54,8 @@ Classify the work:
 
 Prefer the lowest level that can succeed.
 
+If a loop produces a reusable lesson, do not automatically add it to memory or a skill. Use `agent-learning-layer-triage` after the run to decide whether the lesson belongs in a context note, durable doc, checklist, `SKILL.md`, script/tool, eval, golden fixture, or rejected buffer.
+
 ## Harness Contract
 
 Every loop harness must define:
