@@ -1,9 +1,9 @@
 {
-  "skill_count": 50,
+  "skill_count": 51,
   "categories": {
     "Coding, Debugging & Architecture": 10,
     "Research, Knowledge & Reusable Methods": 7,
-    "Frontend, UX & Product Surfaces": 9,
+    "Frontend, UX & Product Surfaces": 10,
     "Token Economy & Context Control": 8,
     "Long-Run Delivery Control": 4,
     "Discovery, Planning & Delivery": 5,
@@ -522,6 +522,29 @@
       "card_path": "skills/minimal-diff-builder/SKILL_CARD.md",
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/minimal-diff-builder/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/minimal-diff-builder/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental"
+    },
+    {
+      "name": "motion-review-gate",
+      "display_name": "Motion Review Gate",
+      "category": "Frontend, UX & Product Surfaces",
+      "description": "Review frontend motion and animation code before shipping, with strict checks for purpose, frequency, easing, duration, transform origin, interruptibility, GPU-safe properties, reduced-motion support, and hover behavior. Use when a diff touches transitions, keyframes, Framer Motion, Lottie, drawers, popovers, toasts, hover or press states, gesture motion, or branded motion assets.",
+      "short_description": "Review frontend motion before shipping.",
+      "intended_use": "Use when a frontend diff touches transitions, keyframes, Framer Motion, Lottie, drawers, popovers, toasts, hover or press states, gestures, or other motion-sensitive UI.",
+      "model_sensitivity": "",
+      "composable_with": [
+        "`browser-verification`",
+        "`design-critique-polish`",
+        "`frontend-taste-layer`",
+        "`lottie-motion-builder`"
+      ],
+      "anti_patterns": [],
+      "risks": "- Risk: taste-only criticism. Mitigation: require concrete evidence and user-facing consequences.\n- Risk: deleting useful motion. Mitigation: first check purpose and frequency before recommending removal.\n- Risk: over-polishing. Mitigation: prefer deletion, reduction, and bounded fixes before decorative polish.\n- Risk: inaccessible motion. Mitigation: require reduced-motion and hover/touch checks where relevant.",
+      "path": "skills/motion-review-gate/SKILL.md",
+      "card_path": "skills/motion-review-gate/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/motion-review-gate/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/motion-review-gate/SKILL_CARD.md",
       "origin": "adapted",
       "status": "experimental"
     },

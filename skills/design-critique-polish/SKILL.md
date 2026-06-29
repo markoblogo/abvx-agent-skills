@@ -44,7 +44,7 @@ Evaluate in this order:
 6. **States and resilience**
    - hover, focus, loading, empty, error, disabled, overflow, long labels.
 7. **Motion and interaction**
-   - helpful versus noisy; reduced-motion handling.
+   - helpful versus noisy; reduced-motion handling. If the diff materially changes transitions, keyframes, gestures, Lottie, popovers, toasts, or hover/press motion, run `motion-review-gate` as the dedicated review pass.
 8. **Technical quality**
    - responsive behavior, accessibility signals, obvious performance issues.
 

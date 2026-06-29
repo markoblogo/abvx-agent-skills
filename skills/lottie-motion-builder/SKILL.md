@@ -53,7 +53,8 @@ Use the external diffusionstudio/lottie harness rather than inventing a custom p
 3. Generate or edit `public/lottie.json` in the harness project.
 4. Expose at least one background-color control and any explicitly requested controls.
 5. Run the local preview and visually verify the result.
-6. Export the usable artifact set and summarize how to embed it.
+6. Run `motion-review-gate` when the asset is meant for a product UI surface rather than a throwaway demo.
+7. Export the usable artifact set and summarize how to embed it.
 
 ## Output Contract
 
@@ -72,6 +73,7 @@ Produce these artifacts when the user asks for a usable result:
 - Background control exists.
 - Dimensions, duration, and FPS match the request.
 - The asset is small enough for the intended product surface.
+- Product-surface motion has passed `motion-review-gate` or the exception is stated.
 
 ## Reporting
 
