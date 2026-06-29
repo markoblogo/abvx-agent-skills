@@ -21,6 +21,8 @@ Run the smallest useful baseline check before committing the agent to a long imp
 
 For security-sensitive work, run `authorized-security-router` first when authorization, target boundary, or allowed action level is not already explicit.
 
+If repeated preflight failures reveal a reusable lesson, use `agent-learning-layer-triage` to decide whether the fix belongs in a memory/context note, durable repo doc, checklist, `SKILL.md`, script/tool, eval, or golden fixture.
+
 ## Core Rules
 
 - Deduplicate checks. Do not run the same command under different names.
