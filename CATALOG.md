@@ -12,7 +12,7 @@ Generated from `docs/catalog.json`.
 | `compaction-survival` | Token Economy & Context Control | Preserve compact resumable state across long sessions and compaction. | `gh skill install markoblogo/abvx-agent-skills compaction-survival` |
 | `complexity-optimizer` | Coding, Debugging & Architecture | Audit and improve complexity without behavior drift. | `gh skill install markoblogo/abvx-agent-skills complexity-optimizer` |
 | `delivery-baseline-audit` | Long-Run Delivery Control | Audit deliverables against the starting baseline. | `gh skill install markoblogo/abvx-agent-skills delivery-baseline-audit` |
-| `delivery-preflight-gate` | Long-Run Delivery Control | Check the baseline before a long delivery loop starts. | `gh skill install markoblogo/abvx-agent-skills delivery-preflight-gate` |
+| `delivery-preflight-gate` | Long-Run Delivery Control | Check the baseline before long delivery or PR publication. | `gh skill install markoblogo/abvx-agent-skills delivery-preflight-gate` |
 | `design-critique-polish` | Frontend, UX & Product Surfaces | Critique and polish a frontend surface before shipping. | `gh skill install markoblogo/abvx-agent-skills design-critique-polish` |
 | `design-register-bootstrap` | Frontend, UX & Product Surfaces | Set brand vs product register before frontend work. | `gh skill install markoblogo/abvx-agent-skills design-register-bootstrap` |
 | `designmd-brand-kit` | Frontend, UX & Product Surfaces | Use DESIGN.md for brand-aware UI work. | `gh skill install markoblogo/abvx-agent-skills designmd-brand-kit` |
