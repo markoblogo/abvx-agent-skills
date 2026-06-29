@@ -89,6 +89,7 @@ See:
 - **Need discovery or product shaping?** Start with `rapid-grilling`, `doc-grounded-grilling`, and `spec-to-prd`.
 - **Need to turn plans into execution?** Start with `plan-to-issues`, `repo-issue-triage`, and `test-driven-execution`.
 - **Need safer long delivery runs?** Start with `delivery-preflight-gate`, `phase-spec-execution`, `recovery-loop-3strike`, and `delivery-baseline-audit`.
+- **Need to gate a branch before PR publication?** Start with `delivery-preflight-gate` push-gate mode, then add external tooling such as `no-mistakes` only when the repo benefits from an isolated disposable worktree.
 - **Need a full multi-track workflow?** Start with `dynamic-workflow-packets`.
 - **Need to turn repeated prompts into loops?** Start with `loopops-protocol`, then use `skillopt-evolve-skills` to capture durable lessons.
 - **Need to build reusable assistant packs?** Start with `role-skill-pack-design`, `workflow-policy-layering`, `brief-first-execution`, and `private-vs-publishable-skill-audit`.
@@ -188,7 +189,7 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 
 | Skill | What It Does |
 |---|---|
-| `delivery-preflight-gate` | Runs the minimum useful baseline checks before a long implementation loop starts, so pre-existing breakage does not poison later verification. |
+| `delivery-preflight-gate` | Runs the minimum useful baseline checks before a long implementation loop or PR publication, so pre-existing breakage and noisy branches do not poison later verification. |
 | `phase-spec-execution` | Breaks larger delivery into explicit phases with acceptance criteria, verification commands, and lightweight state updates. |
 | `recovery-loop-3strike` | Bounds execution failure handling to one evidence-bearing retry, one focused fix-spec, and then an honest blocker handoff. |
 | `delivery-baseline-audit` | Re-checks declared deliverables and final verification against the starting baseline and full working tree before calling the task complete. |
