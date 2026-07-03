@@ -88,6 +88,7 @@ See:
 - **Need to onboard a new repo?** Start with `project-context-bootstrap` and follow with `durable-context-maintenance`.
 - **Need discovery or product shaping?** Start with `rapid-grilling`, `doc-grounded-grilling`, and `spec-to-prd`.
 - **Need to turn plans into execution?** Start with `plan-to-issues`, `repo-issue-triage`, and `test-driven-execution`.
+- **Need to take an idea all the way to a shipped slice?** Start with `idea-to-ship-gates`, then route into `spec-to-prd`, `plan-to-issues`, `delivery-preflight-gate`, and proof/review skills only where the current gate needs depth.
 - **Need safer long delivery runs?** Start with `delivery-preflight-gate`, `phase-spec-execution`, `recovery-loop-3strike`, and `delivery-baseline-audit`.
 - **Need to gate a branch before PR publication?** Start with `delivery-preflight-gate` push-gate mode, then add external tooling such as `no-mistakes` only when the repo benefits from an isolated disposable worktree.
 - **Need to route security work?** Start with `authorized-security-router` before any defensive security review where authorization, target boundary, or allowed action level is not explicit.
@@ -199,6 +200,7 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 
 | Skill | What It Does |
 |---|---|
+| `idea-to-ship-gates` | Routes ideas through intent, spec, slices, architecture, proof, convergence, and release gates. |
 | `delivery-preflight-gate` | Runs the minimum useful baseline checks before a long implementation loop or PR publication, so pre-existing breakage and noisy branches do not poison later verification. |
 | `phase-spec-execution` | Breaks larger delivery into explicit phases with acceptance criteria, verification commands, and lightweight state updates. |
 | `recovery-loop-3strike` | Bounds execution failure handling to one evidence-bearing retry, one focused fix-spec, and then an honest blocker handoff. |

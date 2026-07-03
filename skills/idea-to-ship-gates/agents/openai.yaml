@@ -1,0 +1,4 @@
+interface:
+  display_name: "Idea To Ship Gates"
+  short_description: "Route ideas through spec, slices, proof, review, and release."
+  default_prompt: "Handle this idea with delivery gates from intent to release."

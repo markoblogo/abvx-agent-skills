@@ -1,12 +1,12 @@
 {
-  "skill_count": 56,
+  "skill_count": 57,
   "categories": {
     "Research, Knowledge & Reusable Methods": 10,
     "Coding, Debugging & Architecture": 11,
     "Security & Defensive Review": 1,
     "Frontend, UX & Product Surfaces": 10,
     "Token Economy & Context Control": 8,
-    "Long-Run Delivery Control": 4,
+    "Long-Run Delivery Control": 5,
     "Discovery, Planning & Delivery": 5,
     "Project Context & Onboarding": 2,
     "Workflow, Handoffs & Multi-Track Work": 2,
@@ -540,6 +540,39 @@
       "card_path": "skills/html-diagram-artifact/SKILL_CARD.md",
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/html-diagram-artifact/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/html-diagram-artifact/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental"
+    },
+    {
+      "name": "idea-to-ship-gates",
+      "display_name": "Idea To Ship Gates",
+      "category": "Long-Run Delivery Control",
+      "description": "Route an idea, vague feature request, or agent-built product change through delivery gates from intent to release. Use when work needs more discipline than a readiness check: clarify the spec, slice the work, protect architecture boundaries, gather proof, converge through review, and prepare release without turning the task into a heavyweight process.",
+      "short_description": "Route ideas through spec, slices, proof, review, and release.",
+      "intended_use": "Use when a task is bigger than a one-shot fix and needs a disciplined path from idea to shipped slice without adopting a heavyweight project-management workflow.",
+      "model_sensitivity": "Works best on models that can separate product uncertainty from engineering uncertainty and can route to more specific skills when a gate needs depth.",
+      "composable_with": [
+        "`rapid-grilling`",
+        "`spec-to-prd`",
+        "`plan-to-issues`",
+        "`delivery-preflight-gate`",
+        "`phase-spec-execution`",
+        "`test-driven-execution`",
+        "`delivery-baseline-audit`",
+        "`agent-learning-layer-triage`"
+      ],
+      "anti_patterns": [
+        "creating PRDs for obvious one-line fixes",
+        "calling a feature shipped before proof exists",
+        "using release notes as verification",
+        "looping on vague review feedback without acceptance criteria",
+        "importing an entire external skill pack when one routing pattern is enough"
+      ],
+      "risks": "- Risk: ceremonial process. Mitigation: start at the first missing gate and skip gates already satisfied by evidence.\n- Risk: fake progress. Mitigation: require proof before review and release gates.\n- Risk: over-scoping. Mitigation: reslice when the current slice crosses too many boundaries.\n- Risk: installing external workflows wholesale. Mitigation: adapt only the small gate pattern that improves ABVX delivery discipline.",
+      "path": "skills/idea-to-ship-gates/SKILL.md",
+      "card_path": "skills/idea-to-ship-gates/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/idea-to-ship-gates/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/idea-to-ship-gates/SKILL_CARD.md",
       "origin": "adapted",
       "status": "experimental"
     },
