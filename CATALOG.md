@@ -31,6 +31,7 @@ Generated from `docs/catalog.json`.
 | `handoff` | Workflow, Handoffs & Multi-Track Work | Write compact continuation briefs for future agents. | `gh skill install markoblogo/abvx-agent-skills handoff` |
 | `html-brief-artifact` | HTML Artifacts & Visual Deliverables | Create a standalone HTML brief for plans, summaries, and reports. | `gh skill install markoblogo/abvx-agent-skills html-brief-artifact` |
 | `html-diagram-artifact` | HTML Artifacts & Visual Deliverables | Create a standalone HTML/SVG architecture or flow explainer. | `gh skill install markoblogo/abvx-agent-skills html-diagram-artifact` |
+| `idea-to-ship-gates` | Long-Run Delivery Control | Route ideas through spec, slices, proof, review, and release. | `gh skill install markoblogo/abvx-agent-skills idea-to-ship-gates` |
 | `lean-context-layout` | Token Economy & Context Control | Shrink always-loaded agent context and move the rest on demand. | `gh skill install markoblogo/abvx-agent-skills lean-context-layout` |
 | `local-inference-tuning` | Coding, Debugging & Architecture | Tune local LLM engines for hardware, cache, KV, batching, and endpoints. | `gh skill install markoblogo/abvx-agent-skills local-inference-tuning` |
 | `loopops-protocol` | Research, Knowledge & Reusable Methods | Turn reusable agent work into bounded loops. | `gh skill install markoblogo/abvx-agent-skills loopops-protocol` |
