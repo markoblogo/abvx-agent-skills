@@ -52,6 +52,7 @@ Generated from `docs/catalog.json`.
 | `rtk-assisted-shell` | Token Economy & Context Control | Use RTK-style filtering before shell output reaches the model. | `gh skill install markoblogo/abvx-agent-skills rtk-assisted-shell` |
 | `shell-output-compaction` | Token Economy & Context Control | Reduce token waste from shell output, logs, diffs, and CI noise. | `gh skill install markoblogo/abvx-agent-skills shell-output-compaction` |
 | `skillopt-evolve-skills` | Coding, Debugging & Architecture | Evolve local skills with validation-gated edits. | `gh skill install markoblogo/abvx-agent-skills skillopt-evolve-skills` |
+| `social-publishing-gate` | Research, Knowledge & Reusable Methods | Draft, audit, approve, publish, and monitor social content safely. | `gh skill install markoblogo/abvx-agent-skills social-publishing-gate` |
 | `spec-to-prd` | Discovery, Planning & Delivery | Turn current discovery into a durable product requirements document. | `gh skill install markoblogo/abvx-agent-skills spec-to-prd` |
 | `spreadsheet-workbook-forensics` | Structured Data & Spreadsheet Work | Edit workbooks with verified outputs. | `gh skill install markoblogo/abvx-agent-skills spreadsheet-workbook-forensics` |
 | `system-zoom-out` | Coding, Debugging & Architecture | Explain how a local area fits into the larger system. | `gh skill install markoblogo/abvx-agent-skills system-zoom-out` |

@@ -89,6 +89,7 @@ See:
 - **Need discovery or product shaping?** Start with `rapid-grilling`, `doc-grounded-grilling`, and `spec-to-prd`.
 - **Need to turn plans into execution?** Start with `plan-to-issues`, `repo-issue-triage`, and `test-driven-execution`.
 - **Need to take an idea all the way to a shipped slice?** Start with `idea-to-ship-gates`, then route into `spec-to-prd`, `plan-to-issues`, `delivery-preflight-gate`, and proof/review skills only where the current gate needs depth.
+- **Need to publish or monitor social content safely?** Start with `social-publishing-gate` so drafts, audits, approvals, external posting, and follow-ups stay separate.
 - **Need safer long delivery runs?** Start with `delivery-preflight-gate`, `phase-spec-execution`, `recovery-loop-3strike`, and `delivery-baseline-audit`.
 - **Need to gate a branch before PR publication?** Start with `delivery-preflight-gate` push-gate mode, then add external tooling such as `no-mistakes` only when the repo benefits from an isolated disposable worktree.
 - **Need to route security work?** Start with `authorized-security-router` before any defensive security review where authorization, target boundary, or allowed action level is not explicit.
@@ -179,6 +180,7 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 | Skill | What It Does |
 |---|---|
 | `evidence-ledger-research` | Keeps claims, sources, calculations, and open questions in a disciplined evidence ledger. |
+| `social-publishing-gate` | Gates social posts, replies, scheduling, and monitoring through draft, audit, approval, publish, and monitor steps. |
 | `loopops-protocol` | Chooses when repeated agent work should stay a prompt or be promoted into a skill, checklist, script, workflow, or cost-bounded loop. |
 | `agent-learning-layer-triage` | Routes agent lessons into the right auditable layer: prompt, memory, durable docs, checklist, skill, script, eval, or rejected buffer. |
 | `book-to-skill` | Converts books, papers, and long documents into reusable, progressive-disclosure agent skills. |

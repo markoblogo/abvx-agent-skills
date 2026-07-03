@@ -1,7 +1,7 @@
 {
-  "skill_count": 57,
+  "skill_count": 58,
   "categories": {
-    "Research, Knowledge & Reusable Methods": 10,
+    "Research, Knowledge & Reusable Methods": 11,
     "Coding, Debugging & Architecture": 11,
     "Security & Defensive Review": 1,
     "Frontend, UX & Product Surfaces": 10,
@@ -976,6 +976,37 @@
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/skillopt-evolve-skills/SKILL_CARD.md",
       "origin": "",
       "status": ""
+    },
+    {
+      "name": "social-publishing-gate",
+      "display_name": "Social Publishing Gate",
+      "category": "Research, Knowledge & Reusable Methods",
+      "description": "Review and route social content before publishing. Use when drafting, adapting, auditing, scheduling, or monitoring posts for LinkedIn, X, Threads, Telegram, newsletters, or other distribution channels where brand voice, factual claims, platform fit, approvals, and no-spam guardrails matter. Enforce draft -> audit -> approval -> publish -> monitor, and never post or message externally without explicit user approval.",
+      "short_description": "Draft, audit, approve, publish, and monitor social content safely.",
+      "intended_use": "Use for LinkedIn, X, Threads, Telegram channels, newsletters, and MediaHub-style distribution workflows where the agent should draft or audit content, then wait for approval before publishing, replying, scheduling, or sending.",
+      "model_sensitivity": "Works best on models that can separate drafting from side effects and can preserve a specific voice without over-optimizing for engagement.",
+      "composable_with": [
+        "`evidence-ledger-research`",
+        "`designmd-brand-kit`",
+        "`idea-to-ship-gates`",
+        "`agent-learning-layer-triage`",
+        "`private-vs-publishable-skill-audit`",
+        "`web-quality-audit`"
+      ],
+      "anti_patterns": [
+        "auto-posting without approval",
+        "engagement farming",
+        "fake authority or invented metrics",
+        "private-data scraping without explicit permission",
+        "generic cross-posting that ignores channel norms"
+      ],
+      "risks": "- Risk: accidental external side effects. Mitigation: classify every publish, reply, reaction, schedule, and DM as approval-required.\n- Risk: spam or engagement bait. Mitigation: audit for platform fit, useful substance, and trust impact.\n- Risk: inaccurate claims. Mitigation: mark unverifiable claims and require fact checks before approval.\n- Risk: voice flattening. Mitigation: preserve provided source voice and avoid generic AI phrasing.\n- Risk: platform or credential misuse. Mitigation: stop when account identity, destination, or permission is unclear.",
+      "path": "skills/social-publishing-gate/SKILL.md",
+      "card_path": "skills/social-publishing-gate/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/social-publishing-gate/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/social-publishing-gate/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental"
     },
     {
       "name": "spec-to-prd",

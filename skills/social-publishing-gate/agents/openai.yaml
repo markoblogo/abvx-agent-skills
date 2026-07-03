@@ -1,0 +1,4 @@
+interface:
+  display_name: "Social Publishing Gate"
+  short_description: "Draft, audit, approve, publish, and monitor social content safely."
+  default_prompt: "Handle this social publishing task with draft, audit, approval, publish, and monitor gates."
