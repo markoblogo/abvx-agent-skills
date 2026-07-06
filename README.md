@@ -16,6 +16,8 @@ ABVX Agent Skills is a small, auditable skillpack for coding agents that helps t
 
 These are not prompt dumps. They are compact `SKILL.md` workflows with clear triggers, attribution, risk notes, and validation. They are portable, versioned agent capabilities meant to be previewed, inspected, and loaded on demand through the Agent Skills progressive-disclosure model.
 
+They also are not a replacement for MCP or CLI tools. In the ABVX stack, MCP is the access layer for external services, CLI is the execution layer for deterministic work, and skills are the discipline layer: they decide when to use MCP, when to use CLI, which checks are mandatory, and when a repeated workflow should become a reusable gate.
+
 ## Try One Skill In 2 Minutes
 
 Preview before installing:
@@ -37,6 +39,8 @@ Use minimal-diff-builder. Implement the smallest correct fix for this issue.
 ```
 
 The newer bet in this pack is **LoopOps**: useful skills should not compete with stronger base models by restating generic advice. They should capture repo-specific context, tool adapters, verification gates, and supervisor contracts that can promote repeated work into scripts, workflows, and cost-bounded agent loops.
+
+That makes skills an orchestration surface rather than another prompt collection: a good skill can route to an MCP server for access, call a CLI or script for heavy work, and then require proof, review, or release gates before the agent claims completion.
 
 ## Context
 
