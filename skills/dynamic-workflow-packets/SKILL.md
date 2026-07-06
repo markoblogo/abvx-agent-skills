@@ -28,9 +28,10 @@ If the task is small, do it directly and mention that packet orchestration is un
 3. Split only genuinely independent work into packets.
 4. Keep critical-path work local; delegate or simulate sidecar work.
 5. Use subagents only if available and appropriate. Otherwise simulate packets with isolated notes.
-6. Integrate results explicitly; never paste raw packet dumps as the final answer.
-7. Verify against the original success criteria.
-8. Save reusable artifacts only when they will help future work.
+6. Set turn/time/tool budgets and stop rules before any long-running or repeated packet.
+7. Integrate results explicitly; never paste raw packet dumps as the final answer.
+8. Verify against the original success criteria.
+9. Save reusable artifacts only when they will help future work.
 
 ## Risk Gates
 
@@ -74,6 +75,16 @@ Verification:
 Reusable artifacts:
 ```
 
+For long-running packets, add:
+
+```text
+Budgets:
+Checkpoint / resume:
+Loop detection:
+Scheduler or trigger:
+Eval / acceptance noise:
+```
+
 ## Packet Template
 
 Each packet must be bounded and self-contained:
@@ -113,6 +124,10 @@ For code packets, assign non-overlapping files or modules. Tell workers or simul
 
 Use packets for discovery, implementation, tests, docs, security review, and final verification. Keep edits scoped by module. The parent agent owns final patch quality and runs the checks.
 
+### Agent Harness Work
+
+Use packets for loop design, tool registry, context assembly, memory policy, permission/sandbox review, eval fixtures, observability, and managed-agent deployment boundaries. Keep classifier-based permissions separate from deterministic denial rules.
+
 ### Research
 
 Use packets for source discovery, primary-source verification, synthesis, counter-evidence, and final citation review. Track source, date, unit, and uncertainty.
@@ -142,6 +157,8 @@ Reusable follow-up:
 
 If packets disagree, inspect the authoritative source before choosing. Reject outputs that are stale, unsupported, duplicate, unsafe, or outside scope.
 
+For subagents, preserve context isolation: give each packet only its needed files, sources, and constraints. The parent agent owns final synthesis, safety decisions, and user-facing claims.
+
 ## Verification
 
 Run the narrowest reliable checks first, then broaden as risk warrants:
@@ -154,6 +171,7 @@ Run the narrowest reliable checks first, then broaden as risk warrants:
 - migration dry run,
 - outreach/privacy review,
 - manual checklist for non-code work.
+- eval fixture replay or acceptance-noise check for agent harness changes.
 
 Do not call the workflow complete until evidence satisfies the original success criteria. Report skipped checks honestly.
 

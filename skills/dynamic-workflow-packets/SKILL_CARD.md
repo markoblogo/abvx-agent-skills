@@ -16,7 +16,7 @@ Use for large coding, research, audit, migration, or job/client-search workflows
 Do not use for small one-shot tasks. Do not use to bypass user approval for destructive, external, expensive, or privacy-sensitive actions.
 
 ## Sources and Attribution
-Inspired by DannyMac180 `codex-dynamic-workflows`, CodexSaver bounded delegation patterns, and ABVX workflow practice.
+Inspired by DannyMac180 `codex-dynamic-workflows`, CodexSaver bounded delegation patterns, Nexu Harness Engineering Guide orchestration/scheduling/managed-agent patterns, and ABVX workflow practice.
 
 ## Inputs and Outputs
 Inputs: task goals, repositories, sources, constraints, approval context.
@@ -25,8 +25,9 @@ Outputs: packet plans, workflow artifacts, integration decisions, verification e
 
 ## Risks and Mitigations
 - Risk: process overhead on small tasks. Mitigation: decision rule says to work directly when orchestration is unnecessary.
-- Risk: unsafe delegation. Mitigation: risk gates and disjoint packet ownership.
+- Risk: unsafe delegation. Mitigation: risk gates, disjoint packet ownership, context isolation, and parent-owned synthesis.
 - Risk: raw packet dumps hide conflicts. Mitigation: explicit integration phase.
+- Risk: long-running packet drift. Mitigation: budgets, checkpoints, loop detection, and eval/acceptance-noise checks.
 
 ## Model Sensitivity
 Most effective on models that can keep packet boundaries and integration checkpoints stable across longer sessions. Weaker models may need narrower packet scopes and more explicit integration prompts.

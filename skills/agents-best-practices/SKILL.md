@@ -37,6 +37,20 @@ task
   -> finish or continue within budget
 ```
 
+## Harness Checklist
+
+Before recommending implementation, cover these surfaces:
+
+- agentic loop: turn budget, stop rules, loop detection, checkpoint/resume;
+- tool registry: static vs dynamic tools, schema quality, denial/error shape, MCP boundaries;
+- context assembly: priority order, just-in-time loading, compaction, source attribution;
+- memory: session state vs durable memory, write policy, contradiction handling;
+- guardrails: trust boundaries, prompt-injection exposure, sandbox/network/filesystem policy;
+- permissions: read/write/send/delete/pay/deploy classes, approval gates, classifier-assisted routing only with deterministic backstops;
+- observability: event log, tool outcomes, user-visible state, no hidden-reasoning leakage;
+- evals: success fixtures, safety fixtures, eval noise budget, floor/ceiling checks;
+- managed-agent architecture: separate brain, hands, credentials, session state, and worker lifecycle when the agent becomes long-running.
+
 ## Design Rules
 
 - Application code enforces safety; prompts only describe desired behavior.
@@ -48,6 +62,8 @@ task
 - Skills and connectors use progressive disclosure; do not expose every capability up front.
 - Long-running goals need budgets, checkpoints, resumable state, and a measurable done condition.
 - Observability records events and outcomes without exposing hidden reasoning.
+- Sandboxes and permission gates belong in the harness, not in the agent's self-restraint.
+- Treat classifier-based permission helpers as advisory unless a deterministic policy layer can still deny unsafe actions.
 
 ## MVP Blueprint Output
 
@@ -61,6 +77,7 @@ When asked to design an agent, produce:
 - context, memory, retrieval, and compaction;
 - skills/connectors;
 - safety and approvals;
+- sandbox, scheduling, and managed-agent boundaries when relevant;
 - observability and evals;
 - minimal implementation path.
 

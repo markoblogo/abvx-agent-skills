@@ -204,7 +204,7 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 
 | Skill | What It Does |
 |---|---|
-| `dynamic-workflow-packets` | Orchestrates large coding, research, audit, or client-search tracks without losing verification and risk gates. |
+| `dynamic-workflow-packets` | Orchestrates large coding, research, audit, harness, or client-search tracks without losing verification, budgets, integration, and risk gates. |
 | `handoff` | Produces compact continuation briefs for long-running work, agent resumes, and human handoffs. |
 
 ### Long-Run Delivery Control
