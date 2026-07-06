@@ -39,6 +39,7 @@ Generated from `docs/catalog.json`.
 | `minimal-diff-builder` | Coding, Debugging & Architecture | Choose the smallest correct implementation path. | `gh skill install markoblogo/abvx-agent-skills minimal-diff-builder` |
 | `motion-review-gate` | Frontend, UX & Product Surfaces | Review frontend motion before shipping. | `gh skill install markoblogo/abvx-agent-skills motion-review-gate` |
 | `overengineering-review` | Coding, Debugging & Architecture | Find what can be deleted, collapsed, or replaced. | `gh skill install markoblogo/abvx-agent-skills overengineering-review` |
+| `personal-workspace-router` | Project Context & Onboarding | Route local work across isolated domain contexts. | `gh skill install markoblogo/abvx-agent-skills personal-workspace-router` |
 | `phase-spec-execution` | Long-Run Delivery Control | Split large delivery into explicit verified phases. | `gh skill install markoblogo/abvx-agent-skills phase-spec-execution` |
 | `plan-to-issues` | Discovery, Planning & Delivery | Break plans into thin end-to-end slices with blockers and criteria. | `gh skill install markoblogo/abvx-agent-skills plan-to-issues` |
 | `private-vs-publishable-skill-audit` | Research, Knowledge & Reusable Methods | Classify private skill-pack content before publishing any of it. | `gh skill install markoblogo/abvx-agent-skills private-vs-publishable-skill-audit` |
