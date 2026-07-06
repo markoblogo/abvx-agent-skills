@@ -1,5 +1,5 @@
 {
-  "skill_count": 58,
+  "skill_count": 59,
   "categories": {
     "Research, Knowledge & Reusable Methods": 11,
     "Coding, Debugging & Architecture": 11,
@@ -8,7 +8,7 @@
     "Token Economy & Context Control": 8,
     "Long-Run Delivery Control": 5,
     "Discovery, Planning & Delivery": 5,
-    "Project Context & Onboarding": 2,
+    "Project Context & Onboarding": 3,
     "Workflow, Handoffs & Multi-Track Work": 2,
     "HTML Artifacts & Visual Deliverables": 2,
     "Structured Data & Spreadsheet Work": 1
@@ -740,6 +740,34 @@
       "card_path": "skills/overengineering-review/SKILL_CARD.md",
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/overengineering-review/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/overengineering-review/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental"
+    },
+    {
+      "name": "personal-workspace-router",
+      "display_name": "Personal Workspace Router",
+      "category": "Project Context & Onboarding",
+      "description": "Design or maintain a local personal AI workspace with a root router, isolated domain folders, user-triggered memory, decision logs, and sparse routing corrections. Use when a user wants one agent workspace spanning multiple projects or life/work domains without mixing context or bloating every session.",
+      "short_description": "Route local work across isolated domain contexts.",
+      "intended_use": "Use when a user wants one agent workspace spanning multiple projects, products, or personal domains without mixing context or loading every memory on every task.",
+      "model_sensitivity": "",
+      "composable_with": [
+        "`project-context-bootstrap`",
+        "`durable-context-maintenance`",
+        "`doc-grounded-grilling`",
+        "`agent-learning-layer-triage`"
+      ],
+      "anti_patterns": [
+        "one giant memory file for every domain;",
+        "writing memory without explicit user instruction;",
+        "logging every successful route;",
+        "asking for confirmation before every routine micro-step."
+      ],
+      "risks": "- Risk: memory bloat. Mitigation: user-triggered writes only.\n- Risk: routing ritual slows work. Mitigation: state routing only when it materially affects the task.\n- Risk: private data leakage. Mitigation: never store secrets, credentials, private contacts, or bulky transcripts.\n- Risk: workspace rules override repo safety. Mitigation: repo-local `AGENTS.md`, tests, and approval gates remain authoritative for implementation.",
+      "path": "skills/personal-workspace-router/SKILL.md",
+      "card_path": "skills/personal-workspace-router/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/personal-workspace-router/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/personal-workspace-router/SKILL_CARD.md",
       "origin": "adapted",
       "status": "experimental"
     },
