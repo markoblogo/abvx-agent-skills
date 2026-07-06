@@ -49,6 +49,10 @@ For each candidate:
 
 Do not implement broad refactors without user confirmation. For implementation, carve one vertical slice and preserve behavior with tests.
 
+## Optional HTML Report
+
+When the user asks for a shareable architecture review, executive-readable report, or visual artifact, do not inline a long prose dump. Route the findings into `html-diagram-artifact` or `html-brief-artifact` after the candidate list is stable. The HTML artifact should stay evidence-backed: files/modules, friction, proposed seam, benefit, risk, and first slice.
+
 ## Final Report
 
 End with the top recommendation, the smallest first step, and what evidence would change the recommendation.
