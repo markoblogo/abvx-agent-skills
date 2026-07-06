@@ -42,6 +42,8 @@ The newer bet in this pack is **LoopOps**: useful skills should not compete with
 
 That makes skills an orchestration surface rather than another prompt collection: a good skill can route to an MCP server for access, call a CLI or script for heavy work, and then require proof, review, or release gates before the agent claims completion.
 
+The pack also keeps several engineering patterns explicit rather than hidden in one monolithic command: shared domain language and ADR capture, red-green-refactor loops, architecture reports, issue slicing, and two-axis code review where one pass checks repo standards and another checks the originating spec.
+
 ## Context
 
 This repository assumes that many public AI skills are net-negative. The bar here is not novelty or stars. The bar is whether a skill adds usable structure without degrading behavior.
@@ -82,6 +84,7 @@ See:
 
 - **Need to save tokens?** Start with `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution`, and `lean-context-layout`. Add `compaction-survival` if your sessions run long enough to forget their own state.
 - **Need to debug a repo?** Start with `diagnose`, `repo-debugging-ledger`, and `graph-guided-code-reading`.
+- **Need code review discipline?** Run a Standards pass with `overengineering-review`, `minimal-diff-builder`, or `architecture-deepening-review`, then a Spec pass with `delivery-baseline-audit` against the issue, PRD, or task contract.
 - **Need the smallest correct implementation path?** Start with `minimal-diff-builder`, then add `delivery-preflight-gate` when the task is long or risky enough that baseline verification matters.
 - **Need to cut bloat from an existing diff or repo slice?** Start with `overengineering-review`, and switch to `minimal-diff-builder` when you want the cuts implemented as the smallest correct patch.
 - **Need to build frontend?** Start with `frontend-product-builder`, `designmd-brand-kit`, `browser-verification`, and `motion-review-gate` when interaction motion changes.
@@ -90,7 +93,7 @@ See:
 - **Need stronger UI taste or design setup?** Start with `design-register-bootstrap`, `frontend-taste-layer`, `design-critique-polish`, and `motion-review-gate` for motion-sensitive surfaces.
 - **Need long-session continuity?** Start with `handoff`, `compaction-survival`, and `token-usage-audit`.
 - **Need to onboard a new repo?** Start with `project-context-bootstrap` and follow with `durable-context-maintenance`.
-- **Need discovery or product shaping?** Start with `rapid-grilling`, `doc-grounded-grilling`, and `spec-to-prd`.
+- **Need discovery or product shaping?** Start with `rapid-grilling`, `doc-grounded-grilling`, and `spec-to-prd`. Use repo glossary/context files and ADRs as first-class artifacts when domain language or consequential decisions settle.
 - **Need to turn plans into execution?** Start with `plan-to-issues`, `repo-issue-triage`, and `test-driven-execution`.
 - **Need to take an idea all the way to a shipped slice?** Start with `idea-to-ship-gates`, then route into `spec-to-prd`, `plan-to-issues`, `delivery-preflight-gate`, and proof/review skills only where the current gate needs depth.
 - **Need to publish or monitor social content safely?** Start with `social-publishing-gate` so drafts, audits, approvals, external posting, and follow-ups stay separate.
@@ -131,7 +134,7 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 | `complexity-optimizer` | Finds safe complexity and performance simplifications without turning the codebase into a refactor festival. |
 | `minimal-diff-builder` | Builds the smallest correct implementation path using a YAGNI, stdlib-first, native-first, minimal-diff ladder with explicit safety exceptions. |
 | `overengineering-review` | Reviews code specifically for needless abstractions, replaceable dependencies, dead flexibility, and wrappers over stdlib or platform behavior. |
-| `architecture-deepening-review` | Reviews deeper module seams, coupling, change surfaces, and testability, not just top-level architecture slogans. |
+| `architecture-deepening-review` | Reviews deeper module seams, coupling, change surfaces, and testability, not just top-level architecture slogans. Pair with `html-diagram-artifact` or `html-brief-artifact` when the output should be a browser-readable architecture report. |
 | `test-driven-execution` | Builds features and fixes through one-behavior-at-a-time red-green-refactor loops instead of broad speculative implementation. |
 | `system-zoom-out` | Pulls a local code area back into its wider system map so you can reason about callers, modules, boundaries, and blast radius. |
 | `local-inference-tuning` | Selects and tunes local LLM engines around hardware, model fit, cache policy, KV cache, batching, and OpenAI-compatible endpoints. |

@@ -30,6 +30,11 @@ Use structured questioning to align a plan with the repo's actual language, cons
    - boundaries are understood;
    - key trade-offs are named;
    - critical scenarios are covered.
+6. When a term or decision settles, classify the durable artifact:
+   - glossary/context update for canonical domain language;
+   - ADR candidate for hard-to-reverse or surprising trade-offs;
+   - PRD/spec note for scope and acceptance criteria;
+   - no artifact when the answer is temporary or already documented.
 
 ## What To Challenge
 
@@ -46,7 +51,8 @@ The session should leave behind:
 - sharper language;
 - clarified decisions;
 - explicit open questions;
-- identified docs that should be updated through `durable-context-maintenance` when the decision settles.
+- identified docs that should be updated through `durable-context-maintenance` when the decision settles;
+- proposed glossary/context or ADR updates when the task changed the repo's shared language or a consequential decision.
 
 ## Guardrails
 
