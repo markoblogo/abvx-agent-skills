@@ -16,7 +16,7 @@ Use for designing MVP agents, auditing harnesses, tool permission models, contex
 Do not use to justify unbounded autonomy, broad unsafe tools, or prompt-only safety for high-risk actions.
 
 ## Sources and Attribution
-ABVX adapted from local provider-neutral agent-harness guidance and public agent engineering practice.
+ABVX adapted from local provider-neutral agent-harness guidance, public agent engineering practice, and Nexu's Harness Engineering Guide framing for loops, tool systems, context, guardrails, sandboxing, eval noise, permissions, scheduling, and managed-agent boundaries.
 
 ## Inputs and Outputs
 Inputs: domain brief, risk constraints, desired tools, deployment environment, validation criteria.
@@ -25,8 +25,9 @@ Outputs: MVP blueprint, harness review, permission matrix, eval plan, launch pat
 
 ## Risks and Mitigations
 - Risk: over-engineering. Mitigation: start with one useful agent loop.
-- Risk: unsafe action surface. Mitigation: typed tools and approval gates.
+- Risk: unsafe action surface. Mitigation: typed tools, sandbox boundaries, deterministic policy checks, and approval gates.
 - Risk: context bloat. Mitigation: progressive disclosure and compaction.
+- Risk: eval overconfidence. Mitigation: track fixture noise, floor/ceiling thresholds, and safety cases separately from happy-path quality.
 
 ## Evaluation
 Evaluated by structural validation and manual review against agent-design workflows.
