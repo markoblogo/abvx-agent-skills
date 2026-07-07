@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rabbithole Doc Exploration"
+  short_description: "Use a local Rabbithole canvas to explore dense agent docs with human-selected branches."
+  default_prompt: "Use Rabbithole doc exploration on this repo context or document."

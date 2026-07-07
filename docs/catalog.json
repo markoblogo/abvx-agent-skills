@@ -1,5 +1,5 @@
 {
-  "skill_count": 59,
+  "skill_count": 60,
   "categories": {
     "Research, Knowledge & Reusable Methods": 11,
     "Coding, Debugging & Architecture": 11,
@@ -8,7 +8,7 @@
     "Token Economy & Context Control": 8,
     "Long-Run Delivery Control": 5,
     "Discovery, Planning & Delivery": 5,
-    "Project Context & Onboarding": 3,
+    "Project Context & Onboarding": 4,
     "Workflow, Handoffs & Multi-Track Work": 2,
     "HTML Artifacts & Visual Deliverables": 2,
     "Structured Data & Spreadsheet Work": 1
@@ -859,6 +859,24 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/prototype-lab/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/prototype-lab/SKILL_CARD.md",
       "origin": "adapted",
+      "status": "experimental"
+    },
+    {
+      "name": "rabbithole-doc-exploration",
+      "display_name": "Rabbithole Doc Exploration",
+      "category": "Project Context & Onboarding",
+      "description": "Use local Rabbithole for human-in-the-loop exploration of AGENTS.md, SKILL.md, SET plans, repomaps, and long repo docs. Use when the user wants to inspect, question, branch, or review dense agent-facing documents interactively before changing durable docs or workflow contracts.",
+      "short_description": "Use a local Rabbithole canvas to explore dense agent docs with human-selected branches.",
+      "intended_use": "Use when a human wants to inspect, question, and branch through generated repo contracts or skill docs before making durable changes.",
+      "model_sensitivity": "",
+      "composable_with": [],
+      "anti_patterns": [],
+      "risks": "- Risk: hidden dependency. Mitigation: Rabbithole is optional and has a direct-review fallback.\n- Risk: canvas notes become stale source of truth. Mitigation: promote only stable findings into repo docs.\n- Risk: sensitive local context exposure. Mitigation: avoid secrets and private files unless explicitly approved.",
+      "path": "skills/rabbithole-doc-exploration/SKILL.md",
+      "card_path": "skills/rabbithole-doc-exploration/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/rabbithole-doc-exploration/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/rabbithole-doc-exploration/SKILL_CARD.md",
+      "origin": "original",
       "status": "experimental"
     },
     {
