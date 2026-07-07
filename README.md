@@ -62,6 +62,8 @@ If you want a scan-friendly text catalog for browsing or indexing, use [CATALOG.
 |---|---|---|
 | Write smaller patches | `minimal-diff-builder` | The agent keeps refactoring too much, widening blast radius, or adding abstractions you did not ask for. |
 | Debug from evidence | `diagnose` | The agent keeps guessing fixes without reproducing the failure and verifying the result. |
+| Review plans before work | `assumption-excavation`, `pipeline-readiness-gate` | A plan, SET bundle, or spec sounds plausible but may hide assumptions or missing gates. |
+| Check ship confidence | `confidence-fragility-review`, `delivery-baseline-audit` | A release, README, generated plan, or PR sounds done but evidence may be thin. |
 | Save tokens in shell-heavy work | `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution` | Logs, diffs, tests, and command output are burning context and hiding the real signal. |
 | Verify frontend work | `browser-verification`, `design-critique-polish`, `motion-review-gate` | The agent says "done" without checking real browser behavior, layout, states, motion, or console errors. |
 
@@ -85,6 +87,8 @@ See:
 - **Need to save tokens?** Start with `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution`, and `lean-context-layout`. Add `compaction-survival` if your sessions run long enough to forget their own state.
 - **Need to debug a repo?** Start with `diagnose`, `repo-debugging-ledger`, and `graph-guided-code-reading`.
 - **Need code review discipline?** Run a Standards pass with `overengineering-review`, `minimal-diff-builder`, or `architecture-deepening-review`, then a Spec pass with `delivery-baseline-audit` against the issue, PRD, or task contract.
+- **Need to surface hidden assumptions before implementation?** Start with `assumption-excavation`, then use `pipeline-readiness-gate` when the work needs a pre/post/ship sequence.
+- **Need to test whether confidence is earned?** Start with `confidence-fragility-review` before trusting release notes, public claims, generated plans, or SET handoff bundles.
 - **Need the smallest correct implementation path?** Start with `minimal-diff-builder`, then add `delivery-preflight-gate` when the task is long or risky enough that baseline verification matters.
 - **Need to cut bloat from an existing diff or repo slice?** Start with `overengineering-review`, and switch to `minimal-diff-builder` when you want the cuts implemented as the smallest correct patch.
 - **Need to build frontend?** Start with `frontend-product-builder`, `designmd-brand-kit`, `browser-verification`, and `motion-review-gate` when interaction motion changes.
@@ -182,6 +186,7 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 |---|---|
 | `rapid-grilling` | Quickly sharpens vague ideas through one-question-at-a-time alignment before heavier planning starts. |
 | `doc-grounded-grilling` | Stress-tests a plan against repo docs, ADRs, design assets, and domain language so discovery stays grounded in reality. |
+| `assumption-excavation` | Surfaces hidden environment, dependency, behavioral, temporal, and success assumptions in plans, docs, skills, and SET bundles. |
 | `spec-to-prd` | Turns clarified context into a durable PRD for product, client, and internal roadmap work. |
 | `plan-to-issues` | Breaks PRDs and plans into thin end-to-end slices that agents or humans can actually pick up. |
 | `repo-issue-triage` | Moves bugs and enhancements through a compact state machine so backlog items become actionable instead of vague. |
@@ -207,6 +212,7 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 | Skill | What It Does |
 |---|---|
 | `dynamic-workflow-packets` | Orchestrates large coding, research, audit, harness, or client-search tracks without losing verification, budgets, integration, and risk gates. |
+| `pipeline-readiness-gate` | Selects a compact pre-implementation, post-implementation, or ship gate without adopting a heavy multi-agent pipeline runtime. |
 | `handoff` | Produces compact continuation briefs for long-running work, agent resumes, and human handoffs. |
 
 ### Long-Run Delivery Control
@@ -217,6 +223,7 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 | `delivery-preflight-gate` | Runs the minimum useful baseline checks before a long implementation loop or PR publication, so pre-existing breakage and noisy branches do not poison later verification. |
 | `phase-spec-execution` | Breaks larger delivery into explicit phases with acceptance criteria, verification commands, and lightweight state updates. |
 | `recovery-loop-3strike` | Bounds execution failure handling to one evidence-bearing retry, one focused fix-spec, and then an honest blocker handoff. |
+| `confidence-fragility-review` | Checks whether confident claims in plans, docs, releases, or workflow contracts are backed by evidence. |
 | `delivery-baseline-audit` | Re-checks declared deliverables and final verification against the starting baseline and full working tree before calling the task complete. |
 
 ### Security & Defensive Review

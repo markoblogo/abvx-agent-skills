@@ -1,0 +1,4 @@
+interface:
+  display_name: "Confidence Fragility Review"
+  short_description: "Check whether confident claims are backed by real evidence."
+  default_prompt: "Run a confidence-fragility review on this artifact."
