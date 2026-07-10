@@ -1,5 +1,5 @@
 {
-  "skill_count": 63,
+  "skill_count": 64,
   "categories": {
     "Research, Knowledge & Reusable Methods": 11,
     "Coding, Debugging & Architecture": 11,
@@ -9,7 +9,7 @@
     "Token Economy & Context Control": 8,
     "Long-Run Delivery Control": 6,
     "Project Context & Onboarding": 4,
-    "Workflow, Handoffs & Multi-Track Work": 3,
+    "Workflow, Handoffs & Multi-Track Work": 4,
     "HTML Artifacts & Visual Deliverables": 2,
     "Structured Data & Spreadsheet Work": 1
   },
@@ -1002,6 +1002,24 @@
       "card_path": "skills/repo-issue-triage/SKILL_CARD.md",
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/repo-issue-triage/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/repo-issue-triage/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental"
+    },
+    {
+      "name": "reversible-agent-task",
+      "display_name": "reversible-agent-task",
+      "category": "Workflow, Handoffs & Multi-Track Work",
+      "description": "Run risky or multi-file agent work as a reviewable proposal before mutating the target workspace. Use when a task should produce retained output, inspectable diffs, and an explicit select/apply/discard decision instead of direct edits.",
+      "short_description": "",
+      "intended_use": "Use when an agent task needs reversible execution discipline: proposal output first, inspection next, then an explicit select/apply/discard settlement.",
+      "model_sensitivity": "",
+      "composable_with": [],
+      "anti_patterns": [],
+      "risks": "- Risk: fake reversibility while mutating the target workspace. Mitigation: state the target/proposal boundary before running.\n- Risk: process overhead on tiny edits. Mitigation: skip for low-risk one-file changes.\n- Risk: unreviewed apply. Mitigation: require inspect before select/apply.",
+      "path": "skills/reversible-agent-task/SKILL.md",
+      "card_path": "skills/reversible-agent-task/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/reversible-agent-task/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/reversible-agent-task/SKILL_CARD.md",
       "origin": "adapted",
       "status": "experimental"
     },

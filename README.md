@@ -63,6 +63,7 @@ If you want a scan-friendly text catalog for browsing or indexing, use [CATALOG.
 | Write smaller patches | `minimal-diff-builder` | The agent keeps refactoring too much, widening blast radius, or adding abstractions you did not ask for. |
 | Debug from evidence | `diagnose` | The agent keeps guessing fixes without reproducing the failure and verifying the result. |
 | Review plans before work | `assumption-excavation`, `pipeline-readiness-gate` | A plan, SET bundle, or spec sounds plausible but may hide assumptions or missing gates. |
+| Run reversible agent work | `reversible-agent-task` | A task should produce retained output first, then move through inspect -> select/apply/discard before touching the target workspace. |
 | Check ship confidence | `confidence-fragility-review`, `delivery-baseline-audit` | A release, README, generated plan, or PR sounds done but evidence may be thin. |
 | Save tokens in shell-heavy work | `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution` | Logs, diffs, tests, and command output are burning context and hiding the real signal. |
 | Verify frontend work | `browser-verification`, `design-critique-polish`, `motion-review-gate` | The agent says "done" without checking real browser behavior, layout, states, motion, or console errors. |
@@ -88,6 +89,7 @@ See:
 - **Need to debug a repo?** Start with `diagnose`, `repo-debugging-ledger`, and `graph-guided-code-reading`.
 - **Need code review discipline?** Run a Standards pass with `overengineering-review`, `minimal-diff-builder`, or `architecture-deepening-review`, then a Spec pass with `delivery-baseline-audit` against the issue, PRD, or task contract.
 - **Need to surface hidden assumptions before implementation?** Start with `assumption-excavation`, then use `pipeline-readiness-gate` when the work needs a pre/post/ship sequence.
+- **Need reversible agent work?** Start with `reversible-agent-task` when output should be retained and inspected before any `select`, `apply`, or `discard` decision.
 - **Need to test whether confidence is earned?** Start with `confidence-fragility-review` before trusting release notes, public claims, generated plans, or SET handoff bundles.
 - **Need the smallest correct implementation path?** Start with `minimal-diff-builder`, then add `delivery-preflight-gate` when the task is long or risky enough that baseline verification matters.
 - **Need to cut bloat from an existing diff or repo slice?** Start with `overengineering-review`, and switch to `minimal-diff-builder` when you want the cuts implemented as the smallest correct patch.
@@ -213,6 +215,7 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 |---|---|
 | `dynamic-workflow-packets` | Orchestrates large coding, research, audit, harness, or client-search tracks without losing verification, budgets, integration, and risk gates. |
 | `pipeline-readiness-gate` | Selects a compact pre-implementation, post-implementation, or ship gate without adopting a heavy multi-agent pipeline runtime. |
+| `reversible-agent-task` | Runs risky or multi-file agent work as retained output, then requires inspect -> select/apply/discard before target workspace mutation. |
 | `handoff` | Produces compact continuation briefs for long-running work, agent resumes, and human handoffs. |
 
 ### Long-Run Delivery Control
