@@ -55,7 +55,7 @@ Use:
 ## Guardrails
 
 - Do not use this as a generic writing critique.
-- Do not delete context just because it is long; delete or demote it when it is low-signal, stale, or conflicting.
+- Do not remove context just because it is long; remove or demote it only when it is low-signal, stale, or conflicting.
 - Do not treat memory as higher authority than the current user message.
 - Do not let stale rollout context override an explicit stop, pause, or changed task.
 

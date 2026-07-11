@@ -1,0 +1,4 @@
+interface:
+  display_name: "Loop Readiness Review"
+  short_description: "Review whether a recurring workflow is ready for bounded loop execution."
+  default_prompt: "Review this recurring or semi-autonomous workflow for loop readiness."

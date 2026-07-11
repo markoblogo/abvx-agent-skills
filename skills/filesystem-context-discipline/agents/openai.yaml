@@ -1,0 +1,4 @@
+interface:
+  display_name: "Filesystem Context Discipline"
+  short_description: "Use durable scratchpads and retained outputs without polluting repo context."
+  default_prompt: "Apply filesystem context discipline to this multi-step agent task."

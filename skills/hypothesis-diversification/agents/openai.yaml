@@ -1,0 +1,4 @@
+interface:
+  display_name: "Hypothesis Diversification"
+  short_description: "Generate diverse alternatives before review or validation."
+  default_prompt: "Generate diverse hypotheses or alternatives for this problem before choosing a path."

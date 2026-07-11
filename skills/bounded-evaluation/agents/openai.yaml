@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bounded Evaluation"
+  short_description: "Design compact evaluation gates for agent outputs."
+  default_prompt: "Design a bounded validation gate for this agent output or skill change."
