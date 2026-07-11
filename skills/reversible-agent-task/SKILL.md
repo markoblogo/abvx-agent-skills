@@ -31,7 +31,7 @@ Use a proposal-first workflow when direct mutation would make review, rollback, 
 
 1. Define the target workspace and the proposal workspace.
 2. State the mutation rule: no direct writes to the target workspace until `apply`.
-3. Capture expected artifacts and verification commands before the run.
+3. Capture expected artifacts, verification commands, and retained-output path before the run.
 4. Run the agent or implementation loop in the proposal context.
 5. Inspect the retained output:
    - changed files;
@@ -67,6 +67,7 @@ Include:
 - `assumption-excavation` before running high-ambiguity proposals.
 - `confidence-fragility-review` before applying a proposal with public or release claims.
 - `delivery-baseline-audit` before calling applied work complete.
+- `filesystem-context-discipline` when retained outputs, scratchpads, or handoffs need durable file structure.
 
 ## Provenance
 

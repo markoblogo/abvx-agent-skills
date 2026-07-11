@@ -24,9 +24,10 @@ Only continue here when the chosen layer is `SKILL.md`, `AGENTS.md`, or another 
    - `replace`: tighten a vague rule.
    - `delete`: remove a harmful or redundant rule.
    - `move`: relocate a rule to where it will trigger.
-5. Accept edits only when they are procedural, reusable, and testable.
-6. Validate against at least one old scenario and one new scenario when feasible.
-7. Record rejected ideas if they looked plausible but would overfit, duplicate existing rules, or weaken a guardrail.
+5. Generate 2-4 distinct bounded proposals before choosing what to validate. The alternatives should differ in operation, target section, or behavioral effect, not just wording.
+6. Accept edits only when they are procedural, reusable, and testable.
+7. Validate against at least one old scenario and one new scenario when feasible.
+8. Record rejected ideas if they looked plausible but would overfit, duplicate existing rules, or weaken a guardrail.
 
 ## Edit Budget
 
@@ -36,6 +37,7 @@ Keep skill updates small:
 - Keep each rule action-oriented and no longer than needed.
 - Do not add examples unless they prevent a likely mistake.
 - Do not duplicate rules already enforced by system, developer, AGENTS.md, or a more specific skill.
+- Use `hypothesis-diversification` when candidate generation is likely to collapse onto the first plausible edit.
 - Preserve the existing voice and structure of the artifact.
 
 ## Validation Gate

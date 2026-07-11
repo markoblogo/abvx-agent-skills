@@ -1,0 +1,4 @@
+interface:
+  display_name: "Knowledge Base Enrichment"
+  short_description: "Enrich Markdown notes and wikis with provenance while preserving raw sources."
+  default_prompt: "Use knowledge-base enrichment with raw notes read-only and keep the result reviewable."

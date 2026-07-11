@@ -1,0 +1,64 @@
+{
+  "schema_version": "skill-evolution-pilot.v1",
+  "status": "manual-pilot",
+  "source_reference": "https://arxiv.org/abs/2605.23904",
+  "purpose": "Track bounded, validation-gated evolution of repeated ABVX skills.",
+  "automatic_runtime": false,
+  "edit_budget": {
+    "max_accepted_edits_per_update": 4,
+    "allowed_operations": ["add", "delete", "replace", "move"]
+  },
+  "validation": {
+    "require_evidence": true,
+    "require_held_out_or_independent_check": true,
+    "require_old_and_new_scenario_when_feasible": true,
+    "require_explicit_maintainer_acceptance": true,
+    "do_not_use_verbalized_probabilities_as_scores": true
+  },
+  "proposal_generation": {
+    "strategy": "diversity-first",
+    "recommended_skill": "hypothesis-diversification",
+    "minimum_distinct_proposals_before_validation": 2,
+    "maximum_distinct_proposals_before_validation": 4,
+    "rank_by": "evidence-readiness"
+  },
+  "researcher_loop": {
+    "enabled": false,
+    "state_machine": ["source", "mechanism", "proposal", "novelty_check", "validation", "pr_ready"],
+    "human_review_required_for_pr_ready": true,
+    "recommended_skills": [
+      "context-degradation-review",
+      "hypothesis-diversification",
+      "bounded-evaluation",
+      "loop-readiness-review"
+    ],
+    "initial_artifacts": {
+      "source_registry": "benchmarks/skill-evolution/source-registry.md",
+      "mechanism_ledger": "benchmarks/skill-evolution/mechanisms/accepted.jsonl",
+      "rejected_mechanism_ledger": "benchmarks/skill-evolution/mechanisms/rejected.jsonl",
+      "activation_cases": "benchmarks/skill-evolution/activation-cases.jsonl",
+      "skill_health_gate": "benchmarks/skill-evolution/skill-health.md"
+    }
+  },
+  "candidates": [
+    {
+      "skill": "minimal-diff-builder",
+      "version": "0.1.0",
+      "status": "candidate",
+      "initial_evidence": "repeated small-diff and overengineering-review workflows",
+      "first_measure": "smallest-correct-patch quality without safety or verification regressions"
+    },
+    {
+      "skill": "reversible-agent-task",
+      "version": "0.1.0",
+      "status": "candidate",
+      "initial_evidence": "proposal-first work and retained-output settlement workflows",
+      "first_measure": "target workspace remains unchanged until inspect and explicit apply"
+    }
+  ],
+  "artifacts": {
+    "proposal_dir": "benchmarks/skill-evolution/proposals/",
+    "rejected_edit_buffer": "benchmarks/skill-evolution/rejected-edits.md",
+    "reports_dir": "benchmarks/skill-evolution/reports/"
+  }
+}

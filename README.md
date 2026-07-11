@@ -79,6 +79,8 @@ See:
 - `dynamic-workflow-packets`
 - `skillopt-evolve-skills`
 
+The next LoopOps layer is bounded skill evolution: see [docs/skill-evolution-roadmap.md](docs/skill-evolution-roadmap.md) and the manual-pilot manifest in [benchmarks/skill-evolution/manifest.json](benchmarks/skill-evolution/manifest.json). Start with one or two repeated skills, keep edits bounded, validate against held-out or independent cases, and retain rejected proposals as negative feedback.
+
 <p>
   <img src="assets/loopops-landscape.png" alt="LoopOps promotion ladder from prompt to checklist, skill, script, or bounded loop" width="1280">
 </p>
@@ -86,9 +88,12 @@ See:
 ## Start Here
 
 - **Need to save tokens?** Start with `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution`, and `lean-context-layout`. Add `compaction-survival` if your sessions run long enough to forget their own state.
+- **Need to check whether context is hurting the run?** Start with `context-degradation-review` before trusting long handoffs, memory summaries, or bloated SET bundles.
 - **Need to debug a repo?** Start with `diagnose`, `repo-debugging-ledger`, and `graph-guided-code-reading`.
 - **Need code review discipline?** Run a Standards pass with `overengineering-review`, `minimal-diff-builder`, or `architecture-deepening-review`, then a Spec pass with `delivery-baseline-audit` against the issue, PRD, or task contract.
+- **Need to review an agent-facing tool?** Start with `agent-tool-contract-review` for MCP, CLI, SET inputs, and AGENTS.md generator contracts.
 - **Need to surface hidden assumptions before implementation?** Start with `assumption-excavation`, then use `pipeline-readiness-gate` when the work needs a pre/post/ship sequence.
+- **Need competing explanations before review?** Start with `hypothesis-diversification`, then hand off to `evidence-ledger-research`, `confidence-fragility-review`, or a domain validator.
 - **Need reversible agent work?** Start with `reversible-agent-task` when output should be retained and inspected before any `select`, `apply`, or `discard` decision.
 - **Need to test whether confidence is earned?** Start with `confidence-fragility-review` before trusting release notes, public claims, generated plans, or SET handoff bundles.
 - **Need the smallest correct implementation path?** Start with `minimal-diff-builder`, then add `delivery-preflight-gate` when the task is long or risky enough that baseline verification matters.
@@ -99,6 +104,7 @@ See:
 - **Need stronger UI taste or design setup?** Start with `design-register-bootstrap`, `frontend-taste-layer`, `design-critique-polish`, and `motion-review-gate` for motion-sensitive surfaces.
 - **Need long-session continuity?** Start with `handoff`, `compaction-survival`, and `token-usage-audit`.
 - **Need to onboard a new repo?** Start with `project-context-bootstrap` and follow with `durable-context-maintenance`.
+- **Need durable files without prompt bloat?** Start with `filesystem-context-discipline` for scratchpads, retained outputs, plan persistence, evidence, and handoffs.
 - **Need to explore dense agent docs interactively?** Start with `rabbithole-doc-exploration` when Rabbithole MCP is available, or use its direct-review fallback.
 - **Need one local workspace across many domains?** Start with `personal-workspace-router` to create a root router, isolated domain context, user-triggered memory, decision logs, and sparse routing corrections.
 - **Need discovery or product shaping?** Start with `rapid-grilling`, `doc-grounded-grilling`, and `spec-to-prd`. Use repo glossary/context files and ADRs as first-class artifacts when domain language or consequential decisions settle.
@@ -110,9 +116,11 @@ See:
 - **Need to route security work?** Start with `authorized-security-router` before any defensive security review where authorization, target boundary, or allowed action level is not explicit.
 - **Need to evaluate document memory?** Start with `doc-to-lora-evaluator` before proposing Doc-to-LoRA, RAG replacement, or adapter-based document recall.
 - **Need to launch a bounded agent loop?** Start with `goal-loop-designer` before running long Codex, Claude Code, MiMo Code, or local-LLM loops.
+- **Need to schedule a recurring agent loop?** Start with `loop-readiness-review` before enabling CI sweepers, PR babysitters, daily triage, changelog drafting, or dependency loops.
 - **Need local model serving?** Start with `local-inference-tuning` before choosing MLX, llama.cpp, Ollama, or vLLM.
 - **Need a full multi-track workflow?** Start with `dynamic-workflow-packets`.
 - **Need to turn repeated prompts into loops?** Start with `loopops-protocol`, then use `skillopt-evolve-skills` to capture durable lessons.
+- **Need a small eval gate?** Start with `bounded-evaluation` before using pairwise judging, LLM-as-judge, activation tests, or SkillOpt validation claims.
 - **Need to decide where agent learning should live?** Start with `agent-learning-layer-triage` before promoting a lesson into memory, durable docs, `SKILL.md`, a script, or an eval.
 - **Need to build reusable assistant packs?** Start with `role-skill-pack-design`, `workflow-policy-layering`, `brief-first-execution`, and `private-vs-publishable-skill-audit`.
 
@@ -127,6 +135,7 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 | `rtk-assisted-shell` | Routes noisy shell workflows through RTK-style filtering. On shell-heavy tasks this can cut command-output tokens dramatically, often in the same range as RTK's reported 60-90% savings on common dev commands. |
 | `shell-output-compaction` | Shrinks logs, diffs, and repo search output into counts, slices, and error-first excerpts. Usually the fastest way to turn multi-screen stdout into a small, usable artifact. |
 | `graph-guided-code-reading` | Replaces broad repo reading with entrypoints, symbols, dependencies, and blast radius. On large codebases this can turn “read everything” into a much smaller focus set. |
+| `context-degradation-review` | Reviews context poisoning, lost-in-the-middle failures, distraction, context clash, and stale carryover before they degrade agent behavior. |
 | `token-efficient-execution` | Cuts waste from repeated reads, broad rewrites, and low-value narration. Best for long coding sessions where the loop, not the final answer, is burning the budget. |
 | `token-frugal-mode` | Compresses final answers without dropping the decisive technical signal. Useful when the session is tight and you want shorter replies without caveman-style degradation. |
 | `lean-context-layout` | Shrinks always-loaded agent docs into a compact startup core and pushes the rest on demand. Best for bloated `AGENTS.md`, `CLAUDE.md`, and repo runbooks. |
@@ -138,6 +147,7 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 | Skill | What It Does |
 |---|---|
 | `diagnose` | Runs a disciplined debugging loop around one reproducible signal, ranked hypotheses, and narrow verification. |
+| `agent-tool-contract-review` | Reviews MCP tools, CLI commands, SET inputs, and AGENTS.md generator outputs as agent-facing contracts with explicit authority and output boundaries. |
 | `repo-debugging-ledger` | Keeps a checked-location ledger so debugging does not keep reopening the same code and repeating the same dead ends. |
 | `complexity-optimizer` | Finds safe complexity and performance simplifications without turning the codebase into a refactor festival. |
 | `minimal-diff-builder` | Builds the smallest correct implementation path using a YAGNI, stdlib-first, native-first, minimal-diff ladder with explicit safety exceptions. |
@@ -178,6 +188,7 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 | Skill | What It Does |
 |---|---|
 | `project-context-bootstrap` | Detects the stack, asks the right project questions, and turns a weakly documented repo into a compact, agent-usable context surface. |
+| `filesystem-context-discipline` | Uses typed files for scratchpads, plans, evidence, retained outputs, and handoffs without polluting always-loaded prompt context. |
 | `rabbithole-doc-exploration` | Opens AGENTS.md, skill docs, SET plans, repomaps, or seed docs in an optional local Rabbithole canvas for human-selected branch questions. |
 | `durable-context-maintenance` | Keeps repo-local context current after architecture, workflow, and test-flow changes so agents stop rediscovering the same facts. |
 | `personal-workspace-router` | Creates a local root router with isolated domain folders, user-triggered memory, decision logs, and routing corrections for multi-project operator work. |
@@ -197,7 +208,9 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 
 | Skill | What It Does |
 |---|---|
+| `bounded-evaluation` | Designs small eval gates with fixtures, rubrics, pairwise checks, position-bias mitigation, and explicit accept/reject/revise decisions. |
 | `evidence-ledger-research` | Keeps claims, sources, calculations, and open questions in a disciplined evidence ledger. |
+| `hypothesis-diversification` | Generates diverse hypotheses, explanations, or bounded proposals before evidence review and adversarial validation. |
 | `social-publishing-gate` | Gates social posts, replies, scheduling, and monitoring through draft, audit, approval, publish, and monitor steps. |
 | `loopops-protocol` | Chooses when repeated agent work should stay a prompt or be promoted into a skill, checklist, script, workflow, or cost-bounded loop. |
 | `agent-learning-layer-triage` | Routes agent lessons into the right auditable layer: prompt, memory, durable docs, checklist, skill, script, eval, or rejected buffer. |
@@ -214,6 +227,7 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 | Skill | What It Does |
 |---|---|
 | `dynamic-workflow-packets` | Orchestrates large coding, research, audit, harness, or client-search tracks without losing verification, budgets, integration, and risk gates. |
+| `loop-readiness-review` | Checks whether a recurring agent loop has cadence, state, isolation, verifier, budget, run log, rollback, and human gate before it runs. |
 | `pipeline-readiness-gate` | Selects a compact pre-implementation, post-implementation, or ship gate without adopting a heavy multi-agent pipeline runtime. |
 | `reversible-agent-task` | Runs risky or multi-file agent work as retained output, then requires inspect -> select/apply/discard before target workspace mutation. |
 | `handoff` | Produces compact continuation briefs for long-running work, agent resumes, and human handoffs. |

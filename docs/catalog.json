@@ -1,16 +1,17 @@
 {
-  "skill_count": 64,
+  "skill_count": 71,
   "categories": {
-    "Research, Knowledge & Reusable Methods": 11,
-    "Coding, Debugging & Architecture": 11,
+    "Research, Knowledge & Reusable Methods": 13,
+    "Coding, Debugging & Architecture": 12,
     "Discovery, Planning & Delivery": 6,
     "Security & Defensive Review": 1,
     "Frontend, UX & Product Surfaces": 10,
-    "Token Economy & Context Control": 8,
+    "Token Economy & Context Control": 9,
     "Long-Run Delivery Control": 6,
-    "Project Context & Onboarding": 4,
-    "Workflow, Handoffs & Multi-Track Work": 4,
+    "Project Context & Onboarding": 5,
+    "Workflow, Handoffs & Multi-Track Work": 5,
     "HTML Artifacts & Visual Deliverables": 2,
+    "Uncategorized": 1,
     "Structured Data & Spreadsheet Work": 1
   },
   "skills": [
@@ -42,6 +43,24 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/agent-learning-layer-triage/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/agent-learning-layer-triage/SKILL_CARD.md",
       "origin": "original",
+      "status": "experimental"
+    },
+    {
+      "name": "agent-tool-contract-review",
+      "display_name": "agent-tool-contract-review",
+      "category": "Coding, Debugging & Architecture",
+      "description": "Review tools, MCP functions, CLI commands, SET inputs, and AGENTS.md generator outputs as agent-facing contracts. Use when a tool description, schema, workflow input, or generated instruction may be ambiguous, unsafe, noisy, or hard for agents to call correctly.",
+      "short_description": "",
+      "intended_use": "Use for MCP tools, CLI wrappers, GitHub Actions inputs, SET planner outputs, AGENTS.md generator templates, and agent-facing command docs.",
+      "model_sensitivity": "",
+      "composable_with": [],
+      "anti_patterns": [],
+      "risks": "- Risk: over-designing tools. Mitigation: recommend the smallest contract change.\n- Risk: hidden side effects. Mitigation: classify authority and require explicit write/destructive boundaries.\n- Risk: noisy outputs. Mitigation: prefer structured, compact machine-readable output.",
+      "path": "skills/agent-tool-contract-review/SKILL.md",
+      "card_path": "skills/agent-tool-contract-review/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/agent-tool-contract-review/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/agent-tool-contract-review/SKILL_CARD.md",
+      "origin": "adapted",
       "status": "experimental"
     },
     {
@@ -141,6 +160,24 @@
       "status": "experimental"
     },
     {
+      "name": "bounded-evaluation",
+      "display_name": "bounded-evaluation",
+      "category": "Research, Knowledge & Reusable Methods",
+      "description": "Design small evaluation gates for agent outputs, skill changes, prompts, and tool contracts. Use when a change needs rubric checks, pairwise comparison, position-bias mitigation, regression fixtures, or LLM-as-judge discipline without building a heavy eval platform.",
+      "short_description": "",
+      "intended_use": "Use for rubric checks, pairwise comparison, position-bias mitigation, regression fixtures, activation tests, and SkillOpt validation.",
+      "model_sensitivity": "",
+      "composable_with": [],
+      "anti_patterns": [],
+      "risks": "- Risk: LLM judge bias. Mitigation: pairwise order swap and invalidation rules.\n- Risk: overclaiming benchmark quality. Mitigation: require committed fixtures and captured artifacts before claims.\n- Risk: self-approval. Mitigation: forbid a judge from approving its own rubric changes.",
+      "path": "skills/bounded-evaluation/SKILL.md",
+      "card_path": "skills/bounded-evaluation/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/bounded-evaluation/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/bounded-evaluation/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental"
+    },
+    {
       "name": "brief-first-execution",
       "display_name": "Brief First Execution",
       "category": "Research, Knowledge & Reusable Methods",
@@ -227,6 +264,24 @@
       "card_path": "skills/confidence-fragility-review/SKILL_CARD.md",
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/confidence-fragility-review/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/confidence-fragility-review/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental"
+    },
+    {
+      "name": "context-degradation-review",
+      "display_name": "context-degradation-review",
+      "category": "Token Economy & Context Control",
+      "description": "Review agent work for context poisoning, lost-in-the-middle failures, distraction, context clash, and stale carryover. Use before long-session handoffs, SET runner handoffs, skill changes, memory writes, or any task where too much or conflicting context may degrade behavior.",
+      "short_description": "",
+      "intended_use": "Use before long-session handoffs, SET runner handoffs, skill changes, memory writes, and complex tasks where too much or conflicting context may degrade behavior.",
+      "model_sensitivity": "",
+      "composable_with": [],
+      "anti_patterns": [],
+      "risks": "- Risk: over-compressing useful context. Mitigation: demote only low-signal, stale, or conflicting material.\n- Risk: overriding the current user. Mitigation: current user instructions outrank memory and summaries.\n- Risk: generic critique. Mitigation: require named failure mode and repair.",
+      "path": "skills/context-degradation-review/SKILL.md",
+      "card_path": "skills/context-degradation-review/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/context-degradation-review/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/context-degradation-review/SKILL_CARD.md",
       "origin": "adapted",
       "status": "experimental"
     },
@@ -443,6 +498,24 @@
       "status": ""
     },
     {
+      "name": "filesystem-context-discipline",
+      "display_name": "filesystem-context-discipline",
+      "category": "Project Context & Onboarding",
+      "description": "Use files as durable context without polluting the live prompt. Apply when a task needs scratchpads, plan persistence, retained outputs, proposal folders, handoffs, or repo-local context that agents can discover and audit later.",
+      "short_description": "",
+      "intended_use": "Use for scratchpads, plan persistence, evidence ledgers, retained outputs, proposal folders, handoffs, and repo-local context.",
+      "model_sensitivity": "",
+      "composable_with": [],
+      "anti_patterns": [],
+      "risks": "- Risk: stale files become false authority. Mitigation: include status and update triggers.\n- Risk: context sprawl. Mitigation: choose the narrowest sensible location.\n- Risk: accidental commit of transient files. Mitigation: clean or classify before commit.",
+      "path": "skills/filesystem-context-discipline/SKILL.md",
+      "card_path": "skills/filesystem-context-discipline/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/filesystem-context-discipline/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/filesystem-context-discipline/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental"
+    },
+    {
       "name": "frontend-product-builder",
       "display_name": "Frontend Product Builder",
       "category": "Frontend, UX & Product Surfaces",
@@ -580,6 +653,24 @@
       "status": "experimental"
     },
     {
+      "name": "hypothesis-diversification",
+      "display_name": "hypothesis-diversification",
+      "category": "Research, Knowledge & Reusable Methods",
+      "description": "Generate diverse hypotheses, explanations, or solution candidates before evidence review. Use for research, incident analysis, market or product reasoning, adversarial review, and SkillOpt proposal generation when first-answer mode collapse would hide alternatives.",
+      "short_description": "",
+      "intended_use": "Use for diversity-first research, adversarial review, incident or market analysis, product reasoning, and SkillOpt candidate proposal generation.",
+      "model_sensitivity": "",
+      "composable_with": [],
+      "anti_patterns": [],
+      "risks": "- Risk: persuasive but unsupported alternatives. Mitigation: rank by evidence readiness and hand off to validation.\n- Risk: false precision from verbalized probabilities. Mitigation: forbid calibrated-probability claims.\n- Risk: proposal sprawl. Mitigation: keep candidate sets small and bounded.",
+      "path": "skills/hypothesis-diversification/SKILL.md",
+      "card_path": "skills/hypothesis-diversification/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/hypothesis-diversification/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/hypothesis-diversification/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental"
+    },
+    {
       "name": "idea-to-ship-gates",
       "display_name": "Idea To Ship Gates",
       "category": "Long-Run Delivery Control",
@@ -609,6 +700,29 @@
       "card_path": "skills/idea-to-ship-gates/SKILL_CARD.md",
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/idea-to-ship-gates/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/idea-to-ship-gates/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental"
+    },
+    {
+      "name": "knowledge-base-enrichment",
+      "display_name": "Knowledge Base Enrichment",
+      "category": "Uncategorized",
+      "description": "Enrich a Markdown knowledge base with durable tags, source provenance, existing-note links, and reviewed wiki synthesis while keeping raw notes read-only by default. Use when organizing Obsidian-style notes, refreshing generated wikis, or preparing source-grounded context for agents.",
+      "short_description": "Enrich Markdown notes and wikis with provenance while preserving raw sources.",
+      "intended_use": "Use for Obsidian-style vaults, Markdown research corpora, durable agent context, and source-grounded wiki refreshes.",
+      "model_sensitivity": "",
+      "composable_with": [
+        "`reversible-agent-task`",
+        "`rabbithole-doc-exploration`",
+        "`confidence-fragility-review`",
+        "`skillopt-evolve-skills`"
+      ],
+      "anti_patterns": [],
+      "risks": "- Risk: raw-note mutation. Mitigation: read-only raw layer and explicit apply boundary.\n- Risk: fabricated links or sources. Mitigation: resolve targets and preserve provenance.\n- Risk: private-vault leakage. Mitigation: no cloud sync or web research without approval.\n- Risk: wiki drift. Mitigation: source backlinks, logs, stale-claim and orphan-link checks.\n- Risk: bulk overreach. Mitigation: sample first, report scope, and require review.\n- Risk: unscoped memory writes. Mitigation: per-project isolation, hybrid retrieval with source paths, and audit-gated proposal-first writes.",
+      "path": "skills/knowledge-base-enrichment/SKILL.md",
+      "card_path": "skills/knowledge-base-enrichment/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/knowledge-base-enrichment/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/knowledge-base-enrichment/SKILL_CARD.md",
       "origin": "adapted",
       "status": "experimental"
     },
@@ -657,6 +771,24 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/local-inference-tuning/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/local-inference-tuning/SKILL_CARD.md",
       "origin": "original",
+      "status": "experimental"
+    },
+    {
+      "name": "loop-readiness-review",
+      "display_name": "loop-readiness-review",
+      "category": "Workflow, Handoffs & Multi-Track Work",
+      "description": "Review whether a recurring or semi-autonomous agent loop is ready to run. Use before scheduling Codex, Claude Code, Grok, Opencode, CI, issue triage, PR babysitting, dependency sweeping, changelog drafting, or other repeated agent workflows.",
+      "short_description": "",
+      "intended_use": "Use before scheduling or promoting repeated agent workflows such as CI sweeping, PR babysitting, issue triage, dependency sweeping, changelog drafting, daily triage, or SET runner handoffs.",
+      "model_sensitivity": "",
+      "composable_with": [],
+      "anti_patterns": [],
+      "risks": "- Risk: premature autonomy. Mitigation: require state, verifier, budget, run log, rollback, and human gate before governed loops.\n- Risk: verifier theater. Mitigation: require deterministic or independently reviewable evidence.\n- Risk: runaway cost. Mitigation: require time, token, run-count, and retry caps.",
+      "path": "skills/loop-readiness-review/SKILL.md",
+      "card_path": "skills/loop-readiness-review/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/loop-readiness-review/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/loop-readiness-review/SKILL_CARD.md",
+      "origin": "adapted",
       "status": "experimental"
     },
     {

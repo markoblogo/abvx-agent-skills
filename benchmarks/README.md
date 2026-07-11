@@ -37,8 +37,15 @@ benchmarks/
   fixtures/
   runs/
   reports/
+  skill-evolution/
 ```
 
 ## Current Status
 
 Scaffolding only. The repo now has a place for benchmark artifacts, but no published ABVX benchmark matrix should be treated as canonical until the fixtures and reports land beside it.
+
+The initial bounded skill-evolution pilot is defined in [`skill-evolution/manifest.json`](skill-evolution/manifest.json). It is manual-pilot only: no skill edits are applied or published without evidence, validation, and explicit maintainer acceptance.
+
+For SkillOpt-style evolution, candidate generation should be diversity-first: create several bounded edit proposals, discard duplicates or guardrail-weakening ideas, then validate only the proposals worth testing. Do not use model-stated probabilities as benchmark scores.
+
+The next researcher-loop structure is `source -> mechanism -> proposal -> novelty_check -> validation -> pr_ready`. Keep it manual until source registries, accepted/rejected ledgers, activation cases, and a skill health gate exist in this directory.
