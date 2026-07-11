@@ -1,0 +1,4 @@
+version: 1
+openai:
+  short_description: "Run agent work as a reviewable proposal before apply."
+  default_prompt: "Run this task with a reversible proposal lifecycle: retained output first, inspect, then select/apply/discard."

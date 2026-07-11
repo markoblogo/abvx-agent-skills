@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Tool Contract Review"
+  short_description: "Review MCP, CLI, SET, and tool contracts before agent use."
+  default_prompt: "Review this agent tool contract for capability boundaries, inputs, outputs, failure modes, and validation gates."

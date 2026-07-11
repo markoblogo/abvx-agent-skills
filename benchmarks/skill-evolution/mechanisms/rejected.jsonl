@@ -1,0 +1,1 @@
+{"id":"vendor-full-context-engineering-plugin","source":"https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering","mechanism":"install or vendor the whole external plugin","decision":"rejected","reason":"duplicates existing ABVX skills and risks routing/context bloat; adapt compact mechanisms instead"}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Assumption Excavation"
+  short_description: "Surface hidden assumptions in specs, repo contracts, skills, and SET bundles."
+  default_prompt: "Run assumption excavation on this artifact before implementation or handoff."

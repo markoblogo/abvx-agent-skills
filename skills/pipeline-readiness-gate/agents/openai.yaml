@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pipeline Readiness Gate"
+  short_description: "Select a compact pre/post/ship gate for agent work."
+  default_prompt: "Run the appropriate pipeline readiness gate for this task."

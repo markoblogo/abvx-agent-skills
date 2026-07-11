@@ -1,0 +1,4 @@
+interface:
+  display_name: "Context Degradation Review"
+  short_description: "Review context poisoning, lost-in-middle, distraction, and instruction clashes."
+  default_prompt: "Review this task context for degradation risk before implementation."

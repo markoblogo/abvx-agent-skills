@@ -1,0 +1,5 @@
+{"id":"context-degradation-handoff","prompt":"Review this long handoff for stale context and conflicting instructions before continuing.","expected_skill":"context-degradation-review","status":"draft"}
+{"id":"tool-contract-set-input","prompt":"Review this SET planner input and generated workflow as an agent-facing tool contract.","expected_skill":"agent-tool-contract-review","status":"draft"}
+{"id":"skillopt-pairwise-eval","prompt":"Compare two proposed SKILL.md edits with a rubric and check position bias.","expected_skill":"bounded-evaluation","status":"draft"}
+{"id":"retained-output-folder","prompt":"Create a durable retained-output folder and handoff for a proposal-first agent run.","expected_skill":"filesystem-context-discipline","status":"draft"}
+{"id":"loop-readiness-ci-sweeper","prompt":"Review whether this CI sweeper should stay report-only or become a proposal-first recurring loop.","expected_skill":"loop-readiness-review","status":"draft"}

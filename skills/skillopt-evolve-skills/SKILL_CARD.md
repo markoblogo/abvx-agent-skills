@@ -1,7 +1,7 @@
 # Skill Card: skillopt-evolve-skills
 
 ## Description
-Improves local skills, AGENTS.md rules, and reusable agent workflows through validation-gated edits.
+Improves local skills, AGENTS.md rules, and reusable agent workflows through diverse bounded proposals and validation-gated edits.
 
 ## Owner
 ABVX / Anton Biletskiy-Volokh
@@ -21,7 +21,7 @@ Inspired by Microsoft SkillOpt and ABVX skill iteration practice.
 ## Inputs and Outputs
 Inputs: task traces, failures, successful workflows, candidate rules, existing skill files.
 
-Outputs: bounded skill edits, rejected-edit notes, validation reports.
+Outputs: bounded proposal sets, accepted skill edits, rejected-edit notes, validation reports.
 
 ## Risks and Mitigations
 - Risk: overfitting a single task. Mitigation: generalization and non-regression checks.
