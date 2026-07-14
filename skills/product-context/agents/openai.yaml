@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Context"
+  short_description: "Build an evidence-backed product context before go-to-market work."
+  default_prompt: "Create or refresh the compact product context for this repository."

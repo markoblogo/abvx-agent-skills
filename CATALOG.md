@@ -12,6 +12,7 @@ Generated from `docs/catalog.json`.
 | `authorized-security-router` | Security & Defensive Review | Route authorized defensive security work safely. | `gh skill install markoblogo/abvx-agent-skills authorized-security-router` |
 | `book-to-skill` | Research, Knowledge & Reusable Methods | Convert long-form documents into reusable agent skills. | `gh skill install markoblogo/abvx-agent-skills book-to-skill` |
 | `bounded-evaluation` | Research, Knowledge & Reusable Methods | Design compact evaluation gates for agent outputs. | `gh skill install markoblogo/abvx-agent-skills bounded-evaluation` |
+| `bounded-growth-loop` | Product Context & Responsible Growth | Design a recurring product review loop with proof and approval gates. | `gh skill install markoblogo/abvx-agent-skills bounded-growth-loop` |
 | `brief-first-execution` | Research, Knowledge & Reusable Methods | Create one live brief before substantial work starts. | `gh skill install markoblogo/abvx-agent-skills brief-first-execution` |
 | `browser-verification` | Frontend, UX & Product Surfaces | Verify web changes with real browser automation. | `gh skill install markoblogo/abvx-agent-skills browser-verification` |
 | `compaction-survival` | Token Economy & Context Control | Preserve compact resumable state across long sessions and compaction. | `gh skill install markoblogo/abvx-agent-skills compaction-survival` |
@@ -53,6 +54,7 @@ Generated from `docs/catalog.json`.
 | `pipeline-readiness-gate` | Workflow, Handoffs & Multi-Track Work | Select a compact pre/post/ship gate for agent work. | `gh skill install markoblogo/abvx-agent-skills pipeline-readiness-gate` |
 | `plan-to-issues` | Discovery, Planning & Delivery | Break plans into thin end-to-end slices with blockers and criteria. | `gh skill install markoblogo/abvx-agent-skills plan-to-issues` |
 | `private-vs-publishable-skill-audit` | Research, Knowledge & Reusable Methods | Classify private skill-pack content before publishing any of it. | `gh skill install markoblogo/abvx-agent-skills private-vs-publishable-skill-audit` |
+| `product-context` | Product Context & Responsible Growth | Build an evidence-backed product context before go-to-market work. | `gh skill install markoblogo/abvx-agent-skills product-context` |
 | `project-context-bootstrap` | Project Context & Onboarding | Detect stack, ask the right project questions, and build compact durable context. | `gh skill install markoblogo/abvx-agent-skills project-context-bootstrap` |
 | `prototype-lab` | Frontend, UX & Product Surfaces | Build throwaway prototypes that answer one question. | `gh skill install markoblogo/abvx-agent-skills prototype-lab` |
 | `rabbithole-doc-exploration` | Project Context & Onboarding | Use a local Rabbithole canvas to explore dense agent docs with human-selected branches. | `gh skill install markoblogo/abvx-agent-skills rabbithole-doc-exploration` |

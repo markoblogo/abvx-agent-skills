@@ -222,6 +222,13 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 | `brief-first-execution` | Starts non-trivial work with one live brief for scope, non-goals, risks, verification, and done criteria. |
 | `private-vs-publishable-skill-audit` | Audits private skill packs before publication and extracts only the reusable layer. |
 
+### Product Context & Responsible Growth
+
+| Skill | What It Does |
+|---|---|
+| `product-context` | Builds a compact, evidence-backed product context with audience, conversion, proof, language, and claim boundaries before go-to-market work. |
+| `bounded-growth-loop` | Designs recurring content, SEO, analytics, or product-review loops with durable state, verification, stop rules, and approval-gated outputs. |
+
 ### Workflow, Handoffs & Multi-Track Work
 
 | Skill | What It Does |
