@@ -221,6 +221,7 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 | `workflow-policy-layering` | Separates workflow from authority, escalation, forbidden actions, and validation so assistant specs stop contradicting themselves. |
 | `brief-first-execution` | Starts non-trivial work with one live brief for scope, non-goals, risks, verification, and done criteria. |
 | `private-vs-publishable-skill-audit` | Audits private skill packs before publication and extracts only the reusable layer. |
+| `agent-friction-ledger` | Captures repeated agent blockers, doc gaps, tool incompatibilities, and workarounds as local, privacy-safe reports that can feed docs, skills, scripts, or evals. |
 
 ### Workflow, Handoffs & Multi-Track Work
 
