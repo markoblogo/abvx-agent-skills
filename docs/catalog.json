@@ -1,10 +1,11 @@
 {
-  "skill_count": 71,
+  "skill_count": 73,
   "categories": {
     "Research, Knowledge & Reusable Methods": 13,
     "Coding, Debugging & Architecture": 12,
     "Discovery, Planning & Delivery": 6,
     "Security & Defensive Review": 1,
+    "Product Context & Responsible Growth": 2,
     "Frontend, UX & Product Surfaces": 10,
     "Token Economy & Context Control": 9,
     "Long-Run Delivery Control": 6,
@@ -174,6 +175,24 @@
       "card_path": "skills/bounded-evaluation/SKILL_CARD.md",
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/bounded-evaluation/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/bounded-evaluation/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental"
+    },
+    {
+      "name": "bounded-growth-loop",
+      "display_name": "Bounded Growth Loop",
+      "category": "Product Context & Responsible Growth",
+      "description": "Design a small recurring product, content, SEO, analytics, or go-to-market review loop with evidence checks, durable state, explicit stop rules, and approval-gated outputs. Use before scheduling recurring growth work or turning a repeated marketing task into an agent loop.",
+      "short_description": "Design a recurring product review loop with proof and approval gates.",
+      "intended_use": "Use before scheduling recurring content, SEO, analytics, funnel, partner, or product-positioning work.",
+      "model_sensitivity": "",
+      "composable_with": [],
+      "anti_patterns": [],
+      "risks": "- Risk: noisy or runaway automation. Mitigation: separate check cadence from action condition and require stop rules.\n- Risk: unsafe side effects. Mitigation: default to report-only or proposal-first; require approval for every external write.\n- Risk: false causal claims. Mitigation: require evidence thresholds and alternative explanations.",
+      "path": "skills/bounded-growth-loop/SKILL.md",
+      "card_path": "skills/bounded-growth-loop/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/bounded-growth-loop/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/bounded-growth-loop/SKILL_CARD.md",
       "origin": "adapted",
       "status": "experimental"
     },
@@ -1009,6 +1028,24 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/private-vs-publishable-skill-audit/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/private-vs-publishable-skill-audit/SKILL_CARD.md",
       "origin": "original",
+      "status": "experimental"
+    },
+    {
+      "name": "product-context",
+      "display_name": "Product Context",
+      "category": "Product Context & Responsible Growth",
+      "description": "Build or refresh a compact, evidence-backed product context before marketing, positioning, SEO, analytics, sales-enablement, or launch work. Use when an agent needs to understand the product, audience, proof, conversion goal, terminology, and claim boundaries without inventing commercial facts.",
+      "short_description": "Build an evidence-backed product context before go-to-market work.",
+      "intended_use": "Use before positioning, SEO, content, analytics, sales-enablement, or launch work when the product, audience, proof, and claim boundaries need a durable source.",
+      "model_sensitivity": "",
+      "composable_with": [],
+      "anti_patterns": [],
+      "risks": "- Risk: invented commercial claims. Mitigation: separate confirmed facts from assumptions and require owner confirmation.\n- Risk: durable context drift. Mitigation: record source surfaces and review after material product changes.\n- Risk: private data leakage. Mitigation: exclude customer, sales, and personal data from committed files.",
+      "path": "skills/product-context/SKILL.md",
+      "card_path": "skills/product-context/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/product-context/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/product-context/SKILL_CARD.md",
+      "origin": "adapted",
       "status": "experimental"
     },
     {
