@@ -1,7 +1,7 @@
 {
-  "skill_count": 71,
+  "skill_count": 72,
   "categories": {
-    "Research, Knowledge & Reusable Methods": 13,
+    "Research, Knowledge & Reusable Methods": 14,
     "Coding, Debugging & Architecture": 12,
     "Discovery, Planning & Delivery": 6,
     "Security & Defensive Review": 1,
@@ -15,6 +15,24 @@
     "Structured Data & Spreadsheet Work": 1
   },
   "skills": [
+    {
+      "name": "agent-friction-ledger",
+      "display_name": "Agent Friction Ledger",
+      "category": "Research, Knowledge & Reusable Methods",
+      "description": "Capture recurring agent-development friction as a local, privacy-safe Markdown report. Use only when the user explicitly requests a friction review or a session has repeatedly hit blockers, misleading errors, missing documentation, incompatible tools, or manual workarounds that should improve a doc, tool, skill, process, or evaluation.",
+      "short_description": "Capture material agent friction locally and propose durable fixes.",
+      "intended_use": "Use after explicit request or repeated, evidenced friction involving blockers, error quality, documentation gaps, tool incompatibility, or manual workarounds.",
+      "model_sensitivity": "",
+      "composable_with": [],
+      "anti_patterns": [],
+      "risks": "- Risk: sensitive leakage. Mitigation: local-only report, no raw transcripts/logs, and abstract sensitive cases.\n- Risk: noisy process. Mitigation: explicit trigger and material-friction threshold.\n- Risk: speculative fixes. Mitigation: mark confidence and require normal authorization before applying follow-ups.",
+      "path": "skills/agent-friction-ledger/SKILL.md",
+      "card_path": "skills/agent-friction-ledger/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/agent-friction-ledger/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/agent-friction-ledger/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental"
+    },
     {
       "name": "agent-learning-layer-triage",
       "display_name": "Agent Learning Layer Triage",

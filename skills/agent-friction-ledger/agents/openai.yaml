@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Friction Ledger"
+  short_description: "Capture material agent friction locally and propose durable fixes."
+  default_prompt: "Review this task for material agent friction and create a local, privacy-safe report."
