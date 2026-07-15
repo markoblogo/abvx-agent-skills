@@ -294,9 +294,13 @@ Current distribution channels:
 
 - PyPI: published
 - TestPyPI: published
-- Homebrew tap: published at <https://github.com/markoblogo/homebrew-tap>
 - conda-forge: staged-recipes submission currently open at <https://github.com/conda-forge/staged-recipes/pull/33719>
-- `homebrew-core`: not accepted for now under the Homebrew core notability policy; use the tap instead
+
+Install the packaged CLI from PyPI:
+
+```bash
+uv tool install abvx-agent-skills
+```
 
 Install one skill into Codex:
 
@@ -325,15 +329,6 @@ Install to a custom destination:
 ```bash
 abvx-skills install --destination ./tmp-skills
 ```
-
-Install via Homebrew tap:
-
-```bash
-brew tap markoblogo/tap
-brew install abvx-agent-skills
-```
-
-`homebrew-core` is not the current install path for this project. The upstream submission was closed under the repository's notability policy, so the maintained Homebrew channel is the ABVX tap.
 
 Smoke-test the published package from PyPI:
 
