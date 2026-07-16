@@ -108,6 +108,7 @@ See:
 - **Need to turn repeated prompts into loops?** Start with `loopops-protocol`, then use `skillopt-evolve-skills` to capture durable lessons.
 - **Need to decide where agent learning should live?** Start with `agent-learning-layer-triage` before promoting a lesson into memory, durable docs, `SKILL.md`, a script, or an eval.
 - **Need to build reusable assistant packs?** Start with `role-skill-pack-design`, `workflow-policy-layering`, `brief-first-execution`, and `private-vs-publishable-skill-audit`.
+- **Need a narrow project hook without a hook runtime?** Start with `project-hook-guardrails`, then use `hook-rule-fixtures` before moving from disabled to warn or block.
 
 ## Skills
 
@@ -197,6 +198,8 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 | `goal-loop-designer` | Compiles raw agent goals into bounded loop harnesses with stop rules, rubric, judge prompt, budgets, and portable artifacts. |
 | `role-skill-pack-design` | Designs compact role/workflow skill packs with base layers, difference layers, boundaries, and rollout order. |
 | `workflow-policy-layering` | Separates workflow from authority, escalation, forbidden actions, and validation so assistant specs stop contradicting themselves. |
+| `project-hook-guardrails` | Designs opt-in per-project rules with explicit warn/block outcomes, bounded patterns/conditions, evidence, bypass, and no global hooks. |
+| `hook-rule-fixtures` | Tests project hook rules with synthetic match, no-match, exception, verifier, bypass, and regression fixtures before rollout. |
 | `brief-first-execution` | Starts non-trivial work with one live brief for scope, non-goals, risks, verification, and done criteria. |
 | `private-vs-publishable-skill-audit` | Audits private skill packs before publication and extracts only the reusable layer. |
 

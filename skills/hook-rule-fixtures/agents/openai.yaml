@@ -1,0 +1,4 @@
+interface:
+  display_name: "Hook Rule Fixtures"
+  short_description: "Test opt-in project hook rules before rollout."
+  default_prompt: "Use $hook-rule-fixtures to test this opt-in project hook with synthetic match, no-match, exception, and bypass cases."

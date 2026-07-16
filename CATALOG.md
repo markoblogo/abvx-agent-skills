@@ -29,6 +29,7 @@ Generated from `docs/catalog.json`.
 | `goal-loop-designer` | Research, Knowledge & Reusable Methods | Compile raw goals into bounded agent loop harnesses. | `gh skill install markoblogo/abvx-agent-skills goal-loop-designer` |
 | `graph-guided-code-reading` | Token Economy & Context Control | Read codebases through symbols, edges, and blast radius instead of broad scans. | `gh skill install markoblogo/abvx-agent-skills graph-guided-code-reading` |
 | `handoff` | Workflow, Handoffs & Multi-Track Work | Write compact continuation briefs for future agents. | `gh skill install markoblogo/abvx-agent-skills handoff` |
+| `hook-rule-fixtures` | Research, Knowledge & Reusable Methods | Test opt-in project hook rules before rollout. | `gh skill install markoblogo/abvx-agent-skills hook-rule-fixtures` |
 | `html-brief-artifact` | HTML Artifacts & Visual Deliverables | Create a standalone HTML brief for plans, summaries, and reports. | `gh skill install markoblogo/abvx-agent-skills html-brief-artifact` |
 | `html-diagram-artifact` | HTML Artifacts & Visual Deliverables | Create a standalone HTML/SVG architecture or flow explainer. | `gh skill install markoblogo/abvx-agent-skills html-diagram-artifact` |
 | `idea-to-ship-gates` | Long-Run Delivery Control | Route ideas through spec, slices, proof, review, and release. | `gh skill install markoblogo/abvx-agent-skills idea-to-ship-gates` |
@@ -44,6 +45,7 @@ Generated from `docs/catalog.json`.
 | `plan-to-issues` | Discovery, Planning & Delivery | Break plans into thin end-to-end slices with blockers and criteria. | `gh skill install markoblogo/abvx-agent-skills plan-to-issues` |
 | `private-vs-publishable-skill-audit` | Research, Knowledge & Reusable Methods | Classify private skill-pack content before publishing any of it. | `gh skill install markoblogo/abvx-agent-skills private-vs-publishable-skill-audit` |
 | `project-context-bootstrap` | Project Context & Onboarding | Detect stack, ask the right project questions, and build compact durable context. | `gh skill install markoblogo/abvx-agent-skills project-context-bootstrap` |
+| `project-hook-guardrails` | Research, Knowledge & Reusable Methods | Design opt-in project hook rules with warn/block boundaries. | `gh skill install markoblogo/abvx-agent-skills project-hook-guardrails` |
 | `prototype-lab` | Frontend, UX & Product Surfaces | Build throwaway prototypes that answer one question. | `gh skill install markoblogo/abvx-agent-skills prototype-lab` |
 | `rapid-grilling` | Discovery, Planning & Delivery | Fast one-question-at-a-time alignment for vague ideas and plans. | `gh skill install markoblogo/abvx-agent-skills rapid-grilling` |
 | `recovery-loop-3strike` | Long-Run Delivery Control | Retry once, fix-spec once, then hand off honestly. | `gh skill install markoblogo/abvx-agent-skills recovery-loop-3strike` |

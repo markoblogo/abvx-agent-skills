@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Hook Guardrails"
+  short_description: "Design opt-in project hook rules with warn/block boundaries."
+  default_prompt: "Use $project-hook-guardrails to design one opt-in, fixture-tested project hook rule without global hooks."

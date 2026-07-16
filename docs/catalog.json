@@ -1,7 +1,7 @@
 {
-  "skill_count": 59,
+  "skill_count": 61,
   "categories": {
-    "Research, Knowledge & Reusable Methods": 11,
+    "Research, Knowledge & Reusable Methods": 13,
     "Coding, Debugging & Architecture": 11,
     "Security & Defensive Review": 1,
     "Frontend, UX & Product Surfaces": 10,
@@ -508,6 +508,24 @@
       "status": "experimental"
     },
     {
+      "name": "hook-rule-fixtures",
+      "display_name": "Hook Rule Fixtures",
+      "category": "Research, Knowledge & Reusable Methods",
+      "description": "Test opt-in per-project hook rules with small synthetic fixtures before rollout. Use when a warn or block hook needs match, no-match, exception, bypass, and regression cases without enabling global hooks.",
+      "short_description": "Test opt-in project hook rules before rollout.",
+      "intended_use": "Use after a project hook rule is designed and before it moves from disabled to warn or block.",
+      "model_sensitivity": "",
+      "composable_with": [],
+      "anti_patterns": [],
+      "risks": "- Risk: testing with sensitive data. Mitigation: require minimal synthetic fixtures and redacted evidence assertions.\n- Risk: blocking on untested logic. Mitigation: require match, no-match, exception, and bypass cases.\n- Risk: silent rule drift. Mitigation: freeze rule version and retain regressions.",
+      "path": "skills/hook-rule-fixtures/SKILL.md",
+      "card_path": "skills/hook-rule-fixtures/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/hook-rule-fixtures/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/hook-rule-fixtures/SKILL_CARD.md",
+      "origin": "original",
+      "status": "experimental"
+    },
+    {
       "name": "html-brief-artifact",
       "display_name": "HTML Brief Artifact",
       "category": "HTML Artifacts & Visual Deliverables",
@@ -840,6 +858,24 @@
       "card_path": "skills/project-context-bootstrap/SKILL_CARD.md",
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/project-context-bootstrap/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/project-context-bootstrap/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental"
+    },
+    {
+      "name": "project-hook-guardrails",
+      "display_name": "Project Hook Guardrails",
+      "category": "Research, Knowledge & Reusable Methods",
+      "description": "Design narrowly scoped, opt-in per-project hook rules with explicit warn versus block outcomes, bounded patterns and conditions, and no global observer or session hooks. Use when a repository needs a small safety or promotion guardrail without adopting a hook runtime.",
+      "short_description": "Design opt-in project hook rules with warn/block boundaries.",
+      "intended_use": "Use when one repository needs a bounded data-boundary or promotion guardrail without adopting global observers, session hooks, or a new runtime.",
+      "model_sensitivity": "",
+      "composable_with": [],
+      "anti_patterns": [],
+      "risks": "- Risk: global surveillance creep. Mitigation: require one named project and event.\n- Risk: unjustified blocks. Mitigation: default to warn; require fixtures, owner, and bypass for blocks.\n- Risk: protected-data leakage. Mitigation: emit redacted markers only.\n- Risk: opaque behavior. Mitigation: make pattern, conditions, evidence, and remediation inspectable.",
+      "path": "skills/project-hook-guardrails/SKILL.md",
+      "card_path": "skills/project-hook-guardrails/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/project-hook-guardrails/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/project-hook-guardrails/SKILL_CARD.md",
       "origin": "adapted",
       "status": "experimental"
     },
