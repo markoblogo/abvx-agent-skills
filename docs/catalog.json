@@ -1,7 +1,7 @@
 {
-  "skill_count": 61,
+  "skill_count": 62,
   "categories": {
-    "Research, Knowledge & Reusable Methods": 13,
+    "Research, Knowledge & Reusable Methods": 14,
     "Coding, Debugging & Architecture": 11,
     "Security & Defensive Review": 1,
     "Frontend, UX & Product Surfaces": 10,
@@ -639,6 +639,24 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/local-inference-tuning/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/local-inference-tuning/SKILL_CARD.md",
       "origin": "original",
+      "status": "experimental"
+    },
+    {
+      "name": "loop-run-contract",
+      "display_name": "Loop Run Contract",
+      "category": "Research, Knowledge & Reusable Methods",
+      "description": "Draft and review a narrow L1 report-only or L2 proposal-first loop run contract with explicit state, budget, verifier, escalation, and stop conditions. Use before enabling repeated agent work for one project or workflow.",
+      "short_description": "Define bounded L1/L2 recurring agent work before enabling it.",
+      "intended_use": "Use before enabling one recurring report, shadow evaluation, or proposal-first assisted workflow for a named project.",
+      "model_sensitivity": "",
+      "composable_with": [],
+      "anti_patterns": [],
+      "risks": "- Risk: automation expands silently. Mitigation: fixed level and explicit denied actions.\n- Risk: cost growth on empty or weak queues. Mitigation: early exit and hard per-run budget.\n- Risk: self-approved changes. Mitigation: L2 maker-checker split and human approval before effects.\n- Risk: state disappears into chat. Mitigation: required durable state plus append-only log.",
+      "path": "skills/loop-run-contract/SKILL.md",
+      "card_path": "skills/loop-run-contract/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/loop-run-contract/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/loop-run-contract/SKILL_CARD.md",
+      "origin": "adapted",
       "status": "experimental"
     },
     {

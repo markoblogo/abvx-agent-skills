@@ -1,0 +1,4 @@
+interface:
+  display_name: "Loop Run Contract"
+  short_description: "Define bounded L1/L2 recurring agent work before enabling it."
+  default_prompt: "Use $loop-run-contract to draft a bounded L1 or L2 run packet for one project workflow without creating a scheduler or runtime."

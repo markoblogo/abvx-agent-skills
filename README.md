@@ -106,6 +106,7 @@ See:
 - **Need local model serving?** Start with `local-inference-tuning` before choosing MLX, llama.cpp, Ollama, or vLLM.
 - **Need a full multi-track workflow?** Start with `dynamic-workflow-packets`.
 - **Need to turn repeated prompts into loops?** Start with `loopops-protocol`, then use `skillopt-evolve-skills` to capture durable lessons.
+- **Need to make one repeated workflow safe before enabling it?** Start with `loop-run-contract` for L1 report-only or L2 proposal-first boundaries; use `loopops-protocol` only when deciding whether the pattern should exist at all.
 - **Need to decide where agent learning should live?** Start with `agent-learning-layer-triage` before promoting a lesson into memory, durable docs, `SKILL.md`, a script, or an eval.
 - **Need to build reusable assistant packs?** Start with `role-skill-pack-design`, `workflow-policy-layering`, `brief-first-execution`, and `private-vs-publishable-skill-audit`.
 - **Need a narrow project hook without a hook runtime?** Start with `project-hook-guardrails`, then use `hook-rule-fixtures` before moving from disabled to warn or block.
@@ -192,6 +193,7 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 | `evidence-ledger-research` | Keeps claims, sources, calculations, and open questions in a disciplined evidence ledger. |
 | `social-publishing-gate` | Gates social posts, replies, scheduling, and monitoring through draft, audit, approval, publish, and monitor steps. |
 | `loopops-protocol` | Chooses when repeated agent work should stay a prompt or be promoted into a skill, checklist, script, workflow, or cost-bounded loop. |
+| `loop-run-contract` | Defines a bounded L1 report-only or L2 proposal-first run packet with state, budget, verifier, escalation, and stop conditions. |
 | `agent-learning-layer-triage` | Routes agent lessons into the right auditable layer: prompt, memory, durable docs, checklist, skill, script, eval, or rejected buffer. |
 | `book-to-skill` | Converts books, papers, and long documents into reusable, progressive-disclosure agent skills. |
 | `doc-to-lora-evaluator` | Evaluates whether document-to-adapter memory is worth a proof-of-concept before building a Doc-to-LoRA plugin or pipeline. |
