@@ -1,11 +1,11 @@
 {
-  "skill_count": 73,
+  "skill_count": 74,
   "categories": {
     "Research, Knowledge & Reusable Methods": 13,
     "Coding, Debugging & Architecture": 12,
     "Discovery, Planning & Delivery": 6,
     "Security & Defensive Review": 1,
-    "Uncategorized": 3,
+    "Uncategorized": 4,
     "Frontend, UX & Product Surfaces": 10,
     "Token Economy & Context Control": 9,
     "Long-Run Delivery Control": 6,
@@ -239,6 +239,29 @@
       "card_path": "skills/browser-verification/SKILL_CARD.md",
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/browser-verification/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/browser-verification/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental"
+    },
+    {
+      "name": "bug-evidence-protocol",
+      "display_name": "Bug Evidence Protocol",
+      "category": "Uncategorized",
+      "description": "Capture and classify minimal red-to-green evidence for a diagnosed bug and scoped fix, with command hashes, Git/environment identity, broader-check records, risk-based approval, route evidence, and optional cpat linkage. Use after diagnose establishes a credible reproducer or when a reported regression needs an auditable proof packet; do not use as an autonomous bug scanner.",
+      "short_description": "Capture and classify honest red-to-green bug evidence.",
+      "intended_use": "Use after a credible reproducer exists, especially for regressions, production incidents, device failures, flaky behavior, and recurring CI/runtime defects.",
+      "model_sensitivity": "",
+      "composable_with": [
+        "`diagnose`",
+        "`test-driven-execution`",
+        "`git-native-context-contract`",
+        "`repo-debugging-ledger`"
+      ],
+      "anti_patterns": [],
+      "risks": "- Risk: false `FIX_PROVEN`. Mitigation: same command hash plus captured passing broader checks.\n- Risk: setup failure mislabeled as bug. Mitigation: explicit symptom-match requirement.\n- Risk: sensitive output retained. Mitigation: bounded redaction, no environment dump, mandatory inspection before publication.\n- Risk: ceremony on ordinary fixes. Mitigation: opt-in use after a credible reproducer or where auditability matters.\n- Risk: approval deadlock. Mitigation: gates are risk-based and preserve existing scoped authorization.",
+      "path": "skills/bug-evidence-protocol/SKILL.md",
+      "card_path": "skills/bug-evidence-protocol/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/bug-evidence-protocol/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/bug-evidence-protocol/SKILL_CARD.md",
       "origin": "adapted",
       "status": "experimental"
     },

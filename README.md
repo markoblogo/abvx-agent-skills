@@ -62,6 +62,7 @@ If you want a scan-friendly text catalog for browsing or indexing, use [CATALOG.
 |---|---|---|
 | Write smaller patches | `minimal-diff-builder` | The agent keeps refactoring too much, widening blast radius, or adding abstractions you did not ask for. |
 | Debug from evidence | `diagnose` | The agent keeps guessing fixes without reproducing the failure and verifying the result. |
+| Prove a regression fix | `bug-evidence-protocol` | A diagnosed bug needs captured same-command red/green evidence, broader checks, Git identity, and an honest fix status. |
 | Review plans before work | `assumption-excavation`, `pipeline-readiness-gate` | A plan, SET bundle, or spec sounds plausible but may hide assumptions or missing gates. |
 | Coordinate reviewed multi-agent work | `bounded-orchestration-contract` | A non-trivial task benefits from Planner/Reviewer approval, stable findings, disjoint executor ownership, explicit route evidence, and root verification. |
 | Preserve typed project truth | `git-native-context-contract` | Decisions, rules, specs, plans, bounded research, or recurring incident lessons need a minimal Git-reviewed lifecycle and relation contract. |
@@ -92,6 +93,7 @@ The next LoopOps layer is bounded skill evolution: see [docs/skill-evolution-roa
 - **Need to save tokens?** Start with `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution`, and `lean-context-layout`. Add `compaction-survival` if your sessions run long enough to forget their own state.
 - **Need to check whether context is hurting the run?** Start with `context-degradation-review` before trusting long handoffs, memory summaries, or bloated SET bundles.
 - **Need to debug a repo?** Start with `diagnose`, `repo-debugging-ledger`, and `graph-guided-code-reading`.
+- **Need auditable red-to-green proof?** Add `bug-evidence-protocol` after `diagnose`; use risk-based approval and link recurrent lessons to a `cpat`.
 - **Need code review discipline?** Run a Standards pass with `overengineering-review`, `minimal-diff-builder`, or `architecture-deepening-review`, then a Spec pass with `delivery-baseline-audit` against the issue, PRD, or task contract.
 - **Need to review an agent-facing tool?** Start with `agent-tool-contract-review` for MCP, CLI, SET inputs, and AGENTS.md generator contracts.
 - **Need to surface hidden assumptions before implementation?** Start with `assumption-excavation`, then use `pipeline-readiness-gate` when the work needs a pre/post/ship sequence.
@@ -151,6 +153,7 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 | Skill | What It Does |
 |---|---|
 | `diagnose` | Runs a disciplined debugging loop around one reproducible signal, ranked hypotheses, and narrow verification. |
+| `bug-evidence-protocol` | Captures same-command red/green evidence, broader checks, Git/environment identity, route state, and an honest fix classification after diagnosis. |
 | `agent-tool-contract-review` | Reviews MCP tools, CLI commands, SET inputs, and AGENTS.md generator outputs as agent-facing contracts with explicit authority and output boundaries. |
 | `repo-debugging-ledger` | Keeps a checked-location ledger so debugging does not keep reopening the same code and repeating the same dead ends. |
 | `complexity-optimizer` | Finds safe complexity and performance simplifications without turning the codebase into a refactor festival. |

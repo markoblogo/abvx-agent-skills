@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bug Evidence Protocol"
+  short_description: "Capture and classify honest red-to-green bug evidence."
+  default_prompt: "Use $bug-evidence-protocol after diagnosis to capture the same targeted command before and after, record broader checks, and classify the fix without overstating evidence."

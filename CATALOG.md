@@ -15,6 +15,7 @@ Generated from `docs/catalog.json`.
 | `bounded-orchestration-contract` | Uncategorized | Gate plans, packets, routes, and root verification. | `gh skill install markoblogo/abvx-agent-skills bounded-orchestration-contract` |
 | `brief-first-execution` | Research, Knowledge & Reusable Methods | Create one live brief before substantial work starts. | `gh skill install markoblogo/abvx-agent-skills brief-first-execution` |
 | `browser-verification` | Frontend, UX & Product Surfaces | Verify web changes with real browser automation. | `gh skill install markoblogo/abvx-agent-skills browser-verification` |
+| `bug-evidence-protocol` | Uncategorized | Capture and classify honest red-to-green bug evidence. | `gh skill install markoblogo/abvx-agent-skills bug-evidence-protocol` |
 | `compaction-survival` | Token Economy & Context Control | Preserve compact resumable state across long sessions and compaction. | `gh skill install markoblogo/abvx-agent-skills compaction-survival` |
 | `complexity-optimizer` | Coding, Debugging & Architecture | Audit and improve complexity without behavior drift. | `gh skill install markoblogo/abvx-agent-skills complexity-optimizer` |
 | `confidence-fragility-review` | Long-Run Delivery Control | Check whether confident claims are backed by real evidence. | `gh skill install markoblogo/abvx-agent-skills confidence-fragility-review` |

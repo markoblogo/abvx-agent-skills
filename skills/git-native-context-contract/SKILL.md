@@ -142,6 +142,8 @@ Content rules:
 
 For hardware, production, financial, or protected systems, source reasoning alone cannot satisfy `Verification`.
 
+When `bug-evidence-protocol` was used, reference its stable evidence ID in `Verification`. Summarize the observed result in the `cpat`; keep bulky or protected command output in its authoritative evidence store.
+
 ## Workflow
 
 1. Search existing durable docs for the decision, rule, spec, plan, research, or incident.
