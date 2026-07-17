@@ -63,6 +63,7 @@ If you want a scan-friendly text catalog for browsing or indexing, use [CATALOG.
 | Write smaller patches | `minimal-diff-builder` | The agent keeps refactoring too much, widening blast radius, or adding abstractions you did not ask for. |
 | Debug from evidence | `diagnose` | The agent keeps guessing fixes without reproducing the failure and verifying the result. |
 | Review plans before work | `assumption-excavation`, `pipeline-readiness-gate` | A plan, SET bundle, or spec sounds plausible but may hide assumptions or missing gates. |
+| Coordinate reviewed multi-agent work | `bounded-orchestration-contract` | A non-trivial task benefits from Planner/Reviewer approval, stable findings, disjoint executor ownership, explicit route evidence, and root verification. |
 | Run reversible agent work | `reversible-agent-task` | A task should produce retained output first, then move through inspect -> select/apply/discard before touching the target workspace. |
 | Check ship confidence | `confidence-fragility-review`, `delivery-baseline-audit` | A release, README, generated plan, or PR sounds done but evidence may be thin. |
 | Save tokens in shell-heavy work | `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution` | Logs, diffs, tests, and command output are burning context and hiding the real signal. |
@@ -119,6 +120,7 @@ The next LoopOps layer is bounded skill evolution: see [docs/skill-evolution-roa
 - **Need to schedule a recurring agent loop?** Start with `loop-readiness-review` before enabling CI sweepers, PR babysitters, daily triage, changelog drafting, or dependency loops.
 - **Need local model serving?** Start with `local-inference-tuning` before choosing MLX, llama.cpp, Ollama, or vLLM.
 - **Need a full multi-track workflow?** Start with `dynamic-workflow-packets`.
+- **Need a reviewed Planner/Reviewer/Executor workflow?** Start with `bounded-orchestration-contract`; keep it opt-in, stop after five review rounds, and require root integration and verification.
 - **Need to turn repeated prompts into loops?** Start with `loopops-protocol`, then use `skillopt-evolve-skills` to capture durable lessons.
 - **Need a small eval gate?** Start with `bounded-evaluation` before using pairwise judging, LLM-as-judge, activation tests, or SkillOpt validation claims.
 - **Need to decide where agent learning should live?** Start with `agent-learning-layer-triage` before promoting a lesson into memory, durable docs, `SKILL.md`, a script, or an eval.

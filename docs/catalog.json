@@ -1,17 +1,17 @@
 {
-  "skill_count": 71,
+  "skill_count": 72,
   "categories": {
     "Research, Knowledge & Reusable Methods": 13,
     "Coding, Debugging & Architecture": 12,
     "Discovery, Planning & Delivery": 6,
     "Security & Defensive Review": 1,
+    "Uncategorized": 2,
     "Frontend, UX & Product Surfaces": 10,
     "Token Economy & Context Control": 9,
     "Long-Run Delivery Control": 6,
     "Project Context & Onboarding": 5,
     "Workflow, Handoffs & Multi-Track Work": 5,
     "HTML Artifacts & Visual Deliverables": 2,
-    "Uncategorized": 1,
     "Structured Data & Spreadsheet Work": 1
   },
   "skills": [
@@ -174,6 +174,35 @@
       "card_path": "skills/bounded-evaluation/SKILL_CARD.md",
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/bounded-evaluation/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/bounded-evaluation/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental"
+    },
+    {
+      "name": "bounded-orchestration-contract",
+      "display_name": "Bounded Orchestration Contract",
+      "category": "Uncategorized",
+      "description": "Coordinate an opt-in Planner, Reviewer, and bounded Executor workflow with stable findings, at most five review rounds, disjoint write ownership, explicit route evidence, and root-owned verification. Use when the user asks for plan review, multi-agent orchestration, routed executors, parallel implementation, or the SET bounded-orchestration capability.",
+      "short_description": "Gate plans, packets, routes, and root verification.",
+      "intended_use": "Use for non-trivial planning, adversarial review, or independent multi-agent implementation slices where a separate review gate reduces material risk.",
+      "model_sensitivity": "Weaker models need smaller packets, explicit file ownership, and stricter ledger/version checks.",
+      "composable_with": [
+        "`dynamic-workflow-packets`",
+        "`agent-tool-contract-review`",
+        "`test-driven-execution`",
+        "`handoff`"
+      ],
+      "anti_patterns": [
+        "using Planner and Reviewer as the same supposedly independent route",
+        "renumbering or dropping findings between rounds",
+        "parallelizing shared files, lockfiles, registries, migrations, or generated artifacts",
+        "reporting `used and confirmed` from child prose or accepted tool parameters",
+        "skipping root verification after executor completion"
+      ],
+      "risks": "- Risk: ceremony on small tasks. Mitigation: explicit non-trivial-task trigger.\n- Risk: false route claims. Mitigation: three exact evidence states and host-metadata requirement for confirmation.\n- Risk: parallel write collisions. Mitigation: disjoint ownership gate.\n- Risk: rubber-stamp review. Mitigation: stable findings, reasoned dispositions, and five-round fail-closed cap.\n- Risk: child output treated as accepted. Mitigation: mandatory root integration and verification.",
+      "path": "skills/bounded-orchestration-contract/SKILL.md",
+      "card_path": "skills/bounded-orchestration-contract/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/bounded-orchestration-contract/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/bounded-orchestration-contract/SKILL_CARD.md",
       "origin": "adapted",
       "status": "experimental"
     },

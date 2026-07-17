@@ -12,6 +12,7 @@ Generated from `docs/catalog.json`.
 | `authorized-security-router` | Security & Defensive Review | Route authorized defensive security work safely. | `gh skill install markoblogo/abvx-agent-skills authorized-security-router` |
 | `book-to-skill` | Research, Knowledge & Reusable Methods | Convert long-form documents into reusable agent skills. | `gh skill install markoblogo/abvx-agent-skills book-to-skill` |
 | `bounded-evaluation` | Research, Knowledge & Reusable Methods | Design compact evaluation gates for agent outputs. | `gh skill install markoblogo/abvx-agent-skills bounded-evaluation` |
+| `bounded-orchestration-contract` | Uncategorized | Gate plans, packets, routes, and root verification. | `gh skill install markoblogo/abvx-agent-skills bounded-orchestration-contract` |
 | `brief-first-execution` | Research, Knowledge & Reusable Methods | Create one live brief before substantial work starts. | `gh skill install markoblogo/abvx-agent-skills brief-first-execution` |
 | `browser-verification` | Frontend, UX & Product Surfaces | Verify web changes with real browser automation. | `gh skill install markoblogo/abvx-agent-skills browser-verification` |
 | `compaction-survival` | Token Economy & Context Control | Preserve compact resumable state across long sessions and compaction. | `gh skill install markoblogo/abvx-agent-skills compaction-survival` |
