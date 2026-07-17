@@ -33,6 +33,7 @@ Generated from `docs/catalog.json`.
 | `filesystem-context-discipline` | Project Context & Onboarding | Use durable scratchpads and retained outputs without polluting repo context. | `gh skill install markoblogo/abvx-agent-skills filesystem-context-discipline` |
 | `frontend-product-builder` | Frontend, UX & Product Surfaces | Build frontend experiences with hierarchy, assets, and verification. | `gh skill install markoblogo/abvx-agent-skills frontend-product-builder` |
 | `frontend-taste-layer` | Frontend, UX & Product Surfaces | Add anti-slop taste to frontend work. | `gh skill install markoblogo/abvx-agent-skills frontend-taste-layer` |
+| `git-native-context-contract` | Uncategorized | Keep typed project truth reviewable and human-gated. | `gh skill install markoblogo/abvx-agent-skills git-native-context-contract` |
 | `goal-loop-designer` | Research, Knowledge & Reusable Methods | Compile raw goals into bounded agent loop harnesses. | `gh skill install markoblogo/abvx-agent-skills goal-loop-designer` |
 | `graph-guided-code-reading` | Token Economy & Context Control | Read codebases through symbols, edges, and blast radius instead of broad scans. | `gh skill install markoblogo/abvx-agent-skills graph-guided-code-reading` |
 | `handoff` | Workflow, Handoffs & Multi-Track Work | Write compact continuation briefs for future agents. | `gh skill install markoblogo/abvx-agent-skills handoff` |

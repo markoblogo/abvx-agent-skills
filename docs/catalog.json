@@ -1,11 +1,11 @@
 {
-  "skill_count": 72,
+  "skill_count": 73,
   "categories": {
     "Research, Knowledge & Reusable Methods": 13,
     "Coding, Debugging & Architecture": 12,
     "Discovery, Planning & Delivery": 6,
     "Security & Defensive Review": 1,
-    "Uncategorized": 2,
+    "Uncategorized": 3,
     "Frontend, UX & Product Surfaces": 10,
     "Token Economy & Context Control": 9,
     "Long-Run Delivery Control": 6,
@@ -577,6 +577,35 @@
       "card_path": "skills/frontend-taste-layer/SKILL_CARD.md",
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/frontend-taste-layer/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/frontend-taste-layer/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental"
+    },
+    {
+      "name": "git-native-context-contract",
+      "display_name": "Git-Native Context Contract",
+      "category": "Uncategorized",
+      "description": "Create or review minimal Git-native project context using only adr, rfc, rule, spec, plan, rnd, and cpat documents; human-gated draft/accepted/rejected lifecycle; implements, depends_on, extends, and related relations; and evidence-backed code-change patterns. Use when a project needs durable decisions, specifications, research, plans, incident lessons, or the SET git-native-context capability without installing a context runtime.",
+      "short_description": "Keep typed project truth reviewable and human-gated.",
+      "intended_use": "Use for durable decisions, proposals, rules, specifications, plans, bounded research, and recurring incident/code-change lessons that should remain reviewable in Git.",
+      "model_sensitivity": "Weaker models need explicit type-selection examples, authoritative source paths, and mechanical lifecycle/relation validation.",
+      "composable_with": [
+        "`durable-context-maintenance`",
+        "`evidence-ledger-research`",
+        "`agent-tool-contract-review`",
+        "`repo-debugging-ledger`"
+      ],
+      "anti_patterns": [
+        "creating a new directory when existing docs already own the subject",
+        "accepting a document without explicit human approval fields",
+        "using `related` for every nearby document",
+        "writing a `cpat` from an unverified hypothesis",
+        "storing secrets, protected evidence, transcripts, or hidden reasoning"
+      ],
+      "risks": "- Risk: competing source of truth. Mitigation: update existing canonical docs and preserve project truth hierarchy.\n- Risk: documentation bureaucracy. Mitigation: seven types only; create nothing when no type fits.\n- Risk: agents self-approve. Mitigation: three-field explicit human acceptance record.\n- Risk: relation graph noise. Mitigation: existing endpoints, four relation types, no duplicates or self-links.\n- Risk: incident folklore. Mitigation: `cpat` requires observed verification and durable prevention.",
+      "path": "skills/git-native-context-contract/SKILL.md",
+      "card_path": "skills/git-native-context-contract/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/git-native-context-contract/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/git-native-context-contract/SKILL_CARD.md",
       "origin": "adapted",
       "status": "experimental"
     },
