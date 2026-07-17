@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bounded Orchestration Contract"
+  short_description: "Gate plans, packets, routes, and root verification."
+  default_prompt: "Coordinate this non-trivial task with the bounded orchestration contract and keep root verification authoritative."
