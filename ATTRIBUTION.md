@@ -4,6 +4,7 @@ ABVX Agent Skills are original or adapted workflow artifacts informed by public 
 
 ## Sources And Inspiration
 
+- User-supplied anti-slop design law: visual defect, coherence, template-repetition, and product-specificity observations, rewritten into the evidence-based `anti-slop-review`. The supplied file contained no author, source, or redistribution license, so its original text is not distributed in this repository.
 - Agent Skills specification: portable `SKILL.md` directory format, progressive disclosure, metadata-first discovery. https://agentskills.io/
 - NVIDIA Trustworthy-AI Skill Card: risk, intended-use, evaluation, and ethical-consideration card structure. https://github.com/NVIDIA/Trustworthy-AI/blob/main/Skill%20Card.md
 - Microsoft SkillOpt: validation-gated skill evolution, accepted/rejected edit discipline, reusable skill improvement loop. https://github.com/microsoft/SkillOpt

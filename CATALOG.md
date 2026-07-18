@@ -7,6 +7,7 @@ Generated from `docs/catalog.json`.
 | `agent-learning-layer-triage` | Research, Knowledge & Reusable Methods | Route agent lessons into memory, skills, scripts, or evals. | `gh skill install markoblogo/abvx-agent-skills agent-learning-layer-triage` |
 | `agent-tool-contract-review` | Coding, Debugging & Architecture | Review MCP, CLI, SET, and tool contracts before agent use. | `gh skill install markoblogo/abvx-agent-skills agent-tool-contract-review` |
 | `agents-best-practices` | Coding, Debugging & Architecture | Design and audit provider-neutral agent harnesses. | `gh skill install markoblogo/abvx-agent-skills agents-best-practices` |
+| `anti-slop-review` | Frontend, UX & Product Surfaces | Separate UI defects, incoherence, and template risk. | `gh skill install markoblogo/abvx-agent-skills anti-slop-review` |
 | `architecture-deepening-review` | Coding, Debugging & Architecture | Find deeper modules, clearer seams, and testability gains. | `gh skill install markoblogo/abvx-agent-skills architecture-deepening-review` |
 | `assumption-excavation` | Discovery, Planning & Delivery | Surface hidden assumptions in specs, repo contracts, skills, and SET bundles. | `gh skill install markoblogo/abvx-agent-skills assumption-excavation` |
 | `authorized-security-router` | Security & Defensive Review | Route authorized defensive security work safely. | `gh skill install markoblogo/abvx-agent-skills authorized-security-router` |
@@ -15,7 +16,7 @@ Generated from `docs/catalog.json`.
 | `bounded-orchestration-contract` | Uncategorized | Gate plans, packets, routes, and root verification. | `gh skill install markoblogo/abvx-agent-skills bounded-orchestration-contract` |
 | `brief-first-execution` | Research, Knowledge & Reusable Methods | Create one live brief before substantial work starts. | `gh skill install markoblogo/abvx-agent-skills brief-first-execution` |
 | `browser-verification` | Frontend, UX & Product Surfaces | Verify web changes with real browser automation. | `gh skill install markoblogo/abvx-agent-skills browser-verification` |
-| `bug-evidence-protocol` | Uncategorized | Capture and classify honest red-to-green bug evidence. | `gh skill install markoblogo/abvx-agent-skills bug-evidence-protocol` |
+| `bug-evidence-protocol` | Coding, Debugging & Architecture | Capture and classify honest red-to-green bug evidence. | `gh skill install markoblogo/abvx-agent-skills bug-evidence-protocol` |
 | `compaction-survival` | Token Economy & Context Control | Preserve compact resumable state across long sessions and compaction. | `gh skill install markoblogo/abvx-agent-skills compaction-survival` |
 | `complexity-optimizer` | Coding, Debugging & Architecture | Audit and improve complexity without behavior drift. | `gh skill install markoblogo/abvx-agent-skills complexity-optimizer` |
 | `confidence-fragility-review` | Long-Run Delivery Control | Check whether confident claims are backed by real evidence. | `gh skill install markoblogo/abvx-agent-skills confidence-fragility-review` |

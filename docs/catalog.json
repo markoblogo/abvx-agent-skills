@@ -1,12 +1,12 @@
 {
-  "skill_count": 74,
+  "skill_count": 75,
   "categories": {
     "Research, Knowledge & Reusable Methods": 13,
-    "Coding, Debugging & Architecture": 12,
+    "Coding, Debugging & Architecture": 13,
+    "Frontend, UX & Product Surfaces": 11,
     "Discovery, Planning & Delivery": 6,
     "Security & Defensive Review": 1,
-    "Uncategorized": 4,
-    "Frontend, UX & Product Surfaces": 10,
+    "Uncategorized": 3,
     "Token Economy & Context Control": 9,
     "Long-Run Delivery Control": 6,
     "Project Context & Onboarding": 5,
@@ -78,6 +78,29 @@
       "card_path": "skills/agents-best-practices/SKILL_CARD.md",
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/agents-best-practices/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/agents-best-practices/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental"
+    },
+    {
+      "name": "anti-slop-review",
+      "display_name": "Anti-Slop Review",
+      "category": "Frontend, UX & Product Surfaces",
+      "description": "Review an implemented product UI for hard visual defects, design-system incoherence, and repeated template patterns without treating subjective taste as universal law. Use for pre-ship screenshots or browser review when a landing page, product surface, dashboard, or redesign may be generic, clipped, inaccessible, visually inconsistent, or overbuilt from familiar AI-generated patterns.",
+      "short_description": "Separate UI defects, incoherence, and template risk.",
+      "intended_use": "Use for bounded pre-ship screenshot, browser, or code review of landing pages, product surfaces, dashboards, and redesigns.",
+      "model_sensitivity": "",
+      "composable_with": [
+        "`frontend-taste-layer`",
+        "`design-critique-polish`",
+        "`web-quality-audit`",
+        "`motion-review-gate`"
+      ],
+      "anti_patterns": [],
+      "risks": "- Risk: subjective taste blocks shipping. Mitigation: only reproduced hard defects block; style findings require contract evidence.\n- Risk: marketing taste applied to utility UI. Mitigation: establish surface register and primary task first.\n- Risk: checklist design. Mitigation: template patterns are scrutiny prompts, not bans.\n- Risk: context bloat. Mitigation: compact core plus on-demand references.\n- Risk: broad redesign. Mitigation: smallest coherent correction and explicit authority boundary.",
+      "path": "skills/anti-slop-review/SKILL.md",
+      "card_path": "skills/anti-slop-review/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/anti-slop-review/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/anti-slop-review/SKILL_CARD.md",
       "origin": "adapted",
       "status": "experimental"
     },
@@ -245,7 +268,7 @@
     {
       "name": "bug-evidence-protocol",
       "display_name": "Bug Evidence Protocol",
-      "category": "Uncategorized",
+      "category": "Coding, Debugging & Architecture",
       "description": "Capture and classify minimal red-to-green evidence for a diagnosed bug and scoped fix, with command hashes, Git/environment identity, broader-check records, risk-based approval, route evidence, and optional cpat linkage. Use after diagnose establishes a credible reproducer or when a reported regression needs an auditable proof packet; do not use as an autonomous bug scanner.",
       "short_description": "Capture and classify honest red-to-green bug evidence.",
       "intended_use": "Use after a credible reproducer exists, especially for regressions, production incidents, device failures, flaky behavior, and recurring CI/runtime defects.",
