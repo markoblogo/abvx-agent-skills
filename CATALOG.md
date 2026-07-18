@@ -7,6 +7,7 @@ Generated from `docs/catalog.json`.
 | `agent-learning-layer-triage` | Research, Knowledge & Reusable Methods | Route agent lessons into memory, skills, scripts, or evals. | `gh skill install markoblogo/abvx-agent-skills agent-learning-layer-triage` |
 | `agent-tool-contract-review` | Coding, Debugging & Architecture | Review MCP, CLI, SET, and tool contracts before agent use. | `gh skill install markoblogo/abvx-agent-skills agent-tool-contract-review` |
 | `agents-best-practices` | Coding, Debugging & Architecture | Design and audit provider-neutral agent harnesses. | `gh skill install markoblogo/abvx-agent-skills agents-best-practices` |
+| `anti-slop-review` | Frontend, UX & Product Surfaces | Separate UI defects, incoherence, and template risk. | `gh skill install markoblogo/abvx-agent-skills anti-slop-review` |
 | `architecture-deepening-review` | Coding, Debugging & Architecture | Find deeper modules, clearer seams, and testability gains. | `gh skill install markoblogo/abvx-agent-skills architecture-deepening-review` |
 | `assumption-excavation` | Discovery, Planning & Delivery | Surface hidden assumptions in specs, repo contracts, skills, and SET bundles. | `gh skill install markoblogo/abvx-agent-skills assumption-excavation` |
 | `authorized-security-router` | Security & Defensive Review | Route authorized defensive security work safely. | `gh skill install markoblogo/abvx-agent-skills authorized-security-router` |
@@ -15,6 +16,7 @@ Generated from `docs/catalog.json`.
 | `bounded-orchestration-contract` | Uncategorized | Gate plans, packets, routes, and root verification. | `gh skill install markoblogo/abvx-agent-skills bounded-orchestration-contract` |
 | `brief-first-execution` | Research, Knowledge & Reusable Methods | Create one live brief before substantial work starts. | `gh skill install markoblogo/abvx-agent-skills brief-first-execution` |
 | `browser-verification` | Frontend, UX & Product Surfaces | Verify web changes with real browser automation. | `gh skill install markoblogo/abvx-agent-skills browser-verification` |
+| `bug-evidence-protocol` | Coding, Debugging & Architecture | Capture and classify honest red-to-green bug evidence. | `gh skill install markoblogo/abvx-agent-skills bug-evidence-protocol` |
 | `compaction-survival` | Token Economy & Context Control | Preserve compact resumable state across long sessions and compaction. | `gh skill install markoblogo/abvx-agent-skills compaction-survival` |
 | `complexity-optimizer` | Coding, Debugging & Architecture | Audit and improve complexity without behavior drift. | `gh skill install markoblogo/abvx-agent-skills complexity-optimizer` |
 | `confidence-fragility-review` | Long-Run Delivery Control | Check whether confident claims are backed by real evidence. | `gh skill install markoblogo/abvx-agent-skills confidence-fragility-review` |
@@ -33,6 +35,7 @@ Generated from `docs/catalog.json`.
 | `filesystem-context-discipline` | Project Context & Onboarding | Use durable scratchpads and retained outputs without polluting repo context. | `gh skill install markoblogo/abvx-agent-skills filesystem-context-discipline` |
 | `frontend-product-builder` | Frontend, UX & Product Surfaces | Build frontend experiences with hierarchy, assets, and verification. | `gh skill install markoblogo/abvx-agent-skills frontend-product-builder` |
 | `frontend-taste-layer` | Frontend, UX & Product Surfaces | Add anti-slop taste to frontend work. | `gh skill install markoblogo/abvx-agent-skills frontend-taste-layer` |
+| `git-native-context-contract` | Uncategorized | Keep typed project truth reviewable and human-gated. | `gh skill install markoblogo/abvx-agent-skills git-native-context-contract` |
 | `goal-loop-designer` | Research, Knowledge & Reusable Methods | Compile raw goals into bounded agent loop harnesses. | `gh skill install markoblogo/abvx-agent-skills goal-loop-designer` |
 | `graph-guided-code-reading` | Token Economy & Context Control | Read codebases through symbols, edges, and blast radius instead of broad scans. | `gh skill install markoblogo/abvx-agent-skills graph-guided-code-reading` |
 | `handoff` | Workflow, Handoffs & Multi-Track Work | Write compact continuation briefs for future agents. | `gh skill install markoblogo/abvx-agent-skills handoff` |
@@ -43,6 +46,7 @@ Generated from `docs/catalog.json`.
 | `knowledge-base-enrichment` | Uncategorized | Enrich Markdown notes and wikis with provenance while preserving raw sources. | `gh skill install markoblogo/abvx-agent-skills knowledge-base-enrichment` |
 | `lean-context-layout` | Token Economy & Context Control | Shrink always-loaded agent context and move the rest on demand. | `gh skill install markoblogo/abvx-agent-skills lean-context-layout` |
 | `local-inference-tuning` | Coding, Debugging & Architecture | Tune local LLM engines for hardware, cache, KV, batching, and endpoints. | `gh skill install markoblogo/abvx-agent-skills local-inference-tuning` |
+| `loop-hardening-contract` | Workflow, Handoffs & Multi-Track Work | Harden repeated sprints with runtime proof and no automatic revert. | `gh skill install markoblogo/abvx-agent-skills loop-hardening-contract` |
 | `loop-readiness-review` | Workflow, Handoffs & Multi-Track Work | Review whether a recurring workflow is ready for bounded loop execution. | `gh skill install markoblogo/abvx-agent-skills loop-readiness-review` |
 | `loopops-protocol` | Research, Knowledge & Reusable Methods | Turn reusable agent work into bounded loops. | `gh skill install markoblogo/abvx-agent-skills loopops-protocol` |
 | `lottie-motion-builder` | Frontend, UX & Product Surfaces | Build small Lottie assets with preview gates. | `gh skill install markoblogo/abvx-agent-skills lottie-motion-builder` |

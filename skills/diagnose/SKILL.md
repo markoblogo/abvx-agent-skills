@@ -62,6 +62,8 @@ Apply the smallest fix supported by evidence, then rerun:
 - the original feedback loop;
 - relevant project checks.
 
+When the task needs an auditable incident, device, CI/runtime, or regression record, hand the established reproducer and verification commands to `bug-evidence-protocol`. That protocol records proof; it does not replace this diagnostic loop.
+
 ## Final Report
 
 Include root cause, winning hypothesis, files changed, verification, debug cleanup, and residual risk.

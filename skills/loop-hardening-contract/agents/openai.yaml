@@ -1,0 +1,4 @@
+interface:
+  display_name: "Loop Hardening Contract"
+  short_description: "Harden repeated sprints with runtime proof and no automatic revert."
+  default_prompt: "Apply the loop-hardening contract to this repeated delivery sprint."

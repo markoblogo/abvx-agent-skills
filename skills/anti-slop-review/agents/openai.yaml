@@ -1,0 +1,4 @@
+interface:
+  display_name: "Anti-Slop Review"
+  short_description: "Separate UI defects, incoherence, and template risk."
+  default_prompt: "Use $anti-slop-review to inspect this implemented UI, return at most seven evidence-backed findings with stable IDs, and distinguish ship-blocking defects from subjective template risk."

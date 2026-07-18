@@ -1,0 +1,4 @@
+interface:
+  display_name: "Git-Native Context Contract"
+  short_description: "Keep typed project truth reviewable and human-gated."
+  default_prompt: "Create or review this durable project context with the minimal Git-native context contract."

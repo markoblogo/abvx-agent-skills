@@ -62,8 +62,11 @@ If you want a scan-friendly text catalog for browsing or indexing, use [CATALOG.
 |---|---|---|
 | Write smaller patches | `minimal-diff-builder` | The agent keeps refactoring too much, widening blast radius, or adding abstractions you did not ask for. |
 | Debug from evidence | `diagnose` | The agent keeps guessing fixes without reproducing the failure and verifying the result. |
+| Prove a regression fix | `bug-evidence-protocol` | A diagnosed bug needs captured same-command red/green evidence, broader checks, Git identity, and an honest fix status. |
+| Harden repeated runtime sprints | `loop-hardening-contract` | Cardputer, browser, CI, or production work needs measured harness stripping, immutable runtime-path predicates, and broken-window revalidation without automatic revert. |
 | Review plans before work | `assumption-excavation`, `pipeline-readiness-gate` | A plan, SET bundle, or spec sounds plausible but may hide assumptions or missing gates. |
 | Coordinate reviewed multi-agent work | `bounded-orchestration-contract` | A non-trivial task benefits from Planner/Reviewer approval, stable findings, disjoint executor ownership, explicit route evidence, and root verification. |
+| Preserve typed project truth | `git-native-context-contract` | Decisions, rules, specs, plans, bounded research, or recurring incident lessons need a minimal Git-reviewed lifecycle and relation contract. |
 | Run reversible agent work | `reversible-agent-task` | A task should produce retained output first, then move through inspect -> select/apply/discard before touching the target workspace. |
 | Check ship confidence | `confidence-fragility-review`, `delivery-baseline-audit` | A release, README, generated plan, or PR sounds done but evidence may be thin. |
 | Save tokens in shell-heavy work | `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution` | Logs, diffs, tests, and command output are burning context and hiding the real signal. |
@@ -91,6 +94,7 @@ The next LoopOps layer is bounded skill evolution: see [docs/skill-evolution-roa
 - **Need to save tokens?** Start with `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution`, and `lean-context-layout`. Add `compaction-survival` if your sessions run long enough to forget their own state.
 - **Need to check whether context is hurting the run?** Start with `context-degradation-review` before trusting long handoffs, memory summaries, or bloated SET bundles.
 - **Need to debug a repo?** Start with `diagnose`, `repo-debugging-ledger`, and `graph-guided-code-reading`.
+- **Need auditable red-to-green proof?** Add `bug-evidence-protocol` after `diagnose`; use risk-based approval and link recurrent lessons to a `cpat`.
 - **Need code review discipline?** Run a Standards pass with `overengineering-review`, `minimal-diff-builder`, or `architecture-deepening-review`, then a Spec pass with `delivery-baseline-audit` against the issue, PRD, or task contract.
 - **Need to review an agent-facing tool?** Start with `agent-tool-contract-review` for MCP, CLI, SET inputs, and AGENTS.md generator contracts.
 - **Need to surface hidden assumptions before implementation?** Start with `assumption-excavation`, then use `pipeline-readiness-gate` when the work needs a pre/post/ship sequence.
@@ -121,6 +125,7 @@ The next LoopOps layer is bounded skill evolution: see [docs/skill-evolution-roa
 - **Need local model serving?** Start with `local-inference-tuning` before choosing MLX, llama.cpp, Ollama, or vLLM.
 - **Need a full multi-track workflow?** Start with `dynamic-workflow-packets`.
 - **Need a reviewed Planner/Reviewer/Executor workflow?** Start with `bounded-orchestration-contract`; keep it opt-in, stop after five review rounds, and require root integration and verification.
+- **Need durable typed decisions or incident lessons?** Start with `git-native-context-contract`; reuse existing docs, keep new records in `draft`, and require explicit human approval for `accepted`.
 - **Need to turn repeated prompts into loops?** Start with `loopops-protocol`, then use `skillopt-evolve-skills` to capture durable lessons.
 - **Need a small eval gate?** Start with `bounded-evaluation` before using pairwise judging, LLM-as-judge, activation tests, or SkillOpt validation claims.
 - **Need to decide where agent learning should live?** Start with `agent-learning-layer-triage` before promoting a lesson into memory, durable docs, `SKILL.md`, a script, or an eval.
@@ -149,6 +154,7 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 | Skill | What It Does |
 |---|---|
 | `diagnose` | Runs a disciplined debugging loop around one reproducible signal, ranked hypotheses, and narrow verification. |
+| `bug-evidence-protocol` | Captures same-command red/green evidence, broader checks, Git/environment identity, route state, and an honest fix classification after diagnosis. |
 | `agent-tool-contract-review` | Reviews MCP tools, CLI commands, SET inputs, and AGENTS.md generator outputs as agent-facing contracts with explicit authority and output boundaries. |
 | `repo-debugging-ledger` | Keeps a checked-location ledger so debugging does not keep reopening the same code and repeating the same dead ends. |
 | `complexity-optimizer` | Finds safe complexity and performance simplifications without turning the codebase into a refactor festival. |
@@ -167,6 +173,7 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 |---|---|
 | `design-register-bootstrap` | Establishes compact design context before implementation: `brand` vs `product` register, audience, anti-references, color strategy, and PRODUCT.md / DESIGN.md direction. |
 | `frontend-taste-layer` | Adds a stronger anti-slop design layer to frontend work so outputs stop looking templated, generic, or visually under-committed. |
+| `anti-slop-review` | Reviews implemented UI for hard defects, incoherence, and template risk with stable evidence-backed findings instead of blanket aesthetic bans. |
 | `design-critique-polish` | Runs a focused critique-and-polish pass to rank frontend issues, identify ship blockers, and tighten hierarchy, typography, color, and states. |
 | `frontend-product-builder` | Builds usable frontends, landing pages, pitch pages, dashboards, and prototypes with a product-first interaction model. |
 | `lottie-motion-builder` | Builds small production-ready Lottie assets from SVGs, logos, loaders, and UI states with a local preview harness and output verification. |
@@ -230,6 +237,7 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 |---|---|
 | `dynamic-workflow-packets` | Orchestrates large coding, research, audit, harness, or client-search tracks without losing verification, budgets, integration, and risk gates. |
 | `loop-readiness-review` | Checks whether a recurring agent loop has cadence, state, isolation, verifier, budget, run log, rollback, and human gate before it runs. |
+| `loop-hardening-contract` | Adds measured harness stripping, immutable runtime-path sprint packets, and broken-window revalidation without automatic revert. |
 | `pipeline-readiness-gate` | Selects a compact pre-implementation, post-implementation, or ship gate without adopting a heavy multi-agent pipeline runtime. |
 | `reversible-agent-task` | Runs risky or multi-file agent work as retained output, then requires inspect -> select/apply/discard before target workspace mutation. |
 | `handoff` | Produces compact continuation briefs for long-running work, agent resumes, and human handoffs. |
