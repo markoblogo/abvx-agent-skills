@@ -159,7 +159,9 @@ def main() -> int:
     accepted_fingerprints = {finding.fingerprint for finding in suppressed + baseline_hits}
     score_blockers = []
     for skill, score in scores.items():
-        skill_findings = [finding for finding in considered if finding.skill == skill]
+        skill_findings = [
+            finding for finding in considered if finding.skill == skill and finding.severity in fail_on
+        ]
         all_findings_accepted = bool(skill_findings) and all(
             finding.fingerprint in accepted_fingerprints for finding in skill_findings
         )
