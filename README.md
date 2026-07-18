@@ -63,6 +63,7 @@ If you want a scan-friendly text catalog for browsing or indexing, use [CATALOG.
 | Write smaller patches | `minimal-diff-builder` | The agent keeps refactoring too much, widening blast radius, or adding abstractions you did not ask for. |
 | Debug from evidence | `diagnose` | The agent keeps guessing fixes without reproducing the failure and verifying the result. |
 | Prove a regression fix | `bug-evidence-protocol` | A diagnosed bug needs captured same-command red/green evidence, broader checks, Git identity, and an honest fix status. |
+| Harden repeated runtime sprints | `loop-hardening-contract` | Cardputer, browser, CI, or production work needs measured harness stripping, immutable runtime-path predicates, and broken-window revalidation without automatic revert. |
 | Review plans before work | `assumption-excavation`, `pipeline-readiness-gate` | A plan, SET bundle, or spec sounds plausible but may hide assumptions or missing gates. |
 | Coordinate reviewed multi-agent work | `bounded-orchestration-contract` | A non-trivial task benefits from Planner/Reviewer approval, stable findings, disjoint executor ownership, explicit route evidence, and root verification. |
 | Preserve typed project truth | `git-native-context-contract` | Decisions, rules, specs, plans, bounded research, or recurring incident lessons need a minimal Git-reviewed lifecycle and relation contract. |
@@ -236,6 +237,7 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 |---|---|
 | `dynamic-workflow-packets` | Orchestrates large coding, research, audit, harness, or client-search tracks without losing verification, budgets, integration, and risk gates. |
 | `loop-readiness-review` | Checks whether a recurring agent loop has cadence, state, isolation, verifier, budget, run log, rollback, and human gate before it runs. |
+| `loop-hardening-contract` | Adds measured harness stripping, immutable runtime-path sprint packets, and broken-window revalidation without automatic revert. |
 | `pipeline-readiness-gate` | Selects a compact pre-implementation, post-implementation, or ship gate without adopting a heavy multi-agent pipeline runtime. |
 | `reversible-agent-task` | Runs risky or multi-file agent work as retained output, then requires inspect -> select/apply/discard before target workspace mutation. |
 | `handoff` | Produces compact continuation briefs for long-running work, agent resumes, and human handoffs. |

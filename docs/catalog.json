@@ -1,5 +1,5 @@
 {
-  "skill_count": 75,
+  "skill_count": 76,
   "categories": {
     "Research, Knowledge & Reusable Methods": 13,
     "Coding, Debugging & Architecture": 13,
@@ -10,7 +10,7 @@
     "Token Economy & Context Control": 9,
     "Long-Run Delivery Control": 6,
     "Project Context & Onboarding": 5,
-    "Workflow, Handoffs & Multi-Track Work": 5,
+    "Workflow, Handoffs & Multi-Track Work": 6,
     "HTML Artifacts & Visual Deliverables": 2,
     "Structured Data & Spreadsheet Work": 1
   },
@@ -875,6 +875,35 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/local-inference-tuning/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/local-inference-tuning/SKILL_CARD.md",
       "origin": "original",
+      "status": "experimental"
+    },
+    {
+      "name": "loop-hardening-contract",
+      "display_name": "Loop Hardening Contract",
+      "category": "Workflow, Handoffs & Multi-Track Work",
+      "description": "Harden repeated delivery loops with evidence-based harness stripping, immutable runtime-path sprint packets, and broken-window revalidation without automatic revert. Use for Cardputer, browser, CI, runtime, or production work split into repeated sprints.",
+      "short_description": "Harden repeated sprints with runtime proof and no automatic revert.",
+      "intended_use": "Use for repeated Cardputer, browser, CI, runtime, or production sprints after the loop has passed a readiness review.",
+      "model_sensitivity": "",
+      "composable_with": [
+        "`loop-readiness-review`",
+        "`bounded-evaluation`",
+        "`bug-evidence-protocol`",
+        "`git-native-context-contract`",
+        "`bounded-orchestration-contract`"
+      ],
+      "anti_patterns": [
+        "changing multiple harness components in one experiment;",
+        "rewriting an accepted sprint packet in place;",
+        "claiming device or production behavior from compilation;",
+        "automatic revert after a failed revalidation."
+      ],
+      "risks": "- Risk: removing a safety control as \u201coverhead.\u201d Mitigation: protected controls are never candidates for stripping.\n- Risk: executor self-certification. Mitigation: runtime-path evidence and root-owned verification are mandatory.\n- Risk: destructive recovery. Mitigation: reopen and repair; never auto-revert.",
+      "path": "skills/loop-hardening-contract/SKILL.md",
+      "card_path": "skills/loop-hardening-contract/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/loop-hardening-contract/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/loop-hardening-contract/SKILL_CARD.md",
+      "origin": "adapted",
       "status": "experimental"
     },
     {

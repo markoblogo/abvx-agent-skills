@@ -46,6 +46,7 @@ Generated from `docs/catalog.json`.
 | `knowledge-base-enrichment` | Uncategorized | Enrich Markdown notes and wikis with provenance while preserving raw sources. | `gh skill install markoblogo/abvx-agent-skills knowledge-base-enrichment` |
 | `lean-context-layout` | Token Economy & Context Control | Shrink always-loaded agent context and move the rest on demand. | `gh skill install markoblogo/abvx-agent-skills lean-context-layout` |
 | `local-inference-tuning` | Coding, Debugging & Architecture | Tune local LLM engines for hardware, cache, KV, batching, and endpoints. | `gh skill install markoblogo/abvx-agent-skills local-inference-tuning` |
+| `loop-hardening-contract` | Workflow, Handoffs & Multi-Track Work | Harden repeated sprints with runtime proof and no automatic revert. | `gh skill install markoblogo/abvx-agent-skills loop-hardening-contract` |
 | `loop-readiness-review` | Workflow, Handoffs & Multi-Track Work | Review whether a recurring workflow is ready for bounded loop execution. | `gh skill install markoblogo/abvx-agent-skills loop-readiness-review` |
 | `loopops-protocol` | Research, Knowledge & Reusable Methods | Turn reusable agent work into bounded loops. | `gh skill install markoblogo/abvx-agent-skills loopops-protocol` |
 | `lottie-motion-builder` | Frontend, UX & Product Surfaces | Build small Lottie assets with preview gates. | `gh skill install markoblogo/abvx-agent-skills lottie-motion-builder` |
