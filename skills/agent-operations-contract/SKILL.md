@@ -1,6 +1,6 @@
 ---
 name: agent-operations-contract
-description: Define and review concrete agent capability cards, asynchronous operation receipts, isolated memory scopes, and evidence-backed provider or tool registry entries. Use when a project introduces named agents, scheduled or long-running work, durable memory, provider routing, MCP tools, or external-action approval boundaries.
+description: Define and review concrete agent capability cards, asynchronous operation receipts, decision receipts with revalidation, isolated and trust-graded memory scopes, and evidence-backed provider or tool registry entries. Use when a project introduces named agents, scheduled or long-running work, durable decisions or memory, provider routing, MCP tools, or external-action approval boundaries.
 license: MIT
 metadata:
   abvx_status: experimental
@@ -57,9 +57,26 @@ Use `templates/memory-record.yaml`. Every memory record has exactly one scope:
 - `agent`: reviewed domain knowledge for one agent;
 - `run`: temporary operation state.
 
-Every record declares provenance, owner, editability, and retention. Cross-project reads, background learning, and automatic scope promotion are off by default. `run` memory expires unless a human-reviewed proposal promotes it. Memory is context, not completion evidence.
+Every record declares provenance, owner, editability, retention, sensitivity, and trust. Allowed trust states are:
 
-## 4. Provider And Tool Registry
+```text
+UNREVIEWED -> VERIFIED | DEPRECATED | SUPERSEDED
+```
+
+New records start `UNREVIEWED`. `DEPRECATED` and `SUPERSEDED` records never supply active context; `SUPERSEDED` requires `superseded_by`. Derived records inherit the highest source sensitivity. Cross-project reads, background learning, and automatic scope promotion are off by default. `run` memory expires unless a human-reviewed proposal promotes it. Memory is context, not completion evidence.
+
+## 4. Decision Receipt And Revalidation
+
+Use `templates/decision-receipt.yaml` for material architecture, product, operational, or hardware decisions. Record:
+
+- stable `decision_id`, owner, stakes, reversibility, and deadline;
+- the decision, rationale, expected outcome, and evidence references;
+- revisit date and an observable success criterion;
+- revalidation result: `CONFIRMED`, `REVISED`, `REVERSED`, or `INCONCLUSIVE`.
+
+The owner or authorized reviewer confirms the initial decision and every revalidation. A receipt does not authorize implementation or an external action. `REVISED` and `REVERSED` retain the original receipt and link the replacement; never rewrite history to make the first decision appear correct.
+
+## 5. Provider And Tool Registry
 
 Use `templates/provider-tool-capability.yaml` for each model provider, local runtime, API, CLI, or MCP surface.
 
@@ -81,6 +98,10 @@ Availability meanings:
 
 Route only through entries whose confirmed capabilities and authority satisfy the task. Treat cost, limits, models, and availability as expiring observations.
 
+## Public Workflow / Private Operator State
+
+Keep reusable workflow logic, schemas, and redacted examples in the public skill or project repository. Keep personal preferences, client or contract material, private archives, credentials, protected evidence, and secret values in an explicitly owned private location. Public templates may name required secret variables but never contain their values. No sync, publication, or cross-project transfer is implied.
+
 ## Project Gate
 
 Before enabling a named agent or schedule, report:
@@ -91,6 +112,7 @@ Before enabling a named agent or schedule, report:
 | provider/tool route | registry entry and current status |
 | memory scope | allowed scopes and retention |
 | operation persistence | receipt location and redaction rule |
+| decision revalidation | receipt path, owner, revisit date, and observable criterion |
 | approval boundary | action families and approver |
 | cancellation/idempotency | recovery behavior |
 | verification | real runtime path exercised |
@@ -115,4 +137,4 @@ If any row is missing, return `CONTRACT_AMBIGUOUS` and keep the route disabled o
 
 ## Attribution
 
-Adapted at the contract level from LobeHub's agent-as-unit, scheduling/status, white-box memory, and multi-provider ideas. Rewritten as a provider-neutral ABVX review contract without the LobeHub runtime or codebase.
+Adapted at the contract level from LobeHub's agent-as-unit, scheduling/status, white-box memory, and multi-provider ideas, plus MakerSkills' decision revisit, source trust, and public-workflow/private-state patterns. Rewritten as a provider-neutral ABVX review contract without either upstream runtime.
