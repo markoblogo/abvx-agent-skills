@@ -1,12 +1,12 @@
 {
-  "skill_count": 77,
+  "skill_count": 78,
   "categories": {
     "Research, Knowledge & Reusable Methods": 13,
+    "Uncategorized": 4,
     "Coding, Debugging & Architecture": 13,
     "Frontend, UX & Product Surfaces": 12,
     "Discovery, Planning & Delivery": 6,
     "Security & Defensive Review": 1,
-    "Uncategorized": 3,
     "Token Economy & Context Control": 9,
     "Long-Run Delivery Control": 6,
     "Project Context & Onboarding": 5,
@@ -43,6 +43,30 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/agent-learning-layer-triage/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/agent-learning-layer-triage/SKILL_CARD.md",
       "origin": "original",
+      "status": "experimental"
+    },
+    {
+      "name": "agent-operations-contract",
+      "display_name": "Agent Operations Contract",
+      "category": "Uncategorized",
+      "description": "Define and review concrete agent capability cards, asynchronous operation receipts, isolated memory scopes, and evidence-backed provider or tool registry entries. Use when a project introduces named agents, scheduled or long-running work, durable memory, provider routing, MCP tools, or external-action approval boundaries.",
+      "short_description": "Review agent identity, receipts, memory, and routes.",
+      "intended_use": "Use when named agents, scheduled or long-running work, project memory, model providers, tools, or MCP routes need explicit authority and evidence contracts.",
+      "model_sensitivity": "",
+      "composable_with": [
+        "`agent-tool-contract-review`",
+        "`bounded-orchestration-contract`",
+        "`loop-readiness-review`",
+        "`agent-friction-ledger`",
+        "project-specific runtime and governance skills"
+      ],
+      "anti_patterns": [],
+      "risks": "- Risk: configuration is mistaken for authority. Mitigation: cards fail closed and require owner plus approval boundaries.\n- Risk: probe success is overstated. Mitigation: separate declared, probed, confirmed, and unavailable.\n- Risk: memory leaks between projects. Mitigation: exactly one scope with provenance, owner, editability, and retention.\n- Risk: receipts retain sensitive content. Mitigation: allow compact operational facts and evidence references only.\n- Risk: schedules bypass humans. Mitigation: timing never widens authority and external actions retain existing approval gates.",
+      "path": "skills/agent-operations-contract/SKILL.md",
+      "card_path": "skills/agent-operations-contract/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/agent-operations-contract/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/agent-operations-contract/SKILL_CARD.md",
+      "origin": "adapted",
       "status": "experimental"
     },
     {

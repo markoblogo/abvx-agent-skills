@@ -1,0 +1,16 @@
+schema_version: 1
+memory_id: memory-example
+scope: run
+scope_id: op-example
+provenance:
+  source: replace-with-source
+  captured_at: "1970-01-01T00:00:00Z"
+owner: replace-with-owner
+editability: proposal-first
+retention:
+  policy: expire
+  expires_at: null
+content_reference: replace-with-protected-or-project-owned-reference
+promotion:
+  allowed: false
+  review_reference: null

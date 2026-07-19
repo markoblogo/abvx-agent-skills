@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Operations Contract"
+  short_description: "Review agent identity, receipts, memory, and routes."
+  default_prompt: "Use $agent-operations-contract to review this named agent or long-running operation for explicit authority, receipts, scoped memory, provider/tool evidence, approval gates, and runtime verification."

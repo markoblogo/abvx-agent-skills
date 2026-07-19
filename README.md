@@ -71,6 +71,7 @@ If you want a scan-friendly text catalog for browsing or indexing, use [CATALOG.
 | Check ship confidence | `confidence-fragility-review`, `delivery-baseline-audit` | A release, README, generated plan, or PR sounds done but evidence may be thin. |
 | Save tokens in shell-heavy work | `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution` | Logs, diffs, tests, and command output are burning context and hiding the real signal. |
 | Verify frontend work | `browser-verification`, `design-critique-polish`, `motion-review-gate`, `fluid-interaction-review` for drag/swipe physics | The agent says "done" without checking real browser behavior, layout, states, motion, gesture continuity, or console errors. |
+| Govern named agents and long operations | `agent-operations-contract`, `agent-tool-contract-review`, `loop-readiness-review` | Agent configuration, schedules, memory, providers, and operation status are mistaken for authority or verified runtime behavior. |
 
 ## LoopOps
 
@@ -104,6 +105,7 @@ The next LoopOps layer is bounded skill evolution: see [docs/skill-evolution-roa
 - **Need the smallest correct implementation path?** Start with `minimal-diff-builder`, then add `delivery-preflight-gate` when the task is long or risky enough that baseline verification matters.
 - **Need to cut bloat from an existing diff or repo slice?** Start with `overengineering-review`, and switch to `minimal-diff-builder` when you want the cuts implemented as the smallest correct patch.
 - **Need to build frontend?** Start with `frontend-product-builder`, `designmd-brand-kit`, `browser-verification`, and `motion-review-gate` when interaction motion changes; add `fluid-interaction-review` for drag, swipe, sheets, carousels, or draggable panels.
+- **Need named agents or scheduled/long-running operations?** Use `agent-operations-contract` for capability cards, receipts, scoped memory, provider/tool evidence, and approval boundaries before enabling a route.
 - **Need a small Lottie or SVG-driven motion asset?** Start with `lottie-motion-builder`, pair with `frontend-product-builder` when the animation needs to land inside a real UI surface, then run `motion-review-gate` before shipping.
 - **Need a standalone HTML artifact?** Start with `html-diagram-artifact` for SVG-first architecture explainers, or `html-brief-artifact` for plans, summaries, reports, and research notes.
 - **Need stronger UI taste or design setup?** Start with `design-register-bootstrap`, `frontend-taste-layer`, `design-critique-polish`, and `motion-review-gate` for motion-sensitive surfaces.
