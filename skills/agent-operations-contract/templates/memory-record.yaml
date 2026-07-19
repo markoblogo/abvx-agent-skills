@@ -10,6 +10,11 @@ editability: proposal-first
 retention:
   policy: expire
   expires_at: null
+sensitivity: internal
+trust: UNREVIEWED
+reviewed_at: null
+reviewed_by: null
+superseded_by: null
 content_reference: replace-with-protected-or-project-owned-reference
 promotion:
   allowed: false

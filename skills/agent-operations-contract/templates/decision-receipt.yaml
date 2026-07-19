@@ -1,0 +1,22 @@
+schema_version: 1
+decision_id: decision-example
+project_id: owner/project
+owner: replace-with-owner
+decided_at: "1970-01-01T00:00:00Z"
+stakes: medium
+reversibility: reversible
+deadline: null
+decision: Replace with the bounded decision.
+rationale: Replace with a compact evidence-backed rationale.
+expected_outcome: Replace with the observable expected outcome.
+evidence: []
+revisit_at: "1970-02-01T00:00:00Z"
+observable_criterion: Replace with the condition that can confirm or challenge the decision.
+revalidation:
+  status: null
+  checked_at: null
+  checked_by: null
+  evidence: []
+  reason: null
+  replacement_decision_id: null
+authority_effect: none
