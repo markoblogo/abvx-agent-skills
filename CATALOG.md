@@ -33,6 +33,7 @@ Generated from `docs/catalog.json`.
 | `dynamic-workflow-packets` | Workflow, Handoffs & Multi-Track Work | Run big Codex tasks with bounded packets. | `gh skill install markoblogo/abvx-agent-skills dynamic-workflow-packets` |
 | `evidence-ledger-research` | Research, Knowledge & Reusable Methods | Research with source, unit, date, and operand discipline. | `gh skill install markoblogo/abvx-agent-skills evidence-ledger-research` |
 | `filesystem-context-discipline` | Project Context & Onboarding | Use durable scratchpads and retained outputs without polluting repo context. | `gh skill install markoblogo/abvx-agent-skills filesystem-context-discipline` |
+| `fluid-interaction-review` | Frontend, UX & Product Surfaces | Review drag, swipe, and gesture physics. | `gh skill install markoblogo/abvx-agent-skills fluid-interaction-review` |
 | `frontend-product-builder` | Frontend, UX & Product Surfaces | Build frontend experiences with hierarchy, assets, and verification. | `gh skill install markoblogo/abvx-agent-skills frontend-product-builder` |
 | `frontend-taste-layer` | Frontend, UX & Product Surfaces | Review marketing and editorial frontend taste. | `gh skill install markoblogo/abvx-agent-skills frontend-taste-layer` |
 | `git-native-context-contract` | Uncategorized | Keep typed project truth reviewable and human-gated. | `gh skill install markoblogo/abvx-agent-skills git-native-context-contract` |
