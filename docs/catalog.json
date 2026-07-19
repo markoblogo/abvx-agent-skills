@@ -1,9 +1,9 @@
 {
-  "skill_count": 76,
+  "skill_count": 77,
   "categories": {
     "Research, Knowledge & Reusable Methods": 13,
     "Coding, Debugging & Architecture": 13,
-    "Frontend, UX & Product Surfaces": 11,
+    "Frontend, UX & Product Surfaces": 12,
     "Discovery, Planning & Delivery": 6,
     "Security & Defensive Review": 1,
     "Uncategorized": 3,
@@ -591,6 +591,29 @@
       "status": "experimental"
     },
     {
+      "name": "fluid-interaction-review",
+      "display_name": "Fluid Interaction Review",
+      "category": "Frontend, UX & Product Surfaces",
+      "description": "Build or review gesture-driven web interactions such as drag, swipe, sheets, carousels, and draggable panels. Use when pointer tracking, interruption, velocity handoff, momentum projection, hysteresis, rubber-banding, spatial continuity, or motion/transparency/contrast fallbacks materially affect the interaction.",
+      "short_description": "Review drag, swipe, and gesture physics.",
+      "intended_use": "Use when direct manipulation needs continuous tracking, pointer capture, interruption from the current value, velocity handoff, momentum projection, hysteresis, soft boundaries, spatial continuity, or accessibility fallbacks.",
+      "model_sensitivity": "",
+      "composable_with": [
+        "`motion-review-gate`",
+        "`browser-verification`",
+        "`user-experience`",
+        "project-specific frontend skills"
+      ],
+      "anti_patterns": [],
+      "risks": "- Risk: unnecessary custom gesture physics. Mitigation: prefer mature libraries that already satisfy the contract.\n- Risk: decorative Apple imitation. Mitigation: exclude visual styling and universal spring constants.\n- Risk: pointer behavior breaks native input. Mitigation: require keyboard, focus, cancellation, and scroll evidence.\n- Risk: accessibility modes are treated as one toggle. Mitigation: verify motion, transparency, and contrast independently and in combination.",
+      "path": "skills/fluid-interaction-review/SKILL.md",
+      "card_path": "skills/fluid-interaction-review/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/fluid-interaction-review/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/fluid-interaction-review/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental"
+    },
+    {
       "name": "frontend-product-builder",
       "display_name": "Frontend Product Builder",
       "category": "Frontend, UX & Product Surfaces",
@@ -1007,6 +1030,7 @@
         "`browser-verification`",
         "`design-critique-polish`",
         "`frontend-taste-layer`",
+        "`fluid-interaction-review`",
         "`lottie-motion-builder`"
       ],
       "anti_patterns": [],

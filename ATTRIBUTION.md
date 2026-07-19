@@ -13,6 +13,7 @@ ABVX Agent Skills are original or adapted workflow artifacts informed by public 
 - CodexSaver by fendouai: bounded delegation, risk routing, sandbox-first patches, and read-only specialist patterns. https://github.com/fendouai/CodexSaver
 - context-dot-dev `designmd-supply`: `DESIGN.md` as a machine-readable brand/design-system artifact for agents. https://github.com/context-dot-dev/designmd-supply
 - Leonxlnx `taste-skill`: anti-slop frontend taste rules, design-read discipline, and stronger frontend aesthetic bias correction. https://github.com/Leonxlnx/taste-skill
+- Emil Kowalski `skills/apple-design`: direct-manipulation tracking, pointer capture, interruptibility, velocity handoff, momentum projection, hysteresis, soft boundaries, spatial continuity, and accessibility fallback guidance, adapted into a bounded web-interaction review without Apple visual styling or universal physics constants. https://github.com/emilkowalski/skills/tree/main/skills/apple-design
 - pbakaus `impeccable`: brand-vs-product register split, frontend design command vocabulary, critique/polish flows, and detector-informed design review. https://github.com/pbakaus/impeccable
 - virgiliojr94 `book-to-skill`: converting long-form documents into progressive-disclosure skills. https://github.com/virgiliojr94/book-to-skill
 - s3rgeym `hh-applicant-tool`: dry-run, scoring, skip-reason, and local-history ideas for job-search workflows. https://github.com/s3rgeym/hh-applicant-tool
