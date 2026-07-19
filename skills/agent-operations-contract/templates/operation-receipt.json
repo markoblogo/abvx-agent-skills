@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "operation_id": "op-example",
+  "agent_id": "example-agent",
+  "project_id": "owner/project",
+  "requested_by": "replace-with-requester",
+  "authority": "read",
+  "queued_at": "1970-01-01T00:00:00Z",
+  "started_at": null,
+  "completed_at": null,
+  "status": "QUEUED",
+  "result_summary": null,
+  "evidence": [],
+  "approval_required": false,
+  "action_fingerprint": null,
+  "parent_operation_id": null,
+  "idempotency_key": null,
+  "limitations": []
+}

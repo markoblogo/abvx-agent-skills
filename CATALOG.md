@@ -5,6 +5,7 @@ Generated from `docs/catalog.json`.
 | Skill | Category | Use case | Install |
 |---|---|---|---|
 | `agent-learning-layer-triage` | Research, Knowledge & Reusable Methods | Route agent lessons into memory, skills, scripts, or evals. | `gh skill install markoblogo/abvx-agent-skills agent-learning-layer-triage` |
+| `agent-operations-contract` | Uncategorized | Review agent identity, receipts, memory, and routes. | `gh skill install markoblogo/abvx-agent-skills agent-operations-contract` |
 | `agent-tool-contract-review` | Coding, Debugging & Architecture | Review MCP, CLI, SET, and tool contracts before agent use. | `gh skill install markoblogo/abvx-agent-skills agent-tool-contract-review` |
 | `agents-best-practices` | Coding, Debugging & Architecture | Design and audit provider-neutral agent harnesses. | `gh skill install markoblogo/abvx-agent-skills agents-best-practices` |
 | `anti-slop-review` | Frontend, UX & Product Surfaces | Separate UI defects, incoherence, and template risk. | `gh skill install markoblogo/abvx-agent-skills anti-slop-review` |
