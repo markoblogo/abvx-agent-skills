@@ -4,16 +4,40 @@
   "source_reference": "https://arxiv.org/abs/2605.23904",
   "purpose": "Track bounded, validation-gated evolution of repeated ABVX skills.",
   "automatic_runtime": false,
+  "skill_as_trainable_artifact": true,
+  "best_skill_export": {
+    "filename": "best_skill.md",
+    "requires_validation": true,
+    "requires_maintainer_acceptance": true,
+    "experimental_drafts_are_not_best": true
+  },
+  "rollout_evidence_required_fields": [
+    "task_id",
+    "input",
+    "skill_id",
+    "skill_version",
+    "trajectory_ref",
+    "verifier",
+    "score",
+    "failure_class"
+  ],
   "edit_budget": {
     "max_accepted_edits_per_update": 4,
-    "allowed_operations": ["add", "delete", "replace", "move"]
+    "allowed_operations": ["add", "delete", "replace"],
+    "discouraged_operations": ["move"],
+    "forbidden": ["full_rewrite", "authority_expansion", "hidden_prompt_drift"]
   },
   "validation": {
     "require_evidence": true,
     "require_held_out_or_independent_check": true,
     "require_old_and_new_scenario_when_feasible": true,
     "require_explicit_maintainer_acceptance": true,
+    "require_rejected_edit_reason": true,
     "do_not_use_verbalized_probabilities_as_scores": true
+  },
+  "sleep_mode": {
+    "allowed": "staged_review_only",
+    "automatic_adoption": false
   },
   "proposal_generation": {
     "strategy": "diversity-first",
