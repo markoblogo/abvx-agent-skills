@@ -249,6 +249,13 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 | `private-vs-publishable-skill-audit` | Audits private skill packs before publication and extracts only the reusable layer. |
 | `agent-friction-ledger` | Captures repeated agent blockers, doc gaps, tool incompatibilities, and workarounds as local, privacy-safe reports that can feed docs, skills, scripts, or evals. |
 
+### Product Context & Responsible Growth
+
+| Skill | What It Does |
+|---|---|
+| `product-context` | Builds a compact, evidence-backed product context with audience, conversion, proof, language, and claim boundaries before go-to-market work. |
+| `bounded-growth-loop` | Designs recurring content, SEO, analytics, or product-review loops with durable state, verification, stop rules, and approval-gated outputs. |
+
 ### Workflow, Handoffs & Multi-Track Work
 
 | Skill | What It Does |
