@@ -15,6 +15,6 @@ def test_review_contract_separates_defects_from_taste() -> None:
 
 
 def test_original_unlicensed_source_is_not_distributed() -> None:
-    references = list((SKILL.parent / "references").iterdir())
-    assert references == [CATALOG]
+    references = sorted(path.name for path in (SKILL.parent / "references").iterdir())
+    assert references == ["prose-humanization-review.md", "review-catalog.md"]
     assert "not a ban list" in CATALOG.read_text(encoding="utf-8")

@@ -5,6 +5,7 @@ license: MIT
 metadata:
   abvx_status: experimental
   abvx_origin: adapted
+  abvx_eval_tier: fixture_checked
 ---
 
 # Anti-Slop Review
@@ -92,6 +93,7 @@ Deterministic, repeatable checks for visual or prose defects. Use this type when
 - prose tells matched from an explicit pattern list.
 
 Detector rules are evidence, not automatic verdicts. A rule can be waived when the project design context, brand system, legacy constraint, or explicit owner direction justifies it.
+If a deterministic finding also qualifies as a shipment-blocking accessibility, visibility, interaction, or responsive failure, classify it as `HARD_DEFECT`; hard-defect precedence wins over `DETECTOR_RULE`.
 
 ### PROSE_TELL
 
@@ -192,7 +194,7 @@ A local installation may also contain `references/slop-source.local.md`, the ful
 ## Verdict
 
 - `SHIP_BLOCKED`: at least one unresolved hard defect blocks the reviewed path;
-- `REVISE`: no blocker, but high-impact coherence work remains;
+- `REVISE`: no blocker, but high-impact coherence, prose, or detector-rule work remains;
 - `SHIP_READY_WITHIN_REVIEWED_SCOPE`: no actionable blocker or high-impact finding;
 - `INSUFFICIENT_EVIDENCE`: the surface, states, or viewport evidence cannot support a verdict.
 

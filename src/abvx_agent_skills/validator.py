@@ -6,6 +6,12 @@ from pathlib import Path
 import yaml
 
 ALLOWED_FRONTMATTER_KEYS = {"name", "description", "license", "metadata", "allowed-tools"}
+ALLOWED_EVAL_TIERS = {
+    "structural_only",
+    "fixture_checked",
+    "rollout_checked",
+    "held_out_validated",
+}
 SECRET_PATTERNS = [
     re.compile(r"sk-[A-Za-z0-9_-]{20,}"),
     re.compile(r"ghp_[A-Za-z0-9_]{20,}"),
@@ -69,6 +75,16 @@ def validate_skill(skill_dir: Path, failures: list[str]) -> None:
             fail(f"{skill_md}: description is required", failures)
         elif len(description) > 1024:
             fail(f"{skill_md}: description exceeds 1024 characters", failures)
+        metadata = data.get("metadata")
+        if metadata is not None and not isinstance(metadata, dict):
+            fail(f"{skill_md}: metadata must be a mapping", failures)
+        elif isinstance(metadata, dict) and "abvx_eval_tier" in metadata:
+            eval_tier = metadata.get("abvx_eval_tier")
+            if not isinstance(eval_tier, str) or eval_tier not in ALLOWED_EVAL_TIERS:
+                fail(
+                    f"{skill_md}: metadata.abvx_eval_tier must be one of {sorted(ALLOWED_EVAL_TIERS)}",
+                    failures,
+                )
         name = data.get("name", "")
         if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", str(name)):
             fail(f"{skill_md}: invalid skill name", failures)
