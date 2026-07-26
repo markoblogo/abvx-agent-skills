@@ -53,6 +53,36 @@ Typical pairings:
 - `loop-readiness-review`
 - `agent-tool-contract-review`
 
+## Natural targets by lane
+
+Keep the shortlist small and composable.
+
+### `review_first`
+
+- `confidence-fragility-review`
+- `delivery-baseline-audit`
+- `design-critique-polish`
+- `browser-verification`
+- `motion-review-gate`
+- `agent-tool-contract-review`
+
+### `human_gate`
+
+- `delivery-preflight-gate`
+- `social-publishing-gate`
+- `authorized-security-router`
+- `reversible-agent-task`
+
+### `bounded_loop`
+
+- `loop-readiness-review`
+- `goal-loop-designer`
+- `recovery-loop-3strike`
+- `phase-spec-execution`
+
+Use these as likely targets, not mandatory bundles. One route should activate
+the smallest sufficient follow-up skill set.
+
 ## Boundary
 
 - not a promise that the task is ready to ship;
