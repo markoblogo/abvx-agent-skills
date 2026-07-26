@@ -87,6 +87,7 @@ See:
 The next LoopOps layer is bounded skill evolution: see [docs/skill-evolution-roadmap.md](docs/skill-evolution-roadmap.md) and the manual-pilot manifest in [benchmarks/skill-evolution/manifest.json](benchmarks/skill-evolution/manifest.json). Start with one or two repeated skills, treat the skill as a versioned artifact, capture rollout evidence, keep edits bounded, validate against held-out or independent cases, retain rejected proposals as negative feedback, and export `best_skill.md` only after maintainer acceptance.
 
 For the public pack and searchable catalog, also keep catalog text source-linked, concise, and drift-checked against real skill files. See [docs/quality-eval-and-catalog-hygiene-contract.md](docs/quality-eval-and-catalog-hygiene-contract.md).
+Use [docs/catalog-schema-hardening.md](docs/catalog-schema-hardening.md), [docs/catalog-eval-tiers.md](docs/catalog-eval-tiers.md), and [docs/catalog-drift-and-distribution.md](docs/catalog-drift-and-distribution.md) for the follow-up rules.
 
 <p>
   <img src="assets/loopops-landscape.png" alt="LoopOps promotion ladder from prompt to checklist, skill, script, or bounded loop" width="1280">
@@ -311,6 +312,8 @@ Current distribution channels:
 - TestPyPI: published
 - conda-forge: staged-recipes submission currently open at <https://github.com/conda-forge/staged-recipes/pull/33719>
 
+Distribution boundaries for repo, Lab, and package surfaces are summarized in [docs/catalog-drift-and-distribution.md](docs/catalog-drift-and-distribution.md).
+
 Install the packaged CLI from PyPI:
 
 ```bash
@@ -395,6 +398,7 @@ This repository is intentionally optimized for inspection before trust: compact 
 If you are listing the repo in curated skill directories, agent catalogs, or install surfaces, use [docs/outreach/submission-kit.md](docs/outreach/submission-kit.md) for positioning and [docs/outreach/targets.md](docs/outreach/targets.md) for target tracking.
 
 Catalog and publish discipline for the pack itself lives in [docs/quality-eval-and-catalog-hygiene-contract.md](docs/quality-eval-and-catalog-hygiene-contract.md).
+Schema expectations, eval tiers, and drift/distribution rules live in [docs/catalog-schema-hardening.md](docs/catalog-schema-hardening.md), [docs/catalog-eval-tiers.md](docs/catalog-eval-tiers.md), and [docs/catalog-drift-and-distribution.md](docs/catalog-drift-and-distribution.md).
 
 For the current first-wave outreach set, use [docs/outreach/first-wave-submissions.md](docs/outreach/first-wave-submissions.md).
 

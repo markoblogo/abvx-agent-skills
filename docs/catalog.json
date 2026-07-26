@@ -109,18 +109,19 @@
       "name": "anti-slop-review",
       "display_name": "Anti-Slop Review",
       "category": "Frontend, UX & Product Surfaces",
-      "description": "Review an implemented product UI for hard visual defects, design-system incoherence, and repeated template patterns without treating subjective taste as universal law. Use for pre-ship screenshots or browser review when a landing page, product surface, dashboard, or redesign may be generic, clipped, inaccessible, visually inconsistent, or overbuilt from familiar AI-generated patterns.",
+      "description": "Review an implemented product UI or public prose surface for hard visual defects, design-system incoherence, repeated template patterns, and AI-writing tells without treating subjective taste as universal law. Use for pre-ship screenshots, browser review, README/tool-page copy, launch notes, guide prose, or redesigns that may be generic, clipped, inaccessible, visually inconsistent, overbuilt from familiar AI-generated patterns, or inflated by AI-ish language.",
       "short_description": "Separate UI defects, incoherence, and template risk.",
-      "intended_use": "Use for bounded pre-ship screenshot, browser, or code review of landing pages, product surfaces, dashboards, and redesigns.",
+      "intended_use": "Use for bounded pre-ship screenshot, browser, code, README, guide, launch-note, or public-copy review of landing pages, product surfaces, dashboards, docs pages, and redesigns.",
       "model_sensitivity": "",
       "composable_with": [
         "`frontend-taste-layer`",
         "`design-critique-polish`",
         "`web-quality-audit`",
-        "`motion-review-gate`"
+        "`motion-review-gate`",
+        "`doc-grounded-grilling`"
       ],
       "anti_patterns": [],
-      "risks": "- Risk: subjective taste blocks shipping. Mitigation: only reproduced hard defects block; style findings require contract evidence.\n- Risk: marketing taste applied to utility UI. Mitigation: establish surface register and primary task first.\n- Risk: checklist design. Mitigation: template patterns are scrutiny prompts, not bans.\n- Risk: context bloat. Mitigation: compact core plus on-demand references.\n- Risk: broad redesign. Mitigation: smallest coherent correction and explicit authority boundary.",
+      "risks": "- Risk: subjective taste blocks shipping. Mitigation: only reproduced hard defects block; style findings require contract evidence.\n- Risk: marketing taste applied to utility UI. Mitigation: establish surface register and primary task first.\n- Risk: checklist design. Mitigation: template patterns are scrutiny prompts, not bans.\n- Risk: context bloat. Mitigation: compact core plus on-demand references.\n- Risk: broad redesign. Mitigation: smallest coherent correction and explicit authority boundary.\n- Risk: humanization invents facts or hides AI origin. Mitigation: no-fabrication rule, source-boundary check, and framing as truthful prose QA rather than detector evasion.",
       "path": "skills/anti-slop-review/SKILL.md",
       "card_path": "skills/anti-slop-review/SKILL_CARD.md",
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/anti-slop-review/SKILL.md",
