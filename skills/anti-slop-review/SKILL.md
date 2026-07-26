@@ -1,6 +1,6 @@
 ---
 name: anti-slop-review
-description: Review an implemented product UI for hard visual defects, design-system incoherence, and repeated template patterns without treating subjective taste as universal law. Use for pre-ship screenshots or browser review when a landing page, product surface, dashboard, or redesign may be generic, clipped, inaccessible, visually inconsistent, or overbuilt from familiar AI-generated patterns.
+description: Review an implemented product UI or public prose surface for hard visual defects, design-system incoherence, repeated template patterns, and AI-writing tells without treating subjective taste as universal law. Use for pre-ship screenshots, browser review, README/tool-page copy, launch notes, guide prose, or redesigns that may be generic, clipped, inaccessible, visually inconsistent, overbuilt from familiar AI-generated patterns, or inflated by AI-ish language.
 license: MIT
 metadata:
   abvx_status: experimental
@@ -12,6 +12,13 @@ metadata:
 Review evidence, not vibes. This skill critiques an implemented interface; it does not replace the brief, design system, accessibility checks, or product requirements.
 
 Use `frontend-taste-layer` while choosing a visual direction. Use this skill after implementation or on screenshots/live UI. Use `design-critique-polish` for broader polish and `web-quality-audit` for full accessibility, performance, privacy, and security coverage.
+
+For prose-only work, use the prose pass below and skip browser-specific checks unless the text is already placed in a live UI.
+
+For prose requests, choose one mode up front:
+
+- `detect`: identify named prose patterns with quoted evidence and bounded fixes; do not rewrite the draft;
+- `edit`: make the smallest useful rewrite, then run the post-edit eval before returning it.
 
 ## Authority
 
@@ -72,6 +79,33 @@ Non-blocking signals that the surface may be interchangeable:
 
 These are prompts for scrutiny, not bans. A pattern is acceptable when it serves the task, matches the design system, and is executed coherently.
 
+### DETECTOR_RULE
+
+Deterministic, repeatable checks for visual or prose defects. Use this type when a finding can be detected from code, rendered DOM, CSS, screenshots, or text without relying on taste:
+
+- nested cards or page sections styled as cards;
+- long line length, cramped padding, unsafe tap target, skipped heading level, or missing focus state;
+- gray text on colored backgrounds with poor contrast;
+- repeated layout skeletons across unrelated sections;
+- bounce/elastic motion used without a product reason;
+- overflow-prone fixed heights, clipped strings, or hidden content paths;
+- prose tells matched from an explicit pattern list.
+
+Detector rules are evidence, not automatic verdicts. A rule can be waived when the project design context, brand system, legacy constraint, or explicit owner direction justifies it.
+
+### PROSE_TELL
+
+AI-writing patterns that weaken trust, specificity, or project voice:
+
+- inflated significance, generic `pivotal/testament/landscape` framing, or travel-brochure adjectives;
+- vague attribution, unsupported experts/users/industry claims, or filler where a source is missing;
+- formulaic contrasts such as `not just X, but Y`, rule-of-three lists, fake-candid openings, or chatbot closers;
+- repeated em dashes, title-case microheadings, boldface overuse, and inline label prose that makes the text feel templated;
+- diff-anchored public writing that describes what changed instead of the current behavior;
+- voice drift away from an approved user, brand, or project sample.
+
+Apply the no-fabrication rule: rewrites must not invent facts, names, dates, citations, metrics, customer claims, or source context. If specificity is missing, ask for it or leave a bounded placeholder. Do not optimize for hiding AI origin; optimize for truthful, natural, source-faithful prose.
+
 ## Evidence pass
 
 When browser access is available, verify at minimum:
@@ -86,6 +120,36 @@ When browser access is available, verify at minimum:
 
 Use screenshots at the actual failing viewport. Zoom into suspected clipping or centering problems instead of relying on a normal-scale impression.
 
+## Prose pass
+
+Use this for README sections, tool pages, release notes, public guides, Substack drafts, partner-facing copy, and in-product explanatory text.
+
+1. Choose mode:
+   - `detect` when the user asks whether a text sounds AI-generated, generic, inflated, or “sloppy” and wants evidence first;
+   - `edit` when the user wants a rewrite, cleanup, polish, or humanization pass.
+2. Identify the register: technical, product, guide, editorial, partner-facing, or personal voice.
+3. Check source boundaries: which facts, dates, names, claims, and links are allowed.
+4. Scan for `PROSE_TELL` patterns and separate real defects from harmless personal style.
+5. If a voice sample exists, preserve its rhythm and vocabulary; otherwise keep the rewrite plain and project-specific.
+6. In `detect` mode, return named patterns with quoted evidence and a short bounded fix; do not rewrite or guess whether AI wrote it.
+7. In `edit` mode, rewrite only the smallest useful span, then run a second pass for leftover AI tells and accidental fact drift.
+
+Return prose findings using the normal `AS-###` format with `Type: PROSE_TELL`. For short direct rewrites, include a compact `Before -> After` block and the no-fabrication boundary you preserved.
+
+## Post-edit eval
+
+Run this only for prose `edit` mode before returning the rewrite.
+
+1. Point preserved: no new claims, examples, names, dates, stats, links, or opinions were added.
+2. Voice preserved: the draft still sounds like the same writer or project register, not generic polished filler.
+3. Minimum effective edit: strong human lines were left alone; cutting is proportional to the actual problem.
+4. Concrete over inflated: puffery, vague authority, and fake significance were replaced with facts or removed.
+5. Pattern cleanup: no obvious leftover binary contrast, throat-clearing opener, faux-insight setup, colon-reveal drama, synonym cycling, or generic recap ending remains unless intentionally preserved.
+6. Formatting cleanup: bold, bullets, em dashes, and microheadings were not used as decorative residue.
+7. Second-pass boundary: no fact drift found; no detector-gaming tactics introduced.
+
+If any item fails, fix the draft before returning it.
+
 ## Bounded findings
 
 Return at most seven findings per pass. Use stable IDs `AS-001`, `AS-002`, and so on. Order by `HARD_DEFECT`, then user impact, then leverage.
@@ -94,7 +158,7 @@ Each finding contains:
 
 ```text
 ID: AS-001
-Type: HARD_DEFECT | COHERENCE | TEMPLATE_RISK
+Type: HARD_DEFECT | COHERENCE | TEMPLATE_RISK | PROSE_TELL | DETECTOR_RULE
 Severity: blocker | high | medium | low
 Evidence: screenshot/viewport/interaction/file:line
 Impact: concrete user or product consequence
@@ -121,6 +185,8 @@ A style exception is valid when it follows explicit user direction or a document
 
 Read `references/review-catalog.md` only when a suspected template pattern is ambiguous, the user requests a comprehensive anti-slop pass, or repeated reviews keep producing the same surface-level result.
 
+Read `references/prose-humanization-review.md` only when prose is the main surface, the user asks to humanize/polish text, public copy sounds AI-generated, or a rewrite risks changing factual claims or project voice.
+
 A local installation may also contain `references/slop-source.local.md`, the full user-supplied source. Load it only on explicit request or when the compact catalog cannot resolve a disputed pattern. It is not a point-by-point shipping checklist.
 
 ## Verdict
@@ -133,3 +199,5 @@ A local installation may also contain `references/slop-source.local.md`, the ful
 ## Attribution
 
 Adapted from a user-supplied anti-slop design law with no supplied provenance or redistribution license. The original is not distributed in this repository. This contract retains only general review ideas and rewrites them as evidence-based, context-sensitive ABVX guidance.
+
+The prose pass is a compact local adaptation of public AI-writing cleanup patterns, including `blader/humanizer`, with a stricter ABVX no-fabrication and source-boundary rule. It is not an AI-detection or evasion tool.
