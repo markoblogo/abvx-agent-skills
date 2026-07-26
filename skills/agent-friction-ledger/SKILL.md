@@ -1,6 +1,6 @@
 ---
 name: agent-friction-ledger
-description: Capture recurring agent-development friction as a local, privacy-safe Markdown report. Use only when the user explicitly requests a friction review or a session has repeatedly hit blockers, misleading errors, missing documentation, incompatible tools, or manual workarounds that should improve a doc, tool, skill, process, or evaluation.
+description: Capture recurring agent-development friction as a local, privacy-safe Markdown report. Use only when the user explicitly requests a friction review of blockers, misleading errors, missing documentation, incompatible tools, or manual workarounds that should improve a doc, tool, skill, process, or evaluation.
 license: MIT
 metadata:
   abvx_status: experimental
@@ -15,8 +15,7 @@ Turn repeatable agent friction into a small, actionable local artifact. This ski
 
 Use only when:
 
-- the user explicitly asks for a friction report or review; or
-- a session has a repeated blocker or workaround worth preserving.
+- the user explicitly asks for a friction report or review.
 
 Do not run merely because a task had normal shell output, a single failed command, or a clean completion.
 
@@ -38,7 +37,7 @@ Do not record every tool call, full conversation, raw logs, private URLs, creden
 2. For each event, record: `symptom -> attempted -> root cause -> resolution -> durable fix`.
 3. Mark confidence: confirmed, likely, or unresolved. Do not turn a guess into a root cause.
 4. Redact or omit sensitive content before writing.
-5. Write a local report at `artifacts/agent-friction/YYYY-MM-DD-<task>.md` unless the repo defines an approved alternative.
+5. Write a local report to an ignored or private location only. Default to `.git/agent-friction/YYYY-MM-DD-<task>.md` unless the repo defines another approved ignored path.
 6. Group action items under `docs`, `tooling`, `skill/process`, and `research`.
 7. Propose the smallest durable change, but do not apply it without normal task authorization.
 
@@ -69,6 +68,7 @@ Do not record every tool call, full conversation, raw logs, private URLs, creden
 ## Guardrails
 
 - Local Markdown only. Never POST to a viewer, telemetry endpoint, or external API.
+- Never write to a tracked repo path by default. If no ignored/private location exists, stop and ask before writing.
 - A friction report is not permission to create a ticket, alter a skill, edit docs, or change a process.
 - Prefer one concise report over a growing per-turn buffer.
 - If the task contains regulated, personal, client, deal, financial, or credential data, record the abstract failure mode only.
