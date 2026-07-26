@@ -102,6 +102,7 @@ def build_catalog(skills_root: Path, readme_path: Path) -> dict[str, Any]:
                 "github_card_url": f"{github_root}/skills/{skill_dir.name}/SKILL_CARD.md",
                 "origin": (frontmatter.get("metadata") or {}).get("abvx_origin", ""),
                 "status": (frontmatter.get("metadata") or {}).get("abvx_status", ""),
+                "eval_tier": (frontmatter.get("metadata") or {}).get("abvx_eval_tier", "structural_only"),
             }
         )
 
@@ -128,8 +129,8 @@ def render_catalog_markdown(payload: dict[str, Any]) -> str:
         "",
         "Generated from `docs/catalog.json`.",
         "",
-        "| Skill | Category | Use case | Install |",
-        "|---|---|---|---|",
+        "| Skill | Category | Eval tier | Use case | Install |",
+        "|---|---|---|---|---|",
     ]
 
     for skill in sorted(payload.get("skills", []), key=lambda item: item["name"]):
@@ -137,7 +138,7 @@ def render_catalog_markdown(payload: dict[str, Any]) -> str:
         use_case = " ".join(str(use_case).split())
         install = f"`gh skill install markoblogo/abvx-agent-skills {skill['name']}`"
         lines.append(
-            f"| `{skill['name']}` | {skill['category']} | {use_case} | {install} |"
+            f"| `{skill['name']}` | {skill['category']} | {skill.get('eval_tier', 'structural_only')} | {use_case} | {install} |"
         )
 
     lines.append("")
