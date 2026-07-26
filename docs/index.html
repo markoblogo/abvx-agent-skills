@@ -188,9 +188,20 @@
       const resultsEl = document.getElementById("results");
 
       let catalog = { skills: [], categories: {}, skill_count: 0 };
+      const allowedEvalTiers = new Set([
+        "structural_only",
+        "fixture_checked",
+        "rollout_checked",
+        "held_out_validated",
+      ]);
 
       function safeText(value) {
         return value && String(value).trim() ? String(value).trim() : "Not specified yet.";
+      }
+
+      function safeEvalTier(value) {
+        const tier = String(value || "").trim();
+        return allowedEvalTiers.has(tier) ? tier : "structural_only";
       }
 
       function skillHaystack(skill) {
@@ -198,6 +209,7 @@
           skill.name,
           skill.display_name,
           skill.category,
+          safeEvalTier(skill.eval_tier),
           skill.description,
           skill.short_description,
           skill.intended_use,
@@ -232,14 +244,17 @@
         for (const skill of skills) {
           const article = document.createElement("article");
           article.className = "lab-b-product-panel catalog-card";
+          const evalTier = safeEvalTier(skill.eval_tier);
           article.innerHTML = `
             <p class="lab-b-eyebrow">${skill.category}</p>
             <h3>${skill.display_name}</h3>
             <div class="catalog-pills">
               <span>${skill.name}</span>
+              <span>${evalTier}</span>
             </div>
             <p class="lab-b-product-summary">${skill.short_description || skill.description}</p>
             <div class="small"><strong>Intended use:</strong> ${safeText(skill.intended_use)}</div>
+            <div class="small"><strong>Eval tier:</strong> ${evalTier}</div>
             <div class="small"><strong>Model sensitivity:</strong> ${safeText(skill.model_sensitivity)}</div>
             <div class="small"><strong>Composable with:</strong> ${(skill.composable_with || []).length ? skill.composable_with.join("; ") : "Not specified yet."}</div>
             <div class="small"><strong>Anti-patterns:</strong> ${(skill.anti_patterns || []).length ? skill.anti_patterns.join("; ") : "Not specified yet."}</div>
