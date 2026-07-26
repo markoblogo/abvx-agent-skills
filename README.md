@@ -69,6 +69,7 @@ If you want a scan-friendly text catalog for browsing or indexing, use [CATALOG.
 | Preserve typed project truth | `git-native-context-contract` | Decisions, rules, specs, plans, bounded research, or recurring incident lessons need a minimal Git-reviewed lifecycle and relation contract. |
 | Run reversible agent work | `reversible-agent-task` | A task should produce retained output first, then move through inspect -> select/apply/discard before touching the target workspace. |
 | Check ship confidence | `confidence-fragility-review`, `delivery-baseline-audit` | A release, README, generated plan, or PR sounds done but evidence may be thin. |
+| Choose the right delivery lane before shipping | `docs/ship-router-contract.md` | Work may need `direct`, `review_first`, `bounded_loop`, or `human_gate` routing before implementation widens or a ship claim is made. |
 | Save tokens in shell-heavy work | `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution` | Logs, diffs, tests, and command output are burning context and hiding the real signal. |
 | Verify frontend work | `browser-verification`, `design-critique-polish`, `motion-review-gate`, `fluid-interaction-review` for drag/swipe physics | The agent says "done" without checking real browser behavior, layout, states, motion, gesture continuity, or console errors. |
 | Govern named agents, long operations, and durable decisions | `agent-operations-contract`, `agent-tool-contract-review`, `loop-readiness-review` | Agent configuration, schedules, memory, providers, operation status, or decision records are mistaken for authority or verified outcomes. |
@@ -98,6 +99,7 @@ For delivery-lane choice before a ship claim, use [docs/ship-router-contract.md]
 
 - **Need to save tokens?** Start with `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution`, and `lean-context-layout`. Add `compaction-survival` if your sessions run long enough to forget their own state.
 - **Need to check whether context is hurting the run?** Start with `context-degradation-review` before trusting long handoffs, memory summaries, or bloated SET bundles.
+- **Need to choose direct vs review-first vs loop vs human approval before work widens?** Start with [docs/ship-router-contract.md](docs/ship-router-contract.md), then route into the smallest sufficient follow-up skill set.
 - **Need to debug a repo?** Start with `diagnose`, `repo-debugging-ledger`, and `graph-guided-code-reading`.
 - **Need auditable red-to-green proof?** Add `bug-evidence-protocol` after `diagnose`; use risk-based approval and link recurrent lessons to a `cpat`.
 - **Need code review discipline?** Run a Standards pass with `overengineering-review`, `minimal-diff-builder`, or `architecture-deepening-review`, then a Spec pass with `delivery-baseline-audit` against the issue, PRD, or task contract.
