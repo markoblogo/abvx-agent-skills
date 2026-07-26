@@ -88,6 +88,7 @@ The next LoopOps layer is bounded skill evolution: see [docs/skill-evolution-roa
 
 For the public pack and searchable catalog, also keep catalog text source-linked, concise, and drift-checked against real skill files. See [docs/quality-eval-and-catalog-hygiene-contract.md](docs/quality-eval-and-catalog-hygiene-contract.md).
 Use [docs/catalog-schema-hardening.md](docs/catalog-schema-hardening.md), [docs/catalog-eval-tiers.md](docs/catalog-eval-tiers.md), and [docs/catalog-drift-and-distribution.md](docs/catalog-drift-and-distribution.md) for the follow-up rules.
+For delivery-lane choice before a ship claim, use [docs/ship-router-contract.md](docs/ship-router-contract.md).
 
 <p>
   <img src="assets/loopops-landscape.png" alt="LoopOps promotion ladder from prompt to checklist, skill, script, or bounded loop" width="1280">
