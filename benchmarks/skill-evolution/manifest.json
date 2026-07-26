@@ -23,7 +23,7 @@
   ],
   "edit_budget": {
     "max_accepted_edits_per_update": 4,
-    "allowed_operations": ["add", "delete", "replace"],
+    "allowed_operations": ["add", "delete", "replace", "move"],
     "discouraged_operations": ["move"],
     "forbidden": ["full_rewrite", "authority_expansion", "hidden_prompt_drift"]
   },

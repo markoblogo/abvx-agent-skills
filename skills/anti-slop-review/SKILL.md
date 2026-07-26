@@ -5,6 +5,7 @@ license: MIT
 metadata:
   abvx_status: experimental
   abvx_origin: adapted
+  abvx_eval_tier: fixture_checked
 ---
 
 # Anti-Slop Review
@@ -92,6 +93,7 @@ Deterministic, repeatable checks for visual or prose defects. Use this type when
 - prose tells matched from an explicit pattern list.
 
 Detector rules are evidence, not automatic verdicts. A rule can be waived when the project design context, brand system, legacy constraint, or explicit owner direction justifies it.
+If a deterministic finding also qualifies as a shipment-blocking accessibility, visibility, interaction, or responsive failure, classify it as `HARD_DEFECT`; hard-defect precedence wins over `DETECTOR_RULE`.
 
 ### PROSE_TELL
 

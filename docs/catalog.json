@@ -43,7 +43,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/agent-learning-layer-triage/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/agent-learning-layer-triage/SKILL_CARD.md",
       "origin": "original",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "agent-operations-contract",
@@ -67,7 +68,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/agent-operations-contract/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/agent-operations-contract/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "agent-tool-contract-review",
@@ -85,7 +87,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/agent-tool-contract-review/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/agent-tool-contract-review/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "agents-best-practices",
@@ -103,7 +106,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/agents-best-practices/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/agents-best-practices/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "anti-slop-review",
@@ -127,7 +131,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/anti-slop-review/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/anti-slop-review/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "fixture_checked"
     },
     {
       "name": "architecture-deepening-review",
@@ -145,7 +150,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/architecture-deepening-review/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/architecture-deepening-review/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "assumption-excavation",
@@ -163,7 +169,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/assumption-excavation/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/assumption-excavation/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "authorized-security-router",
@@ -187,7 +194,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/authorized-security-router/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/authorized-security-router/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "book-to-skill",
@@ -205,7 +213,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/book-to-skill/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/book-to-skill/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "bounded-evaluation",
@@ -223,7 +232,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/bounded-evaluation/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/bounded-evaluation/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "bounded-orchestration-contract",
@@ -252,7 +262,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/bounded-orchestration-contract/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/bounded-orchestration-contract/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "brief-first-execution",
@@ -270,7 +281,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/brief-first-execution/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/brief-first-execution/SKILL_CARD.md",
       "origin": "original",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "browser-verification",
@@ -288,7 +300,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/browser-verification/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/browser-verification/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "bug-evidence-protocol",
@@ -311,7 +324,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/bug-evidence-protocol/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/bug-evidence-protocol/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "compaction-survival",
@@ -329,7 +343,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/compaction-survival/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/compaction-survival/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "complexity-optimizer",
@@ -347,7 +362,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/complexity-optimizer/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/complexity-optimizer/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "confidence-fragility-review",
@@ -365,7 +381,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/confidence-fragility-review/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/confidence-fragility-review/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "context-degradation-review",
@@ -383,7 +400,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/context-degradation-review/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/context-degradation-review/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "delivery-baseline-audit",
@@ -401,7 +419,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/delivery-baseline-audit/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/delivery-baseline-audit/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "delivery-preflight-gate",
@@ -419,7 +438,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/delivery-preflight-gate/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/delivery-preflight-gate/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "design-critique-polish",
@@ -437,7 +457,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/design-critique-polish/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/design-critique-polish/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "design-register-bootstrap",
@@ -455,7 +476,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/design-register-bootstrap/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/design-register-bootstrap/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "designmd-brand-kit",
@@ -473,7 +495,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/designmd-brand-kit/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/designmd-brand-kit/SKILL_CARD.md",
       "origin": "",
-      "status": ""
+      "status": "",
+      "eval_tier": "structural_only"
     },
     {
       "name": "diagnose",
@@ -491,7 +514,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/diagnose/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/diagnose/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "doc-grounded-grilling",
@@ -509,7 +533,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/doc-grounded-grilling/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/doc-grounded-grilling/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "doc-to-lora-evaluator",
@@ -532,7 +557,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/doc-to-lora-evaluator/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/doc-to-lora-evaluator/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "durable-context-maintenance",
@@ -550,7 +576,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/durable-context-maintenance/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/durable-context-maintenance/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "dynamic-workflow-packets",
@@ -577,7 +604,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/dynamic-workflow-packets/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/dynamic-workflow-packets/SKILL_CARD.md",
       "origin": "",
-      "status": ""
+      "status": "",
+      "eval_tier": "structural_only"
     },
     {
       "name": "evidence-ledger-research",
@@ -595,7 +623,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/evidence-ledger-research/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/evidence-ledger-research/SKILL_CARD.md",
       "origin": "",
-      "status": ""
+      "status": "",
+      "eval_tier": "structural_only"
     },
     {
       "name": "filesystem-context-discipline",
@@ -613,7 +642,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/filesystem-context-discipline/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/filesystem-context-discipline/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "fluid-interaction-review",
@@ -636,7 +666,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/fluid-interaction-review/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/fluid-interaction-review/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "frontend-product-builder",
@@ -654,7 +685,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/frontend-product-builder/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/frontend-product-builder/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "frontend-taste-layer",
@@ -672,7 +704,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/frontend-taste-layer/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/frontend-taste-layer/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "git-native-context-contract",
@@ -701,7 +734,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/git-native-context-contract/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/git-native-context-contract/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "goal-loop-designer",
@@ -730,7 +764,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/goal-loop-designer/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/goal-loop-designer/SKILL_CARD.md",
       "origin": "original",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "graph-guided-code-reading",
@@ -748,7 +783,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/graph-guided-code-reading/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/graph-guided-code-reading/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "handoff",
@@ -766,7 +802,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/handoff/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/handoff/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "html-brief-artifact",
@@ -784,7 +821,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/html-brief-artifact/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/html-brief-artifact/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "html-diagram-artifact",
@@ -802,7 +840,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/html-diagram-artifact/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/html-diagram-artifact/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "hypothesis-diversification",
@@ -820,7 +859,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/hypothesis-diversification/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/hypothesis-diversification/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "idea-to-ship-gates",
@@ -853,7 +893,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/idea-to-ship-gates/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/idea-to-ship-gates/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "knowledge-base-enrichment",
@@ -876,7 +917,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/knowledge-base-enrichment/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/knowledge-base-enrichment/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "lean-context-layout",
@@ -894,7 +936,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/lean-context-layout/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/lean-context-layout/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "local-inference-tuning",
@@ -923,7 +966,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/local-inference-tuning/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/local-inference-tuning/SKILL_CARD.md",
       "origin": "original",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "loop-hardening-contract",
@@ -952,7 +996,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/loop-hardening-contract/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/loop-hardening-contract/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "loop-readiness-review",
@@ -970,7 +1015,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/loop-readiness-review/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/loop-readiness-review/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "loopops-protocol",
@@ -997,7 +1043,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/loopops-protocol/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/loopops-protocol/SKILL_CARD.md",
       "origin": "",
-      "status": ""
+      "status": "",
+      "eval_tier": "structural_only"
     },
     {
       "name": "lottie-motion-builder",
@@ -1015,7 +1062,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/lottie-motion-builder/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/lottie-motion-builder/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "minimal-diff-builder",
@@ -1041,7 +1089,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/minimal-diff-builder/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/minimal-diff-builder/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "motion-review-gate",
@@ -1065,7 +1114,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/motion-review-gate/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/motion-review-gate/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "overengineering-review",
@@ -1091,7 +1141,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/overengineering-review/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/overengineering-review/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "personal-workspace-router",
@@ -1119,7 +1170,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/personal-workspace-router/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/personal-workspace-router/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "phase-spec-execution",
@@ -1137,7 +1189,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/phase-spec-execution/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/phase-spec-execution/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "pipeline-readiness-gate",
@@ -1155,7 +1208,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/pipeline-readiness-gate/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/pipeline-readiness-gate/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "plan-to-issues",
@@ -1173,7 +1227,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/plan-to-issues/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/plan-to-issues/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "private-vs-publishable-skill-audit",
@@ -1191,7 +1246,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/private-vs-publishable-skill-audit/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/private-vs-publishable-skill-audit/SKILL_CARD.md",
       "origin": "original",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "project-context-bootstrap",
@@ -1209,7 +1265,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/project-context-bootstrap/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/project-context-bootstrap/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "prototype-lab",
@@ -1227,7 +1284,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/prototype-lab/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/prototype-lab/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "rabbithole-doc-exploration",
@@ -1245,7 +1303,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/rabbithole-doc-exploration/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/rabbithole-doc-exploration/SKILL_CARD.md",
       "origin": "original",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "rapid-grilling",
@@ -1263,7 +1322,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/rapid-grilling/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/rapid-grilling/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "recovery-loop-3strike",
@@ -1281,7 +1341,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/recovery-loop-3strike/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/recovery-loop-3strike/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "repo-debugging-ledger",
@@ -1299,7 +1360,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/repo-debugging-ledger/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/repo-debugging-ledger/SKILL_CARD.md",
       "origin": "",
-      "status": ""
+      "status": "",
+      "eval_tier": "structural_only"
     },
     {
       "name": "repo-issue-triage",
@@ -1317,7 +1379,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/repo-issue-triage/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/repo-issue-triage/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "reversible-agent-task",
@@ -1335,7 +1398,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/reversible-agent-task/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/reversible-agent-task/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "role-skill-pack-design",
@@ -1353,7 +1417,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/role-skill-pack-design/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/role-skill-pack-design/SKILL_CARD.md",
       "origin": "original",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "rtk-assisted-shell",
@@ -1371,7 +1436,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/rtk-assisted-shell/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/rtk-assisted-shell/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "shell-output-compaction",
@@ -1389,7 +1455,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/shell-output-compaction/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/shell-output-compaction/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "skillopt-evolve-skills",
@@ -1407,7 +1474,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/skillopt-evolve-skills/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/skillopt-evolve-skills/SKILL_CARD.md",
       "origin": "",
-      "status": ""
+      "status": "",
+      "eval_tier": "structural_only"
     },
     {
       "name": "social-publishing-gate",
@@ -1438,7 +1506,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/social-publishing-gate/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/social-publishing-gate/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "spec-to-prd",
@@ -1456,7 +1525,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/spec-to-prd/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/spec-to-prd/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "spreadsheet-workbook-forensics",
@@ -1474,7 +1544,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/spreadsheet-workbook-forensics/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/spreadsheet-workbook-forensics/SKILL_CARD.md",
       "origin": "",
-      "status": ""
+      "status": "",
+      "eval_tier": "structural_only"
     },
     {
       "name": "system-zoom-out",
@@ -1492,7 +1563,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/system-zoom-out/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/system-zoom-out/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "test-driven-execution",
@@ -1510,7 +1582,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/test-driven-execution/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/test-driven-execution/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "token-efficient-execution",
@@ -1537,7 +1610,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/token-efficient-execution/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/token-efficient-execution/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "token-frugal-mode",
@@ -1555,7 +1629,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/token-frugal-mode/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/token-frugal-mode/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "token-usage-audit",
@@ -1573,7 +1648,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/token-usage-audit/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/token-usage-audit/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "web-quality-audit",
@@ -1591,7 +1667,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/web-quality-audit/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/web-quality-audit/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "workflow-policy-layering",
@@ -1609,7 +1686,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/workflow-policy-layering/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/workflow-policy-layering/SKILL_CARD.md",
       "origin": "original",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     }
   ]
 }

@@ -25,4 +25,7 @@ that legible.
 Higher tiers do not imply global superiority. They only describe the current
 evidence depth for that skill.
 
+Canonical source: `skills/<name>/SKILL.md` frontmatter metadata field
+`abvx_eval_tier`.
+
 If no tier is explicitly captured yet, treat the skill as `structural_only`.

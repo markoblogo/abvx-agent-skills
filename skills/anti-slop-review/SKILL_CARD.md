@@ -17,6 +17,7 @@ Not a replacement for a product brief, design system, accessibility audit, brows
 
 ## Sources and Attribution
 Adapted from a user-supplied anti-slop design law. No author, source, or redistribution license was supplied, so the original text is retained only in the user's local installation and is not distributed here.
+The prose pass also adapts public AI-writing cleanup patterns from `blader/humanizer`, rewritten for bounded evidence, no-fabrication edits, and source-faithful voice preservation.
 
 ## Inputs and Outputs
 Inputs: brief, design-system constraints, screenshots/live UI, viewport and interaction evidence, voice samples, source boundaries, and relevant files.

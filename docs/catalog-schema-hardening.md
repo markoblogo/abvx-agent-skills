@@ -27,6 +27,7 @@ Each catalog entry should have, at minimum:
 
 Recommended when present in source truth:
 
+- `eval_tier`
 - `model_sensitivity`
 - `composable_with`
 - `anti_patterns`
