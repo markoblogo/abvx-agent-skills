@@ -56,6 +56,14 @@ Browse the searchable catalog at [lab.abvx.xyz/tools/abvx-agent-skills/](https:/
 
 If you want a scan-friendly text catalog for browsing or indexing, use [CATALOG.md](CATALOG.md).
 
+## Companion contracts
+
+Some useful repo surfaces are companion contracts rather than installable skill entries.
+
+- [docs/ship-router-contract.md](docs/ship-router-contract.md) — choose `direct`, `review_first`, `bounded_loop`, `human_gate`, or `blocked` before execution widens or a ship claim is made.
+- [docs/quality-eval-and-catalog-hygiene-contract.md](docs/quality-eval-and-catalog-hygiene-contract.md) — keep the public pack, generated catalog, and skill truth aligned.
+- [docs/catalog-drift-and-distribution.md](docs/catalog-drift-and-distribution.md) — define what belongs in GitHub, Lab, and generated distribution surfaces.
+
 ## Start With One Job
 
 | Job | Install | Use when |
