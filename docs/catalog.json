@@ -110,7 +110,7 @@
       "display_name": "Anti-Slop Review",
       "category": "Frontend, UX & Product Surfaces",
       "description": "Review an implemented product UI or public prose surface for hard visual defects, design-system incoherence, repeated template patterns, and AI-writing tells without treating subjective taste as universal law. Use for pre-ship screenshots, browser review, README/tool-page copy, launch notes, guide prose, or redesigns that may be generic, clipped, inaccessible, visually inconsistent, overbuilt from familiar AI-generated patterns, or inflated by AI-ish language.",
-      "short_description": "Separate UI defects, incoherence, and template risk.",
+      "short_description": "Separate UI/prose defects, incoherence, and template risk.",
       "intended_use": "Use for bounded pre-ship screenshot, browser, code, README, guide, launch-note, or public-copy review of landing pages, product surfaces, dashboards, docs pages, and redesigns.",
       "model_sensitivity": "",
       "composable_with": [

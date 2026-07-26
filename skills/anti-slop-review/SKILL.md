@@ -192,7 +192,7 @@ A local installation may also contain `references/slop-source.local.md`, the ful
 ## Verdict
 
 - `SHIP_BLOCKED`: at least one unresolved hard defect blocks the reviewed path;
-- `REVISE`: no blocker, but high-impact coherence work remains;
+- `REVISE`: no blocker, but high-impact coherence, prose, or detector-rule work remains;
 - `SHIP_READY_WITHIN_REVIEWED_SCOPE`: no actionable blocker or high-impact finding;
 - `INSUFFICIENT_EVIDENCE`: the surface, states, or viewport evidence cannot support a verdict.
 

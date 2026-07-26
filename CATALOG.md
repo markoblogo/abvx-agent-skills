@@ -8,7 +8,7 @@ Generated from `docs/catalog.json`.
 | `agent-operations-contract` | Uncategorized | Review agent identity, receipts, memory, and routes. | `gh skill install markoblogo/abvx-agent-skills agent-operations-contract` |
 | `agent-tool-contract-review` | Coding, Debugging & Architecture | Review MCP, CLI, SET, and tool contracts before agent use. | `gh skill install markoblogo/abvx-agent-skills agent-tool-contract-review` |
 | `agents-best-practices` | Coding, Debugging & Architecture | Design and audit provider-neutral agent harnesses. | `gh skill install markoblogo/abvx-agent-skills agents-best-practices` |
-| `anti-slop-review` | Frontend, UX & Product Surfaces | Separate UI defects, incoherence, and template risk. | `gh skill install markoblogo/abvx-agent-skills anti-slop-review` |
+| `anti-slop-review` | Frontend, UX & Product Surfaces | Separate UI/prose defects, incoherence, and template risk. | `gh skill install markoblogo/abvx-agent-skills anti-slop-review` |
 | `architecture-deepening-review` | Coding, Debugging & Architecture | Find deeper modules, clearer seams, and testability gains. | `gh skill install markoblogo/abvx-agent-skills architecture-deepening-review` |
 | `assumption-excavation` | Discovery, Planning & Delivery | Surface hidden assumptions in specs, repo contracts, skills, and SET bundles. | `gh skill install markoblogo/abvx-agent-skills assumption-excavation` |
 | `authorized-security-router` | Security & Defensive Review | Route authorized defensive security work safely. | `gh skill install markoblogo/abvx-agent-skills authorized-security-router` |
