@@ -1,0 +1,27 @@
+schema_version: 1
+id: example-provider-or-tool
+kind: provider
+modalities: []
+tool_calling: false
+structured_output: false
+streaming: false
+async_operations: false
+location: cloud
+required_secret_names: []
+data_egress:
+  enabled: true
+  destination: replace-with-destination
+availability:
+  status: declared
+  checked_at: null
+  evidence: []
+cost_observation:
+  observed_at: null
+  source: null
+  value: unknown
+rate_limit_observation:
+  observed_at: null
+  source: null
+  value: unknown
+authority: read
+side_effects: []

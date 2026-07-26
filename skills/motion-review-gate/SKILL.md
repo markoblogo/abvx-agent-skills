@@ -13,6 +13,7 @@ Review motion as a pre-ship gate. This skill does not design a whole interface a
 
 Use it after implementation or during review when the diff includes animation, transitions, gestures, Lottie assets, interaction states, or motion-heavy UI polish.
 Pair it with `browser-verification` when the visual behavior must be checked in a real browser.
+When a diff includes drag, swipe, momentum, snap points, or another direct-manipulation gesture, also run `fluid-interaction-review`; this gate alone does not fully verify gesture physics.
 
 ## Use For
 

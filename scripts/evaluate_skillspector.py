@@ -156,7 +156,17 @@ def main() -> int:
         if finding.severity in fail_on:
             blocking.append(finding)
 
-    score_blockers = [f"{skill}: score {score}" for skill, score in scores.items() if score > max_risk_score]
+    accepted_fingerprints = {finding.fingerprint for finding in suppressed + baseline_hits}
+    score_blockers = []
+    for skill, score in scores.items():
+        skill_findings = [
+            finding for finding in considered if finding.skill == skill and finding.severity in fail_on
+        ]
+        all_findings_accepted = bool(skill_findings) and all(
+            finding.fingerprint in accepted_fingerprints for finding in skill_findings
+        )
+        if score > max_risk_score and not all_findings_accepted:
+            score_blockers.append(f"{skill}: score {score}")
 
     print(f"Reports: {args.reports_dir}")
     print(f"Findings: total={len(findings)} considered={len(considered)}")

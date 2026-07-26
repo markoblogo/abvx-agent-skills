@@ -121,6 +121,7 @@
             <div class="lab-b-product-cta">
               <a class="lab-b-product-link primary" href="https://github.com/markoblogo/abvx-agent-skills">GitHub</a>
               <a class="lab-b-product-link" href="./loopops-guide.md">LoopOps guide</a>
+              <a class="lab-b-product-link" href="./ship-router-contract.md">Ship router</a>
               <a class="lab-b-product-link" href="./catalog.json">Catalog JSON</a>
             </div>
           </div>
@@ -146,6 +147,10 @@
                 <div>
                   <span class="lab-b-point-label">Current emphasis</span>
                   <p>Composable workflows, LoopOps framing, and explicit anti-patterns where a skill should not be used.</p>
+                </div>
+                <div>
+                  <span class="lab-b-point-label">Companion route layer</span>
+                  <p>Ship routing stays outside the generated skill list: use the ship-router contract to choose direct, review-first, bounded-loop, or human-gated delivery lanes.</p>
                 </div>
               </div>
             </div>
@@ -183,9 +188,20 @@
       const resultsEl = document.getElementById("results");
 
       let catalog = { skills: [], categories: {}, skill_count: 0 };
+      const allowedEvalTiers = new Set([
+        "structural_only",
+        "fixture_checked",
+        "rollout_checked",
+        "held_out_validated",
+      ]);
 
       function safeText(value) {
         return value && String(value).trim() ? String(value).trim() : "Not specified yet.";
+      }
+
+      function safeEvalTier(value) {
+        const tier = String(value || "").trim();
+        return allowedEvalTiers.has(tier) ? tier : "structural_only";
       }
 
       function skillHaystack(skill) {
@@ -193,6 +209,7 @@
           skill.name,
           skill.display_name,
           skill.category,
+          safeEvalTier(skill.eval_tier),
           skill.description,
           skill.short_description,
           skill.intended_use,
@@ -227,14 +244,17 @@
         for (const skill of skills) {
           const article = document.createElement("article");
           article.className = "lab-b-product-panel catalog-card";
+          const evalTier = safeEvalTier(skill.eval_tier);
           article.innerHTML = `
             <p class="lab-b-eyebrow">${skill.category}</p>
             <h3>${skill.display_name}</h3>
             <div class="catalog-pills">
               <span>${skill.name}</span>
+              <span>${evalTier}</span>
             </div>
             <p class="lab-b-product-summary">${skill.short_description || skill.description}</p>
             <div class="small"><strong>Intended use:</strong> ${safeText(skill.intended_use)}</div>
+            <div class="small"><strong>Eval tier:</strong> ${evalTier}</div>
             <div class="small"><strong>Model sensitivity:</strong> ${safeText(skill.model_sensitivity)}</div>
             <div class="small"><strong>Composable with:</strong> ${(skill.composable_with || []).length ? skill.composable_with.join("; ") : "Not specified yet."}</div>
             <div class="small"><strong>Anti-patterns:</strong> ${(skill.anti_patterns || []).length ? skill.anti_patterns.join("; ") : "Not specified yet."}</div>

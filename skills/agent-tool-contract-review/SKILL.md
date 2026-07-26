@@ -17,6 +17,18 @@ Use this skill to make a tool easier and safer for agents to call.
 - changing AGENTS.md generator templates that tell agents which commands or tools to use;
 - a tool has ambiguous parameters, hidden side effects, noisy output, or weak error messages;
 - agent runs repeatedly misuse a command or need human intervention after avoidable failures.
+- adapting an external skill, contract, or workflow into the local skill network.
+
+## Adaptation Delta
+
+Before writing an adapted external skill, classify each material source fragment in `templates/adaptation-delta.yaml`:
+
+- `KEEP`: retain source mechanics or schema without semantic change;
+- `ADAPT`: change paths, tools, authority, terminology, or environment assumptions;
+- `ADD`: introduce local guardrails, routing, verification, or project boundaries;
+- `REJECT`: exclude a fragment and record the reason plus source reference.
+
+Every entry requires a stable ID and source fragment reference. Present the complete delta to the owner before writing. Record `APPROVED`, `REVISE`, or `REJECTED`; silence is not approval. Preserve attribution and license constraints independently of the classification.
 
 ## Review Dimensions
 
@@ -54,7 +66,8 @@ Use:
 - Do not hide write or destructive behavior behind friendly wording.
 - Do not require agents to infer defaults that can be encoded in schema.
 - Do not make logs the primary machine interface when structured output is feasible.
+- Do not silently omit or rewrite upstream behavior during adaptation.
 
 ## Provenance
 
-Adapted from tool-design patterns in `muratcankoylan/Agent-Skills-for-Context-Engineering`, narrowed for SET, AGENTS.md generator, MCP, and CLI contract review.
+Adapted from tool-design patterns in `muratcankoylan/Agent-Skills-for-Context-Engineering`, plus MakerSkills' explicit keep/adapt/add porting report. Narrowed for SET, AGENTS.md generator, MCP, CLI, and provider-neutral skill adaptation, with an added `REJECT` disposition and owner gate.

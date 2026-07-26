@@ -27,6 +27,7 @@ Outputs: ranked motion findings, concrete fixes, a block/needs-changes/approve d
 - `browser-verification`
 - `design-critique-polish`
 - `frontend-taste-layer`
+- `fluid-interaction-review`
 - `lottie-motion-builder`
 
 ## Risks and Mitigations
