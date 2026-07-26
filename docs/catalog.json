@@ -1,6 +1,5 @@
 {
-  "skill_count": 73,
-  "skill_count": 78,
+  "skill_count": 80,
   "categories": {
     "Research, Knowledge & Reusable Methods": 13,
     "Uncategorized": 4,
@@ -9,7 +8,6 @@
     "Discovery, Planning & Delivery": 6,
     "Security & Defensive Review": 1,
     "Product Context & Responsible Growth": 2,
-    "Frontend, UX & Product Surfaces": 10,
     "Token Economy & Context Control": 9,
     "Long-Run Delivery Control": 6,
     "Project Context & Onboarding": 5,
@@ -239,6 +237,25 @@
       "eval_tier": "structural_only"
     },
     {
+      "name": "bounded-growth-loop",
+      "display_name": "Bounded Growth Loop",
+      "category": "Product Context & Responsible Growth",
+      "description": "Design a small recurring product, content, SEO, analytics, or go-to-market review loop with evidence checks, durable state, explicit stop rules, and approval-gated outputs. Use before scheduling recurring growth work or turning a repeated marketing task into an agent loop.",
+      "short_description": "Design a recurring product review loop with proof and approval gates.",
+      "intended_use": "Use before scheduling recurring content, SEO, analytics, funnel, partner, or product-positioning work.",
+      "model_sensitivity": "",
+      "composable_with": [],
+      "anti_patterns": [],
+      "risks": "- Risk: noisy or runaway automation. Mitigation: separate check cadence from action condition and require stop rules.\n- Risk: unsafe side effects. Mitigation: default to report-only or proposal-first; require approval for every external write.\n- Risk: false causal claims. Mitigation: require evidence thresholds and alternative explanations.",
+      "path": "skills/bounded-growth-loop/SKILL.md",
+      "card_path": "skills/bounded-growth-loop/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/bounded-growth-loop/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/bounded-growth-loop/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental",
+      "eval_tier": "structural_only"
+    },
+    {
       "name": "bounded-orchestration-contract",
       "display_name": "Bounded Orchestration Contract",
       "category": "Uncategorized",
@@ -267,24 +284,6 @@
       "origin": "adapted",
       "status": "experimental",
       "eval_tier": "structural_only"
-    },
-    {
-      "name": "bounded-growth-loop",
-      "display_name": "Bounded Growth Loop",
-      "category": "Product Context & Responsible Growth",
-      "description": "Design a small recurring product, content, SEO, analytics, or go-to-market review loop with evidence checks, durable state, explicit stop rules, and approval-gated outputs. Use before scheduling recurring growth work or turning a repeated marketing task into an agent loop.",
-      "short_description": "Design a recurring product review loop with proof and approval gates.",
-      "intended_use": "Use before scheduling recurring content, SEO, analytics, funnel, partner, or product-positioning work.",
-      "model_sensitivity": "",
-      "composable_with": [],
-      "anti_patterns": [],
-      "risks": "- Risk: noisy or runaway automation. Mitigation: separate check cadence from action condition and require stop rules.\n- Risk: unsafe side effects. Mitigation: default to report-only or proposal-first; require approval for every external write.\n- Risk: false causal claims. Mitigation: require evidence thresholds and alternative explanations.",
-      "path": "skills/bounded-growth-loop/SKILL.md",
-      "card_path": "skills/bounded-growth-loop/SKILL_CARD.md",
-      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/bounded-growth-loop/SKILL.md",
-      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/bounded-growth-loop/SKILL_CARD.md",
-      "origin": "adapted",
-      "status": "experimental"
     },
     {
       "name": "brief-first-execution",
@@ -1286,7 +1285,8 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/product-context/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/product-context/SKILL_CARD.md",
       "origin": "adapted",
-      "status": "experimental"
+      "status": "experimental",
+      "eval_tier": "structural_only"
     },
     {
       "name": "project-context-bootstrap",
