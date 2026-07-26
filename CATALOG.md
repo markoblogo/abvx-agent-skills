@@ -4,6 +4,7 @@ Generated from `docs/catalog.json`.
 
 | Skill | Category | Eval tier | Use case | Install |
 |---|---|---|---|---|
+| `agent-friction-ledger` | Research, Knowledge & Reusable Methods | structural_only | Capture material agent friction locally and propose durable fixes. | `gh skill install markoblogo/abvx-agent-skills agent-friction-ledger` |
 | `agent-learning-layer-triage` | Research, Knowledge & Reusable Methods | structural_only | Route agent lessons into memory, skills, scripts, or evals. | `gh skill install markoblogo/abvx-agent-skills agent-learning-layer-triage` |
 | `agent-operations-contract` | Uncategorized | structural_only | Review agent identity, receipts, memory, and routes. | `gh skill install markoblogo/abvx-agent-skills agent-operations-contract` |
 | `agent-tool-contract-review` | Coding, Debugging & Architecture | structural_only | Review MCP, CLI, SET, and tool contracts before agent use. | `gh skill install markoblogo/abvx-agent-skills agent-tool-contract-review` |
