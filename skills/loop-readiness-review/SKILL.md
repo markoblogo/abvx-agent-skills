@@ -86,6 +86,7 @@ Use:
 - `bounded-evaluation` for verifier and maker/checker gates.
 - `reversible-agent-task` for proposal-first worktree or retained-output settlement.
 - `agent-tool-contract-review` for MCP, CLI, and GitHub Action inputs used by the loop.
+- `loop-hardening-contract` for runtime-path sprint packets, measured harness stripping, and broken-window revalidation without automatic revert.
 
 ## Provenance
 

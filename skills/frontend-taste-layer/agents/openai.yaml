@@ -1,4 +1,4 @@
 interface:
   display_name: "Frontend Taste Layer"
-  short_description: "Add anti-slop taste to frontend work."
-  default_prompt: "Improve this frontend with stronger design taste and less template-looking output."
+  short_description: "Review marketing and editorial frontend taste."
+  default_prompt: "State the design read, calibrate composition, motion, and density, preserve approved elements, then review layout rhythm and browser evidence. Route product UI to Lazyweb and UX review."

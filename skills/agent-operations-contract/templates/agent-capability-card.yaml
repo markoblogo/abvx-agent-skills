@@ -1,0 +1,17 @@
+schema_version: 1
+agent_id: example-agent
+purpose: Describe one bounded outcome.
+responsibilities: []
+owner: replace-with-owner
+authority: read
+models: []
+tools: []
+knowledge_bases: []
+allowed_schedules:
+  unattended: false
+  rules: []
+approval_boundary:
+  approver: replace-with-owner
+  required_for: []
+  forbidden: []
+last_confirmed_capabilities: []

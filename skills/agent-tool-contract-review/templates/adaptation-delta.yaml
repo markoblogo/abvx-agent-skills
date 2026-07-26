@@ -1,0 +1,22 @@
+schema_version: 1
+adaptation_id: adaptation-example
+source:
+  repository: owner/repository
+  revision: replace-with-immutable-revision
+  license: replace-with-license
+target:
+  repository: owner/repository
+  skill: replace-with-skill
+owner: replace-with-owner
+entries:
+  - id: AD-001
+    disposition: KEEP
+    source_fragment: path/to/source:line-or-heading
+    summary: Replace with the retained mechanic.
+    reason: Replace with why this disposition is correct.
+    target_reference: null
+owner_review:
+  status: REVISE
+  reviewed_at: null
+  reviewed_by: null
+  reason: Initial state; writing is blocked until explicit approval.

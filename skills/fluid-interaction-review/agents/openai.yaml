@@ -1,0 +1,4 @@
+interface:
+  display_name: "Fluid Interaction Review"
+  short_description: "Review drag, swipe, and gesture physics."
+  default_prompt: "Use $fluid-interaction-review to review this direct-manipulation interaction for tracking, interruption, velocity, bounds, spatial continuity, accessibility fallbacks, and browser evidence."

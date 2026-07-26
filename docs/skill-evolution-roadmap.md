@@ -18,6 +18,8 @@ baseline -> rollout evidence -> bounded proposal -> held-out validation
          -> accept/version or reject/record
 ```
 
+In SkillOpt terms, the skill file is treated as a trainable procedural artifact, not as permanent prose. The ABVX version keeps the same discipline but remains manual/staged: collect scored rollout evidence, propose bounded edits, validate against held-out cases, and export `best_skill.md` only after maintainer acceptance.
+
 The researcher-loop structure for future automation is:
 
 ```text
@@ -35,6 +37,10 @@ Each proposal is an `add`, `delete`, `replace`, or `move` operation with:
 - validation command or evaluator;
 - result, score delta, and decision.
 
+The default bounded edit set is `add`, `delete`, and `replace`. Use `move` only when the validation target is structure/readability rather than behavior. Full skill rewrites, hidden prompt drift, and authority expansion are rejected by default.
+
+Rollout evidence must record task ID, input, skill ID, skill version, trajectory or run-note reference, verifier, score, and failure class. Keep enough evidence to audit the scoring decision without exposing secrets or protected project data.
+
 Before validation, generate a small set of alternative bounded proposals rather than accepting the first plausible edit. Use `hypothesis-diversification` when candidate generation needs an explicit diversity-first pass. The point is not to vote on model confidence; it is to expose different edit shapes before the validation gate chooses what is worth testing.
 
 The first implementation may be manual or script-assisted. A proposal remains separate until validation passes and a maintainer explicitly accepts it.
@@ -46,6 +52,8 @@ Use `bounded-evaluation` for pairwise checks, position-bias mitigation, activati
 The pilot manifest lives at [`benchmarks/skill-evolution/manifest.json`](../benchmarks/skill-evolution/manifest.json). It names the candidate skills, the evidence and validation requirements, and the limits for the first experiments.
 
 Rejected proposals belong in the rejected-edit buffer. Record why a plausible edit was rejected so later iterations do not repeat overfit, duplicate, or guardrail-weakening changes.
+
+`SkillOpt-Sleep`-style proposals are staged review material only. They may create a candidate, but they cannot update the published pack, catalog, README, or installed local skill without explicit maintainer acceptance.
 
 The first researcher artifacts should stay small:
 
@@ -65,6 +73,7 @@ An evolution proposal is eligible for acceptance only when:
 4. held-out or independently selected validation does not regress;
 5. safety, accessibility, validation, data-loss, and reversibility rules remain intact;
 6. the accepted version and evidence are reviewable in git.
+7. `best_skill.md`, when produced, is an accepted export artifact rather than an experimental draft.
 
 If reliable scoring is unavailable, keep the proposal as a note or rejected candidate. Do not infer improvement from a persuasive explanation or one successful run.
 

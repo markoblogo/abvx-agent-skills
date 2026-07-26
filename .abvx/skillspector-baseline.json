@@ -10,6 +10,16 @@
       "fingerprint": "RA1:skills/loopops-protocol/SKILL_CARD.md:30:30",
       "reason": "The skill card documents the same controlled skill-evolution behavior for reviewer context.",
       "expires_on": "2026-12-31"
+    },
+    {
+      "fingerprint": "OH1:skills/bug-evidence-protocol/scripts/capture_command.py:48:48",
+      "reason": "The evidence helper invokes fixed Git argv without a shell to record repository identity.",
+      "expires_on": "2026-10-31"
+    },
+    {
+      "fingerprint": "OH1:skills/bug-evidence-protocol/scripts/capture_command.py:90:90",
+      "reason": "The evidence helper runs the explicit user-supplied argv without a shell, with timeout and bounded redacted output.",
+      "expires_on": "2026-10-31"
     }
   ]
 }

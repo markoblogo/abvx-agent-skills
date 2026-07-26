@@ -1,6 +1,6 @@
 ---
 name: frontend-taste-layer
-description: Add a stronger anti-slop taste layer to frontend work. Use when the UI direction is too generic, templated, card-heavy, gradient-biased, typographically weak, or visually under-committed, especially for landing pages, portfolios, and brand-forward redesigns.
+description: Set and review a bounded visual direction for marketing, editorial, portfolio, and brand-forward frontend work. Use when a surface needs an explicit design read, calibrated composition/motion/density, preservation-first redesign, layout-rhythm review, or desktop/mobile/reduced-motion verification. Route product UI to Lazyweb and UX review instead.
 license: MIT
 metadata:
   abvx_status: experimental
@@ -28,6 +28,12 @@ Use this after the task is understood and the surface register is known. If the 
 - settings forms where utility matters more than expressive styling;
 - projects that must preserve a strict existing enterprise design system.
 
+## Route Before Styling
+
+- For marketing, editorial, portfolio, and brand-forward pages, continue with this skill.
+- For dashboards, settings, onboarding, checkout, paywalls, and other product UI, use Lazyweb evidence first, then `user-experience`, `design-critique-polish`, or the project's product-specific skill.
+- If one page mixes both registers, apply this skill only to the marketing/editorial regions. Product-task clarity wins at the seam.
+
 ## Design Read
 
 Before changing code, state one sentence:
@@ -38,13 +44,22 @@ Do not skip this. Most generic output comes from styling before the read is expl
 
 ## Three Dials
 
-Set these mentally for the pass:
+Set these as relative directions for the pass; do not impose universal numeric defaults:
 
 - `variance`: symmetry versus surprise;
 - `motion`: static versus cinematic;
 - `density`: airy versus packed.
 
 Use them to keep decisions consistent. Do not expose a pile of disconnected visual tweaks.
+
+## Audit First On Redesigns
+
+Before changing an existing surface, write two short lists:
+
+- preserve: approved copy, brand assets, tokens, working interactions, content hierarchy, accessibility behavior, and explicit owner constraints;
+- reconsider: only the composition, typography, density, motion, or section rhythm that the brief permits changing.
+
+Do not silently rewrite content, replace supplied assets, swap the design system, or broaden the redesign scope.
 
 ## Anti-Slop Rules
 
@@ -66,7 +81,7 @@ Use them to keep decisions consistent. Do not expose a pile of disconnected visu
 
 ## Motion Taste Rules
 
-- Do not animate just because the surface feels flat; first decide what motion explains or confirms.
+- Every animation must communicate hierarchy, feedback, state change, or narrative. If its purpose cannot be stated in one sentence, remove it.
 - Avoid motion on high-frequency or keyboard-triggered interactions.
 - Prefer crisp, short, origin-aware motion over broad cinematic transitions in product UI.
 - After implementing meaningful motion, run `motion-review-gate` before calling the surface ship-ready.
@@ -86,11 +101,32 @@ If a surface is product-first, use this skill as a restraint-and-hierarchy layer
 - Motion must respect reduced-motion settings.
 - If the project already has tokens or a component system, bend them intelligently before replacing them.
 
+## Layout Rhythm Review
+
+- Name each section's layout family, then flag accidental repetition that flattens distinct content roles.
+- Repetition is not automatically a defect: navigation, lists, and comparable records may need it.
+- When consecutive marketing sections repeat the same split, equal-card grid, or centered-stack composition without a content reason, change the smallest high-leverage section rather than reskinning the page.
+
+## Evidence Pass
+
+Before calling the reviewed surface ready, verify:
+
+1. one representative desktop width;
+2. one representative mobile width;
+3. `prefers-reduced-motion` behavior when motion exists;
+4. every visible string, including navigation, headings, buttons, labels, captions, alt text, and loading, empty, error, or disabled states that belong to the reviewed path;
+5. preserved items from the redesign audit are still intact.
+
+Build success and source inspection do not count as visual verification. If browser evidence is unavailable, report `INSUFFICIENT_VISUAL_EVIDENCE`.
+
 ## Final Report
 
 Include:
 
 - the design read;
+- the relative variance, motion, and density direction;
+- what was preserved during redesign;
 - what anti-slop defaults were deliberately avoided;
 - key visual decisions changed;
+- desktop, mobile, reduced-motion, and visible-copy evidence;
 - what still remains intentionally plain because the product context demands it.
