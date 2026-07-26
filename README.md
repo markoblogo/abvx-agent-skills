@@ -56,6 +56,14 @@ Browse the searchable catalog at [lab.abvx.xyz/tools/abvx-agent-skills/](https:/
 
 If you want a scan-friendly text catalog for browsing or indexing, use [CATALOG.md](CATALOG.md).
 
+## Companion contracts
+
+Some useful repo surfaces are companion contracts rather than installable skill entries.
+
+- [docs/ship-router-contract.md](docs/ship-router-contract.md) — choose `direct`, `review_first`, `bounded_loop`, `human_gate`, or `blocked` before execution widens or a ship claim is made.
+- [docs/quality-eval-and-catalog-hygiene-contract.md](docs/quality-eval-and-catalog-hygiene-contract.md) — keep the public pack, generated catalog, and skill truth aligned.
+- [docs/catalog-drift-and-distribution.md](docs/catalog-drift-and-distribution.md) — define what belongs in GitHub, Lab, and generated distribution surfaces.
+
 ## Start With One Job
 
 | Job | Install | Use when |
@@ -69,6 +77,7 @@ If you want a scan-friendly text catalog for browsing or indexing, use [CATALOG.
 | Preserve typed project truth | `git-native-context-contract` | Decisions, rules, specs, plans, bounded research, or recurring incident lessons need a minimal Git-reviewed lifecycle and relation contract. |
 | Run reversible agent work | `reversible-agent-task` | A task should produce retained output first, then move through inspect -> select/apply/discard before touching the target workspace. |
 | Check ship confidence | `confidence-fragility-review`, `delivery-baseline-audit` | A release, README, generated plan, or PR sounds done but evidence may be thin. |
+| Choose the right delivery lane before shipping | `docs/ship-router-contract.md` | Work may need `direct`, `review_first`, `bounded_loop`, or `human_gate` routing before implementation widens or a ship claim is made. |
 | Save tokens in shell-heavy work | `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution` | Logs, diffs, tests, and command output are burning context and hiding the real signal. |
 | Verify frontend work | `browser-verification`, `design-critique-polish`, `motion-review-gate`, `fluid-interaction-review` for drag/swipe physics | The agent says "done" without checking real browser behavior, layout, states, motion, gesture continuity, or console errors. |
 | Govern named agents, long operations, and durable decisions | `agent-operations-contract`, `agent-tool-contract-review`, `loop-readiness-review` | Agent configuration, schedules, memory, providers, operation status, or decision records are mistaken for authority or verified outcomes. |
@@ -86,6 +95,10 @@ See:
 
 The next LoopOps layer is bounded skill evolution: see [docs/skill-evolution-roadmap.md](docs/skill-evolution-roadmap.md) and the manual-pilot manifest in [benchmarks/skill-evolution/manifest.json](benchmarks/skill-evolution/manifest.json). Start with one or two repeated skills, treat the skill as a versioned artifact, capture rollout evidence, keep edits bounded, validate against held-out or independent cases, retain rejected proposals as negative feedback, and export `best_skill.md` only after maintainer acceptance.
 
+For the public pack and searchable catalog, also keep catalog text source-linked, concise, and drift-checked against real skill files. See [docs/quality-eval-and-catalog-hygiene-contract.md](docs/quality-eval-and-catalog-hygiene-contract.md).
+Use [docs/catalog-schema-hardening.md](docs/catalog-schema-hardening.md), [docs/catalog-eval-tiers.md](docs/catalog-eval-tiers.md), and [docs/catalog-drift-and-distribution.md](docs/catalog-drift-and-distribution.md) for the follow-up rules.
+For delivery-lane choice before a ship claim, use [docs/ship-router-contract.md](docs/ship-router-contract.md).
+
 <p>
   <img src="assets/loopops-landscape.png" alt="LoopOps promotion ladder from prompt to checklist, skill, script, or bounded loop" width="1280">
 </p>
@@ -94,6 +107,7 @@ The next LoopOps layer is bounded skill evolution: see [docs/skill-evolution-roa
 
 - **Need to save tokens?** Start with `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution`, and `lean-context-layout`. Add `compaction-survival` if your sessions run long enough to forget their own state.
 - **Need to check whether context is hurting the run?** Start with `context-degradation-review` before trusting long handoffs, memory summaries, or bloated SET bundles.
+- **Need to choose direct vs review-first vs loop vs human approval before work widens?** Start with [docs/ship-router-contract.md](docs/ship-router-contract.md), then route into the smallest sufficient follow-up skill set.
 - **Need to debug a repo?** Start with `diagnose`, `repo-debugging-ledger`, and `graph-guided-code-reading`.
 - **Need auditable red-to-green proof?** Add `bug-evidence-protocol` after `diagnose`; use risk-based approval and link recurrent lessons to a `cpat`.
 - **Need code review discipline?** Run a Standards pass with `overengineering-review`, `minimal-diff-builder`, or `architecture-deepening-review`, then a Spec pass with `delivery-baseline-audit` against the issue, PRD, or task contract.
@@ -176,7 +190,7 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 | `design-register-bootstrap` | Establishes compact design context before implementation: `brand` vs `product` register, audience, anti-references, color strategy, and PRODUCT.md / DESIGN.md direction. |
 | `frontend-taste-layer` | Sets and reviews marketing/editorial visual direction through a design read, relative composition/motion/density, preservation-first redesign, layout rhythm, and browser evidence; product UI routes to Lazyweb and UX review. |
 | `fluid-interaction-review` | Reviews direct-manipulation physics: 1:1 tracking and grab offset, pointer capture, current-value interruption, velocity handoff, momentum projection, hysteresis, soft boundaries, spatial continuity, and independent motion/transparency/contrast fallbacks. |
-| `anti-slop-review` | Reviews implemented UI for hard defects, incoherence, and template risk with stable evidence-backed findings instead of blanket aesthetic bans. |
+| `anti-slop-review` | Reviews implemented UI and public prose for hard defects, incoherence, template risk, and AI-writing tells with stable evidence-backed findings instead of blanket aesthetic or voice bans. |
 | `design-critique-polish` | Runs a focused critique-and-polish pass to rank frontend issues, identify ship blockers, and tighten hierarchy, typography, color, and states. |
 | `frontend-product-builder` | Builds usable frontends, landing pages, pitch pages, dashboards, and prototypes with a product-first interaction model. |
 | `lottie-motion-builder` | Builds small production-ready Lottie assets from SVGs, logos, loaders, and UI states with a local preview harness and output verification. |
@@ -309,6 +323,8 @@ Current distribution channels:
 - TestPyPI: published
 - conda-forge: staged-recipes submission currently open at <https://github.com/conda-forge/staged-recipes/pull/33719>
 
+Distribution boundaries for repo, Lab, and package surfaces are summarized in [docs/catalog-drift-and-distribution.md](docs/catalog-drift-and-distribution.md).
+
 Install the packaged CLI from PyPI:
 
 ```bash
@@ -391,6 +407,9 @@ This repository is intentionally optimized for inspection before trust: compact 
 ## Distribution
 
 If you are listing the repo in curated skill directories, agent catalogs, or install surfaces, use [docs/outreach/submission-kit.md](docs/outreach/submission-kit.md) for positioning and [docs/outreach/targets.md](docs/outreach/targets.md) for target tracking.
+
+Catalog and publish discipline for the pack itself lives in [docs/quality-eval-and-catalog-hygiene-contract.md](docs/quality-eval-and-catalog-hygiene-contract.md).
+Schema expectations, eval tiers, and drift/distribution rules live in [docs/catalog-schema-hardening.md](docs/catalog-schema-hardening.md), [docs/catalog-eval-tiers.md](docs/catalog-eval-tiers.md), and [docs/catalog-drift-and-distribution.md](docs/catalog-drift-and-distribution.md).
 
 For the current first-wave outreach set, use [docs/outreach/first-wave-submissions.md](docs/outreach/first-wave-submissions.md).
 
