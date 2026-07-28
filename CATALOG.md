@@ -4,6 +4,7 @@ Generated from `docs/catalog.json`.
 
 | Skill | Category | Eval tier | Use case | Install |
 |---|---|---|---|---|
+| `agent-friction-ledger` | Research, Knowledge & Reusable Methods | structural_only | Capture material agent friction locally and propose durable fixes. | `gh skill install markoblogo/abvx-agent-skills agent-friction-ledger` |
 | `agent-learning-layer-triage` | Research, Knowledge & Reusable Methods | structural_only | Route agent lessons into memory, skills, scripts, or evals. | `gh skill install markoblogo/abvx-agent-skills agent-learning-layer-triage` |
 | `agent-operations-contract` | Uncategorized | structural_only | Review agent identity, receipts, memory, and routes. | `gh skill install markoblogo/abvx-agent-skills agent-operations-contract` |
 | `agent-tool-contract-review` | Coding, Debugging & Architecture | structural_only | Review MCP, CLI, SET, and tool contracts before agent use. | `gh skill install markoblogo/abvx-agent-skills agent-tool-contract-review` |
@@ -14,6 +15,7 @@ Generated from `docs/catalog.json`.
 | `authorized-security-router` | Security & Defensive Review | structural_only | Route authorized defensive security work safely. | `gh skill install markoblogo/abvx-agent-skills authorized-security-router` |
 | `book-to-skill` | Research, Knowledge & Reusable Methods | structural_only | Convert long-form documents into reusable agent skills. | `gh skill install markoblogo/abvx-agent-skills book-to-skill` |
 | `bounded-evaluation` | Research, Knowledge & Reusable Methods | structural_only | Design compact evaluation gates for agent outputs. | `gh skill install markoblogo/abvx-agent-skills bounded-evaluation` |
+| `bounded-growth-loop` | Product Context & Responsible Growth | structural_only | Design a recurring product review loop with proof and approval gates. | `gh skill install markoblogo/abvx-agent-skills bounded-growth-loop` |
 | `bounded-orchestration-contract` | Uncategorized | structural_only | Gate plans, packets, routes, and root verification. | `gh skill install markoblogo/abvx-agent-skills bounded-orchestration-contract` |
 | `brief-first-execution` | Research, Knowledge & Reusable Methods | structural_only | Create one live brief before substantial work starts. | `gh skill install markoblogo/abvx-agent-skills brief-first-execution` |
 | `browser-verification` | Frontend, UX & Product Surfaces | structural_only | Verify web changes with real browser automation. | `gh skill install markoblogo/abvx-agent-skills browser-verification` |
@@ -60,6 +62,7 @@ Generated from `docs/catalog.json`.
 | `pipeline-readiness-gate` | Workflow, Handoffs & Multi-Track Work | structural_only | Select a compact pre/post/ship gate for agent work. | `gh skill install markoblogo/abvx-agent-skills pipeline-readiness-gate` |
 | `plan-to-issues` | Discovery, Planning & Delivery | structural_only | Break plans into thin end-to-end slices with blockers and criteria. | `gh skill install markoblogo/abvx-agent-skills plan-to-issues` |
 | `private-vs-publishable-skill-audit` | Research, Knowledge & Reusable Methods | structural_only | Classify private skill-pack content before publishing any of it. | `gh skill install markoblogo/abvx-agent-skills private-vs-publishable-skill-audit` |
+| `product-context` | Product Context & Responsible Growth | structural_only | Build an evidence-backed product context before go-to-market work. | `gh skill install markoblogo/abvx-agent-skills product-context` |
 | `project-context-bootstrap` | Project Context & Onboarding | structural_only | Detect stack, ask the right project questions, and build compact durable context. | `gh skill install markoblogo/abvx-agent-skills project-context-bootstrap` |
 | `prototype-lab` | Frontend, UX & Product Surfaces | structural_only | Build throwaway prototypes that answer one question. | `gh skill install markoblogo/abvx-agent-skills prototype-lab` |
 | `rabbithole-doc-exploration` | Project Context & Onboarding | structural_only | Use a local Rabbithole canvas to explore dense agent docs with human-selected branches. | `gh skill install markoblogo/abvx-agent-skills rabbithole-doc-exploration` |

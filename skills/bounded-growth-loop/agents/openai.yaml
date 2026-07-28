@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bounded Growth Loop"
+  short_description: "Design a recurring product review loop with proof and approval gates."
+  default_prompt: "Design a bounded, proposal-first growth loop for this product workflow."

@@ -84,7 +84,6 @@ keep the adaptation narrow:
 - keep search budgeted by candidate count and evaluation cost;
 - treat optimizer output as proposal material until held-out validation and
   maintainer review pass.
-
 ## Boundary
 
 - this repo does not become a giant marketplace;
