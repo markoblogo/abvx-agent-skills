@@ -1,7 +1,7 @@
 # Skill Card: frontend-taste-layer
 
 ## Description
-Adds a bounded taste-review layer for marketing/editorial surfaces: explicit design read, relative composition/motion/density, preservation-first redesign, layout rhythm, and browser evidence.
+Adds a bounded taste-review layer for marketing/editorial surfaces: explicit design read, creator-intent check, relative composition/motion/density, preservation-first redesign, layout rhythm, and browser evidence.
 
 ## Owner
 ABVX / Anton Biletskiy-Volokh
@@ -21,7 +21,7 @@ ABVX adapted from Leonxlnx `taste-skill` anti-slop frontend direction, plus loca
 ## Inputs and Outputs
 Inputs: brief, screenshots, existing frontend code, references, and current design context.
 
-Outputs: design read, relative axes, preservation audit, layout/motion findings, and desktop/mobile/reduced-motion/visible-copy evidence.
+Outputs: design read, creator-intent check, relative axes, preservation audit, layout/motion findings, and desktop/mobile/reduced-motion/visible-copy evidence.
 
 ## Risks and Mitigations
 - Risk: style over function. Mitigation: require a design read and preserve product clarity.

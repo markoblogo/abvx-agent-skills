@@ -38,6 +38,8 @@ Do not treat these as interchangeable. Brand surfaces can lead with identity and
    - surface type: `brand` or `product`;
    - audience;
    - first-screen job;
+   - creator intent: what the person is actually trying to make possible;
+   - preserve-theirs: what must remain recognizably theirs;
    - brand/product lane;
    - anti-references: what this should explicitly not resemble;
    - color strategy: restrained, committed, full palette, or drenched;
@@ -47,7 +49,7 @@ Do not treat these as interchangeable. Brand surfaces can lead with identity and
 3. If context files are missing, create or update:
    - `PRODUCT.md` for audience, product lane, workflow, tone, anti-references;
    - `DESIGN.md` for colors, typography, spacing, component patterns, do/don't rules.
-4. If the surface is ambiguous, ask one clarifying question only when the branch between `brand` and `product` is genuinely unclear.
+4. If the surface is ambiguous, ask one clarifying question only when the branch between `brand` and `product` is genuinely unclear, or when creator intent is too vague to guide a real design choice.
 5. Use the register as a constraint system for later frontend work. Do not restyle pages in the same pass unless the task explicitly includes implementation.
 
 ## Output Shape
@@ -56,7 +58,9 @@ When working inline, summarize:
 
 - `register`
 - `audience`
+- `creator intent`
 - `design thesis`
+- `preserve-theirs`
 - `anti-references`
 - `color strategy`
 - `typography direction`

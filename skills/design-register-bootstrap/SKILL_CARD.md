@@ -1,7 +1,7 @@
 # Skill Card: design-register-bootstrap
 
 ## Description
-Creates or refreshes compact frontend design context, with an explicit `brand` versus `product` register split, before implementation begins.
+Creates or refreshes compact frontend design context, with an explicit `brand` versus `product` register split and a small creator-intent check, before implementation begins.
 
 ## Owner
 ABVX / Anton Biletskiy-Volokh
@@ -21,7 +21,7 @@ ABVX adapted from pbakaus `impeccable` project setup and register split concepts
 ## Inputs and Outputs
 Inputs: brief, screenshots, reference URLs, existing tokens, CSS, components, and any current context files.
 
-Outputs: compact design register, updated `PRODUCT.md` and/or `DESIGN.md`, downstream design constraints.
+Outputs: compact design register, creator-intent and preserve-theirs fields, updated `PRODUCT.md` and/or `DESIGN.md`, downstream design constraints.
 
 ## Risks and Mitigations
 - Risk: over-documenting instead of shipping. Mitigation: keep context compact and implementation-oriented.

@@ -187,8 +187,8 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 
 | Skill | What It Does |
 |---|---|
-| `design-register-bootstrap` | Establishes compact design context before implementation: `brand` vs `product` register, audience, anti-references, color strategy, and PRODUCT.md / DESIGN.md direction. |
-| `frontend-taste-layer` | Sets and reviews marketing/editorial visual direction through a design read, relative composition/motion/density, preservation-first redesign, layout rhythm, and browser evidence; product UI routes to Lazyweb and UX review. |
+| `design-register-bootstrap` | Establishes compact design context before implementation: `brand` vs `product` register, audience, creator intent, preserve-theirs constraints, anti-references, color strategy, and PRODUCT.md / DESIGN.md direction. |
+| `frontend-taste-layer` | Sets and reviews marketing/editorial visual direction through a design read, creator-intent check, relative composition/motion/density, preservation-first redesign, layout rhythm, and browser evidence; product UI routes to Lazyweb and UX review. |
 | `fluid-interaction-review` | Reviews direct-manipulation physics: 1:1 tracking and grab offset, pointer capture, current-value interruption, velocity handoff, momentum projection, hysteresis, soft boundaries, spatial continuity, and independent motion/transparency/contrast fallbacks. |
 | `anti-slop-review` | Reviews implemented UI and public prose for hard defects, incoherence, template risk, and AI-writing tells with stable evidence-backed findings instead of blanket aesthetic or voice bans. |
 | `design-critique-polish` | Runs a focused critique-and-polish pass to rank frontend issues, identify ship blockers, and tighten hierarchy, typography, color, and states. |
