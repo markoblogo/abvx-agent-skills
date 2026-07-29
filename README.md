@@ -64,6 +64,7 @@ Some useful repo surfaces are companion contracts rather than installable skill 
 - [docs/quality-eval-and-catalog-hygiene-contract.md](docs/quality-eval-and-catalog-hygiene-contract.md) — keep the public pack, generated catalog, and skill truth aligned.
 - [docs/catalog-drift-and-distribution.md](docs/catalog-drift-and-distribution.md) — define what belongs in GitHub, Lab, and generated distribution surfaces.
 - Security-review repo selection belongs in `SET`: [docs/codex-security-repo-selection-matrix.md](https://github.com/markoblogo/SET/blob/main/docs/codex-security-repo-selection-matrix.md).
+- Search-discoverable code guidance lives in [docs/search-discoverable-code-note.md](docs/search-discoverable-code-note.md) here and the broader contract belongs in `SET`: [docs/search-discoverable-code-contract.md](https://github.com/markoblogo/SET/blob/main/docs/search-discoverable-code-contract.md).
 
 ## Start With One Job
 
