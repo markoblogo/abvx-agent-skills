@@ -29,7 +29,7 @@ Outputs: browser observations, screenshot paths if captured, failures, verificat
 - Risk: unintended side effects. Mitigation: gate authenticated, paid, or destructive flows.
 
 ## Evaluation
-Evaluated by structural validation and manual review against frontend verification workflows.
+Fixture-checked with activation, positive, and negative live-browser evidence cases in `benchmarks/fixture-cases/browser-verification.json`.
 
 ## Version
 0.2.0

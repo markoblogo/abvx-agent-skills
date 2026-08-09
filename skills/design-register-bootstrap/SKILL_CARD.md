@@ -1,7 +1,7 @@
 # Skill Card: design-register-bootstrap
 
 ## Description
-Creates or refreshes compact frontend design context, with an explicit `brand` versus `product` register split, before implementation begins.
+Creates or refreshes compact frontend design context, with an explicit `brand` versus `product` register split and a small creator-intent check, before implementation begins.
 
 ## Owner
 ABVX / Anton Biletskiy-Volokh
@@ -16,12 +16,12 @@ Use when a frontend project lacks stable design context, when `PRODUCT.md` or `D
 Do not use as a substitute for actual implementation, browser verification, or accessibility/performance review.
 
 ## Sources and Attribution
-ABVX adapted from pbakaus `impeccable` project setup and register split concepts, plus local PRODUCT.md / DESIGN.md workflow practice.
+ABVX adapted from pbakaus `impeccable` project setup and register split concepts, plus local PRODUCT.md / DESIGN.md workflow practice. Creator-intent and preserve-theirs checks are adapted from bish-x `creator-vibe`: https://github.com/bish-x/creator-vibe
 
 ## Inputs and Outputs
 Inputs: brief, screenshots, reference URLs, existing tokens, CSS, components, and any current context files.
 
-Outputs: compact design register, updated `PRODUCT.md` and/or `DESIGN.md`, downstream design constraints.
+Outputs: compact design register, creator-intent and preserve-theirs fields, updated `PRODUCT.md` and/or `DESIGN.md`, downstream design constraints.
 
 ## Risks and Mitigations
 - Risk: over-documenting instead of shipping. Mitigation: keep context compact and implementation-oriented.
@@ -32,7 +32,7 @@ Outputs: compact design register, updated `PRODUCT.md` and/or `DESIGN.md`, downs
 Evaluated by structural validation and manual review against frontend setup and redesign workflows.
 
 ## Version
-0.1.0
+0.2.0
 
 ## Reporting Issues
 Open an issue in the repository.

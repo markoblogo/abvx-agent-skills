@@ -1,6 +1,6 @@
 ---
 name: frontend-taste-layer
-description: Set and review a bounded visual direction for marketing, editorial, portfolio, and brand-forward frontend work. Use when a surface needs an explicit design read, calibrated composition/motion/density, preservation-first redesign, layout-rhythm review, or desktop/mobile/reduced-motion verification. Route product UI to Lazyweb and UX review instead.
+description: Set and review a bounded, creator-aware visual direction for marketing, editorial, portfolio, and brand-forward frontend work. Use when a surface needs an explicit design read, creator-intent check, calibrated composition/motion/density, preservation-first redesign, layout-rhythm review, or desktop/mobile/reduced-motion verification. Route product UI to Lazyweb and UX review instead.
 license: MIT
 metadata:
   abvx_status: experimental
@@ -41,6 +41,18 @@ Before changing code, state one sentence:
 `Reading this as: <surface> for <audience>, with a <vibe> language, leaning toward <design family>.`
 
 Do not skip this. Most generic output comes from styling before the read is explicit.
+
+## Creator Intent Check
+
+Before widening into polish, state briefly:
+
+- what the person is actually trying to make possible;
+- what must remain recognizably theirs;
+- which single decision most changes first-use experience.
+
+If the answer is still too vague to guide a real choice, ask one sharp
+clarifying question, not a survey. If ambiguity does not block a real choice,
+move.
 
 ## Three Dials
 
@@ -116,6 +128,9 @@ Before calling the reviewed surface ready, verify:
 3. `prefers-reduced-motion` behavior when motion exists;
 4. every visible string, including navigation, headings, buttons, labels, captions, alt text, and loading, empty, error, or disabled states that belong to the reviewed path;
 5. preserved items from the redesign audit are still intact.
+6. where applicable, the strongest visual decision still holds through first
+   use, failure, recovery, and repetition instead of working only as a
+   first-demo impression; for static surfaces record `N/A`.
 
 Build success and source inspection do not count as visual verification. If browser evidence is unavailable, report `INSUFFICIENT_VISUAL_EVIDENCE`.
 
@@ -129,4 +144,5 @@ Include:
 - what anti-slop defaults were deliberately avoided;
 - key visual decisions changed;
 - desktop, mobile, reduced-motion, and visible-copy evidence;
+- whether the result still feels authored and usable across first use, failure, recovery, and repetition;
 - what still remains intentionally plain because the product context demands it.

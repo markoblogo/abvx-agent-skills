@@ -1,0 +1,8 @@
+{
+  "skill": "reversible-agent-task",
+  "eval_tier": "fixture_checked",
+  "activation": "Prepare a retained proposal and inspect it before applying any multi-file workspace change.",
+  "positive": "Keeps the target workspace unchanged until an explicit select/apply decision.",
+  "negative": "Do not add proposal overhead to a low-risk one-file documentation typo.",
+  "failure_class": "reversibility_or_overhead_drift"
+}

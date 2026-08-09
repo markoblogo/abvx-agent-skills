@@ -73,6 +73,17 @@ Before a new skill or a materially changed skill is treated as published:
 - record evaluation or the reason evaluation is still limited;
 - keep acceptance human-reviewed.
 
+## GEPA-style note
+
+If later experiments use GEPA-style search for prompt or skill improvement,
+keep the adaptation narrow:
+
+- optimize only versioned text artifacts with stable evaluators;
+- preserve useful trace detail such as failure classes, judge notes, or tool
+  errors instead of reducing every run to one scalar score;
+- keep search budgeted by candidate count and evaluation cost;
+- treat optimizer output as proposal material until held-out validation and
+  maintainer review pass.
 ## Boundary
 
 - this repo does not become a giant marketplace;

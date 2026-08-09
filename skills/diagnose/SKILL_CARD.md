@@ -29,7 +29,7 @@ Outputs: repro loop, hypotheses, probes, scoped fix, regression evidence.
 - Risk: leaked debug code. Mitigation: tagged instrumentation cleanup.
 
 ## Evaluation
-Evaluated by structural validation and manual review against debugging workflows.
+Fixture-checked with activation, positive, and negative evidence cases in `benchmarks/fixture-cases/diagnose.json`.
 
 ## Version
 0.2.0

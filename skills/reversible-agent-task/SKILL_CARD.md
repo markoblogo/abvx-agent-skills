@@ -29,7 +29,7 @@ Outputs: lifecycle state, retained-output location, artifacts, verification evid
 - Risk: unreviewed apply. Mitigation: require inspect before select/apply.
 
 ## Evaluation
-Evaluated by structural validation and manual review against SET bundle, worktree, and retained-output scenarios.
+Fixture-checked with activation, positive, and negative reversibility/overhead cases in `benchmarks/fixture-cases/reversible-agent-task.json`.
 
 ## Version
 0.1.0

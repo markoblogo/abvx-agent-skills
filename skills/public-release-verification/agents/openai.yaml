@@ -1,0 +1,4 @@
+interface:
+  display_name: "Public Release Verification"
+  short_description: "Prove release status across live, browser, and human gates."
+  default_prompt: "Verify this release with separate evidence for repository, build, deploy, HTTP, browser, locale, visual, and human approval gates."

@@ -1,6 +1,6 @@
 ---
 name: design-register-bootstrap
-description: Establish frontend design context before implementation. Use when a project lacks a clear PRODUCT.md or DESIGN.md, when the model needs to distinguish brand surfaces from product UI, or when design direction keeps drifting because audience, register, anti-references, and visual constraints are not explicit.
+description: Establish frontend design context before implementation, including creator intent and preserve-theirs constraints. Use when a project lacks a clear PRODUCT.md or DESIGN.md, when the model needs to distinguish brand surfaces from product UI, or when design direction keeps drifting because audience, intent, register, anti-references, and visual constraints are not explicit.
 license: MIT
 metadata:
   abvx_status: experimental
@@ -38,6 +38,8 @@ Do not treat these as interchangeable. Brand surfaces can lead with identity and
    - surface type: `brand` or `product`;
    - audience;
    - first-screen job;
+   - creator intent: what the person is actually trying to make possible;
+   - preserve-theirs: what must remain recognizably theirs;
    - brand/product lane;
    - anti-references: what this should explicitly not resemble;
    - color strategy: restrained, committed, full palette, or drenched;
@@ -45,9 +47,13 @@ Do not treat these as interchangeable. Brand surfaces can lead with identity and
    - motion tolerance;
    - density and radius rules.
 3. If context files are missing, create or update:
-   - `PRODUCT.md` for audience, product lane, workflow, tone, anti-references;
-   - `DESIGN.md` for colors, typography, spacing, component patterns, do/don't rules.
-4. If the surface is ambiguous, ask one clarifying question only when the branch between `brand` and `product` is genuinely unclear.
+   - `PRODUCT.md` for audience, product lane, workflow, tone, creator intent,
+     preserve-theirs, and anti-references;
+   - `DESIGN.md` for colors, typography, spacing, component patterns,
+     creator intent, preserve-theirs, and do/don't rules.
+4. Ask one clarifying question only when either the branch between `brand` and
+   `product` is genuinely unclear or creator intent is too vague to guide a
+   real design choice. If neither blocks a real choice, move.
 5. Use the register as a constraint system for later frontend work. Do not restyle pages in the same pass unless the task explicitly includes implementation.
 
 ## Output Shape
@@ -56,7 +62,9 @@ When working inline, summarize:
 
 - `register`
 - `audience`
+- `creator intent`
 - `design thesis`
+- `preserve-theirs`
 - `anti-references`
 - `color strategy`
 - `typography direction`
@@ -66,6 +74,9 @@ When creating files, prefer concise machine-usable docs over long essays.
 
 ## Guardrails
 
+- Skip this skill when an existing design register is coherent and the task
+  only needs implementation or a narrow visual fix; preserve the existing
+  context instead of recreating it.
 - Do not default every warm or “premium” brief to beige paper backgrounds.
 - Do not default every technical product to dark mode.
 - Do not choose palette or typography before writing the surface classification.
