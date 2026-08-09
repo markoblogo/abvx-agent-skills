@@ -8,7 +8,7 @@ Small, reviewable, validation-gated agent skills for Codex-style project work.
 
 [![Validate](https://github.com/markoblogo/abvx-agent-skills/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/markoblogo/abvx-agent-skills/actions/workflows/validate.yml)
 [![Security Audit](https://github.com/markoblogo/abvx-agent-skills/actions/workflows/security-audit.yml/badge.svg?branch=main)](https://github.com/markoblogo/abvx-agent-skills/actions/workflows/security-audit.yml)
-[![PyPI version](https://img.shields.io/pypi/v/abvx-agent-skills.svg)](https://pypi.org/project/abvx-agent-skills/)
+[![PyPI version](https://img.shields.io/pypi/v/abvx-agent-skills.svg?cacheSeconds=300)](https://pypi.org/project/abvx-agent-skills/)
 ![Catalog live](https://img.shields.io/badge/catalog-live-3b82f6)
 ![gh skill ready](https://img.shields.io/badge/gh%20skill-ready-111827)
 
