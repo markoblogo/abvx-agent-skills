@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Health Audit"
+  short_description: "Audit skill quality, evidence, drift, and evaluation readiness."
+  default_prompt: "Audit this skill's trigger fit, evidence, metadata, drift, overhead, safety, and recommended evaluation tier without editing it."

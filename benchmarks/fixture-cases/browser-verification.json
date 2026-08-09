@@ -1,0 +1,8 @@
+{
+  "skill": "browser-verification",
+  "eval_tier": "fixture_checked",
+  "activation": "Verify this frontend change in a real browser at desktop and mobile viewports, including console errors.",
+  "positive": "Reports observed rendering and interaction evidence instead of inferring it from source code.",
+  "negative": "Do not claim visual proof from a static build when no browser session ran.",
+  "failure_class": "live_evidence_or_scope_drift"
+}

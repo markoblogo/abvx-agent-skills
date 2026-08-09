@@ -1,6 +1,7 @@
 # Search-Discoverable Code Note
 
-This repository can borrow one narrow idea from search-first coding guidance:
+This repository can borrow one narrow idea from Matt Pocock's search-first
+coding guidance:
 agent-readable code becomes easier to maintain when names, filenames, and short
 comments behave well under plain-text search.
 
@@ -32,3 +33,5 @@ Lower fit:
 
 This is a companion review note, not a new installable skill and not a mandate
 to rename stable public skill IDs without a compatibility reason.
+
+Source: https://github.com/mattpocock/skills

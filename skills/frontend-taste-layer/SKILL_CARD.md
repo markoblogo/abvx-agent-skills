@@ -16,7 +16,7 @@ Use for marketing, editorial, portfolio, and brand-forward surfaces that need st
 Do not use to overpower utilitarian product UI, replace a mandated design system, or bypass Lazyweb/UX evidence for dashboards, settings, onboarding, checkout, or paywalls.
 
 ## Sources and Attribution
-ABVX adapted from Leonxlnx `taste-skill` anti-slop frontend direction, plus local frontend review practice.
+ABVX adapted from Leonxlnx `taste-skill` anti-slop frontend direction, plus local frontend review practice. Creator-intent and preserve-theirs checks are adapted from bish-x `creator-vibe`: https://github.com/bish-x/creator-vibe
 
 ## Inputs and Outputs
 Inputs: brief, screenshots, existing frontend code, references, and current design context.
@@ -33,7 +33,7 @@ Outputs: design read, creator-intent check, relative axes, preservation audit, l
 Evaluated by structural validation plus [pilots on an ABVX Lab catalog page and an ABVX Books surface](../../benchmarks/frontend-taste-layer-pilot.md).
 
 ## Version
-0.2.0
+0.3.0
 
 ## Reporting Issues
 Open an issue in the repository.

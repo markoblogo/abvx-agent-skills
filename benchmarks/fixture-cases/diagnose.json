@@ -1,0 +1,8 @@
+{
+  "skill": "diagnose",
+  "eval_tier": "fixture_checked",
+  "activation": "Reproduce this failing command, rank hypotheses, and verify the fix with a regression check.",
+  "positive": "Captures the failure before changing code and rejects speculative fixes.",
+  "negative": "Do not activate for an unambiguous one-line copy edit with no failure signal.",
+  "failure_class": "evidence_or_trigger_drift"
+}

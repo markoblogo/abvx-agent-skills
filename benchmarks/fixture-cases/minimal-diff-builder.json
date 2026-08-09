@@ -1,0 +1,8 @@
+{
+  "skill": "minimal-diff-builder",
+  "eval_tier": "fixture_checked",
+  "activation": "Implement the smallest safe fix for this one-file bug without refactoring nearby code.",
+  "positive": "Keeps the patch local, preserves validation, and reports the skipped heavier design.",
+  "negative": "Do not activate for a user-requested reusable framework redesign.",
+  "failure_class": "scope_or_safety_drift"
+}

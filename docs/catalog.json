@@ -1,17 +1,16 @@
 {
-  "skill_count": 81,
+  "skill_count": 83,
   "categories": {
-    "Research, Knowledge & Reusable Methods": 14,
-    "Uncategorized": 4,
+    "Research, Knowledge & Reusable Methods": 17,
+    "Workflow, Handoffs & Multi-Track Work": 8,
     "Coding, Debugging & Architecture": 13,
     "Frontend, UX & Product Surfaces": 12,
     "Discovery, Planning & Delivery": 6,
     "Security & Defensive Review": 1,
     "Product Context & Responsible Growth": 2,
     "Token Economy & Context Control": 9,
-    "Long-Run Delivery Control": 6,
+    "Long-Run Delivery Control": 7,
     "Project Context & Onboarding": 5,
-    "Workflow, Handoffs & Multi-Track Work": 6,
     "HTML Artifacts & Visual Deliverables": 2,
     "Structured Data & Spreadsheet Work": 1
   },
@@ -69,7 +68,7 @@
     {
       "name": "agent-operations-contract",
       "display_name": "Agent Operations Contract",
-      "category": "Uncategorized",
+      "category": "Workflow, Handoffs & Multi-Track Work",
       "description": "Define and review concrete agent capability cards, asynchronous operation receipts, decision receipts with revalidation, isolated and trust-graded memory scopes, and evidence-backed provider or tool registry entries. Use when a project introduces named agents, scheduled or long-running work, durable decisions or memory, provider routing, MCP tools, or external-action approval boundaries.",
       "short_description": "Review agent identity, receipts, memory, and routes.",
       "intended_use": "Use when named agents, scheduled or long-running work, project memory, model providers, tools, or MCP routes need explicit authority and evidence contracts.",
@@ -277,7 +276,7 @@
     {
       "name": "bounded-orchestration-contract",
       "display_name": "Bounded Orchestration Contract",
-      "category": "Uncategorized",
+      "category": "Workflow, Handoffs & Multi-Track Work",
       "description": "Coordinate an opt-in Planner, Reviewer, and bounded Executor workflow with stable findings, at most five review rounds, disjoint write ownership, explicit route evidence, and root-owned verification. Use when the user asks for plan review, multi-agent orchestration, routed executors, parallel implementation, or the SET bounded-orchestration capability.",
       "short_description": "Gate plans, packets, routes, and root verification.",
       "intended_use": "Use for non-trivial planning, adversarial review, or independent multi-agent implementation slices where a separate review gate reduces material risk.",
@@ -340,7 +339,7 @@
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/browser-verification/SKILL_CARD.md",
       "origin": "adapted",
       "status": "experimental",
-      "eval_tier": "structural_only"
+      "eval_tier": "fixture_checked"
     },
     {
       "name": "bug-evidence-protocol",
@@ -503,8 +502,8 @@
       "name": "design-register-bootstrap",
       "display_name": "Design Register Bootstrap",
       "category": "Frontend, UX & Product Surfaces",
-      "description": "Establish frontend design context before implementation. Use when a project lacks a clear PRODUCT.md or DESIGN.md, when the model needs to distinguish brand surfaces from product UI, or when design direction keeps drifting because audience, register, anti-references, and visual constraints are not explicit.",
-      "short_description": "Set brand vs product register before frontend work.",
+      "description": "Establish frontend design context before implementation, including creator intent and preserve-theirs constraints. Use when a project lacks a clear PRODUCT.md or DESIGN.md, when the model needs to distinguish brand surfaces from product UI, or when design direction keeps drifting because audience, intent, register, anti-references, and visual constraints are not explicit.",
+      "short_description": "Set design register and creator intent before frontend work.",
       "intended_use": "Use when a frontend project lacks stable design context, when `PRODUCT.md` or `DESIGN.md` should be created or updated, or when the surface classification materially changes design choices.",
       "model_sensitivity": "",
       "composable_with": [],
@@ -554,7 +553,7 @@
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/diagnose/SKILL_CARD.md",
       "origin": "adapted",
       "status": "experimental",
-      "eval_tier": "structural_only"
+      "eval_tier": "fixture_checked"
     },
     {
       "name": "doc-grounded-grilling",
@@ -731,8 +730,8 @@
       "name": "frontend-taste-layer",
       "display_name": "Frontend Taste Layer",
       "category": "Frontend, UX & Product Surfaces",
-      "description": "Set and review a bounded visual direction for marketing, editorial, portfolio, and brand-forward frontend work. Use when a surface needs an explicit design read, calibrated composition/motion/density, preservation-first redesign, layout-rhythm review, or desktop/mobile/reduced-motion verification. Route product UI to Lazyweb and UX review instead.",
-      "short_description": "Review marketing and editorial frontend taste.",
+      "description": "Set and review a bounded, creator-aware visual direction for marketing, editorial, portfolio, and brand-forward frontend work. Use when a surface needs an explicit design read, creator-intent check, calibrated composition/motion/density, preservation-first redesign, layout-rhythm review, or desktop/mobile/reduced-motion verification. Route product UI to Lazyweb and UX review instead.",
+      "short_description": "Review authored marketing and editorial frontend direction.",
       "intended_use": "Use for marketing, editorial, portfolio, and brand-forward surfaces that need stronger design judgment and evidence-backed review.",
       "model_sensitivity": "",
       "composable_with": [],
@@ -749,7 +748,7 @@
     {
       "name": "git-native-context-contract",
       "display_name": "Git-Native Context Contract",
-      "category": "Uncategorized",
+      "category": "Research, Knowledge & Reusable Methods",
       "description": "Create or review minimal Git-native project context using only adr, rfc, rule, spec, plan, rnd, and cpat documents; human-gated draft/accepted/rejected lifecycle; implements, depends_on, extends, and related relations; and evidence-backed code-change patterns. Use when a project needs durable decisions, specifications, research, plans, incident lessons, or the SET git-native-context capability without installing a context runtime.",
       "short_description": "Keep typed project truth reviewable and human-gated.",
       "intended_use": "Use for durable decisions, proposals, rules, specifications, plans, bounded research, and recurring incident/code-change lessons that should remain reviewable in Git.",
@@ -938,7 +937,7 @@
     {
       "name": "knowledge-base-enrichment",
       "display_name": "Knowledge Base Enrichment",
-      "category": "Uncategorized",
+      "category": "Research, Knowledge & Reusable Methods",
       "description": "Enrich a Markdown knowledge base with durable tags, source provenance, existing-note links, and reviewed wiki synthesis while keeping raw notes read-only by default. Use when organizing Obsidian-style notes, refreshing generated wikis, or preparing source-grounded context for agents.",
       "short_description": "Enrich Markdown notes and wikis with provenance while preserving raw sources.",
       "intended_use": "Use for Obsidian-style vaults, Markdown research corpora, durable agent context, and source-grounded wiki refreshes.",
@@ -1129,7 +1128,7 @@
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/minimal-diff-builder/SKILL_CARD.md",
       "origin": "adapted",
       "status": "experimental",
-      "eval_tier": "structural_only"
+      "eval_tier": "fixture_checked"
     },
     {
       "name": "motion-review-gate",
@@ -1346,6 +1345,34 @@
       "eval_tier": "structural_only"
     },
     {
+      "name": "public-release-verification",
+      "display_name": "Public Release Verification",
+      "category": "Long-Run Delivery Control",
+      "description": "Verify whether a software release is publicly proven across repository identity, baseline, build, package, deployment, HTTP routes, SEO metadata, browser desktop/mobile behavior, locale content, visual availability, and human approval. Use when an agent is preparing or reviewing a release and must separate build proof, live proof, and owner-gated public claims.",
+      "short_description": "Prove release status across live, browser, and human gates.",
+      "intended_use": "Use for release readiness, production cutover review, package publication, live URL verification, and public claims that require evidence across multiple layers.",
+      "model_sensitivity": "Works best when the model can preserve evidence boundaries and distinguish observed results from inferred status. Weaker models need an explicit evidence matrix and command/artifact references.",
+      "composable_with": [
+        "`delivery-preflight-gate`",
+        "`browser-verification`",
+        "`confidence-fragility-review`",
+        "`skill-health-audit`"
+      ],
+      "anti_patterns": [
+        "treating build, deploy, or HTTP success as complete public proof",
+        "filling missing rows with assumptions",
+        "accepting visual or owner approval without a recorded scope"
+      ],
+      "risks": "- Risk: claiming public success from a build. Mitigation: require separate deployment, HTTP, browser, and visual rows.\n- Risk: inventing absent evidence. Mitigation: use `UNKNOWN` and preserve artifact references.\n- Risk: unauthorized cutover. Mitigation: keep publication, DNS, traffic, and approval actions human-gated.",
+      "path": "skills/public-release-verification/SKILL.md",
+      "card_path": "skills/public-release-verification/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/public-release-verification/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/public-release-verification/SKILL_CARD.md",
+      "origin": "original",
+      "status": "experimental",
+      "eval_tier": "fixture_checked"
+    },
+    {
       "name": "rabbithole-doc-exploration",
       "display_name": "Rabbithole Doc Exploration",
       "category": "Project Context & Onboarding",
@@ -1457,7 +1484,7 @@
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/reversible-agent-task/SKILL_CARD.md",
       "origin": "adapted",
       "status": "experimental",
-      "eval_tier": "structural_only"
+      "eval_tier": "fixture_checked"
     },
     {
       "name": "role-skill-pack-design",
@@ -1513,6 +1540,34 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/shell-output-compaction/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/shell-output-compaction/SKILL_CARD.md",
       "origin": "adapted",
+      "status": "experimental",
+      "eval_tier": "structural_only"
+    },
+    {
+      "name": "skill-health-audit",
+      "display_name": "Skill Health Audit",
+      "category": "Research, Knowledge & Reusable Methods",
+      "description": "Audit an agent skill or skillpack for trigger fit, false activation, structure, metadata, intended use, risks, composability, model sensitivity, fixtures, held-out evidence, prompt overhead, catalog drift, and regression risk. Use when deciding whether a skill is ready to publish, revise, evaluate, or keep structural-only.",
+      "short_description": "Audit skill quality, evidence, drift, and evaluation readiness.",
+      "intended_use": "Use before publishing a new or materially changed skill, raising its evaluation tier, or reviewing the health of the public pack.",
+      "model_sensitivity": "Requires disciplined distinction between observed fixtures, missing evidence, and inferred quality. Weaker models need fixed report fields and explicit negative activation cases.",
+      "composable_with": [
+        "`bounded-evaluation`",
+        "`context-degradation-review`",
+        "`confidence-fragility-review`",
+        "`private-vs-publishable-skill-audit`"
+      ],
+      "anti_patterns": [
+        "assigning `fixture_checked` or higher from metadata alone",
+        "treating a generated catalog entry as independent evidence",
+        "editing or publishing the audited skill without a separate approved task"
+      ],
+      "risks": "- Risk: structural polish mistaken for behavioral quality. Mitigation: separate structure from activation and rollout evidence.\n- Risk: audit silently changes the pack. Mitigation: require read-only review output and explicit maintainer acceptance for edits.\n- Risk: excessive review overhead. Mitigation: inspect the smallest evidence set that can justify the requested tier.",
+      "path": "skills/skill-health-audit/SKILL.md",
+      "card_path": "skills/skill-health-audit/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/skill-health-audit/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/skill-health-audit/SKILL_CARD.md",
+      "origin": "original",
       "status": "experimental",
       "eval_tier": "structural_only"
     },

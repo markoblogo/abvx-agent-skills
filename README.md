@@ -12,7 +12,7 @@ Small, reviewable, validation-gated agent skills for Codex-style project work.
 ![Catalog live](https://img.shields.io/badge/catalog-live-3b82f6)
 ![gh skill ready](https://img.shields.io/badge/gh%20skill-ready-111827)
 
-ABVX Agent Skills is a small, auditable skillpack for coding agents that helps them write smaller diffs, debug from evidence, compact noisy shell output, and verify work before saying done.
+ABVX Agent Skills is a small, auditable skillpack for coding agents that helps them write smaller diffs, debug from evidence, compact noisy shell output, and verify work before saying done. The proof-first pack keeps release, browser, locale, visual, device-boundary, and human-gated claims separate so an agent does not turn partial evidence into a confident public status.
 
 These are not prompt dumps. They are compact `SKILL.md` workflows with clear triggers, attribution, risk notes, and validation. They are portable, versioned agent capabilities meant to be previewed, inspected, and loaded on demand through the Agent Skills progressive-disclosure model.
 
@@ -252,6 +252,9 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 | `brief-first-execution` | Starts non-trivial work with one live brief for scope, non-goals, risks, verification, and done criteria. |
 | `private-vs-publishable-skill-audit` | Audits private skill packs before publication and extracts only the reusable layer. |
 | `agent-friction-ledger` | Captures repeated agent blockers, doc gaps, tool incompatibilities, and workarounds as local, privacy-safe reports that can feed docs, skills, scripts, or evals. |
+| `knowledge-base-enrichment` | Enriches Markdown notes and wikis with provenance while preserving raw sources and review boundaries. |
+| `git-native-context-contract` | Keeps typed project truth, decisions, and incident lessons reviewable through a human-gated Git lifecycle. |
+| `skill-health-audit` | Audits trigger fit, evidence depth, drift, overhead, safety, and evaluation readiness without editing the audited skill. |
 
 ### Product Context & Responsible Growth
 
@@ -270,6 +273,8 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 | `pipeline-readiness-gate` | Selects a compact pre-implementation, post-implementation, or ship gate without adopting a heavy multi-agent pipeline runtime. |
 | `reversible-agent-task` | Runs risky or multi-file agent work as retained output, then requires inspect -> select/apply/discard before target workspace mutation. |
 | `handoff` | Produces compact continuation briefs for long-running work, agent resumes, and human handoffs. |
+| `agent-operations-contract` | Governs named agents, operation receipts, decisions, memory, provider evidence, and approval boundaries. |
+| `bounded-orchestration-contract` | Coordinates reviewed Planner/Reviewer/Executor work with stable findings, disjoint ownership, and root verification. |
 
 ### Long-Run Delivery Control
 
@@ -281,6 +286,7 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 | `recovery-loop-3strike` | Bounds execution failure handling to one evidence-bearing retry, one focused fix-spec, and then an honest blocker handoff. |
 | `confidence-fragility-review` | Checks whether confident claims in plans, docs, releases, or workflow contracts are backed by evidence. |
 | `delivery-baseline-audit` | Re-checks declared deliverables and final verification against the starting baseline and full working tree before calling the task complete. |
+| `public-release-verification` | Proves release status across package, deploy, HTTP, browser, locale, visual, and human approval gates. |
 
 ### Security & Defensive Review
 

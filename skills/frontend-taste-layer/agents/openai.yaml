@@ -1,4 +1,4 @@
 interface:
   display_name: "Frontend Taste Layer"
-  short_description: "Review marketing and editorial frontend taste."
-  default_prompt: "State the design read, calibrate composition, motion, and density, preserve approved elements, then review layout rhythm and browser evidence. Route product UI to Lazyweb and UX review."
+  short_description: "Review authored marketing and editorial frontend direction."
+  default_prompt: "State the design read and creator intent, calibrate composition, motion, and density, preserve approved elements, then review layout rhythm and browser evidence. Route product UI to Lazyweb and UX review."

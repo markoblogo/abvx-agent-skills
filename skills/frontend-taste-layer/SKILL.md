@@ -1,6 +1,6 @@
 ---
 name: frontend-taste-layer
-description: Set and review a bounded visual direction for marketing, editorial, portfolio, and brand-forward frontend work. Use when a surface needs an explicit design read, calibrated composition/motion/density, preservation-first redesign, layout-rhythm review, or desktop/mobile/reduced-motion verification. Route product UI to Lazyweb and UX review instead.
+description: Set and review a bounded, creator-aware visual direction for marketing, editorial, portfolio, and brand-forward frontend work. Use when a surface needs an explicit design read, creator-intent check, calibrated composition/motion/density, preservation-first redesign, layout-rhythm review, or desktop/mobile/reduced-motion verification. Route product UI to Lazyweb and UX review instead.
 license: MIT
 metadata:
   abvx_status: experimental
@@ -128,7 +128,9 @@ Before calling the reviewed surface ready, verify:
 3. `prefers-reduced-motion` behavior when motion exists;
 4. every visible string, including navigation, headings, buttons, labels, captions, alt text, and loading, empty, error, or disabled states that belong to the reviewed path;
 5. preserved items from the redesign audit are still intact.
-6. the strongest visual decision still holds through first use, failure, recovery, and repetition instead of working only as a first-demo impression.
+6. where applicable, the strongest visual decision still holds through first
+   use, failure, recovery, and repetition instead of working only as a
+   first-demo impression; for static surfaces record `N/A`.
 
 Build success and source inspection do not count as visual verification. If browser evidence is unavailable, report `INSUFFICIENT_VISUAL_EVIDENCE`.
 

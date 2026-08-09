@@ -42,7 +42,7 @@ Works well on strong coding models that can keep the ladder order intact without
 - confusing smallest correct patch with shortest possible code regardless of readability
 
 ## Evaluation
-Evaluated by structural validation and manual review against scoped implementation and simplification workflows.
+Fixture-checked with activation, positive, and negative scope/safety cases in `benchmarks/fixture-cases/minimal-diff-builder.json`.
 
 ## Version
 0.1.0
