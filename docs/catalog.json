@@ -1,5 +1,5 @@
 {
-  "skill_count": 83,
+  "skill_count": 86,
   "categories": {
     "Research, Knowledge & Reusable Methods": 17,
     "Workflow, Handoffs & Multi-Track Work": 8,
@@ -10,6 +10,7 @@
     "Product Context & Responsible Growth": 2,
     "Token Economy & Context Control": 9,
     "Long-Run Delivery Control": 7,
+    "Uncategorized": 3,
     "Project Context & Onboarding": 5,
     "HTML Artifacts & Visual Deliverables": 2,
     "Structured Data & Spreadsheet Work": 1
@@ -442,6 +443,25 @@
       "eval_tier": "structural_only"
     },
     {
+      "name": "corporate-surface",
+      "display_name": "Corporate Surface",
+      "category": "Uncategorized",
+      "description": "Shape partner-facing and institutional surfaces so they read as credible operating systems rather than generic SaaS templates. Use for corporate landings, capability pages, partner sections, investor-facing surfaces, and other public pages that must feel clear, evidence-backed, and commercially serious.",
+      "short_description": "Make partner-facing pages proof-first and less generic SaaS.",
+      "intended_use": "Use for corporate landings, ecosystem/capability pages, partner-facing sections, and other public business surfaces that must feel credible and product-backed.",
+      "model_sensitivity": "",
+      "composable_with": [],
+      "anti_patterns": [],
+      "risks": "- Risk: page still reads like generic SaaS. Mitigation: prioritize real product proof over equal-card feature grids.\n- Risk: architecture jargon outruns business clarity. Mitigation: state the partner job first and translate capability into outcomes.\n- Risk: decorative polish displaces CTA clarity. Mitigation: preserve explicit contact and partner-entry paths.",
+      "path": "skills/corporate-surface/SKILL.md",
+      "card_path": "skills/corporate-surface/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/corporate-surface/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/corporate-surface/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental",
+      "eval_tier": "structural_only"
+    },
+    {
       "name": "delivery-baseline-audit",
       "display_name": "Delivery Baseline Audit",
       "category": "Long-Run Delivery Control",
@@ -643,6 +663,25 @@
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/dynamic-workflow-packets/SKILL_CARD.md",
       "origin": "",
       "status": "",
+      "eval_tier": "structural_only"
+    },
+    {
+      "name": "editorial-surface",
+      "display_name": "Editorial Surface",
+      "category": "Uncategorized",
+      "description": "Shape editorial and reading-first surfaces with strong hierarchy, readable measure, and disciplined media rhythm. Use for articles, guides, books, blog indexes, featured/recent cards, and other longform or text-heavy public surfaces.",
+      "short_description": "Tighten hierarchy, excerpts, and reading rhythm on text-first surfaces.",
+      "intended_use": "Use for longform pages and content listings where the main success criterion is readable, intentional editorial structure rather than generic marketing polish.",
+      "model_sensitivity": "",
+      "composable_with": [],
+      "anti_patterns": [],
+      "risks": "- Risk: over-polished layout that weakens reading. Mitigation: prioritize measure, hierarchy, and rhythm over decoration.\n- Risk: rewriting content to hide layout weakness. Mitigation: preserve owner-approved body unless the task explicitly asks for copy edits.\n- Risk: dead-space fixes that make cards bloated. Mitigation: add only enough excerpt or structure to match the card role.",
+      "path": "skills/editorial-surface/SKILL.md",
+      "card_path": "skills/editorial-surface/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/editorial-surface/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/editorial-surface/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental",
       "eval_tier": "structural_only"
     },
     {
@@ -1779,6 +1818,25 @@
       "card_path": "skills/web-quality-audit/SKILL_CARD.md",
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/web-quality-audit/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/web-quality-audit/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental",
+      "eval_tier": "structural_only"
+    },
+    {
+      "name": "wireframe-preflight",
+      "display_name": "Wireframe Preflight",
+      "category": "Uncategorized",
+      "description": "Build a low-fidelity wireframe before frontend implementation when layout, hierarchy, and flow are still unclear. Use for landing pages, editorial surfaces, partner-facing sections, and other UI work where a cheap structural pass can prevent expensive redesign loops.",
+      "short_description": "Run a cheap low-fidelity wireframe pass before frontend implementation.",
+      "intended_use": "Use for landing pages, editorial surfaces, partner-facing sections, hero redesigns, and other frontend work where structure is still uncertain.",
+      "model_sensitivity": "",
+      "composable_with": [],
+      "anti_patterns": [],
+      "risks": "- Risk: turning wireframing into another exploration sink. Mitigation: cap the pass at one primary approach and one meaningful fallback.\n- Risk: fake certainty from pretty mockups. Mitigation: keep the output low fidelity and structural.\n- Risk: scope drift into copywriting or product invention. Mitigation: preserve approved content and task boundaries.",
+      "path": "skills/wireframe-preflight/SKILL.md",
+      "card_path": "skills/wireframe-preflight/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/wireframe-preflight/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/wireframe-preflight/SKILL_CARD.md",
       "origin": "adapted",
       "status": "experimental",
       "eval_tier": "structural_only"

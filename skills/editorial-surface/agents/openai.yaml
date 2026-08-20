@@ -1,0 +1,4 @@
+interface:
+  display_name: "Editorial Surface"
+  short_description: "Tighten hierarchy, excerpts, and reading rhythm on text-first surfaces."
+  default_prompt: "Improve this editorial surface for hierarchy, excerpts, and reading comfort."
