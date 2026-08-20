@@ -1,0 +1,4 @@
+interface:
+  display_name: "Corporate Surface"
+  short_description: "Make partner-facing pages proof-first and less generic SaaS."
+  default_prompt: "Improve this corporate page so it feels product-backed, credible, and structurally clear."

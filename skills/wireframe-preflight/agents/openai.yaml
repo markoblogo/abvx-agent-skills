@@ -1,0 +1,4 @@
+interface:
+  display_name: "Wireframe Preflight"
+  short_description: "Run a cheap low-fidelity wireframe pass before frontend implementation."
+  default_prompt: "Create a low-fidelity wireframe package for this page before implementation."
