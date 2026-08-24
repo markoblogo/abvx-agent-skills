@@ -20,6 +20,51 @@
       "fingerprint": "OH1:skills/bug-evidence-protocol/scripts/capture_command.py:90:90",
       "reason": "The evidence helper runs the explicit user-supplied argv without a shell, with timeout and bounded redacted output.",
       "expires_on": "2026-10-31"
+    },
+    {
+      "fingerprint": "AE1:skills/agent-learning-layer-triage/SKILL.md:81:81",
+      "reason": "SkillSpector reports the intentional cross-skill reference to skillopt-evolve-skills as unresolved; the referenced skill is a local reusable contract, not an analysis-evasion path.",
+      "expires_on": "2026-12-31"
+    },
+    {
+      "fingerprint": "AE1:skills/assumption-excavation/SKILL.md:17:17",
+      "reason": "SkillSpector reports the intentional generic reference to repo-local SKILL.md and workflow artifacts as unresolved; the skill requires those artifacts to be inspected when present.",
+      "expires_on": "2026-12-31"
+    },
+    {
+      "fingerprint": "AE1:skills/book-to-skill/SKILL.md:31:31",
+      "reason": "SkillSpector reports the intentional generated SKILL.md output reference as unresolved; the skill generates and validates that artifact in the target workspace.",
+      "expires_on": "2026-12-31"
+    },
+    {
+      "fingerprint": "AE1:skills/delivery-preflight-gate/SKILL.md:24:24",
+      "reason": "SkillSpector reports the intentional list of possible local learning destinations as unresolved; the skill routes to the selected existing layer rather than evading analysis.",
+      "expires_on": "2026-12-31"
+    },
+    {
+      "fingerprint": "AE1:skills/durable-context-maintenance/SKILL.md:26:26",
+      "reason": "SkillSpector reports the intentional cross-skill reference to agent-learning-layer-triage as unresolved; the referenced skill is part of this local pack.",
+      "expires_on": "2026-12-31"
+    },
+    {
+      "fingerprint": "AE1:skills/goal-loop-designer/SKILL.md:57:57",
+      "reason": "SkillSpector reports the intentional list of possible local learning destinations as unresolved; the workflow keeps the chosen destination reviewable.",
+      "expires_on": "2026-12-31"
+    },
+    {
+      "fingerprint": "AE1:skills/rabbithole-doc-exploration/SKILL.md:17:17",
+      "reason": "SkillSpector reports the intentional generic references to local skill and workflow documents as unresolved; they are inspected when supplied by the target repo.",
+      "expires_on": "2026-12-31"
+    },
+    {
+      "fingerprint": "AE1:skills/skillopt-evolve-skills/SKILL.md:15:15",
+      "reason": "SkillSpector reports the intentional reusable-instruction artifact boundary as unresolved; this skill requires bounded review before any evolution proposal.",
+      "expires_on": "2026-12-31"
+    },
+    {
+      "fingerprint": "AE1:skills/skillopt-evolve-skills/SKILL.md:19:19",
+      "reason": "SkillSpector reports the intentional reusable-instruction artifact boundary as unresolved; this skill does not auto-apply evolution and requires maintainer acceptance.",
+      "expires_on": "2026-12-31"
     }
   ]
 }
