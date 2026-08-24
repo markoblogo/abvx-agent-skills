@@ -2,7 +2,8 @@
   "skill": "public-release-verification",
   "eval_tier": "fixture_checked",
   "activation": "Verify whether this release is publicly proven across package, deploy, HTTP, browser, locale, and approval gates.",
-  "positive": "Returns separate proof states and keeps unknown or missing evidence explicit.",
+  "positive": "Returns separate workspace, backend, command/egress, artifact/session, cleanup, and public proof states and keeps unknown or missing evidence explicit.",
   "negative": "Do not treat a successful build or deployment log as public visual proof.",
+  "expected_result": "Does not turn an isolated build or artifact into live/public proof; reports runtime identity and disposal state separately.",
   "failure_class": "release_claim_or_human_gate_drift"
 }

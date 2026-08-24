@@ -1,7 +1,7 @@
 # ABVX Agent Skills
 
 <p>
-  <img src="assets/skillslogo.png" alt="ABVX Agent Skills logo" width="1536" height="1024">
+  <img src="assets/skillslogo.png?v=evergreen" alt="ABVX Agent Skills logo" width="1536" height="1024">
 </p>
 
 Small, reviewable, validation-gated agent skills for Codex-style project work.
@@ -167,6 +167,7 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 | `token-frugal-mode` | Compresses final answers without dropping the decisive technical signal. Useful when the session is tight and you want shorter replies without caveman-style degradation. |
 | `lean-context-layout` | Shrinks always-loaded agent docs into a compact startup core and pushes the rest on demand. Best for bloated `AGENTS.md`, `CLAUDE.md`, and repo runbooks. |
 | `compaction-survival` | Preserves the high-value working state before long sessions collapse into compaction. Saves the turns you would otherwise spend reconstructing “what were we doing?”. |
+| `proof-preserving-doc-compress` | Tightens project context and handoff documents while preserving facts, decisions, constraints, provenance, and explicit unknowns. |
 | `token-usage-audit` | Diagnoses where the budget is really going: startup bloat, shell noise, repeated reads, oversized summaries, or compaction loss. Use this before over-optimizing the wrong layer. |
 
 ### Coding, Debugging & Architecture
@@ -274,6 +275,8 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 | `reversible-agent-task` | Runs risky or multi-file agent work as retained output, then requires inspect -> select/apply/discard before target workspace mutation. |
 | `handoff` | Produces compact continuation briefs for long-running work, agent resumes, and human handoffs. |
 | `agent-operations-contract` | Governs named agents, operation receipts, decisions, memory, provider evidence, and approval boundaries. |
+| `agent-workspace-boundary-review` | Reviews accessible paths, tools, runtimes, backends, egress, artifact ownership, approval, and cleanup before agent execution. |
+| `isolated-agent-runtime-review` | Separates filesystem, execution, artifact, and external/public proof for isolated agent runs. |
 | `bounded-orchestration-contract` | Coordinates reviewed Planner/Reviewer/Executor work with stable findings, disjoint ownership, and root verification. |
 
 ### Long-Run Delivery Control

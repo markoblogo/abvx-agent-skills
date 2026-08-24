@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Workspace Boundary Review"
+  short_description: "Review agent workspace reach and authority"
+  default_prompt: "Review this agent workspace boundary. Separate configured capability from observed proof and list unknowns, approval gates, and cleanup obligations."

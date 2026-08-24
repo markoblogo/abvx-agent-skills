@@ -98,6 +98,11 @@ def cmd_audit_security(args: argparse.Namespace) -> int:
     output_dir = args.output_dir.expanduser().resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
 
+    # Do not let reports from a previous scan survive into the evaluator.
+    # The report directory is an output surface, not a source of truth.
+    for stale_report in output_dir.glob("*.json"):
+        stale_report.unlink()
+
     scan_errors: list[str] = []
 
     for skill_dir in skill_dirs:
