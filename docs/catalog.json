@@ -1,5 +1,5 @@
 {
-  "skill_count": 83,
+  "skill_count": 84,
   "categories": {
     "Research, Knowledge & Reusable Methods": 17,
     "Workflow, Handoffs & Multi-Track Work": 8,
@@ -8,7 +8,7 @@
     "Discovery, Planning & Delivery": 6,
     "Security & Defensive Review": 1,
     "Product Context & Responsible Growth": 2,
-    "Token Economy & Context Control": 9,
+    "Token Economy & Context Control": 10,
     "Long-Run Delivery Control": 7,
     "Project Context & Onboarding": 5,
     "HTML Artifacts & Visual Deliverables": 2,
@@ -1324,6 +1324,25 @@
       "origin": "adapted",
       "status": "experimental",
       "eval_tier": "structural_only"
+    },
+    {
+      "name": "proof-preserving-doc-compress",
+      "display_name": "Proof-Preserving Doc Compress",
+      "category": "Token Economy & Context Control",
+      "description": "Tighten ABVX project context, handoff, proposal, or evidence documents while preserving facts, decisions, constraints, provenance, and unresolved uncertainty.",
+      "short_description": "Tighten project docs without losing proof",
+      "intended_use": "Use for context packs, handoffs, proposals, evidence notes, task briefs, and release or operational documents.",
+      "model_sensitivity": "",
+      "composable_with": [],
+      "anti_patterns": [],
+      "risks": "- Semantic drift: preserve sacred fields and use `FLAG` when equivalence is uncertain.\n- False losslessness: record baseline and run a structural fidelity check.\n- Context leakage: respect the target project's scope and privacy boundary.",
+      "path": "skills/proof-preserving-doc-compress/SKILL.md",
+      "card_path": "skills/proof-preserving-doc-compress/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/proof-preserving-doc-compress/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/proof-preserving-doc-compress/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental",
+      "eval_tier": "fixture_checked"
     },
     {
       "name": "prototype-lab",

@@ -1,0 +1,9 @@
+{
+  "skill": "proof-preserving-doc-compress",
+  "eval_tier": "fixture_checked",
+  "activation": "Tighten this ABVX handoff without losing facts, decisions, constraints, provenance, or unknowns.",
+  "positive": "Preserves IDs, dates, numbers, source links, approval state, and open questions while removing only provable redundancy.",
+  "negative": "Do not activate for free summarization, design-quality review, or a request to rewrite a contract's meaning.",
+  "expected_result": "Compressed document plus complete removal log and scorecard with source identity and fidelity status.",
+  "failure_class": "semantic_fidelity_or_scope_drift"
+}

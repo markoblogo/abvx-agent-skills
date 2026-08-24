@@ -167,6 +167,7 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 | `token-frugal-mode` | Compresses final answers without dropping the decisive technical signal. Useful when the session is tight and you want shorter replies without caveman-style degradation. |
 | `lean-context-layout` | Shrinks always-loaded agent docs into a compact startup core and pushes the rest on demand. Best for bloated `AGENTS.md`, `CLAUDE.md`, and repo runbooks. |
 | `compaction-survival` | Preserves the high-value working state before long sessions collapse into compaction. Saves the turns you would otherwise spend reconstructing “what were we doing?”. |
+| `proof-preserving-doc-compress` | Tightens project context and handoff documents while preserving facts, decisions, constraints, provenance, and explicit unknowns. |
 | `token-usage-audit` | Diagnoses where the budget is really going: startup bloat, shell noise, repeated reads, oversized summaries, or compaction loss. Use this before over-optimizing the wrong layer. |
 
 ### Coding, Debugging & Architecture

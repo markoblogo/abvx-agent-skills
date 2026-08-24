@@ -1,0 +1,4 @@
+interface:
+  display_name: "Proof-Preserving Doc Compress"
+  short_description: "Tighten project docs without losing proof"
+  default_prompt: "Compress this project document under its local proof-preserving contract. Return the tightened document, removal log, and scorecard."
