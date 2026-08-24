@@ -4,7 +4,7 @@ description: Verify whether a software release is publicly proven across reposit
 license: MIT
 metadata:
   abvx_status: experimental
-  abvx_origin: original
+  abvx_origin: adapted
   abvx_eval_tier: fixture_checked
 ---
 
@@ -39,6 +39,20 @@ Capture one evidence row for each applicable domain:
 11. **human approval and cutover status** — named approval evidence, approval
    scope, and whether DNS, traffic, or publication gates remain open.
 
+For releases produced through an isolated agent runtime, also capture:
+
+12. **workspace identity** — workspace/session/tenant owner, source baseline,
+    path scope, and read-only mounts;
+13. **backend identity** — selected backend, runtime version, command/module
+    surface, and observed rather than merely configured capability;
+14. **command scope and egress policy** — exact command or module scope,
+    network destinations, blocked destinations, and credential boundary;
+15. **artifact/session ownership** — artifact destination, digest, retention,
+    repository or session owner, and whether the artifact is private, staged,
+    or public;
+16. **cleanup and disposal state** — process/handle disposal, workspace expiry,
+    temporary data cleanup, pending sync, and retry state.
+
 Mark each row `PROVEN`, `PARTIAL`, `BLOCKED`, or `UNKNOWN`, with command,
 URL, artifact path, timestamp, and verifier where available. Use `N/A` only
 when the row genuinely does not apply and explain why.
@@ -49,6 +63,10 @@ when the row genuinely does not apply and explain why.
 - Deployment proof is not HTTP proof.
 - HTTP proof is not browser or visual proof.
 - Browser proof is not owner approval or public cutover authorization.
+- Filesystem proof is not execution proof; execution proof is not artifact or
+  public proof.
+- A configured backend, egress rule, artifact binding, or cleanup policy is not
+  observed proof until the relevant runtime evidence exists.
 - Missing evidence is `UNKNOWN`, not success.
 - A final `PROVEN` claim requires every applicable release-critical row to be
   `PROVEN` and the human gate to be explicit.
@@ -92,3 +110,6 @@ Claim boundary: <what this packet proves and does not prove>
 - Use `confidence-fragility-review` when the release summary sounds stronger
   than its evidence.
 - Use `skill-health-audit` when reviewing this contract or its fixtures.
+- Use `agent-workspace-boundary-review` before an isolated runtime starts.
+- Use `isolated-agent-runtime-review` to separate runtime proof from release
+  proof.

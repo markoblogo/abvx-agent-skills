@@ -1,8 +1,8 @@
 {
-  "skill_count": 84,
+  "skill_count": 86,
   "categories": {
     "Research, Knowledge & Reusable Methods": 17,
-    "Workflow, Handoffs & Multi-Track Work": 8,
+    "Workflow, Handoffs & Multi-Track Work": 10,
     "Coding, Debugging & Architecture": 13,
     "Frontend, UX & Product Surfaces": 12,
     "Discovery, Planning & Delivery": 6,
@@ -108,6 +108,25 @@
       "origin": "adapted",
       "status": "experimental",
       "eval_tier": "structural_only"
+    },
+    {
+      "name": "agent-workspace-boundary-review",
+      "display_name": "Agent Workspace Boundary Review",
+      "category": "Workflow, Handoffs & Multi-Track Work",
+      "description": "Review an agent workspace boundary before execution, including accessible files, commands, runtimes, backends, egress, artifacts, session ownership, and cleanup obligations.",
+      "short_description": "Review agent workspace reach and authority",
+      "intended_use": "Use for local sandboxes, containers, Durable Object workspaces, MCP code tools, remote runtimes, and isolated agent missions.",
+      "model_sensitivity": "",
+      "composable_with": [],
+      "anti_patterns": [],
+      "risks": "- Capability inflation: distinguish configured from observed behavior.\n- Cross-session leakage: require explicit owner and artifact/session scope.\n- Unbounded execution: keep review read-only and approval-gated.",
+      "path": "skills/agent-workspace-boundary-review/SKILL.md",
+      "card_path": "skills/agent-workspace-boundary-review/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/agent-workspace-boundary-review/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/agent-workspace-boundary-review/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental",
+      "eval_tier": "fixture_checked"
     },
     {
       "name": "agents-best-practices",
@@ -935,6 +954,25 @@
       "eval_tier": "structural_only"
     },
     {
+      "name": "isolated-agent-runtime-review",
+      "display_name": "Isolated Agent Runtime Review",
+      "category": "Workflow, Handoffs & Multi-Track Work",
+      "description": "Review an isolated agent runtime by separating filesystem, execution, artifact, and external/public proof before accepting its result.",
+      "short_description": "Separate runtime proof from public proof",
+      "intended_use": "Use for container, worker, sandbox, remote workspace, and multi-backend agent executions.",
+      "model_sensitivity": "",
+      "composable_with": [],
+      "anti_patterns": [],
+      "risks": "- Proof collapse: keep filesystem, execution, artifact, and public rows independent.\n- Session leakage: record owner, retention, and cleanup state.\n- False release claim: require separate external/public evidence and human approval.",
+      "path": "skills/isolated-agent-runtime-review/SKILL.md",
+      "card_path": "skills/isolated-agent-runtime-review/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/isolated-agent-runtime-review/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/isolated-agent-runtime-review/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental",
+      "eval_tier": "fixture_checked"
+    },
+    {
       "name": "knowledge-base-enrichment",
       "display_name": "Knowledge Base Enrichment",
       "category": "Research, Knowledge & Reusable Methods",
@@ -1372,6 +1410,8 @@
       "intended_use": "Use for release readiness, production cutover review, package publication, live URL verification, and public claims that require evidence across multiple layers.",
       "model_sensitivity": "Works best when the model can preserve evidence boundaries and distinguish observed results from inferred status. Weaker models need an explicit evidence matrix and command/artifact references.",
       "composable_with": [
+        "`agent-workspace-boundary-review`",
+        "`isolated-agent-runtime-review`",
         "`delivery-preflight-gate`",
         "`browser-verification`",
         "`confidence-fragility-review`",
@@ -1382,12 +1422,12 @@
         "filling missing rows with assumptions",
         "accepting visual or owner approval without a recorded scope"
       ],
-      "risks": "- Risk: claiming public success from a build. Mitigation: require separate deployment, HTTP, browser, and visual rows.\n- Risk: inventing absent evidence. Mitigation: use `UNKNOWN` and preserve artifact references.\n- Risk: unauthorized cutover. Mitigation: keep publication, DNS, traffic, and approval actions human-gated.",
+      "risks": "- Risk: claiming public success from a build. Mitigation: require separate deployment, HTTP, browser, and visual rows.\n- Risk: inventing absent evidence. Mitigation: use `UNKNOWN` and preserve artifact references.\n- Risk: unauthorized cutover. Mitigation: keep publication, DNS, traffic, and approval actions human-gated.\n- Risk: proof collapse across an isolated runtime. Mitigation: keep filesystem, execution, artifact, and public rows independent.",
       "path": "skills/public-release-verification/SKILL.md",
       "card_path": "skills/public-release-verification/SKILL_CARD.md",
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/public-release-verification/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/public-release-verification/SKILL_CARD.md",
-      "origin": "original",
+      "origin": "adapted",
       "status": "experimental",
       "eval_tier": "fixture_checked"
     },

@@ -1,0 +1,9 @@
+{
+  "skill": "isolated-agent-runtime-review",
+  "eval_tier": "fixture_checked",
+  "activation": "Review whether this container run proves a successful public release or only a successful isolated execution.",
+  "positive": "Reports separate filesystem, execution, artifact, and external/public statuses and refuses to turn a green command into live proof.",
+  "negative": "Do not activate for ordinary local command output with no isolated runtime or public claim.",
+  "expected_result": "Four-domain proof matrix, bounded final claim, explicit unknowns, and cleanup/disposal state.",
+  "failure_class": "proof_domain_collapse"
+}

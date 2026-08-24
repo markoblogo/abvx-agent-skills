@@ -275,6 +275,8 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 | `reversible-agent-task` | Runs risky or multi-file agent work as retained output, then requires inspect -> select/apply/discard before target workspace mutation. |
 | `handoff` | Produces compact continuation briefs for long-running work, agent resumes, and human handoffs. |
 | `agent-operations-contract` | Governs named agents, operation receipts, decisions, memory, provider evidence, and approval boundaries. |
+| `agent-workspace-boundary-review` | Reviews accessible paths, tools, runtimes, backends, egress, artifact ownership, approval, and cleanup before agent execution. |
+| `isolated-agent-runtime-review` | Separates filesystem, execution, artifact, and external/public proof for isolated agent runs. |
 | `bounded-orchestration-contract` | Coordinates reviewed Planner/Reviewer/Executor work with stable findings, disjoint ownership, and root verification. |
 
 ### Long-Run Delivery Control

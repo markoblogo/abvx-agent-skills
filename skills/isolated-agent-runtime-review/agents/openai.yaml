@@ -1,0 +1,4 @@
+interface:
+  display_name: "Isolated Agent Runtime Review"
+  short_description: "Separate runtime proof from public proof"
+  default_prompt: "Review this isolated agent run across filesystem, execution, artifact, and external/public proof. Keep unknowns explicit."
