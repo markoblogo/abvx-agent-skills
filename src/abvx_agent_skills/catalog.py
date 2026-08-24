@@ -64,12 +64,15 @@ def category_map_from_readme(readme_path: Path) -> dict[str, str]:
     return categories
 
 
-def build_catalog(skills_root: Path, readme_path: Path) -> dict[str, Any]:
+def build_catalog(skills_root: Path, readme_path: Path, skill_names: set[str] | None = None) -> dict[str, Any]:
     categories = category_map_from_readme(readme_path)
     skills: list[dict[str, Any]] = []
     github_root = "https://github.com/markoblogo/abvx-agent-skills/blob/main"
 
-    for skill_dir in sorted(path for path in skills_root.iterdir() if path.is_dir()):
+    skill_dirs = (path for path in skills_root.iterdir() if path.is_dir())
+    if skill_names is not None:
+        skill_dirs = (path for path in skill_dirs if path.name in skill_names)
+    for skill_dir in sorted(skill_dirs):
         skill_md = skill_dir / "SKILL.md"
         card_md = skill_dir / "SKILL_CARD.md"
         openai_yaml = skill_dir / "agents" / "openai.yaml"
