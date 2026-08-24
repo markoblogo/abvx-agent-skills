@@ -25,6 +25,7 @@ Generated from `docs/catalog.json`.
 | `complexity-optimizer` | Coding, Debugging & Architecture | structural_only | Audit and improve complexity without behavior drift. | `gh skill install markoblogo/abvx-agent-skills complexity-optimizer` |
 | `confidence-fragility-review` | Long-Run Delivery Control | structural_only | Check whether confident claims are backed by real evidence. | `gh skill install markoblogo/abvx-agent-skills confidence-fragility-review` |
 | `context-degradation-review` | Token Economy & Context Control | structural_only | Review context poisoning, lost-in-middle, distraction, and instruction clashes. | `gh skill install markoblogo/abvx-agent-skills context-degradation-review` |
+| `corporate-surface` | Uncategorized | structural_only | Make partner-facing pages proof-first and less generic SaaS. | `gh skill install markoblogo/abvx-agent-skills corporate-surface` |
 | `delivery-baseline-audit` | Long-Run Delivery Control | structural_only | Audit deliverables against the starting baseline. | `gh skill install markoblogo/abvx-agent-skills delivery-baseline-audit` |
 | `delivery-preflight-gate` | Long-Run Delivery Control | structural_only | Check the baseline before long delivery or PR publication. | `gh skill install markoblogo/abvx-agent-skills delivery-preflight-gate` |
 | `design-critique-polish` | Frontend, UX & Product Surfaces | structural_only | Critique and polish a frontend surface before shipping. | `gh skill install markoblogo/abvx-agent-skills design-critique-polish` |
@@ -35,6 +36,7 @@ Generated from `docs/catalog.json`.
 | `doc-to-lora-evaluator` | Research, Knowledge & Reusable Methods | structural_only | Evaluate document-to-adapter memory before building it. | `gh skill install markoblogo/abvx-agent-skills doc-to-lora-evaluator` |
 | `durable-context-maintenance` | Project Context & Onboarding | structural_only | Refresh repo-local durable context after code and workflow drift. | `gh skill install markoblogo/abvx-agent-skills durable-context-maintenance` |
 | `dynamic-workflow-packets` | Workflow, Handoffs & Multi-Track Work | structural_only | Run big Codex tasks with bounded packets. | `gh skill install markoblogo/abvx-agent-skills dynamic-workflow-packets` |
+| `editorial-surface` | Uncategorized | structural_only | Tighten hierarchy, excerpts, and reading rhythm on text-first surfaces. | `gh skill install markoblogo/abvx-agent-skills editorial-surface` |
 | `evidence-ledger-research` | Research, Knowledge & Reusable Methods | structural_only | Research with source, unit, date, and operand discipline. | `gh skill install markoblogo/abvx-agent-skills evidence-ledger-research` |
 | `filesystem-context-discipline` | Project Context & Onboarding | structural_only | Use durable scratchpads and retained outputs without polluting repo context. | `gh skill install markoblogo/abvx-agent-skills filesystem-context-discipline` |
 | `fluid-interaction-review` | Frontend, UX & Product Surfaces | structural_only | Review drag, swipe, and gesture physics. | `gh skill install markoblogo/abvx-agent-skills fluid-interaction-review` |
@@ -89,4 +91,5 @@ Generated from `docs/catalog.json`.
 | `token-frugal-mode` | Token Economy & Context Control | structural_only | Compress answers without losing technical accuracy. | `gh skill install markoblogo/abvx-agent-skills token-frugal-mode` |
 | `token-usage-audit` | Token Economy & Context Control | structural_only | Audit where token budget is being wasted and apply the smallest fix. | `gh skill install markoblogo/abvx-agent-skills token-usage-audit` |
 | `web-quality-audit` | Frontend, UX & Product Surfaces | structural_only | Audit accessibility, performance, UX, privacy, and browser security. | `gh skill install markoblogo/abvx-agent-skills web-quality-audit` |
+| `wireframe-preflight` | Uncategorized | structural_only | Run a cheap low-fidelity wireframe pass before frontend implementation. | `gh skill install markoblogo/abvx-agent-skills wireframe-preflight` |
 | `workflow-policy-layering` | Research, Knowledge & Reusable Methods | structural_only | Split workflow, authority, escalation, and validation into clean layers. | `gh skill install markoblogo/abvx-agent-skills workflow-policy-layering` |
