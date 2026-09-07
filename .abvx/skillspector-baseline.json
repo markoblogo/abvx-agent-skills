@@ -20,6 +20,69 @@
       "fingerprint": "OH1:skills/bug-evidence-protocol/scripts/capture_command.py:90:90",
       "reason": "The evidence helper runs the explicit user-supplied argv without a shell, with timeout and bounded redacted output.",
       "expires_on": "2026-10-31"
+    },
+    {
+      "fingerprint": "AE1:skills/agent-learning-layer-triage/SKILL.md:81:81",
+      "reason": "Reviewed SkillSpector 2.11.0 reference-resolution false positive. Names target artifact types and decision categories for future work; these are not bundled dependencies. See docs/security/skillspector-2.11-reference-review.md.",
+      "source_path": "skills/agent-learning-layer-triage/SKILL.md",
+      "source_sha256": "ce100babd5d8420fe796313195b46e80f810494f53302719c9150f412183e736",
+      "expires_on": "2026-10-07"
+    },
+    {
+      "fingerprint": "AE1:skills/assumption-excavation/SKILL.md:17:17",
+      "reason": "Reviewed SkillSpector 2.11.0 reference-resolution false positive. Lists document types to review in a caller repository; SKILL.md is a generic input type, not a hidden dependency. See docs/security/skillspector-2.11-reference-review.md.",
+      "source_path": "skills/assumption-excavation/SKILL.md",
+      "source_sha256": "9e0ff9ffee25a28d79190a4c3036ad8bd6e6ce31631b509d3a1f4cd82b1ab584",
+      "expires_on": "2026-10-07"
+    },
+    {
+      "fingerprint": "AE1:skills/book-to-skill/SKILL.md:31:31",
+      "reason": "Reviewed SkillSpector 2.11.0 reference-resolution false positive. Describes generating SKILL.md as an output from approved analysis; the proposed output cannot be an existing scan dependency. See docs/security/skillspector-2.11-reference-review.md.",
+      "source_path": "skills/book-to-skill/SKILL.md",
+      "source_sha256": "25ad9f73ca41c2d2d8db148c9254093d75ece99ca3ec3f7827c02a873c43df5f",
+      "expires_on": "2026-10-07"
+    },
+    {
+      "fingerprint": "AE1:skills/delivery-preflight-gate/SKILL.md:24:24",
+      "reason": "Reviewed SkillSpector 2.11.0 reference-resolution false positive. Lists alternative destinations for a reusable lesson; script/tool and pass/fail are prose categories. See docs/security/skillspector-2.11-reference-review.md.",
+      "source_path": "skills/delivery-preflight-gate/SKILL.md",
+      "source_sha256": "fb4ef23b08e6b33010b6b49c55bdc5a2e54d42e786d3089224986346df5ee309",
+      "expires_on": "2026-10-07"
+    },
+    {
+      "fingerprint": "AE1:skills/durable-context-maintenance/SKILL.md:26:26",
+      "reason": "Reviewed SkillSpector 2.11.0 reference-resolution false positive. Lists possible lesson destinations, caller AGENTS.md files, and cleanup risk categories; no uninspected bundled payload is referenced. See docs/security/skillspector-2.11-reference-review.md.",
+      "source_path": "skills/durable-context-maintenance/SKILL.md",
+      "source_sha256": "7540162dbede96dc1c6d4dfc8def2cf501130270b3157e38546c98efc1ff4f57",
+      "expires_on": "2026-10-07"
+    },
+    {
+      "fingerprint": "AE1:skills/goal-loop-designer/SKILL.md:57:57",
+      "reason": "Reviewed SkillSpector 2.11.0 reference-resolution false positive. Lists possible lesson destinations, host types, and token/tool budgets; these are generic workflow categories. See docs/security/skillspector-2.11-reference-review.md.",
+      "source_path": "skills/goal-loop-designer/SKILL.md",
+      "source_sha256": "87994d252bcb6dd8759d32fd098f9c90da970d12280b1d2782bf17dc5f1b02b6",
+      "expires_on": "2026-10-07"
+    },
+    {
+      "fingerprint": "AE1:skills/rabbithole-doc-exploration/SKILL.md:17:17",
+      "reason": "Reviewed SkillSpector 2.11.0 reference-resolution false positive. Enumerates optional files in the caller repository to inspect when present; they are user inputs, not required bundled artifacts. See docs/security/skillspector-2.11-reference-review.md.",
+      "source_path": "skills/rabbithole-doc-exploration/SKILL.md",
+      "source_sha256": "97294ded6286f2a5a8a98b969a01747f0054dbb9183050a835c5ebae05a55870",
+      "expires_on": "2026-10-07"
+    },
+    {
+      "fingerprint": "AE1:skills/skillopt-evolve-skills/SKILL.md:15:15",
+      "reason": "Reviewed SkillSpector 2.11.0 reference-resolution false positive. Names instruction artifacts to create or edit after layer selection; generic filenames and slash-separated rejection reasons are not bundled dependencies. See docs/security/skillspector-2.11-reference-review.md.",
+      "source_path": "skills/skillopt-evolve-skills/SKILL.md",
+      "source_sha256": "2aabd2f29aba82ece6197633c196d36c0e6e13a03203135bc87ac496467d0b50",
+      "expires_on": "2026-10-07"
+    },
+    {
+      "fingerprint": "AE1:skills/skillopt-evolve-skills/SKILL.md:19:19",
+      "reason": "Reviewed SkillSpector 2.11.0 reference-resolution false positive. Names instruction artifacts to create or edit after layer selection; generic filenames and slash-separated rejection reasons are not bundled dependencies. See docs/security/skillspector-2.11-reference-review.md.",
+      "source_path": "skills/skillopt-evolve-skills/SKILL.md",
+      "source_sha256": "2aabd2f29aba82ece6197633c196d36c0e6e13a03203135bc87ac496467d0b50",
+      "expires_on": "2026-10-07"
     }
   ]
 }

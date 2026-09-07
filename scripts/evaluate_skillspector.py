@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import hashlib
 from dataclasses import dataclass
 from datetime import date
 from fnmatch import fnmatch
@@ -55,7 +56,7 @@ def baseline_matches(finding: Finding, baseline_fingerprints: set[str]) -> bool:
     return finding.fingerprint in baseline_fingerprints
 
 
-def load_baseline(path: Path | None) -> tuple[set[str], list[str]]:
+def load_baseline(path: Path | None, repo_root: Path | None = None) -> tuple[set[str], list[str]]:
     if path is None or not path.is_file():
         return set(), []
 
@@ -63,9 +64,22 @@ def load_baseline(path: Path | None) -> tuple[set[str], list[str]]:
     fingerprints: set[str] = set()
     expired: list[str] = []
     today = date.today()
+    root = (repo_root or Path(__file__).resolve().parents[1]).resolve()
 
     for item in data.get("findings", []):
         fp = item.get("fingerprint")
+        digest = item.get("source_sha256")
+        if digest:
+            source_path = item.get("source_path")
+            if not isinstance(source_path, str):
+                continue
+            if not isinstance(fp, str) or fp.rsplit(":", 2)[0].split(":", 1)[-1] != source_path:
+                continue
+            source = (root / source_path).resolve()
+            if not source.is_relative_to(root) or not source.is_file():
+                continue
+            if hashlib.sha256(source.read_bytes()).hexdigest() != digest:
+                continue
         if fp:
             fingerprints.add(fp)
         expires_on = item.get("expires_on")
@@ -121,6 +135,10 @@ def main() -> int:
     parser.add_argument("--policy", type=Path, required=True)
     parser.add_argument("--baseline", type=Path)
     args = parser.parse_args()
+
+    if not args.reports_dir.is_dir() or not any(args.reports_dir.glob("*.json")):
+        print(f"Security gate failed: no JSON reports in {args.reports_dir}")
+        return 1
 
     policy = load_yaml(args.policy)
     thresholds = policy.get("thresholds", {})
