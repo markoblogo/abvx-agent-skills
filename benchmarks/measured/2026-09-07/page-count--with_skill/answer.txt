@@ -1,0 +1,5 @@
+Fixed [app.py](app.py:4) with native ceiling division: partially filled pages now count. Validation is unchanged.
+
+Verified 8 counting cases, 4 validation cases, and `git diff --check`.
+
+Used a one-line local change; skipped dependencies and abstractions. A larger design is only warranted if pagination requirements expand.

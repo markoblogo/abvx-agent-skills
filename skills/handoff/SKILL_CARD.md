@@ -23,6 +23,8 @@ Inputs: conversation state, repo status, plans, commands, commits, URLs, decisio
 
 Outputs: compact handoff document and next-step summary.
 
+Closeout output: `changed`, `verified`, `skipped_with_reason`, and `follow_up`; cleanup proposals preserve approval boundaries and memory changes require explicit user request.
+
 ## Risks and Mitigations
 - Risk: leaking sensitive data. Mitigation: redact and link instead of copying.
 - Risk: losing active state. Mitigation: include status, commands, blockers, and next steps.
@@ -32,7 +34,7 @@ Outputs: compact handoff document and next-step summary.
 Evaluated by structural validation and manual review against long-running task transfers.
 
 ## Version
-0.2.0
+0.3.0
 
 ## Reporting Issues
 Open an issue in the repository.

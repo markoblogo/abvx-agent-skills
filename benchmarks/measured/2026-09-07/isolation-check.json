@@ -1,0 +1,6 @@
+{
+  "initial_skill_inventory": "NONE",
+  "disabled_paths_count": 52,
+  "method": "Explicit skills.config path disables; apps/plugins/skill_search off; no project instructions",
+  "excluded_from_task_metrics": true
+}

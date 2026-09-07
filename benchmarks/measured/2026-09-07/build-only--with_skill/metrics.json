@@ -1,0 +1,32 @@
+{
+  "case": "build-only",
+  "skill": "public-release-verification",
+  "arm": "with_skill",
+  "returncode": 0,
+  "started_at_utc": "2026-09-07T11:52:55Z",
+  "duration_seconds": 16.6,
+  "usage": {
+    "input_tokens": 25817,
+    "cached_input_tokens": 23168,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 226,
+    "reasoning_output_tokens": 97
+  },
+  "isolation_violations": [],
+  "changed_files": [],
+  "changed_lines": 0,
+  "skill_sha256": "951e3e434489b26e920c737c30921a7df9eab8ccfc4ed2ede738942d5d5bf2e0",
+  "grade": {
+    "passed": false,
+    "mismatches": {
+      "repository": {
+        "expected": "PROVEN",
+        "actual": "PARTIAL"
+      },
+      "deployment": {
+        "expected": "UNKNOWN",
+        "actual": "PARTIAL"
+      }
+    }
+  }
+}

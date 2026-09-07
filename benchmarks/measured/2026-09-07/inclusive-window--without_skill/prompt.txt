@@ -1,0 +1,1 @@
+Fix within: the documented interval includes both endpoints. Preserve reversed-bound validation. Make the change in this workspace and verify it.

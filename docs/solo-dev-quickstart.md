@@ -2,11 +2,11 @@
 
 Use this path when you want ABVX skills working in one local environment with minimal setup.
 
-## Fastest Path
+## Install Three Skills
 
 ```bash
 pip install abvx-agent-skills
-abvx-skills install
+abvx-skills install minimal-diff-builder diagnose token-efficient-execution
 ```
 
 If PyPI is temporarily unavailable, use GitVerse's PyPI mirror for that install command only:
@@ -32,6 +32,10 @@ Swap `--agent codex` for `cursor`, `claude-code`, or `gemini-cli` if that is you
 - `rtk-assisted-shell`: reduce shell noise
 - `token-efficient-execution`: reduce wasted reads and narration
 - `frontend-product-builder`: only if you regularly ship UI
+
+`abvx-skills install` without names installs the entire package. Use the named
+starter set above to keep discovery context small. Installation does not mean
+every skill body is loaded on every turn.
 
 ## First 10 Minutes
 

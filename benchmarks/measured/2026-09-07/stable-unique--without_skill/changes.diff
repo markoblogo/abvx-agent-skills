@@ -1,0 +1,8 @@
+diff --git a/app.py b/app.py
+index 972b9f9..aecf8f6 100644
+--- a/app.py
++++ b/app.py
+@@ -1,2 +1,2 @@
+ def unique(values):
+-    return list(set(values))
++    return list(dict.fromkeys(values))

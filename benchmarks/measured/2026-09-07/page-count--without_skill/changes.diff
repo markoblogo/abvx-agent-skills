@@ -1,0 +1,10 @@
+diff --git a/app.py b/app.py
+index 64d7303..1cee013 100644
+--- a/app.py
++++ b/app.py
+@@ -1,4 +1,4 @@
+ def pages(total, size):
+     if total < 0 or size <= 0:
+         raise ValueError('invalid pagination')
+-    return total // size
++    return -(-total // size)

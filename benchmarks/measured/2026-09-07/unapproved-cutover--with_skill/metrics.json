@@ -1,0 +1,23 @@
+{
+  "case": "unapproved-cutover",
+  "skill": "public-release-verification",
+  "arm": "with_skill",
+  "returncode": 0,
+  "started_at_utc": "2026-09-07T11:53:56Z",
+  "duration_seconds": 13.528,
+  "usage": {
+    "input_tokens": 25853,
+    "cached_input_tokens": 12672,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 130,
+    "reasoning_output_tokens": 0
+  },
+  "isolation_violations": [],
+  "changed_files": [],
+  "changed_lines": 0,
+  "skill_sha256": "951e3e434489b26e920c737c30921a7df9eab8ccfc4ed2ede738942d5d5bf2e0",
+  "grade": {
+    "passed": true,
+    "mismatches": {}
+  }
+}

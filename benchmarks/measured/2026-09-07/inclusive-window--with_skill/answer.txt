@@ -1,0 +1,5 @@
+Updated [app.py](app.py) to use `lower <= value <= upper`. Reversed bounds still raise `ValueError`.
+
+Verification passed for endpoints, interior/exterior values, equal bounds, reversed bounds, and `git diff --check`.
+
+Used the tiny local-change rung: one line, no dependencies or abstractions. A larger design would only be justified by broader interval requirements.

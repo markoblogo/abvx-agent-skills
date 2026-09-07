@@ -1,0 +1,10 @@
+{
+  "overall": "BLOCKED",
+  "repository": "PROVEN",
+  "build": "PROVEN",
+  "deployment": "PROVEN",
+  "http": "PROVEN",
+  "browser": "PROVEN",
+  "approval": "UNKNOWN",
+  "can_announce_live": false
+}

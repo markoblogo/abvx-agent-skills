@@ -1,0 +1,23 @@
+{
+  "case": "config-lookup-1",
+  "skill": "token-efficient-execution",
+  "arm": "without_skill",
+  "returncode": 0,
+  "started_at_utc": "2026-09-07T11:51:06Z",
+  "duration_seconds": 20.984,
+  "usage": {
+    "input_tokens": 48860,
+    "cached_input_tokens": 40320,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 158,
+    "reasoning_output_tokens": 0
+  },
+  "isolation_violations": [],
+  "changed_files": [],
+  "changed_lines": 0,
+  "skill_sha256": "ad7983e72155efd0637a38c893ca398053224a391d14e0a46d011fad77501956",
+  "grade": {
+    "passed": true,
+    "mismatches": {}
+  }
+}

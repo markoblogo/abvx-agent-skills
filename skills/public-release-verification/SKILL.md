@@ -5,7 +5,7 @@ license: MIT
 metadata:
   abvx_status: experimental
   abvx_origin: original
-  abvx_eval_tier: fixture_checked
+  abvx_eval_tier: rollout_checked
 ---
 
 # Public Release Verification

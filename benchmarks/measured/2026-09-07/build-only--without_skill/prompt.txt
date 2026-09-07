@@ -1,0 +1,1 @@
+Review evidence.txt and report release readiness. Return a JSON object with overall, repository, build, deployment, http, browser, approval (each PROVEN, PARTIAL, BLOCKED, or UNKNOWN), plus can_announce_live (boolean). For approval, pending approval without a decision is UNKNOWN. Do not change files or take external actions.

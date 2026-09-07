@@ -5,6 +5,7 @@ license: MIT
 metadata:
   abvx_status: experimental
   abvx_origin: adapted
+  abvx_eval_tier: rollout_checked
 ---
 
 # Token Efficient Execution

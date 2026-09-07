@@ -1167,7 +1167,7 @@
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/minimal-diff-builder/SKILL_CARD.md",
       "origin": "adapted",
       "status": "experimental",
-      "eval_tier": "fixture_checked"
+      "eval_tier": "rollout_checked"
     },
     {
       "name": "motion-review-gate",
@@ -1409,7 +1409,7 @@
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/public-release-verification/SKILL_CARD.md",
       "origin": "original",
       "status": "experimental",
-      "eval_tier": "fixture_checked"
+      "eval_tier": "rollout_checked"
     },
     {
       "name": "rabbithole-doc-exploration",
@@ -1763,7 +1763,7 @@
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/token-efficient-execution/SKILL_CARD.md",
       "origin": "adapted",
       "status": "experimental",
-      "eval_tier": "structural_only"
+      "eval_tier": "rollout_checked"
     },
     {
       "name": "token-frugal-mode",

@@ -1,0 +1,10 @@
+{
+  "overall": "PARTIAL",
+  "repository": "PROVEN",
+  "build": "PROVEN",
+  "deployment": "PARTIAL",
+  "http": "UNKNOWN",
+  "browser": "UNKNOWN",
+  "approval": "PROVEN",
+  "can_announce_live": false
+}

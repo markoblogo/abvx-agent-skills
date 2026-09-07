@@ -1,0 +1,25 @@
+{
+  "case": "inclusive-window",
+  "skill": "minimal-diff-builder",
+  "arm": "without_skill",
+  "returncode": 0,
+  "started_at_utc": "2026-09-07T11:49:39Z",
+  "duration_seconds": 32.769,
+  "usage": {
+    "input_tokens": 50765,
+    "cached_input_tokens": 47360,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 607,
+    "reasoning_output_tokens": 0
+  },
+  "isolation_violations": [],
+  "changed_files": [
+    "app.py"
+  ],
+  "changed_lines": 2,
+  "skill_sha256": "4fbdf028a18e549d4c29c5786b9a0410bdd608afa926515e819aec4ad8ea3cc0",
+  "grade": {
+    "passed": true,
+    "details": ""
+  }
+}

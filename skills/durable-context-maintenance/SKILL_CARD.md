@@ -23,6 +23,8 @@ Inputs: current context files, recent code changes, repo structure, workflow cha
 
 Outputs: refreshed durable docs, corrected routing entrypoints, and a cleaner read order for future sessions.
 
+Closeout output: `changed`, `verified`, `skipped_with_reason`, and `follow_up`; cleanup proposals preserve approval boundaries and memory changes require explicit user request.
+
 ## Risks and Mitigations
 - Risk: stale docs survive unnoticed. Mitigation: tie refreshes to real code and workflow changes.
 - Risk: too many files. Mitigation: split only when a topic is genuinely separable and repeatedly needed.
@@ -32,7 +34,7 @@ Outputs: refreshed durable docs, corrected routing entrypoints, and a cleaner re
 Evaluated by structural validation and manual review against repo-drift and context-refresh scenarios.
 
 ## Version
-0.6.0
+0.7.0
 
 ## Reporting Issues
 Open an issue in the repository.
