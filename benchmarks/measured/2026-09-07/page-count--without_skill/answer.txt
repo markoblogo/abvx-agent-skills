@@ -1,0 +1,3 @@
+Updated [app.py](app.py) to round page counts up, so a partially filled last page counts. Existing validation is unchanged.
+
+Verified 9 page-count cases and 5 invalid-input cases; all passed. `git diff --check` also passed.

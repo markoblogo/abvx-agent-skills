@@ -1,0 +1,23 @@
+{
+  "case": "broken-route",
+  "skill": "public-release-verification",
+  "arm": "without_skill",
+  "returncode": 0,
+  "started_at_utc": "2026-09-07T11:53:27Z",
+  "duration_seconds": 16.275,
+  "usage": {
+    "input_tokens": 36211,
+    "cached_input_tokens": 23680,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 169,
+    "reasoning_output_tokens": 0
+  },
+  "isolation_violations": [],
+  "changed_files": [],
+  "changed_lines": 0,
+  "skill_sha256": "951e3e434489b26e920c737c30921a7df9eab8ccfc4ed2ede738942d5d5bf2e0",
+  "grade": {
+    "passed": true,
+    "mismatches": {}
+  }
+}

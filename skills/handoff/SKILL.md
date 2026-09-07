@@ -36,6 +36,22 @@ Include:
 - suggested skills for the next session;
 - exact next steps in priority order.
 
+## Closeout Receipt
+
+When the handoff follows completed project work, include:
+
+```text
+changed: files, commits, PRs, or artifacts that matter
+verified: checks and results, or why verification was unavailable
+skipped_with_reason: docs, memory, cleanup, or rules intentionally not updated
+follow_up: bounded next actions only
+```
+
+Link to existing evidence instead of repeating it. Separate local checks from
+push, CI, deployment, and public availability. Do not turn closeout into cleanup
+authority: retain temporary files and old plans unless removal was approved.
+Memory changes require an explicit user request; a handoff is not that request.
+
 ## Compression Rules
 
 - Link to artifacts instead of copying them.

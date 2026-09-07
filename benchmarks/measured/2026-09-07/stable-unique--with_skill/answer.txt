@@ -1,0 +1,5 @@
+Fixed `unique` using `dict.fromkeys`, preserving first-seen order with a one-line built-in solution.
+
+Added a focused test for duplicates, mixed hashable values, iterators, and empty input. `python3 -m unittest -v` and `git diff --check` passed.
+
+Skipped dependencies and custom abstractions; a larger implementation is only warranted if requirements expand beyond hashable values.

@@ -43,10 +43,12 @@ Useful across strong coding models, but especially valuable on models that other
 - optimizing narration while leaving tool or verification waste untouched
 
 ## Evaluation
+
+Bounded `rollout_checked` evidence: three synthetic tasks, paired with/without this skill on gpt-6-astra (medium), one run per arm. See [measured results](../../benchmarks/measured/2026-09-07/README.md) for exact prompts, hashes, traces, costs, and rubric limitations. This does not establish held-out or cross-model superiority.
 Evaluated by structural validation and manual review against long-running execution workflows.
 
 ## Version
-0.3.0
+0.4.0
 
 ## Reporting Issues
 Open an issue in the repository.

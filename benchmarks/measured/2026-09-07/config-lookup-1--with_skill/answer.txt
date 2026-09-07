@@ -1,0 +1,1 @@
+{"value":7,"config_path":"config/runtime.json","reader_path":"src/settings.py"}

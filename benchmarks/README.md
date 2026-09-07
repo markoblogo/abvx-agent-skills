@@ -42,7 +42,12 @@ benchmarks/
 
 ## Current Status
 
-Scaffolding only. The repo now has a place for benchmark artifacts, but no published ABVX benchmark matrix should be treated as canonical until the fixtures and reports land beside it.
+The first measured pilot is [2026-09-07](measured/2026-09-07/README.md):
+three synthetic cases each for minimal diffs, token-efficient lookup, and
+release-proof review, paired with/without the target skill. Fixtures, prompts,
+raw sanitized traces, deterministic grades, and CLI usage counters are retained.
+This is a single-model pilot with one run per arm per case, not a canonical
+cross-model benchmark or a held-out result.
 
 The initial bounded skill-evolution pilot is defined in [`skill-evolution/manifest.json`](skill-evolution/manifest.json). It is manual-pilot only: no skill edits are applied or published without evidence, validation, and explicit maintainer acceptance.
 

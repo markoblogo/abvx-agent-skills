@@ -1,0 +1,3 @@
+Updated [app.py](app.py) to use `list(dict.fromkeys(values))`, preserving distinct hashable values in first-seen order.
+
+Verified seven checks covering ordering, duplicates, empty input, iterators, mixed hashables, first-object retention, and unchanged input. `git diff --check` passed.

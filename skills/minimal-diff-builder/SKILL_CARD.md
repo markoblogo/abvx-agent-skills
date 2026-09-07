@@ -42,10 +42,12 @@ Works well on strong coding models that can keep the ladder order intact without
 - confusing smallest correct patch with shortest possible code regardless of readability
 
 ## Evaluation
+
+Bounded `rollout_checked` evidence: three synthetic tasks, paired with/without this skill on gpt-6-astra (medium), one run per arm. See [measured results](../../benchmarks/measured/2026-09-07/README.md) for exact prompts, hashes, traces, costs, and rubric limitations. This does not establish held-out or cross-model superiority.
 Fixture-checked with activation, positive, and negative scope/safety cases in `benchmarks/fixture-cases/minimal-diff-builder.json`.
 
 ## Version
-0.1.0
+0.2.0
 
 ## Reporting Issues
 Open an issue in the repository.

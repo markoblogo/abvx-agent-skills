@@ -1,0 +1,1 @@
+Fix pages: a partially filled last page must count as a page. Preserve validation. Make the change in this workspace and verify it.

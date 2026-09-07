@@ -1,0 +1,1 @@
+Find the active production value of batch_limit and the code that reads it. Reply with a JSON object containing value (integer), config_path, and reader_path. Do not change files.

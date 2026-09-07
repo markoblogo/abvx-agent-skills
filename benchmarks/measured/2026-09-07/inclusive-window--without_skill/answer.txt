@@ -1,0 +1,3 @@
+Updated [app.py](app.py) so `within` includes both endpoints (`lower <= value <= upper`). Reversed bounds still raise `ValueError('reversed bounds')`.
+
+Verified 11 checks covering endpoints, interior/exterior values, equal bounds, and reversed bounds. `git diff --check` passed.

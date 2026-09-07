@@ -56,7 +56,7 @@ Generated from `docs/catalog.json`.
 | `loop-readiness-review` | Workflow, Handoffs & Multi-Track Work | structural_only | Review whether a recurring workflow is ready for bounded loop execution. | `gh skill install markoblogo/abvx-agent-skills loop-readiness-review` |
 | `loopops-protocol` | Research, Knowledge & Reusable Methods | structural_only | Turn reusable agent work into bounded loops. | `gh skill install markoblogo/abvx-agent-skills loopops-protocol` |
 | `lottie-motion-builder` | Frontend, UX & Product Surfaces | structural_only | Build small Lottie assets with preview gates. | `gh skill install markoblogo/abvx-agent-skills lottie-motion-builder` |
-| `minimal-diff-builder` | Coding, Debugging & Architecture | fixture_checked | Choose the smallest correct implementation path. | `gh skill install markoblogo/abvx-agent-skills minimal-diff-builder` |
+| `minimal-diff-builder` | Coding, Debugging & Architecture | rollout_checked | Choose the smallest correct implementation path. | `gh skill install markoblogo/abvx-agent-skills minimal-diff-builder` |
 | `motion-review-gate` | Frontend, UX & Product Surfaces | structural_only | Review frontend motion before shipping. | `gh skill install markoblogo/abvx-agent-skills motion-review-gate` |
 | `overengineering-review` | Coding, Debugging & Architecture | structural_only | Find what can be deleted, collapsed, or replaced. | `gh skill install markoblogo/abvx-agent-skills overengineering-review` |
 | `personal-workspace-router` | Project Context & Onboarding | structural_only | Route local work across isolated domain contexts. | `gh skill install markoblogo/abvx-agent-skills personal-workspace-router` |
@@ -67,7 +67,7 @@ Generated from `docs/catalog.json`.
 | `product-context` | Product Context & Responsible Growth | structural_only | Build an evidence-backed product context before go-to-market work. | `gh skill install markoblogo/abvx-agent-skills product-context` |
 | `project-context-bootstrap` | Project Context & Onboarding | structural_only | Detect stack, ask the right project questions, and build compact durable context. | `gh skill install markoblogo/abvx-agent-skills project-context-bootstrap` |
 | `prototype-lab` | Frontend, UX & Product Surfaces | structural_only | Build throwaway prototypes that answer one question. | `gh skill install markoblogo/abvx-agent-skills prototype-lab` |
-| `public-release-verification` | Long-Run Delivery Control | fixture_checked | Prove release status across live, browser, and human gates. | `gh skill install markoblogo/abvx-agent-skills public-release-verification` |
+| `public-release-verification` | Long-Run Delivery Control | rollout_checked | Prove release status across live, browser, and human gates. | `gh skill install markoblogo/abvx-agent-skills public-release-verification` |
 | `rabbithole-doc-exploration` | Project Context & Onboarding | structural_only | Use a local Rabbithole canvas to explore dense agent docs with human-selected branches. | `gh skill install markoblogo/abvx-agent-skills rabbithole-doc-exploration` |
 | `rapid-grilling` | Discovery, Planning & Delivery | structural_only | Fast one-question-at-a-time alignment for vague ideas and plans. | `gh skill install markoblogo/abvx-agent-skills rapid-grilling` |
 | `recovery-loop-3strike` | Long-Run Delivery Control | structural_only | Retry once, fix-spec once, then hand off honestly. | `gh skill install markoblogo/abvx-agent-skills recovery-loop-3strike` |
@@ -84,7 +84,7 @@ Generated from `docs/catalog.json`.
 | `spreadsheet-workbook-forensics` | Structured Data & Spreadsheet Work | structural_only | Edit workbooks with verified outputs. | `gh skill install markoblogo/abvx-agent-skills spreadsheet-workbook-forensics` |
 | `system-zoom-out` | Coding, Debugging & Architecture | structural_only | Explain how a local area fits into the larger system. | `gh skill install markoblogo/abvx-agent-skills system-zoom-out` |
 | `test-driven-execution` | Coding, Debugging & Architecture | structural_only | Build one behavior at a time with a red-green-refactor loop. | `gh skill install markoblogo/abvx-agent-skills test-driven-execution` |
-| `token-efficient-execution` | Token Economy & Context Control | structural_only | Reduce repeated reads, broad rewrites, and low-value narration. | `gh skill install markoblogo/abvx-agent-skills token-efficient-execution` |
+| `token-efficient-execution` | Token Economy & Context Control | rollout_checked | Reduce repeated reads, broad rewrites, and low-value narration. | `gh skill install markoblogo/abvx-agent-skills token-efficient-execution` |
 | `token-frugal-mode` | Token Economy & Context Control | structural_only | Compress answers without losing technical accuracy. | `gh skill install markoblogo/abvx-agent-skills token-frugal-mode` |
 | `token-usage-audit` | Token Economy & Context Control | structural_only | Audit where token budget is being wasted and apply the smallest fix. | `gh skill install markoblogo/abvx-agent-skills token-usage-audit` |
 | `web-quality-audit` | Frontend, UX & Product Surfaces | structural_only | Audit accessibility, performance, UX, privacy, and browser security. | `gh skill install markoblogo/abvx-agent-skills web-quality-audit` |
