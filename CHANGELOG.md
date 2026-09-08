@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Add `professional-role-router` for task-time selection and handoff between bounded professional roles.
 - Extend `role-skill-pack-design` with professional-role donor adaptation, maturity states, routing, handoffs, authority separation, and evaluation guidance.
 - Extend `personal-workspace-router` so isolated personal domains can activate a small set of professional role profiles without broad context or permission inheritance.
 - Record `msitarzewski/agency-agents` as a pattern source; the prompt corpus is not bundled.

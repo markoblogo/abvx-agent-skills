@@ -1,0 +1,4 @@
+interface:
+  display_name: "Professional Role Router"
+  short_description: "Route substantial work to the right professional roles."
+  default_prompt: "Use $professional-role-router to select the smallest useful professional role set, complete the work through explicit handoffs, and preserve authority boundaries."

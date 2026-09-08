@@ -230,6 +230,7 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 | `book-to-skill` | Converts books, papers, and long documents into reusable, progressive-disclosure agent skills. |
 | `doc-to-lora-evaluator` | Evaluates whether document-to-adapter memory is worth a proof-of-concept before building a Doc-to-LoRA plugin or pipeline. |
 | `goal-loop-designer` | Compiles raw agent goals into bounded loop harnesses with stop rules, rubric, judge prompt, budgets, and portable artifacts. |
+| `professional-role-router` | Routes substantial current work to one primary professional and only the supporting roles needed for explicit handoffs. |
 | `role-skill-pack-design` | Adapts professional role agents into compact packs with routing, donor provenance, bounded context, authority, and evaluation. |
 | `workflow-policy-layering` | Separates workflow from authority, escalation, forbidden actions, and validation so assistant specs stop contradicting themselves. |
 | `brief-first-execution` | Starts non-trivial work with one live brief for scope, non-goals, risks, verification, and done criteria. |
