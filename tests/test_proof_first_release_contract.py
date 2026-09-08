@@ -53,6 +53,7 @@ def test_fixture_checked_skills_have_activation_and_negative_cases() -> None:
         "minimal-diff-builder",
         "diagnose",
         "reversible-agent-task",
+        "happy-handoff",
         "browser-verification",
         "public-release-verification",
     }

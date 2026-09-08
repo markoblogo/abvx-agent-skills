@@ -102,6 +102,7 @@ Some useful repo surfaces are companion contracts rather than installable skill 
 | Coordinate reviewed multi-agent work | `bounded-orchestration-contract` | A non-trivial task benefits from Planner/Reviewer approval, stable findings, disjoint executor ownership, explicit route evidence, and root verification. |
 | Preserve typed project truth | `git-native-context-contract` | Decisions, rules, specs, plans, bounded research, or recurring incident lessons need a minimal Git-reviewed lifecycle and relation contract. |
 | Run reversible agent work | `reversible-agent-task` | A task should produce retained output first, then move through inspect -> select/apply/discard before touching the target workspace. |
+| Continue a Codex task from Android | `happy-handoff` | The user says `ухожу` or explicitly asks to resume the same active Codex Desktop task through Happy. |
 | Check ship confidence | `confidence-fragility-review`, `delivery-baseline-audit` | A release, README, generated plan, or PR sounds done but evidence may be thin. |
 | Choose the right delivery lane before shipping | `docs/ship-router-contract.md` | Work may need `direct`, `review_first`, `bounded_loop`, or `human_gate` routing before implementation widens or a ship claim is made. |
 | Save tokens in shell-heavy work | `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution` | Logs, diffs, tests, and command output are burning context and hiding the real signal. |
@@ -255,6 +256,7 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 | `pipeline-readiness-gate` | Selects a compact pre-implementation, post-implementation, or ship gate without adopting a heavy multi-agent pipeline runtime. |
 | `reversible-agent-task` | Runs risky or multi-file agent work as retained output, then requires inspect -> select/apply/discard before target workspace mutation. |
 | `handoff` | Produces compact continuation briefs for long-running work, agent resumes, and human handoffs. |
+| `happy-handoff` | Schedules the exact active Codex Desktop task to resume in Happy on Android while preserving its workspace and approval boundaries. See the [local pilot](docs/demos/happy-handoff.md). |
 | `agent-operations-contract` | Governs named agents, operation receipts, decisions, memory, provider evidence, and approval boundaries. |
 | `bounded-orchestration-contract` | Coordinates reviewed Planner/Reviewer/Executor work with stable findings, disjoint ownership, and root verification. |
 

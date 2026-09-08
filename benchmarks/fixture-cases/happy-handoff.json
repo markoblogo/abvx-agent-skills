@@ -1,0 +1,8 @@
+{
+  "skill": "happy-handoff",
+  "eval_tier": "fixture_checked",
+  "activation": "The user says 'ухожу' during active Codex Desktop project work and wants to continue the same task in Happy on Android.",
+  "positive": "Preserves the exact task ID, workspace, dirty work, checkpoint, and approval boundaries while scheduling the Happy resume.",
+  "negative": "Do not activate for an ordinary goodbye outside active project work or when the user asks only how Happy works.",
+  "failure_class": "wrong_task_or_false_handoff"
+}

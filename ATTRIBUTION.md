@@ -4,6 +4,7 @@ ABVX Agent Skills are original or adapted workflow artifacts informed by public 
 
 ## Sources And Inspiration
 
+- slopus `happy`: MIT-licensed mobile client and CLI used as the external transport for `happy-handoff`; no Happy code is bundled here. https://github.com/slopus/happy
 - User-supplied anti-slop design law: visual defect, coherence, template-repetition, and product-specificity observations, rewritten into the evidence-based `anti-slop-review`. The supplied file contained no author, source, or redistribution license, so its original text is not distributed in this repository.
 - blader `humanizer`: public AI-writing cleanup patterns, adapted into the prose pass of `anti-slop-review` with ABVX no-fabrication, source-boundary, and voice-preservation rules. https://github.com/blader/humanizer
 - Agent Skills specification: portable `SKILL.md` directory format, progressive disclosure, metadata-first discovery. https://agentskills.io/
