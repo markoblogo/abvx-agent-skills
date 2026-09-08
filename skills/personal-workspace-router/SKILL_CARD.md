@@ -2,7 +2,7 @@
 
 ## Description
 
-Designs and maintains a local personal AI workspace with a root router, isolated domain folders, user-triggered memory, decision logs, and sparse routing corrections.
+Designs and maintains a local personal AI workspace with domain isolation, professional role routing, user-triggered memory, decision logs, and sparse routing corrections.
 
 ## Owner
 
@@ -26,9 +26,9 @@ ABVX adapted. Informed by personal AI workspace patterns in Bykov Digital's publ
 
 ## Inputs and Outputs
 
-Inputs: user domains, routing signals, repo paths, safety boundaries, memory policy, and existing local workspace files.
+Inputs: user domains, routing signals, professional role profiles, repo paths, safety boundaries, memory policy, and existing local workspace files.
 
-Outputs: root `AGENTS.md`, isolated domain folders, user-triggered `MEMORY.md` files, `DECISIONS.md`, and `ROUTING-LOG.md` policy.
+Outputs: root `AGENTS.md`, isolated domain folders, initial role routing, user-triggered `MEMORY.md` files, `DECISIONS.md`, and `ROUTING-LOG.md` policy.
 
 ## Risks and Mitigations
 
@@ -36,6 +36,7 @@ Outputs: root `AGENTS.md`, isolated domain folders, user-triggered `MEMORY.md` f
 - Risk: routing ritual slows work. Mitigation: state routing only when it materially affects the task.
 - Risk: private data leakage. Mitigation: never store secrets, credentials, private contacts, or bulky transcripts.
 - Risk: workspace rules override repo safety. Mitigation: repo-local `AGENTS.md`, tests, and approval gates remain authoritative for implementation.
+- Risk: a routed role is mistaken for authority. Mitigation: role selection changes stance and context only; source/action policy still governs every action.
 
 ## Evaluation
 
@@ -47,6 +48,7 @@ Evaluated by structural validation and manual review against multi-domain ABVX l
 - `durable-context-maintenance`
 - `doc-grounded-grilling`
 - `agent-learning-layer-triage`
+- `role-skill-pack-design`
 
 ## Anti-Patterns
 
@@ -57,7 +59,7 @@ Evaluated by structural validation and manual review against multi-domain ABVX l
 
 ## Version
 
-0.1.0
+0.2.0
 
 ## Reporting Issues
 

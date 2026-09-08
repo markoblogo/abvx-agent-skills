@@ -1,4 +1,4 @@
 interface:
   display_name: "Role Skill Pack Design"
-  short_description: "Design compact role and workflow skill packs with base and difference layers."
-  default_prompt: "Design a compact reusable role or workflow skill pack."
+  short_description: "Adapt professional role agents with bounded context and authority."
+  default_prompt: "Use $role-skill-pack-design to design a compact professional role pack with routing, donor provenance, authority boundaries, and evaluation."

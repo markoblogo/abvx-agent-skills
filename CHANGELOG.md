@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Extend `role-skill-pack-design` with professional-role donor adaptation, maturity states, routing, handoffs, authority separation, and evaluation guidance.
+- Extend `personal-workspace-router` so isolated personal domains can activate a small set of professional role profiles without broad context or permission inheritance.
+- Record `msitarzewski/agency-agents` as a pattern source; the prompt corpus is not bundled.
+
 ## 0.14.0 — measured demos and task closeout
 
 - Run the test suite in both validation CI and the publication build gate; include tests in the source distribution.
