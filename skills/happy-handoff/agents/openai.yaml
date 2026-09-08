@@ -1,0 +1,4 @@
+interface:
+  display_name: "Happy Handoff"
+  short_description: "Continue the current Codex task from Happy on Android."
+  default_prompt: "Move this task to Happy safely and preserve the current workspace and approval boundaries."

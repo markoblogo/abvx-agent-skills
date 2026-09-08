@@ -45,6 +45,7 @@ Generated from `docs/catalog.json`.
 | `goal-loop-designer` | Research, Knowledge & Reusable Methods | structural_only | Compile raw goals into bounded agent loop harnesses. | `gh skill install markoblogo/abvx-agent-skills goal-loop-designer` |
 | `graph-guided-code-reading` | Token Economy & Context Control | structural_only | Read codebases through symbols, edges, and blast radius instead of broad scans. | `gh skill install markoblogo/abvx-agent-skills graph-guided-code-reading` |
 | `handoff` | Workflow, Handoffs & Multi-Track Work | structural_only | Write compact continuation briefs for future agents. | `gh skill install markoblogo/abvx-agent-skills handoff` |
+| `happy-handoff` | Workflow, Handoffs & Multi-Track Work | fixture_checked | Continue the current Codex task from Happy on Android. | `gh skill install markoblogo/abvx-agent-skills happy-handoff` |
 | `html-brief-artifact` | HTML Artifacts & Visual Deliverables | structural_only | Create a standalone HTML brief for plans, summaries, and reports. | `gh skill install markoblogo/abvx-agent-skills html-brief-artifact` |
 | `html-diagram-artifact` | HTML Artifacts & Visual Deliverables | structural_only | Create a standalone HTML/SVG architecture or flow explainer. | `gh skill install markoblogo/abvx-agent-skills html-diagram-artifact` |
 | `hypothesis-diversification` | Research, Knowledge & Reusable Methods | structural_only | Generate diverse alternatives before review or validation. | `gh skill install markoblogo/abvx-agent-skills hypothesis-diversification` |

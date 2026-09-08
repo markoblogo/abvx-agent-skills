@@ -1,8 +1,8 @@
 {
-  "skill_count": 86,
+  "skill_count": 87,
   "categories": {
     "Research, Knowledge & Reusable Methods": 17,
-    "Workflow, Handoffs & Multi-Track Work": 8,
+    "Workflow, Handoffs & Multi-Track Work": 9,
     "Coding, Debugging & Architecture": 13,
     "Frontend, UX & Product Surfaces": 12,
     "Discovery, Planning & Delivery": 6,
@@ -881,6 +881,25 @@
       "origin": "adapted",
       "status": "experimental",
       "eval_tier": "structural_only"
+    },
+    {
+      "name": "happy-handoff",
+      "display_name": "Happy Handoff",
+      "category": "Workflow, Handoffs & Multi-Track Work",
+      "description": "Continue the current Codex Desktop task in Happy on Android when the user says \"\u0443\u0445\u043e\u0436\u0443\", asks to move or hand off to Happy, or invokes this skill explicitly.",
+      "short_description": "Continue the current Codex task from Happy on Android.",
+      "intended_use": "Use after the user says `\u0443\u0445\u043e\u0436\u0443`, explicitly asks to continue in Happy, or invokes the skill during an active Codex Desktop task.",
+      "model_sensitivity": "",
+      "composable_with": [],
+      "anti_patterns": [],
+      "risks": "- Risk: resuming the wrong task. Mitigation: validate and pass the exact `CODEX_THREAD_ID`.\n- Risk: losing dirty work. Mitigation: preserve the current directory and prohibit cleanup, stash, or commit during handoff.\n- Risk: weakening approvals. Mitigation: prohibit `--yolo` and permission bypasses.\n- Risk: false success. Mitigation: distinguish scheduling from observed Android receipt.",
+      "path": "skills/happy-handoff/SKILL.md",
+      "card_path": "skills/happy-handoff/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/happy-handoff/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/happy-handoff/SKILL_CARD.md",
+      "origin": "original",
+      "status": "experimental",
+      "eval_tier": "fixture_checked"
     },
     {
       "name": "html-brief-artifact",
