@@ -57,6 +57,27 @@ Browse the searchable catalog at [lab.abvx.xyz/tools/abvx-agent-skills/](https:/
 
 If you want a scan-friendly text catalog for browsing or indexing, use [CATALOG.md](CATALOG.md).
 
+## External companion for modern web work
+
+[GoogleChrome/modern-web-guidance](https://github.com/GoogleChrome/modern-web-guidance)
+is the recommended source for current browser APIs, compatibility-aware fallbacks,
+accessibility, CSS, forms, and web performance patterns. Use it only for browser-facing
+HTML, CSS, and client-side JavaScript work. It complements `frontend-product-builder`,
+`web-quality-audit`, and `browser-verification`; it is not bundled here and its results
+do not replace ABVX validation or browser evidence.
+
+For Codex:
+
+```bash
+codex plugin marketplace add GoogleChrome/modern-web-guidance
+codex plugin add modern-web-guidance@googlechrome
+```
+
+The external tool collects guide IDs and agent-generated search queries by default.
+Set `DISABLE_TELEMETRY=1` in the shell environment to opt out. Review its
+[telemetry notes](https://github.com/GoogleChrome/modern-web-guidance#telemetry--privacy)
+and preview-release status before team-wide adoption.
+
 ## Companion contracts
 
 Some useful repo surfaces are companion contracts rather than installable skill entries.
