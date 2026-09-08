@@ -1,4 +1,4 @@
 interface:
   display_name: "Personal Workspace Router"
-  short_description: "Route local work across isolated domain contexts."
-  default_prompt: "Use $personal-workspace-router to design a compact local AI workspace with isolated domains, user-triggered memory, decision logs, and routing corrections."
+  short_description: "Route personal work across isolated domains and professional roles."
+  default_prompt: "Use $personal-workspace-router to design a compact local AI workspace with isolated domains, professional role routing, user-triggered memory, and sparse corrections."

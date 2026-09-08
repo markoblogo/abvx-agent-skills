@@ -204,7 +204,7 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 | `filesystem-context-discipline` | Uses typed files for scratchpads, plans, evidence, retained outputs, and handoffs without polluting always-loaded prompt context. |
 | `rabbithole-doc-exploration` | Opens AGENTS.md, skill docs, SET plans, repomaps, or seed docs in an optional local Rabbithole canvas for human-selected branch questions. |
 | `durable-context-maintenance` | Keeps repo-local context current after architecture, workflow, and test-flow changes so agents stop rediscovering the same facts. |
-| `personal-workspace-router` | Creates a local root router with isolated domain folders, user-triggered memory, decision logs, and routing corrections for multi-project operator work. |
+| `personal-workspace-router` | Routes personal work across isolated domains and professional roles with user-triggered memory and sparse corrections. |
 
 ### Discovery, Planning & Delivery
 
@@ -230,7 +230,7 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 | `book-to-skill` | Converts books, papers, and long documents into reusable, progressive-disclosure agent skills. |
 | `doc-to-lora-evaluator` | Evaluates whether document-to-adapter memory is worth a proof-of-concept before building a Doc-to-LoRA plugin or pipeline. |
 | `goal-loop-designer` | Compiles raw agent goals into bounded loop harnesses with stop rules, rubric, judge prompt, budgets, and portable artifacts. |
-| `role-skill-pack-design` | Designs compact role/workflow skill packs with base layers, difference layers, boundaries, and rollout order. |
+| `role-skill-pack-design` | Adapts professional role agents into compact packs with routing, donor provenance, bounded context, authority, and evaluation. |
 | `workflow-policy-layering` | Separates workflow from authority, escalation, forbidden actions, and validation so assistant specs stop contradicting themselves. |
 | `brief-first-execution` | Starts non-trivial work with one live brief for scope, non-goals, risks, verification, and done criteria. |
 | `private-vs-publishable-skill-audit` | Audits private skill packs before publication and extracts only the reusable layer. |
