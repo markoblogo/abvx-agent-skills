@@ -1,7 +1,7 @@
 {
-  "skill_count": 87,
+  "skill_count": 88,
   "categories": {
-    "Research, Knowledge & Reusable Methods": 17,
+    "Research, Knowledge & Reusable Methods": 18,
     "Workflow, Handoffs & Multi-Track Work": 9,
     "Coding, Debugging & Architecture": 13,
     "Frontend, UX & Product Surfaces": 12,
@@ -1362,6 +1362,37 @@
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/product-context/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/product-context/SKILL_CARD.md",
       "origin": "adapted",
+      "status": "experimental",
+      "eval_tier": "structural_only"
+    },
+    {
+      "name": "professional-role-router",
+      "display_name": "Professional Role Router",
+      "category": "Research, Knowledge & Reusable Methods",
+      "description": "Route a substantial current task to the smallest useful set of professional role stances and carry the work through their explicit handoffs. Use for career, research, publishing, coaching, fitness, business, finance, support, engineering, architecture, or other work where specialist methods materially improve the result. Skip simple one-step requests.",
+      "short_description": "Route substantial work to the right professional roles.",
+      "intended_use": "Use for cross-domain personal, product, career, publishing, research, coaching, finance, support, and software tasks where specialist methods materially improve the result.",
+      "model_sensitivity": "Works across models that can follow scoped instructions and preserve source/action boundaries. Weaker models may over-select roles or blur handoffs; keep routes smaller and outputs structured.",
+      "composable_with": [
+        "`role-skill-pack-design`",
+        "`personal-workspace-router`",
+        "`evidence-ledger-research`",
+        "`test-driven-execution`",
+        "`public-release-verification`"
+      ],
+      "anti_patterns": [
+        "announcing roles without changing the work method;",
+        "loading every specialist into one context;",
+        "letting a supporting role take over without a handoff;",
+        "treating a role as a credential or approval;",
+        "persisting private context because multiple roles may need it later."
+      ],
+      "risks": "- Role sprawl: cap the route at one primary and two supporting roles.\n- Persona theatre: judge success by the deliverable and evidence.\n- Context leakage: pass only the minimum handoff artifact.\n- Authority confusion: role selection has no authority effect.\n- Unsupported expertise: domain sources and policies override generic role patterns.",
+      "path": "skills/professional-role-router/SKILL.md",
+      "card_path": "skills/professional-role-router/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/professional-role-router/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/professional-role-router/SKILL_CARD.md",
+      "origin": "original",
       "status": "experimental",
       "eval_tier": "structural_only"
     },
