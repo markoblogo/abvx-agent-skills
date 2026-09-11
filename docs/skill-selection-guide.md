@@ -27,6 +27,7 @@ Choose the smallest relevant set. See the [quickstart](solo-dev-quickstart.md) f
 - **Need to explore dense agent docs interactively?** Start with `rabbithole-doc-exploration` when Rabbithole MCP is available, or use its direct-review fallback.
 - **Need one local workspace across many domains?** Start with `personal-workspace-router` to create a root router, isolated domain context, user-triggered memory, decision logs, and sparse routing corrections.
 - **Need discovery or product shaping?** Start with `rapid-grilling`, `doc-grounded-grilling`, and `spec-to-prd`. Use repo glossary/context files and ADRs as first-class artifacts when domain language or consequential decisions settle.
+- **Need to compare strategic options under uncertainty?** Install the standalone [DecisionMap](https://github.com/markoblogo/decision-map) companion for explicit assumptions, trade-offs, breakpoints, and revisit triggers.
 - **Need to turn plans into execution?** Start with `plan-to-issues`, `repo-issue-triage`, and `test-driven-execution`.
 - **Need to take an idea all the way to a shipped slice?** Start with `idea-to-ship-gates`, then route into `spec-to-prd`, `plan-to-issues`, `delivery-preflight-gate`, and proof/review skills only where the current gate needs depth.
 - **Need to publish or monitor social content safely?** Start with `social-publishing-gate` so drafts, audits, approvals, external posting, and follow-ups stay separate.

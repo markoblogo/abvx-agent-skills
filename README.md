@@ -57,7 +57,19 @@ Browse the searchable catalog at [lab.abvx.xyz/tools/abvx-agent-skills/](https:/
 
 If you want a scan-friendly text catalog for browsing or indexing, use [CATALOG.md](CATALOG.md).
 
-## External companion for modern web work
+## External companions
+
+### Decision mapping
+
+[DecisionMap](https://github.com/markoblogo/decision-map) is the standalone companion for complex business, product, market, positioning, and go-to-market decisions. It generates comparable options, explicit assumptions, breakpoints, evidence needs, and revisit triggers. Install it directly from its canonical repository:
+
+```bash
+npx skills add markoblogo/decision-map --skill decision-map
+```
+
+DecisionMap stays separate because its protocol, JSON schemas, worked examples, and cascade logs form an independent product. This pack links to it but does not duplicate or repackage its files.
+
+### Modern web work
 
 [GoogleChrome/modern-web-guidance](https://github.com/GoogleChrome/modern-web-guidance)
 is the recommended source for current browser APIs, compatibility-aware fallbacks,
