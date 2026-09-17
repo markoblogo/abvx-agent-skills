@@ -90,6 +90,43 @@ Set `DISABLE_TELEMETRY=1` in the shell environment to opt out. Review its
 [telemetry notes](https://github.com/GoogleChrome/modern-web-guidance#telemetry--privacy)
 and preview-release status before team-wide adoption.
 
+### Chrome DevTools verification
+
+[Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) is an
+optional local companion for inspecting a live Chrome session after a web change.
+It can collect console and network failures, accessibility snapshots, screenshots,
+and performance traces. Use it for `ABVXsite`, `SET`, `git-tweet`, Pictiq web
+surfaces, and extension UIs; do not add it to product runtime dependencies or
+require it for CLI, firmware, or backend-only repositories.
+
+Install and run it locally with privacy-safe defaults:
+
+```json
+{
+  "mcpServers": {
+    "chrome-devtools": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "chrome-devtools-mcp@latest",
+        "--isolated",
+        "--no-usage-statistics",
+        "--no-performance-crux"
+      ],
+      "env": {
+        "CHROME_DEVTOOLS_MCP_NO_UPDATE_CHECKS": "1"
+      }
+    }
+  }
+}
+```
+
+Use a separate browser profile and never connect it to tabs containing private
+credentials or personal data. The server can inspect and modify the connected
+browser, and its upstream defaults include usage statistics and optional CrUX
+lookups. The complete pilot procedure is in
+[docs/chrome-devtools-mcp-pilot.md](docs/chrome-devtools-mcp-pilot.md).
+
 ## Companion contracts
 
 Some useful repo surfaces are companion contracts rather than installable skill entries.
