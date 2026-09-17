@@ -3,6 +3,10 @@
 This is an optional verification companion, not a runtime dependency of the
 ABVX projects.
 
+**Current status (2026-09-17): `INSTALL_BLOCKED`.** The official npm package
+could not be downloaded in the current Codex environment, so no MCP browser
+result is claimed yet. Resume the pilot when npm access is available.
+
 ## Scope
 
 Run the pilot on the next substantive web PR in `SET` or `ABVXsite`. Do not
