@@ -127,6 +127,30 @@ browser, and its upstream defaults include usage statistics and optional CrUX
 lookups. The complete pilot procedure is in
 [docs/chrome-devtools-mcp-pilot.md](docs/chrome-devtools-mcp-pilot.md).
 
+### Design reference research
+
+[Inspo](https://github.com/Nutlope/inspo) is an optional local MCP companion for
+finding real interface references before changing a web UI. Use targeted screen
+searches and inspect the selected references individually; do not treat its
+automatic recommendation as a design brief or copy a source site's identity.
+
+Install it for Codex:
+
+```bash
+npx -y inspo-mcp install --client codex --local
+```
+
+For smaller responses, configure the server with `INSPO_PROFILE=lite`,
+`INSPO_IMAGES=thumbs`, and `INSPO_MAX_TOKENS=8000`. Inspo runs locally over
+stdio without telemetry, but it downloads its public reference catalogue from
+a CDN, so keep confidential product information out of search prompts. It is a
+research tool, not a product dependency or a replacement for browser checks.
+
+The [Pictiq pilot](docs/inspo-pictiq-pilot.md) found that precise searches for
+type specimens, glyph systems, and ecosystem indexes produced useful evidence,
+while the generic recommendation route pushed the symbol-first landing toward
+an unsuitable SaaS/agency pattern.
+
 ## Companion contracts
 
 Some useful repo surfaces are companion contracts rather than installable skill entries.
