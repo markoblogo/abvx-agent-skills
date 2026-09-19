@@ -1,0 +1,7 @@
+{
+  "summary": "Authentication guarantees sign-in (A1), not admin authorization. The route trusts the caller-supplied tenant (A2) and exports without a role check (A3). Hiding the button using localStorage.role (A4) is bypassable and provides no server-side protection. Policy requires server-side admin authorization and tenant scope derived from authenticated server identity (A5). Minimum safe remediation: reject non-admins server-side before export and derive tenant scope exclusively from authenticated server identity.",
+  "retained_point_ids": ["A1", "A2", "A3", "A4", "A5"],
+  "evidence_files": ["policy.md", "route.py", "client.js"],
+  "caveat": "Static inspection only; export_all and upstream enforcement are not shown, so actual cross-tenant disclosure is unverified. No files changed.",
+  "next_step": "Implement the server-side checks; verify non-admin requests are denied and caller-supplied tenant values cannot alter export scope."
+}

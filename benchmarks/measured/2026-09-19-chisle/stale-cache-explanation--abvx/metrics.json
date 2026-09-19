@@ -1,0 +1,33 @@
+{
+  "case": "stale-cache-explanation",
+  "kind": "explanation",
+  "arm": "abvx",
+  "returncode": 0,
+  "started_at_utc": "2026-09-19T21:04:33Z",
+  "duration_seconds": 37.807,
+  "usage": {
+    "input_tokens": 53483,
+    "cached_input_tokens": 39168,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 438,
+    "reasoning_output_tokens": 0
+  },
+  "tool_calls": 3,
+  "tool_output_bytes": 1325,
+  "isolation_violations": [],
+  "changed_files": [],
+  "changed_lines": 0,
+  "grade": {
+    "passed": false,
+    "information_retained": 0,
+    "information_total": 5,
+    "missing_points": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5"
+    ],
+    "evidence_mismatch": []
+  }
+}

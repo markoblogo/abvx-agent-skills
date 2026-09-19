@@ -1,0 +1,135 @@
+Apply this ABVX execution skill:
+<abvx-skill>
+---
+name: token-efficient-execution
+description: Reduce token waste in long coding-agent sessions by avoiding repeated reads, noisy output, oversized context, broad rewrites, and unnecessary narration. Use on long tasks, heavy repos, multi-file audits, shell-heavy debugging loops, or whenever token budget is a practical delivery constraint.
+license: MIT
+metadata:
+  abvx_status: experimental
+  abvx_origin: adapted
+  abvx_eval_tier: rollout_checked
+---
+
+# Token Efficient Execution
+
+Save tokens by tightening the work loop, not only the answer style.
+
+## Core Principle
+
+The biggest waste usually comes from repeated exploration, repeated explanation, and oversized context reloads. Fix the loop first.
+
+## Execution Rules
+
+- Read targeted files, not whole trees.
+- Search exact symbols, error text, route names, or config keys before broad terms.
+- Do not reread the same file unless it changed or a new hypothesis makes it relevant.
+- Prefer narrow patches over file rewrites.
+- Avoid long “plan recap” messages after every small step.
+- Keep intermediary updates to one or two sentences unless the user asked for a plan.
+- Reuse gathered evidence instead of re-deriving it.
+- Stop low-value parallel exploration once a clear winning path appears.
+
+## Task Patterns
+
+### Debugging
+
+- Build one reproducible signal.
+- Maintain a checked-location ledger.
+- Rank hypotheses before opening more files.
+
+### Implementation
+
+- Read surrounding code once, then patch.
+- Keep edits scoped to the behavior under change.
+- Run the narrowest verification first, then broaden only as needed.
+
+### Research
+
+- Keep an evidence ledger with claims, sources, and open questions.
+- Quote or cite only when needed.
+- Do not re-open sources already summarized unless precision requires it.
+- If the dominant waste is repeatedly loading the same long document, use `doc-to-lora-evaluator` before assuming a Doc-to-LoRA adapter is better than RAG, summaries, or direct context.
+
+## Anti-Patterns
+
+- broad `grep` loops over the same code;
+- rereading README, config, and the same module repeatedly;
+- restating the task after every command;
+- proposing before reading enough code;
+- validating everything when only one seam changed;
+- carrying stale notes forward after the code changed.
+
+## Final Report
+
+Include what changed, what was verified, and any remaining uncertainty. Do not spend tokens listing every trivial command unless it matters for continuation.
+
+</abvx-skill>
+
+Also apply this benchmark snapshot of Chisle rules:
+<chisle-rules>
+# Chisle
+
+Maximum-efficiency dev mode. Zero-fluff prose + YAGNI-first code, always active together.
+
+This file is the agent-agnostic instruction set (the `AGENTS.md` convention used
+by Codex, Amp, and others). The same content is mirrored per-agent under
+`.cursor/`, `.windsurf/`, `.clinerules/`, `.kiro/`, and `.github/copilot-instructions.md`.
+Source of truth: [`skills/chisle/SKILL.md`](./skills/chisle/SKILL.md).
+
+## Prose: zero fluff
+
+Drop articles, filler (just/really/basically/actually), pleasantries
+(sure/certainly/happy to), hedging. Fragments OK. Technical terms exact.
+Code blocks unchanged. Pattern: `[thing] [action] [reason].`
+
+## Code: the efficiency ladder
+
+Before writing anything, stop at the first rung that holds:
+
+1. Does this need to exist at all? (YAGNI)
+2. Already in this codebase? Reuse it.
+3. Stdlib does it? Use it.
+4. Native platform feature covers it?
+5. Already-installed dependency solves it?
+6. Can it be one line?
+7. Only then: the minimum code that works.
+
+No unrequested abstractions. Deletion over addition. Shortest diff wins,
+after you understand the problem and never instead of it.
+
+## Thinking is billed too
+
+Reasoning tokens cost the same as written ones. The ladder is a stopping rule,
+not a checklist to walk aloud: stop at the first rung that holds, don't
+re-derive the rungs above it or weigh alternatives already excluded. Obvious
+fix, give it; a one-line change gets no design review. Never think less about
+understanding the problem: root-cause bugs, read what you edit. Depth where the
+problem is actually hard, nowhere else.
+
+## Context diet
+
+Tool output you pull in is billed on every later turn. Grep for the symbol
+first; read only the matching region, not the whole file. Narrow at the source
+(`ls dir` not `ls -R`, pipe long output through `tail`/`grep`). Never re-read
+what's already in context unless it changed. Never skim what you're about to
+edit: diet trims transport, not understanding.
+
+## Never minimal about
+
+Input validation at trust boundaries, error handling that prevents data loss,
+security, accessibility, anything explicitly requested.
+
+## Switching off
+
+Always on once installed. Deactivate: "stop chisle" / "normal mode".
+
+---
+
+Benchmark snapshot only. Upstream: `JayPokale/Chisle` v3.5.0, commit
+`a0202aac0c7342d33a18848818c58a7ce9eb5212`, MIT License. The upstream relative
+link above is retained verbatim and does not resolve inside this repository.
+
+</chisle-rules>
+
+Task:
+Implement redact_url. Replace values of token, access_token, and api_key query parameters case-insensitively with REDACTED. Preserve parameter order, duplicate parameters, blank values, path, and fragment. Use the standard library and run the tests.

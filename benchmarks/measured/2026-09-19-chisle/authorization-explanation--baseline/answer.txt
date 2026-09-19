@@ -1,0 +1,7 @@
+{
+  "summary": "A1: Middleware guarantees authentication, not admin authorization. A2: The export route trusts the caller-controlled tenant query parameter. A3: It calls export_all without a role check, allowing signed-in non-admins to request exports and callers to select another tenant. A4: Hiding the button using localStorage.role is bypassable and provides no server-side protection. A5: Policy requires server-side admin authorization and tenant scope derived from the authenticated server identity. Minimum safe remediation: enforce the admin check on the server before exporting, derive tenant scope exclusively from the authenticated server identity, and use that scope for export_all.",
+  "retained_point_ids": ["A1", "A2", "A3", "A4", "A5"],
+  "evidence_files": ["route.py", "client.js", "policy.md"],
+  "caveat": "The supplied route lacks both controls; middleware and export_all implementations were not provided, so downstream enforcement and actual data exposure cannot be verified. No files were changed.",
+  "next_step": "Implement both server-side controls and verify that direct non-admin requests are denied, tenant query tampering cannot change export scope, and admins can export only their authenticated tenant."
+}

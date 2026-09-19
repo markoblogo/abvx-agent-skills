@@ -1,0 +1,3 @@
+Updated `apply_overrides` to return a fresh dict, preserve defaults, and raise `KeyError` for unknown override keys. No dependencies added.
+
+Tests: `python -m pytest -q` — 3 passed.

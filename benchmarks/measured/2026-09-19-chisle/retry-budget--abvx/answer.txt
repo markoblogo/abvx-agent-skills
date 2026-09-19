@@ -1,0 +1,3 @@
+Fixed `attempt` to make at most `max_attempts` calls, including the first.
+
+Verified exact budgets, last-error propagation, immediate and final-attempt success, and invalid-budget validation. All 7 tests pass; diff checks pass. No remaining uncertainty identified.

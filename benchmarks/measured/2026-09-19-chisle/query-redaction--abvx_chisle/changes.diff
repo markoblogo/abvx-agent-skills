@@ -1,0 +1,47 @@
+diff --git a/__pycache__/app.cpython-314.pyc b/__pycache__/app.cpython-314.pyc
+new file mode 100644
+index 0000000..9572cb8
+Binary files /dev/null and b/__pycache__/app.cpython-314.pyc differ
+diff --git a/__pycache__/test_app.cpython-314-pytest-9.1.1.pyc b/__pycache__/test_app.cpython-314-pytest-9.1.1.pyc
+new file mode 100644
+index 0000000..3b67a2f
+Binary files /dev/null and b/__pycache__/test_app.cpython-314-pytest-9.1.1.pyc differ
+diff --git a/app.py b/app.py
+index 98f5949..9a683cc 100644
+--- a/app.py
++++ b/app.py
+@@ -1,7 +1,11 @@
+-from urllib.parse import urlsplit, urlunsplit
++from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
+ 
+ SENSITIVE = {'token', 'access_token', 'api_key'}
+ 
+ def redact_url(url):
+     parts = urlsplit(url)
+-    return urlunsplit(parts)
++    query = urlencode([
++        (key, 'REDACTED' if key.lower() in SENSITIVE else value)
++        for key, value in parse_qsl(parts.query, keep_blank_values=True)
++    ])
++    return urlunsplit(parts._replace(query=query))
+diff --git a/test_app.py b/test_app.py
+index 377b7ce..28d99a3 100644
+--- a/test_app.py
++++ b/test_app.py
+@@ -2,3 +2,16 @@ from app import redact_url
+ 
+ def test_redacts_sensitive_query_values():
+     assert redact_url('https://x.test/p?a=1&token=secret#top') == 'https://x.test/p?a=1&token=REDACTED#top'
++
++def test_preserves_order_duplicates_blanks_path_and_fragment():
++    url = 'https://x.test/a%2Fb?x=&ToKeN=one&x=2&ACCESS_TOKEN=two&api_KEY=three&ToKeN=four#token=visible'
++    assert redact_url(url) == 'https://x.test/a%2Fb?x=&ToKeN=REDACTED&x=2&ACCESS_TOKEN=REDACTED&api_KEY=REDACTED&ToKeN=REDACTED#token=visible'
++
++def test_decodes_parameter_names_and_matches_exact_names():
++    assert redact_url('https://x.test/?%74oken=secret&my_token=visible') == 'https://x.test/?token=REDACTED&my_token=visible'
++
++def test_redacts_empty_sensitive_values():
++    assert redact_url('/p?token=&api_key&blank=') == '/p?token=REDACTED&api_key=REDACTED&blank='
++
++def test_url_without_query():
++    assert redact_url('/p#top') == '/p#top'

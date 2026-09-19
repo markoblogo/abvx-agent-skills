@@ -80,11 +80,11 @@ def cases():
             },
             "prompt": "Explain the stale-price incident for an engineer. Return JSON with summary, retained_point_ids, evidence_files, caveat, and next_step. Keep every decisive fact even if the prose is short. Do not change files.",
             "points": {
-                "P1": ["tenant", "key"],
-                "P2": ["300"],
-                "P3": ["west", "east"],
-                "P4": ["invalidat"],
-                "P5": ["verify"],
+                "E1": ["tenant", "key"],
+                "E2": ["300"],
+                "E3": ["west", "14"],
+                "E4": ["east", "11"],
+                "E5": ["deploy", "invalidat"],
             },
             "evidence": ["service.py", "incident.log", "README.md"],
         },
@@ -97,11 +97,11 @@ def cases():
             },
             "prompt": "Explain the authorization defect and the minimum safe remediation. Return JSON with summary, retained_point_ids, evidence_files, caveat, and next_step. Keep every decisive fact even if the prose is short. Do not change files.",
             "points": {
-                "P1": ["client", "untrusted"],
-                "P2": ["server", "role"],
-                "P3": ["tenant", "authenticated"],
-                "P4": ["authoriz"],
-                "P5": ["audit"],
+                "A1": ["authentication", "admin"],
+                "A2": ["tenant"],
+                "A3": ["role", "check"],
+                "A4": ["localstorage", "bypass"],
+                "A5": ["server", "admin", "authenticated"],
             },
             "evidence": ["route.py", "client.js", "policy.md"],
         },
@@ -113,11 +113,11 @@ def cases():
             },
             "prompt": "Assess the draft release claim. Return JSON with summary, retained_point_ids, evidence_files, caveat, and next_step. Keep every decisive fact even if the prose is short. Do not change files.",
             "points": {
-                "P1": ["new123", "build"],
-                "P2": ["old999", "deploy"],
-                "P3": ["health", "version"],
-                "P4": ["browser"],
-                "P5": ["approval", "pending"],
+                "R1": ["new123", "build"],
+                "R2": ["old999", "deploy"],
+                "R3": ["health", "version"],
+                "R4": ["browser"],
+                "R5": ["approval", "pending"],
             },
             "evidence": ["evidence.md", "draft.md"],
         },
@@ -295,6 +295,8 @@ def main():
             commands = [item for item in completed if item.get("type") == "command_execution"]
             tool_output_bytes = sum(len(item.get("aggregated_output", "").encode()) for item in commands)
             replacements = [(str(workspace), "<workspace>"), (str(private), "<private>"), (str(Path.home()), "<home>")]
+            if os.environ.get("USER"):
+                replacements.append((os.environ["USER"], "<user>"))
             for old, new in replacements:
                 raw, answer = raw.replace(old, new), answer.replace(old, new)
             sanitized = []

@@ -1,0 +1,3 @@
+Updated `apply_overrides` to return a fresh dict, preserve defaults, and raise `KeyError` for unknown override keys. Implementation uses only the standard library.
+
+Added regression coverage. All 3 tests pass (`python -m pytest -q`).

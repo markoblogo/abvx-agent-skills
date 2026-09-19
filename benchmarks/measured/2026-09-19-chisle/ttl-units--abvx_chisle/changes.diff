@@ -1,0 +1,18 @@
+diff --git a/__pycache__/app.cpython-314.pyc b/__pycache__/app.cpython-314.pyc
+new file mode 100644
+index 0000000..5e255f8
+Binary files /dev/null and b/__pycache__/app.cpython-314.pyc differ
+diff --git a/__pycache__/test_app.cpython-314-pytest-9.1.1.pyc b/__pycache__/test_app.cpython-314-pytest-9.1.1.pyc
+new file mode 100644
+index 0000000..a08eb24
+Binary files /dev/null and b/__pycache__/test_app.cpython-314-pytest-9.1.1.pyc differ
+diff --git a/app.py b/app.py
+index 2c0123c..b123a7e 100644
+--- a/app.py
++++ b/app.py
+@@ -1,4 +1,4 @@
+ def is_expired(issued_at_seconds, ttl_seconds, now_ms):
+     if issued_at_seconds < 0 or ttl_seconds < 0 or now_ms < 0:
+         raise ValueError('timestamps must be non-negative')
+-    return now_ms >= issued_at_seconds + ttl_seconds
++    return now_ms >= (issued_at_seconds + ttl_seconds) * 1000

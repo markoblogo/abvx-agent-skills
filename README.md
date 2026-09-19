@@ -51,6 +51,10 @@ Read the [method and captured results](benchmarks/measured/2026-09-07/README.md)
 before interpreting a number. Structural validation, fixture checks, rollout
 observations, and held-out validation are [different evidence tiers](docs/catalog-eval-tiers.md).
 
+Supplemental comparison: [ABVX vs Chisle across 5 coding and 3 explanation tasks](docs/demos/chisle-comparison.md).
+The bounded result promotes two narrow execution rules while keeping Chisle out
+of global installation and repository defaults.
+
 ## Catalog
 
 Browse the searchable catalog at [lab.abvx.xyz/tools/abvx-agent-skills/](https://lab.abvx.xyz/tools/abvx-agent-skills/). The page is powered by the generated catalog data in [docs/catalog.json](docs/catalog.json), so the repository remains the source of truth while the published catalog lives on ABVX Lab.

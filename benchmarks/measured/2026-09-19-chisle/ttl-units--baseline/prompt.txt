@@ -1,0 +1,1 @@
+Fix is_expired: issued_at_seconds and ttl_seconds are seconds, while now_ms is milliseconds. Preserve validation. Make the smallest correct change and run the tests.

@@ -1,0 +1,3 @@
+Implemented `redact_url` using the standard library. It redacts sensitive keys case-insensitively while preserving parameter order, duplicates, non-sensitive blank values, encoding, path, and fragment.
+
+Tests: **5 passed** (`python -m pytest -q`).

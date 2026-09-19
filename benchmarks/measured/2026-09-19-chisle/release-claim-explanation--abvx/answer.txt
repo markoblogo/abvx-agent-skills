@@ -1,0 +1,7 @@
+{
+  "summary": "The claim is unsupported: tests and build passed for new123 (R1), but the production deployment receipt names old999 (R2). /health returned 200 without identifying the version (R3), no browser check was recorded (R4), and owner approval remains pending (R5).",
+  "retained_point_ids": ["R1", "R2", "R3", "R4", "R5"],
+  "evidence_files": ["draft.md", "evidence.md"],
+  "caveat": "Passing checks and an unversioned health response do not establish that new123 is live or production-verified. Assessment used the supplied records; no files were changed.",
+  "next_step": "Confirm production runs new123 with version-identifying deployment evidence, record a browser check, and obtain owner approval before asserting the release is live and verified."
+}

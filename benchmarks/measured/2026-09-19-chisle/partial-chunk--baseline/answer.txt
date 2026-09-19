@@ -1,0 +1,3 @@
+Fixed `chunks` in [app.py](<workspace>/app.py:4) with a one-line change to retain the final partial chunk.
+
+`python -m pytest`: **1 passed**. Additional checks confirmed empty-input behavior and size validation remain unchanged.

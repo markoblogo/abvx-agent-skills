@@ -1,0 +1,3 @@
+Fixed `is_expired` by converting expiration seconds to milliseconds before comparison. Validation unchanged; one-line patch.
+
+Tests: `python -m pytest -q` — 1 passed.

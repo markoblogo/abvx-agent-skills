@@ -1,0 +1,29 @@
+{
+  "case": "partial-chunk",
+  "kind": "coding",
+  "arm": "abvx_chisle",
+  "returncode": 0,
+  "started_at_utc": "2026-09-19T21:02:32Z",
+  "duration_seconds": 35.47,
+  "usage": {
+    "input_tokens": 71543,
+    "cached_input_tokens": 56064,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 622,
+    "reasoning_output_tokens": 0
+  },
+  "tool_calls": 4,
+  "tool_output_bytes": 656,
+  "isolation_violations": [],
+  "changed_files": [
+    "__pycache__/app.cpython-314.pyc",
+    "__pycache__/test_app.cpython-314-pytest-9.1.1.pyc",
+    "app.py"
+  ],
+  "changed_lines": 2,
+  "grade": {
+    "passed": true,
+    "information_retained": null,
+    "details": ""
+  }
+}

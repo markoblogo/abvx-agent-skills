@@ -1,0 +1,7 @@
+{
+  "summary": "Authentication guarantees a signed-in user (A1), but the export route trusts the caller-supplied tenant (A2) and calls export_all without checking admin authorization (A3). Hiding the button using localStorage.role (A4) is bypassable and provides no server-side protection. This permits non-admin exports and potentially cross-tenant exports, violating the requirement for server-side admin authorization and tenant scope derived from authenticated server identity (A5).",
+  "retained_point_ids": ["A1", "A2", "A3", "A4", "A5"],
+  "evidence_files": ["route.py", "client.js", "policy.md"],
+  "caveat": "Verified by static inspection only; export_all and middleware implementations were not provided, so downstream enforcement is unknown. No files changed.",
+  "next_step": "Before calling export_all, enforce admin authorization for the authenticated tenant using trusted server-side identity and derive tenant scope from that identity instead of the query parameter. Verify that direct non-admin requests are denied, tenant parameters cannot access another tenant, and authorized admins can export their own tenant."
+}

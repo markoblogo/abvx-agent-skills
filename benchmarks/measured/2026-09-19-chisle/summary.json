@@ -1,0 +1,837 @@
+[
+  {
+    "case": "ttl-units",
+    "kind": "coding",
+    "arm": "baseline",
+    "returncode": 0,
+    "started_at_utc": "2026-09-19T20:55:18Z",
+    "duration_seconds": 20.242,
+    "usage": {
+      "input_tokens": 52731,
+      "cached_input_tokens": 36608,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 375,
+      "reasoning_output_tokens": 0
+    },
+    "tool_calls": 3,
+    "tool_output_bytes": 1106,
+    "isolation_violations": [],
+    "changed_files": [
+      "__pycache__/app.cpython-314.pyc",
+      "__pycache__/test_app.cpython-314-pytest-9.1.1.pyc",
+      "app.py"
+    ],
+    "changed_lines": 2,
+    "grade": {
+      "passed": true,
+      "information_retained": null,
+      "details": ""
+    },
+    "total_tokens": 53106
+  },
+  {
+    "case": "ttl-units",
+    "kind": "coding",
+    "arm": "abvx",
+    "returncode": 0,
+    "started_at_utc": "2026-09-19T20:55:38Z",
+    "duration_seconds": 22.928,
+    "usage": {
+      "input_tokens": 54487,
+      "cached_input_tokens": 39936,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 397,
+      "reasoning_output_tokens": 0
+    },
+    "tool_calls": 3,
+    "tool_output_bytes": 798,
+    "isolation_violations": [],
+    "changed_files": [
+      "__pycache__/app.cpython-314.pyc",
+      "__pycache__/test_app.cpython-314-pytest-9.1.1.pyc",
+      "app.py"
+    ],
+    "changed_lines": 2,
+    "grade": {
+      "passed": true,
+      "information_retained": null,
+      "details": ""
+    },
+    "total_tokens": 54884
+  },
+  {
+    "case": "ttl-units",
+    "kind": "coding",
+    "arm": "abvx_chisle",
+    "returncode": 0,
+    "started_at_utc": "2026-09-19T20:56:01Z",
+    "duration_seconds": 20.543,
+    "usage": {
+      "input_tokens": 57220,
+      "cached_input_tokens": 42112,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 370,
+      "reasoning_output_tokens": 0
+    },
+    "tool_calls": 3,
+    "tool_output_bytes": 914,
+    "isolation_violations": [],
+    "changed_files": [
+      "__pycache__/app.cpython-314.pyc",
+      "__pycache__/test_app.cpython-314-pytest-9.1.1.pyc",
+      "app.py"
+    ],
+    "changed_lines": 2,
+    "grade": {
+      "passed": true,
+      "information_retained": null,
+      "details": ""
+    },
+    "total_tokens": 57590
+  },
+  {
+    "case": "retry-budget",
+    "kind": "coding",
+    "arm": "abvx",
+    "returncode": 0,
+    "started_at_utc": "2026-09-19T20:56:22Z",
+    "duration_seconds": 42.512,
+    "usage": {
+      "input_tokens": 83045,
+      "cached_input_tokens": 67328,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 884,
+      "reasoning_output_tokens": 53
+    },
+    "tool_calls": 5,
+    "tool_output_bytes": 1681,
+    "isolation_violations": [],
+    "changed_files": [
+      "__pycache__/app.cpython-314.pyc",
+      "__pycache__/test_app.cpython-314-pytest-9.1.1.pyc",
+      "app.py",
+      "test_app.py"
+    ],
+    "changed_lines": 40,
+    "grade": {
+      "passed": true,
+      "information_retained": null,
+      "details": ""
+    },
+    "total_tokens": 83929
+  },
+  {
+    "case": "retry-budget",
+    "kind": "coding",
+    "arm": "abvx_chisle",
+    "returncode": 0,
+    "started_at_utc": "2026-09-19T20:57:04Z",
+    "duration_seconds": 35.25,
+    "usage": {
+      "input_tokens": 86766,
+      "cached_input_tokens": 67200,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 713,
+      "reasoning_output_tokens": 0
+    },
+    "tool_calls": 5,
+    "tool_output_bytes": 1815,
+    "isolation_violations": [],
+    "changed_files": [
+      "__pycache__/app.cpython-314.pyc",
+      "__pycache__/test_app.cpython-314-pytest-9.1.1.pyc",
+      "app.py"
+    ],
+    "changed_lines": 2,
+    "grade": {
+      "passed": true,
+      "information_retained": null,
+      "details": ""
+    },
+    "total_tokens": 87479
+  },
+  {
+    "case": "retry-budget",
+    "kind": "coding",
+    "arm": "baseline",
+    "returncode": 0,
+    "started_at_utc": "2026-09-19T20:57:40Z",
+    "duration_seconds": 42.267,
+    "usage": {
+      "input_tokens": 80558,
+      "cached_input_tokens": 52096,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 899,
+      "reasoning_output_tokens": 38
+    },
+    "tool_calls": 5,
+    "tool_output_bytes": 2076,
+    "isolation_violations": [],
+    "changed_files": [
+      "__pycache__/app.cpython-314.pyc",
+      "__pycache__/test_app.cpython-314-pytest-9.1.1.pyc",
+      "app.py"
+    ],
+    "changed_lines": 2,
+    "grade": {
+      "passed": true,
+      "information_retained": null,
+      "details": ""
+    },
+    "total_tokens": 81457
+  },
+  {
+    "case": "config-overlay",
+    "kind": "coding",
+    "arm": "abvx_chisle",
+    "returncode": 0,
+    "started_at_utc": "2026-09-19T20:58:22Z",
+    "duration_seconds": 29.244,
+    "usage": {
+      "input_tokens": 56915,
+      "cached_input_tokens": 41600,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 584,
+      "reasoning_output_tokens": 0
+    },
+    "tool_calls": 3,
+    "tool_output_bytes": 541,
+    "isolation_violations": [],
+    "changed_files": [
+      "__pycache__/app.cpython-314.pyc",
+      "__pycache__/test_app.cpython-314-pytest-9.1.1.pyc",
+      "app.py",
+      "test_app.py"
+    ],
+    "changed_lines": 22,
+    "grade": {
+      "passed": true,
+      "information_retained": null,
+      "details": ""
+    },
+    "total_tokens": 57499
+  },
+  {
+    "case": "config-overlay",
+    "kind": "coding",
+    "arm": "baseline",
+    "returncode": 0,
+    "started_at_utc": "2026-09-19T20:58:52Z",
+    "duration_seconds": 35.661,
+    "usage": {
+      "input_tokens": 52793,
+      "cached_input_tokens": 38272,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 823,
+      "reasoning_output_tokens": 36
+    },
+    "tool_calls": 3,
+    "tool_output_bytes": 1243,
+    "isolation_violations": [],
+    "changed_files": [
+      "__pycache__/app.cpython-314.pyc",
+      "__pycache__/test_app.cpython-314.pyc",
+      "app.py",
+      "test_app.py"
+    ],
+    "changed_lines": 41,
+    "grade": {
+      "passed": true,
+      "information_retained": null,
+      "details": ""
+    },
+    "total_tokens": 53616
+  },
+  {
+    "case": "config-overlay",
+    "kind": "coding",
+    "arm": "abvx",
+    "returncode": 0,
+    "started_at_utc": "2026-09-19T20:59:27Z",
+    "duration_seconds": 48.278,
+    "usage": {
+      "input_tokens": 54558,
+      "cached_input_tokens": 26240,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 573,
+      "reasoning_output_tokens": 43
+    },
+    "tool_calls": 3,
+    "tool_output_bytes": 887,
+    "isolation_violations": [],
+    "changed_files": [
+      "__pycache__/app.cpython-314.pyc",
+      "__pycache__/test_app.cpython-314-pytest-9.1.1.pyc",
+      "app.py",
+      "test_app.py"
+    ],
+    "changed_lines": 22,
+    "grade": {
+      "passed": true,
+      "information_retained": null,
+      "details": ""
+    },
+    "total_tokens": 55131
+  },
+  {
+    "case": "query-redaction",
+    "kind": "coding",
+    "arm": "baseline",
+    "returncode": 0,
+    "started_at_utc": "2026-09-19T21:00:16Z",
+    "duration_seconds": 38.062,
+    "usage": {
+      "input_tokens": 52892,
+      "cached_input_tokens": 38272,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 911,
+      "reasoning_output_tokens": 61
+    },
+    "tool_calls": 3,
+    "tool_output_bytes": 893,
+    "isolation_violations": [],
+    "changed_files": [
+      "__pycache__/app.cpython-314.pyc",
+      "__pycache__/test_app.cpython-314-pytest-9.1.1.pyc",
+      "app.py",
+      "test_app.py"
+    ],
+    "changed_lines": 36,
+    "grade": {
+      "passed": true,
+      "information_retained": null,
+      "details": ""
+    },
+    "total_tokens": 53803
+  },
+  {
+    "case": "query-redaction",
+    "kind": "coding",
+    "arm": "abvx",
+    "returncode": 0,
+    "started_at_utc": "2026-09-19T21:00:54Z",
+    "duration_seconds": 36.632,
+    "usage": {
+      "input_tokens": 54611,
+      "cached_input_tokens": 39680,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 804,
+      "reasoning_output_tokens": 99
+    },
+    "tool_calls": 3,
+    "tool_output_bytes": 565,
+    "isolation_violations": [],
+    "changed_files": [
+      "__pycache__/app.cpython-314.pyc",
+      "__pycache__/test_app.cpython-314-pytest-9.1.1.pyc",
+      "app.py",
+      "test_app.py"
+    ],
+    "changed_lines": 19,
+    "grade": {
+      "passed": true,
+      "information_retained": null,
+      "details": ""
+    },
+    "total_tokens": 55415
+  },
+  {
+    "case": "query-redaction",
+    "kind": "coding",
+    "arm": "abvx_chisle",
+    "returncode": 0,
+    "started_at_utc": "2026-09-19T21:01:31Z",
+    "duration_seconds": 33.726,
+    "usage": {
+      "input_tokens": 57219,
+      "cached_input_tokens": 41728,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 812,
+      "reasoning_output_tokens": 39
+    },
+    "tool_calls": 3,
+    "tool_output_bytes": 543,
+    "isolation_violations": [],
+    "changed_files": [
+      "__pycache__/app.cpython-314.pyc",
+      "__pycache__/test_app.cpython-314-pytest-9.1.1.pyc",
+      "app.py",
+      "test_app.py"
+    ],
+    "changed_lines": 21,
+    "grade": {
+      "passed": true,
+      "information_retained": null,
+      "details": ""
+    },
+    "total_tokens": 58031
+  },
+  {
+    "case": "partial-chunk",
+    "kind": "coding",
+    "arm": "abvx",
+    "returncode": 0,
+    "started_at_utc": "2026-09-19T21:02:05Z",
+    "duration_seconds": 27.213,
+    "usage": {
+      "input_tokens": 68588,
+      "cached_input_tokens": 64768,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 578,
+      "reasoning_output_tokens": 0
+    },
+    "tool_calls": 4,
+    "tool_output_bytes": 1092,
+    "isolation_violations": [],
+    "changed_files": [
+      "__pycache__/app.cpython-314.pyc",
+      "__pycache__/test_app.cpython-314-pytest-9.1.1.pyc",
+      "app.py"
+    ],
+    "changed_lines": 2,
+    "grade": {
+      "passed": true,
+      "information_retained": null,
+      "details": ""
+    },
+    "total_tokens": 69166
+  },
+  {
+    "case": "partial-chunk",
+    "kind": "coding",
+    "arm": "abvx_chisle",
+    "returncode": 0,
+    "started_at_utc": "2026-09-19T21:02:32Z",
+    "duration_seconds": 35.47,
+    "usage": {
+      "input_tokens": 71543,
+      "cached_input_tokens": 56064,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 622,
+      "reasoning_output_tokens": 0
+    },
+    "tool_calls": 4,
+    "tool_output_bytes": 656,
+    "isolation_violations": [],
+    "changed_files": [
+      "__pycache__/app.cpython-314.pyc",
+      "__pycache__/test_app.cpython-314-pytest-9.1.1.pyc",
+      "app.py"
+    ],
+    "changed_lines": 2,
+    "grade": {
+      "passed": true,
+      "information_retained": null,
+      "details": ""
+    },
+    "total_tokens": 72165
+  },
+  {
+    "case": "partial-chunk",
+    "kind": "coding",
+    "arm": "baseline",
+    "returncode": 0,
+    "started_at_utc": "2026-09-19T21:03:08Z",
+    "duration_seconds": 37.676,
+    "usage": {
+      "input_tokens": 79606,
+      "cached_input_tokens": 76032,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 583,
+      "reasoning_output_tokens": 0
+    },
+    "tool_calls": 5,
+    "tool_output_bytes": 1200,
+    "isolation_violations": [],
+    "changed_files": [
+      "__pycache__/app.cpython-314.pyc",
+      "__pycache__/test_app.cpython-314-pytest-9.1.1.pyc",
+      "app.py"
+    ],
+    "changed_lines": 2,
+    "grade": {
+      "passed": true,
+      "information_retained": null,
+      "details": ""
+    },
+    "total_tokens": 80189
+  },
+  {
+    "case": "stale-cache-explanation",
+    "kind": "explanation",
+    "arm": "abvx_chisle",
+    "returncode": 0,
+    "started_at_utc": "2026-09-19T21:03:45Z",
+    "duration_seconds": 23.271,
+    "usage": {
+      "input_tokens": 55508,
+      "cached_input_tokens": 40832,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 412,
+      "reasoning_output_tokens": 0
+    },
+    "tool_calls": 3,
+    "tool_output_bytes": 497,
+    "isolation_violations": [],
+    "changed_files": [],
+    "changed_lines": 0,
+    "grade": {
+      "passed": true,
+      "information_retained": 5,
+      "information_total": 5,
+      "missing_points": [],
+      "evidence_mismatch": []
+    },
+    "original_grade": {
+      "passed": false,
+      "information_retained": 0,
+      "information_total": 5,
+      "missing_points": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ],
+      "evidence_mismatch": []
+    },
+    "grading_correction": "Runner v1 used nonexistent P1-P5 IDs instead of fixture E/A/R evidence IDs; answers are unchanged and regraded deterministically.",
+    "total_tokens": 55920
+  },
+  {
+    "case": "stale-cache-explanation",
+    "kind": "explanation",
+    "arm": "baseline",
+    "returncode": 0,
+    "started_at_utc": "2026-09-19T21:04:09Z",
+    "duration_seconds": 24.141,
+    "usage": {
+      "input_tokens": 51502,
+      "cached_input_tokens": 37504,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 445,
+      "reasoning_output_tokens": 0
+    },
+    "tool_calls": 3,
+    "tool_output_bytes": 1749,
+    "isolation_violations": [],
+    "changed_files": [],
+    "changed_lines": 0,
+    "grade": {
+      "passed": true,
+      "information_retained": 5,
+      "information_total": 5,
+      "missing_points": [],
+      "evidence_mismatch": []
+    },
+    "original_grade": {
+      "passed": false,
+      "information_retained": 0,
+      "information_total": 5,
+      "missing_points": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ],
+      "evidence_mismatch": []
+    },
+    "grading_correction": "Runner v1 used nonexistent P1-P5 IDs instead of fixture E/A/R evidence IDs; answers are unchanged and regraded deterministically.",
+    "total_tokens": 51947
+  },
+  {
+    "case": "stale-cache-explanation",
+    "kind": "explanation",
+    "arm": "abvx",
+    "returncode": 0,
+    "started_at_utc": "2026-09-19T21:04:33Z",
+    "duration_seconds": 37.807,
+    "usage": {
+      "input_tokens": 53483,
+      "cached_input_tokens": 39168,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 438,
+      "reasoning_output_tokens": 0
+    },
+    "tool_calls": 3,
+    "tool_output_bytes": 1325,
+    "isolation_violations": [],
+    "changed_files": [],
+    "changed_lines": 0,
+    "grade": {
+      "passed": true,
+      "information_retained": 5,
+      "information_total": 5,
+      "missing_points": [],
+      "evidence_mismatch": []
+    },
+    "original_grade": {
+      "passed": false,
+      "information_retained": 0,
+      "information_total": 5,
+      "missing_points": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ],
+      "evidence_mismatch": []
+    },
+    "grading_correction": "Runner v1 used nonexistent P1-P5 IDs instead of fixture E/A/R evidence IDs; answers are unchanged and regraded deterministically.",
+    "total_tokens": 53921
+  },
+  {
+    "case": "authorization-explanation",
+    "kind": "explanation",
+    "arm": "baseline",
+    "returncode": 0,
+    "started_at_utc": "2026-09-19T21:05:11Z",
+    "duration_seconds": 45.068,
+    "usage": {
+      "input_tokens": 51841,
+      "cached_input_tokens": 49024,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 415,
+      "reasoning_output_tokens": 0
+    },
+    "tool_calls": 3,
+    "tool_output_bytes": 2190,
+    "isolation_violations": [],
+    "changed_files": [],
+    "changed_lines": 0,
+    "grade": {
+      "passed": true,
+      "information_retained": 5,
+      "information_total": 5,
+      "missing_points": [],
+      "evidence_mismatch": []
+    },
+    "original_grade": {
+      "passed": false,
+      "information_retained": 0,
+      "information_total": 5,
+      "missing_points": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ],
+      "evidence_mismatch": []
+    },
+    "grading_correction": "Runner v1 used nonexistent P1-P5 IDs instead of fixture E/A/R evidence IDs; answers are unchanged and regraded deterministically.",
+    "total_tokens": 52256
+  },
+  {
+    "case": "authorization-explanation",
+    "kind": "explanation",
+    "arm": "abvx",
+    "returncode": 0,
+    "started_at_utc": "2026-09-19T21:05:56Z",
+    "duration_seconds": 22.082,
+    "usage": {
+      "input_tokens": 52870,
+      "cached_input_tokens": 50048,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 411,
+      "reasoning_output_tokens": 0
+    },
+    "tool_calls": 3,
+    "tool_output_bytes": 485,
+    "isolation_violations": [],
+    "changed_files": [],
+    "changed_lines": 0,
+    "grade": {
+      "passed": true,
+      "information_retained": 5,
+      "information_total": 5,
+      "missing_points": [],
+      "evidence_mismatch": []
+    },
+    "original_grade": {
+      "passed": false,
+      "information_retained": 0,
+      "information_total": 5,
+      "missing_points": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ],
+      "evidence_mismatch": []
+    },
+    "grading_correction": "Runner v1 used nonexistent P1-P5 IDs instead of fixture E/A/R evidence IDs; answers are unchanged and regraded deterministically.",
+    "total_tokens": 53281
+  },
+  {
+    "case": "authorization-explanation",
+    "kind": "explanation",
+    "arm": "abvx_chisle",
+    "returncode": 0,
+    "started_at_utc": "2026-09-19T21:06:18Z",
+    "duration_seconds": 21.251,
+    "usage": {
+      "input_tokens": 55400,
+      "cached_input_tokens": 27008,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 391,
+      "reasoning_output_tokens": 0
+    },
+    "tool_calls": 3,
+    "tool_output_bytes": 482,
+    "isolation_violations": [],
+    "changed_files": [],
+    "changed_lines": 0,
+    "grade": {
+      "passed": true,
+      "information_retained": 5,
+      "information_total": 5,
+      "missing_points": [],
+      "evidence_mismatch": []
+    },
+    "original_grade": {
+      "passed": false,
+      "information_retained": 0,
+      "information_total": 5,
+      "missing_points": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ],
+      "evidence_mismatch": []
+    },
+    "grading_correction": "Runner v1 used nonexistent P1-P5 IDs instead of fixture E/A/R evidence IDs; answers are unchanged and regraded deterministically.",
+    "total_tokens": 55791
+  },
+  {
+    "case": "release-claim-explanation",
+    "kind": "explanation",
+    "arm": "abvx",
+    "returncode": 0,
+    "started_at_utc": "2026-09-19T21:06:40Z",
+    "duration_seconds": 18.694,
+    "usage": {
+      "input_tokens": 39684,
+      "cached_input_tokens": 25728,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 381,
+      "reasoning_output_tokens": 0
+    },
+    "tool_calls": 2,
+    "tool_output_bytes": 695,
+    "isolation_violations": [],
+    "changed_files": [],
+    "changed_lines": 0,
+    "grade": {
+      "passed": true,
+      "information_retained": 5,
+      "information_total": 5,
+      "missing_points": [],
+      "evidence_mismatch": []
+    },
+    "original_grade": {
+      "passed": false,
+      "information_retained": 0,
+      "information_total": 5,
+      "missing_points": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ],
+      "evidence_mismatch": []
+    },
+    "grading_correction": "Runner v1 used nonexistent P1-P5 IDs instead of fixture E/A/R evidence IDs; answers are unchanged and regraded deterministically.",
+    "total_tokens": 40065
+  },
+  {
+    "case": "release-claim-explanation",
+    "kind": "explanation",
+    "arm": "abvx_chisle",
+    "returncode": 0,
+    "started_at_utc": "2026-09-19T21:06:59Z",
+    "duration_seconds": 16.56,
+    "usage": {
+      "input_tokens": 41397,
+      "cached_input_tokens": 27008,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 318,
+      "reasoning_output_tokens": 0
+    },
+    "tool_calls": 2,
+    "tool_output_bytes": 368,
+    "isolation_violations": [],
+    "changed_files": [],
+    "changed_lines": 0,
+    "grade": {
+      "passed": true,
+      "information_retained": 5,
+      "information_total": 5,
+      "missing_points": [],
+      "evidence_mismatch": []
+    },
+    "original_grade": {
+      "passed": false,
+      "information_retained": 0,
+      "information_total": 5,
+      "missing_points": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ],
+      "evidence_mismatch": []
+    },
+    "grading_correction": "Runner v1 used nonexistent P1-P5 IDs instead of fixture E/A/R evidence IDs; answers are unchanged and regraded deterministically.",
+    "total_tokens": 41715
+  },
+  {
+    "case": "release-claim-explanation",
+    "kind": "explanation",
+    "arm": "baseline",
+    "returncode": 0,
+    "started_at_utc": "2026-09-19T21:07:15Z",
+    "duration_seconds": 19.372,
+    "usage": {
+      "input_tokens": 37873,
+      "cached_input_tokens": 35968,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 306,
+      "reasoning_output_tokens": 0
+    },
+    "tool_calls": 2,
+    "tool_output_bytes": 344,
+    "isolation_violations": [],
+    "changed_files": [],
+    "changed_lines": 0,
+    "grade": {
+      "passed": true,
+      "information_retained": 5,
+      "information_total": 5,
+      "missing_points": [],
+      "evidence_mismatch": []
+    },
+    "original_grade": {
+      "passed": false,
+      "information_retained": 0,
+      "information_total": 5,
+      "missing_points": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ],
+      "evidence_mismatch": []
+    },
+    "grading_correction": "Runner v1 used nonexistent P1-P5 IDs instead of fixture E/A/R evidence IDs; answers are unchanged and regraded deterministically.",
+    "total_tokens": 38179
+  }
+]

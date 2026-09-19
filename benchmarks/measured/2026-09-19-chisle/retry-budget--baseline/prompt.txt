@@ -1,0 +1,1 @@
+Fix attempt so max_attempts is the exact total call budget, including the first call. Preserve success and validation behavior. Keep the patch focused and run the tests.

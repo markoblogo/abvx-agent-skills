@@ -1,0 +1,3 @@
+Fixed [app.py:5](<workspace>/app.py:5) to use `range(max_attempts)`, so the budget includes the first call.
+
+One-line patch. Tests pass, along with additional checks for success, validation, and exception behavior.

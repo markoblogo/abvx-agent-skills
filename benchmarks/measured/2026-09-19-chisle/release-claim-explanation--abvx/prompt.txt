@@ -1,3 +1,5 @@
+Apply this ABVX execution skill:
+<abvx-skill>
 ---
 name: token-efficient-execution
 description: Reduce token waste in long coding-agent sessions by avoiding repeated reads, noisy output, oversized context, broad rewrites, and unnecessary narration. Use on long tasks, heavy repos, multi-file audits, shell-heavy debugging loops, or whenever token budget is a practical delivery constraint.
@@ -26,11 +28,6 @@ The biggest waste usually comes from repeated exploration, repeated explanation,
 - Keep intermediary updates to one or two sentences unless the user asked for a plan.
 - Reuse gathered evidence instead of re-deriving it.
 - Stop low-value parallel exploration once a clear winning path appears.
-- Treat solution search as a stopping rule: once existing code, the standard
-  library, a native feature, or the smallest viable patch satisfies the task,
-  stop comparing already-excluded alternatives.
-- Do not widen adjacent tests, docs, or abstractions unless the changed behavior
-  requires it. Preserve validation, security, accessibility, and data-safety work.
 
 ## Task Patterns
 
@@ -65,3 +62,8 @@ The biggest waste usually comes from repeated exploration, repeated explanation,
 ## Final Report
 
 Include what changed, what was verified, and any remaining uncertainty. Do not spend tokens listing every trivial command unless it matters for continuation.
+
+</abvx-skill>
+
+Task:
+Assess the draft release claim. Return JSON with summary, retained_point_ids, evidence_files, caveat, and next_step. Keep every decisive fact even if the prose is short. Do not change files.

@@ -1,0 +1,200 @@
+{
+  "model": "gpt-6-astra",
+  "reasoning_effort": "medium",
+  "host": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "cli": "codex-cli 0.155.0-alpha.9.2",
+  "repeats": 1,
+  "source_commit": "bcb1e7e814cb53d810056bd32194cacd061def06",
+  "arms": [
+    "baseline",
+    "abvx",
+    "abvx_chisle"
+  ],
+  "arm_orders": [
+    [
+      "baseline",
+      "abvx",
+      "abvx_chisle"
+    ],
+    [
+      "abvx",
+      "abvx_chisle",
+      "baseline"
+    ],
+    [
+      "abvx_chisle",
+      "baseline",
+      "abvx"
+    ]
+  ],
+  "isolation_flags": [
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "skill_search",
+    "-c",
+    "project_doc_max_bytes=0"
+  ],
+  "explicit_skill_path_disables": 80,
+  "grader_python": "Python 3.14.5",
+  "runner_sha256": "405ba03e3e16118dd976e580a7e7085f8b9740dbcbcb170f7f765329a53ab12e",
+  "abvx_sha256": "c632e76abfea33691da6de8b4f19ddee27a0d6513b37de4270f6971eb55c8b75",
+  "chisle_sha256": "ea822bdbed5bd87b79c034252004d3e16986e46e6a6096bffa9abaee65143b85",
+  "chisle_source": {
+    "version": "v3.5.0",
+    "commit": "a0202aac0c7342d33a18848818c58a7ce9eb5212"
+  },
+  "methodology": "Three-arm bounded synthetic pilot; explicit prompt injection; no automatic activation or universal superiority claim.",
+  "cases": [
+    {
+      "id": "ttl-units",
+      "kind": "coding",
+      "files": {
+        "app.py": "def is_expired(issued_at_seconds, ttl_seconds, now_ms):\n    if issued_at_seconds < 0 or ttl_seconds < 0 or now_ms < 0:\n        raise ValueError('timestamps must be non-negative')\n    return now_ms >= issued_at_seconds + ttl_seconds\n",
+        "test_app.py": "from app import is_expired\n\ndef test_expiry_boundary():\n    assert not is_expired(100, 30, 129_999)\n    assert is_expired(100, 30, 130_000)\n"
+      },
+      "prompt": "Fix is_expired: issued_at_seconds and ttl_seconds are seconds, while now_ms is milliseconds. Preserve validation. Make the smallest correct change and run the tests."
+    },
+    {
+      "id": "retry-budget",
+      "kind": "coding",
+      "files": {
+        "app.py": "def attempt(operation, max_attempts):\n    if max_attempts < 1:\n        raise ValueError('max_attempts must be positive')\n    last_error = None\n    for _ in range(max_attempts + 1):\n        try:\n            return operation()\n        except RuntimeError as exc:\n            last_error = exc\n    raise last_error\n",
+        "test_app.py": "from app import attempt\n\ndef test_budget_is_exact():\n    calls=[]\n    def fail():\n        calls.append(1); raise RuntimeError('no')\n    try: attempt(fail, 2)\n    except RuntimeError: pass\n    assert len(calls) == 2\n"
+      },
+      "prompt": "Fix attempt so max_attempts is the exact total call budget, including the first call. Preserve success and validation behavior. Keep the patch focused and run the tests."
+    },
+    {
+      "id": "config-overlay",
+      "kind": "coding",
+      "files": {
+        "app.py": "def apply_overrides(defaults, overrides):\n    defaults.update(overrides)\n    return defaults\n",
+        "test_app.py": "import pytest\nfrom app import apply_overrides\n\ndef test_returns_fresh_mapping():\n    defaults={'timeout': 10, 'retries': 2}\n    assert apply_overrides(defaults, {'timeout': 20}) == {'timeout':20,'retries':2}\n    assert defaults == {'timeout':10,'retries':2}\n"
+      },
+      "prompt": "Fix apply_overrides so it returns a fresh dict, leaves defaults unchanged, and raises KeyError for override keys absent from defaults. Standard library only. Run the tests."
+    },
+    {
+      "id": "query-redaction",
+      "kind": "coding",
+      "files": {
+        "app.py": "from urllib.parse import urlsplit, urlunsplit\n\nSENSITIVE = {'token', 'access_token', 'api_key'}\n\ndef redact_url(url):\n    parts = urlsplit(url)\n    return urlunsplit(parts)\n",
+        "test_app.py": "from app import redact_url\n\ndef test_redacts_sensitive_query_values():\n    assert redact_url('https://x.test/p?a=1&token=secret#top') == 'https://x.test/p?a=1&token=REDACTED#top'\n"
+      },
+      "prompt": "Implement redact_url. Replace values of token, access_token, and api_key query parameters case-insensitively with REDACTED. Preserve parameter order, duplicate parameters, blank values, path, and fragment. Use the standard library and run the tests."
+    },
+    {
+      "id": "partial-chunk",
+      "kind": "coding",
+      "files": {
+        "app.py": "def chunks(values, size):\n    if size <= 0:\n        raise ValueError('size must be positive')\n    return [values[i:i + size] for i in range(0, len(values) - size + 1, size)]\n",
+        "test_app.py": "from app import chunks\n\ndef test_keeps_partial_tail():\n    assert chunks([1,2,3,4,5], 2) == [[1,2],[3,4],[5]]\n"
+      },
+      "prompt": "Fix chunks so it retains a final partial chunk. Preserve empty-input and size validation behavior. Make the smallest correct change and run the tests."
+    },
+    {
+      "id": "stale-cache-explanation",
+      "kind": "explanation",
+      "files": {
+        "service.py": "def price(cache, tenant_id, sku, load):\n    key = f'price:{sku}'  # E1\n    return cache.get_or_set(key, 300, lambda: load(tenant_id, sku))  # E2\n",
+        "incident.log": "E3 09:02 tenant=west sku=A returned=11 expected=14\nE4 09:01 tenant=east sku=A cached=11\nE5 deploy completed without cache invalidation\n",
+        "README.md": "Prices are tenant-specific. Cache entries must never cross tenant boundaries.\n"
+      },
+      "prompt": "Explain the stale-price incident for an engineer. Return JSON with summary, retained_point_ids, evidence_files, caveat, and next_step. Keep every decisive fact even if the prose is short. Do not change files.",
+      "points": {
+        "P1": [
+          "tenant",
+          "key"
+        ],
+        "P2": [
+          "300"
+        ],
+        "P3": [
+          "west",
+          "east"
+        ],
+        "P4": [
+          "invalidat"
+        ],
+        "P5": [
+          "verify"
+        ]
+      },
+      "evidence": [
+        "service.py",
+        "incident.log",
+        "README.md"
+      ]
+    },
+    {
+      "id": "authorization-explanation",
+      "kind": "explanation",
+      "files": {
+        "route.py": "def export(request, user):\n    # A1: authentication middleware guarantees user is signed in\n    tenant_id = request.query['tenant']  # A2\n    return export_all(tenant_id)  # A3: no role check here\n",
+        "client.js": "// A4: button is hidden unless localStorage.role === 'admin'\n",
+        "policy.md": "A5 Exports require server-side admin authorization. Tenant scope comes from the authenticated server identity.\n"
+      },
+      "prompt": "Explain the authorization defect and the minimum safe remediation. Return JSON with summary, retained_point_ids, evidence_files, caveat, and next_step. Keep every decisive fact even if the prose is short. Do not change files.",
+      "points": {
+        "P1": [
+          "client",
+          "untrusted"
+        ],
+        "P2": [
+          "server",
+          "role"
+        ],
+        "P3": [
+          "tenant",
+          "authenticated"
+        ],
+        "P4": [
+          "authoriz"
+        ],
+        "P5": [
+          "audit"
+        ]
+      },
+      "evidence": [
+        "route.py",
+        "client.js",
+        "policy.md"
+      ]
+    },
+    {
+      "id": "release-claim-explanation",
+      "kind": "explanation",
+      "files": {
+        "evidence.md": "R1 tests and build passed for commit new123.\nR2 production deployment receipt names old999.\nR3 /health returned 200 but exposes no version.\nR4 no browser check was recorded.\nR5 owner approval is pending.\n",
+        "draft.md": "The new release is live and verified.\n"
+      },
+      "prompt": "Assess the draft release claim. Return JSON with summary, retained_point_ids, evidence_files, caveat, and next_step. Keep every decisive fact even if the prose is short. Do not change files.",
+      "points": {
+        "P1": [
+          "new123",
+          "build"
+        ],
+        "P2": [
+          "old999",
+          "deploy"
+        ],
+        "P3": [
+          "health",
+          "version"
+        ],
+        "P4": [
+          "browser"
+        ],
+        "P5": [
+          "approval",
+          "pending"
+        ]
+      },
+      "evidence": [
+        "evidence.md",
+        "draft.md"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+diff --git a/__pycache__/app.cpython-314.pyc b/__pycache__/app.cpython-314.pyc
+new file mode 100644
+index 0000000..ed3adb5
+Binary files /dev/null and b/__pycache__/app.cpython-314.pyc differ
+diff --git a/__pycache__/test_app.cpython-314-pytest-9.1.1.pyc b/__pycache__/test_app.cpython-314-pytest-9.1.1.pyc
+new file mode 100644
+index 0000000..bd03eb2
+Binary files /dev/null and b/__pycache__/test_app.cpython-314-pytest-9.1.1.pyc differ
+diff --git a/app.py b/app.py
+index 8336541..bcb9706 100644
+--- a/app.py
++++ b/app.py
+@@ -2,7 +2,7 @@ def attempt(operation, max_attempts):
+     if max_attempts < 1:
+         raise ValueError('max_attempts must be positive')
+     last_error = None
+-    for _ in range(max_attempts + 1):
++    for _ in range(max_attempts):
+         try:
+             return operation()
+         except RuntimeError as exc:

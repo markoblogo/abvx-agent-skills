@@ -1,0 +1,3 @@
+Implemented `redact_url` using standard-library query parsing. Redacts sensitive names case-insensitively; preserves order, duplicates, nonsensitive blank values, path, and fragment.
+
+All 5 tests pass. Query encoding may normalize during serialization.

@@ -1,0 +1,29 @@
+{
+  "case": "ttl-units",
+  "kind": "coding",
+  "arm": "baseline",
+  "returncode": 0,
+  "started_at_utc": "2026-09-19T20:55:18Z",
+  "duration_seconds": 20.242,
+  "usage": {
+    "input_tokens": 52731,
+    "cached_input_tokens": 36608,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 375,
+    "reasoning_output_tokens": 0
+  },
+  "tool_calls": 3,
+  "tool_output_bytes": 1106,
+  "isolation_violations": [],
+  "changed_files": [
+    "__pycache__/app.cpython-314.pyc",
+    "__pycache__/test_app.cpython-314-pytest-9.1.1.pyc",
+    "app.py"
+  ],
+  "changed_lines": 2,
+  "grade": {
+    "passed": true,
+    "information_retained": null,
+    "details": ""
+  }
+}

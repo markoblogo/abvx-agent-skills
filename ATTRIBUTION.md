@@ -51,6 +51,7 @@ ABVX Agent Skills are original or adapted workflow artifacts informed by public 
 - Matt Pocock `skills`: small, composable engineering workflows for grilling, TDD, issue slicing, triage, shared domain language, ADR capture, architecture HTML reports, and Standards-vs-Spec code review framing. https://github.com/mattpocock/skills
 - diffusionstudio `lottie`: text-to-lottie harness, Skottie preview workflow, control-slot expectations, and Lottie authoring constraints. https://github.com/diffusionstudio/lottie
 - Dietrich Gebert `ponytail`: YAGNI-first minimal implementation ladder and over-engineering review framing, adapted into ABVX skills with stricter safety boundaries and validation discipline. https://github.com/DietrichGebert/ponytail
+- Jay Pokale `Chisle`: MIT-licensed v3.5.0 rules snapshot used in the retained three-arm benchmark; its first-sufficient-solution stopping rule and adjacent-scope guard were adapted into `token-efficient-execution` after measured review. https://github.com/JayPokale/Chisle
 - plannotator `effective-html`: standalone HTML artifact packaging for diagrams, plans, and visual explainers. https://github.com/plannotator/effective-html
 - Thariq Shihipar `html-effectiveness`: single-file HTML example corpus for reviews, plans, diagrams, reports, and explainers. https://thariqs.github.io/html-effectiveness
 - Local ABVX workflow skills: diagnosis, handoff, complexity optimization, frontend product building, architecture deepening review, browser verification, agent harness design, prototyping, and web quality audit patterns.

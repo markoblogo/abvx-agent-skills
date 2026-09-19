@@ -1,0 +1,7 @@
+{
+  "summary": "Prices are tenant-specific, but the cache key price:{sku} omits tenant_id (E1). get_or_set uses a 300-second TTL; tenant_id reaches the loader only on a cache miss (E2). East cached SKU A at 11 at 09:01 (E4); west received 11 instead of 14 at 09:02 (E3), consistent with cross-tenant cache reuse within the TTL. Deployment completed without cache invalidation (E5), allowing existing entries to survive deployment.",
+  "retained_point_ids": ["E1", "E2", "E3", "E4", "E5"],
+  "evidence_files": ["README.md", "service.py", "incident.log"],
+  "caveat": "The code establishes a tenant-isolation defect; the logs support the causal explanation but do not trace the exact cache hit or establish deployment timing relative to the requests. No files were changed.",
+  "next_step": "Include tenant_id in the cache key, invalidate or retire existing shared keys, and verify that east and west receive their respective prices for the same SKU on both cache misses and hits."
+}

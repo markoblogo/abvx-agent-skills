@@ -1,0 +1,3 @@
+Updated `apply_overrides` to return a fresh dict, preserve defaults, and raise `KeyError` for unknown override keys.
+
+Implementation and tests use only the standard library. All 3 tests passed with `python3 -m unittest discover -v`.

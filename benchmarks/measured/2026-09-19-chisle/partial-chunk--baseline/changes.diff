@@ -1,0 +1,18 @@
+diff --git a/__pycache__/app.cpython-314.pyc b/__pycache__/app.cpython-314.pyc
+new file mode 100644
+index 0000000..9158f03
+Binary files /dev/null and b/__pycache__/app.cpython-314.pyc differ
+diff --git a/__pycache__/test_app.cpython-314-pytest-9.1.1.pyc b/__pycache__/test_app.cpython-314-pytest-9.1.1.pyc
+new file mode 100644
+index 0000000..ab8b7f4
+Binary files /dev/null and b/__pycache__/test_app.cpython-314-pytest-9.1.1.pyc differ
+diff --git a/app.py b/app.py
+index 6cf68e1..8e3b283 100644
+--- a/app.py
++++ b/app.py
+@@ -1,4 +1,4 @@
+ def chunks(values, size):
+     if size <= 0:
+         raise ValueError('size must be positive')
+-    return [values[i:i + size] for i in range(0, len(values) - size + 1, size)]
++    return [values[i:i + size] for i in range(0, len(values), size)]

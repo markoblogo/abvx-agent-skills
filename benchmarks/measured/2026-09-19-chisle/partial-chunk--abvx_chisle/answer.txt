@@ -1,0 +1,3 @@
+Changed one line in [app.py](<workspace>/app.py:4) to retain final partial chunks.
+
+Tests: 1 passed. Additional checks confirmed empty input, oversized chunks, exact division, and nonpositive-size validation. No remaining uncertainty.

@@ -1,0 +1,35 @@
+{
+  "baseline": {
+    "checks_passed": 8,
+    "checks_total": 8,
+    "total_tokens": 464553,
+    "coding_tokens": 322171,
+    "explanation_tokens": 142382,
+    "coding_changed_lines": 83,
+    "tool_output_bytes": 10801,
+    "information_retained": 15,
+    "information_total": 15
+  },
+  "abvx": {
+    "checks_passed": 8,
+    "checks_total": 8,
+    "total_tokens": 465792,
+    "coding_tokens": 318525,
+    "explanation_tokens": 147267,
+    "coding_changed_lines": 85,
+    "tool_output_bytes": 7528,
+    "information_retained": 15,
+    "information_total": 15
+  },
+  "abvx_chisle": {
+    "checks_passed": 8,
+    "checks_total": 8,
+    "total_tokens": 486190,
+    "coding_tokens": 332764,
+    "explanation_tokens": 153426,
+    "coding_changed_lines": 49,
+    "tool_output_bytes": 5816,
+    "information_retained": 15,
+    "information_total": 15
+  }
+}

@@ -1,0 +1,45 @@
+diff --git a/__pycache__/app.cpython-314.pyc b/__pycache__/app.cpython-314.pyc
+new file mode 100644
+index 0000000..ac24ce5
+Binary files /dev/null and b/__pycache__/app.cpython-314.pyc differ
+diff --git a/__pycache__/test_app.cpython-314-pytest-9.1.1.pyc b/__pycache__/test_app.cpython-314-pytest-9.1.1.pyc
+new file mode 100644
+index 0000000..076e106
+Binary files /dev/null and b/__pycache__/test_app.cpython-314-pytest-9.1.1.pyc differ
+diff --git a/app.py b/app.py
+index 98f5949..20619ed 100644
+--- a/app.py
++++ b/app.py
+@@ -1,7 +1,11 @@
+-from urllib.parse import urlsplit, urlunsplit
++from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
+ 
+ SENSITIVE = {'token', 'access_token', 'api_key'}
+ 
+ def redact_url(url):
+     parts = urlsplit(url)
+-    return urlunsplit(parts)
++    query = [
++        (key, 'REDACTED' if key.lower() in SENSITIVE else value)
++        for key, value in parse_qsl(parts.query, keep_blank_values=True)
++    ]
++    return urlunsplit(parts._replace(query=urlencode(query)))
+diff --git a/test_app.py b/test_app.py
+index 377b7ce..e70f055 100644
+--- a/test_app.py
++++ b/test_app.py
+@@ -2,3 +2,14 @@ from app import redact_url
+ 
+ def test_redacts_sensitive_query_values():
+     assert redact_url('https://x.test/p?a=1&token=secret#top') == 'https://x.test/p?a=1&token=REDACTED#top'
++
++def test_preserves_order_duplicates_and_blank_values():
++    url = 'https://x.test/p%20ath?blank=&ToKeN=one&a=1&token=two&a=2&ACCESS_TOKEN=three&Api_Key=four#top'
++    expected = 'https://x.test/p%20ath?blank=&ToKeN=REDACTED&a=1&token=REDACTED&a=2&ACCESS_TOKEN=REDACTED&Api_Key=REDACTED#top'
++    assert redact_url(url) == expected
++
++def test_url_without_query():
++    assert redact_url('https://x.test/path#fragment') == 'https://x.test/path#fragment'
++
++def test_matches_decoded_parameter_names_exactly():
++    assert redact_url('https://x.test/?%74oken=secret&my_token=public') == 'https://x.test/?token=REDACTED&my_token=public'

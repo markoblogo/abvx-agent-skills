@@ -51,6 +51,11 @@ cross-model benchmark or a held-out result.
 
 The initial bounded skill-evolution pilot is defined in [`skill-evolution/manifest.json`](skill-evolution/manifest.json). It is manual-pilot only: no skill edits are applied or published without evidence, validation, and explicit maintainer acceptance.
 
+The [2026-09-19 Chisle comparison](measured/2026-09-19-chisle/README.md)
+adds a three-arm benchmark: clean Codex, ABVX token rules, and ABVX plus a pinned
+Chisle rules snapshot. It covers five coding and three explanation tasks and
+retains correctness, information-loss, token, diff, and tool-output evidence.
+
 For SkillOpt-style evolution, candidate generation should be diversity-first: create several bounded edit proposals, discard duplicates or guardrail-weakening ideas, then validate only the proposals worth testing. Do not use model-stated probabilities as benchmark scores.
 
 The next researcher-loop structure is `source -> mechanism -> proposal -> novelty_check -> validation -> pr_ready`. Keep it manual until source registries, accepted/rejected ledgers, activation cases, and a skill health gate exist in this directory.

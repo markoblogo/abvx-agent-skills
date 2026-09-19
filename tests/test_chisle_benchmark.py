@@ -19,12 +19,12 @@ def test_case_mix_and_arm_rotation():
 
 def test_explanation_grader_counts_retained_information(tmp_path):
     case = next(item for item in benchmark.cases() if item["id"] == "release-claim-explanation")
-    complete = '{"summary":"new123 build; old999 deploy; health lacks version; browser absent; approval pending", "retained_point_ids":["P1","P2","P3","P4","P5"], "evidence_files":["evidence.md","draft.md"], "caveat":"approval pending", "next_step":"verify browser and deployment"}'
+    complete = '{"summary":"new123 build; old999 deploy; health lacks version; browser absent; approval pending", "retained_point_ids":["R1","R2","R3","R4","R5"], "evidence_files":["evidence.md","draft.md"], "caveat":"approval pending", "next_step":"verify browser and deployment"}'
     grade = benchmark.grade(case, tmp_path, complete)
     assert grade["passed"]
     assert grade["information_retained"] == grade["information_total"] == 5
 
-    incomplete = '{"summary":"new123 build", "retained_point_ids":["P1"], "evidence_files":["evidence.md","draft.md"], "caveat":"unknown", "next_step":"check"}'
+    incomplete = '{"summary":"new123 build", "retained_point_ids":["R1"], "evidence_files":["evidence.md","draft.md"], "caveat":"unknown", "next_step":"check"}'
     grade = benchmark.grade(case, tmp_path, incomplete)
     assert not grade["passed"]
     assert grade["information_retained"] == 1

@@ -1,0 +1,1 @@
+Fix apply_overrides so it returns a fresh dict, leaves defaults unchanged, and raises KeyError for override keys absent from defaults. Standard library only. Run the tests.

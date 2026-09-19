@@ -1,0 +1,3 @@
+Implemented `redact_url` using the standard library. It redacts sensitive parameter values case-insensitively while preserving order, duplicates, non-sensitive blank values, path, and fragment.
+
+All 4 tests pass. Query encoding may be normalized.

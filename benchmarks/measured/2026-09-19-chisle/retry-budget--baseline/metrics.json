@@ -1,0 +1,29 @@
+{
+  "case": "retry-budget",
+  "kind": "coding",
+  "arm": "baseline",
+  "returncode": 0,
+  "started_at_utc": "2026-09-19T20:57:40Z",
+  "duration_seconds": 42.267,
+  "usage": {
+    "input_tokens": 80558,
+    "cached_input_tokens": 52096,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 899,
+    "reasoning_output_tokens": 38
+  },
+  "tool_calls": 5,
+  "tool_output_bytes": 2076,
+  "isolation_violations": [],
+  "changed_files": [
+    "__pycache__/app.cpython-314.pyc",
+    "__pycache__/test_app.cpython-314-pytest-9.1.1.pyc",
+    "app.py"
+  ],
+  "changed_lines": 2,
+  "grade": {
+    "passed": true,
+    "information_retained": null,
+    "details": ""
+  }
+}

@@ -1,0 +1,3 @@
+Fixed [app.py:5](<workspace>/app.py:5): `max_attempts` now counts all calls, including the first.
+
+Tests: `1 passed`. Additional checks confirmed exact budgets, immediate and final-attempt success, error propagation, and validation. No remaining uncertainty.

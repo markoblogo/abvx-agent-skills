@@ -1,0 +1,68 @@
+diff --git a/__pycache__/app.cpython-314.pyc b/__pycache__/app.cpython-314.pyc
+new file mode 100644
+index 0000000..128de4e
+Binary files /dev/null and b/__pycache__/app.cpython-314.pyc differ
+diff --git a/__pycache__/test_app.cpython-314-pytest-9.1.1.pyc b/__pycache__/test_app.cpython-314-pytest-9.1.1.pyc
+new file mode 100644
+index 0000000..5942da2
+Binary files /dev/null and b/__pycache__/test_app.cpython-314-pytest-9.1.1.pyc differ
+diff --git a/app.py b/app.py
+index 8336541..bcb9706 100644
+--- a/app.py
++++ b/app.py
+@@ -2,7 +2,7 @@ def attempt(operation, max_attempts):
+     if max_attempts < 1:
+         raise ValueError('max_attempts must be positive')
+     last_error = None
+-    for _ in range(max_attempts + 1):
++    for _ in range(max_attempts):
+         try:
+             return operation()
+         except RuntimeError as exc:
+diff --git a/test_app.py b/test_app.py
+index 9f3ccd6..8714527 100644
+--- a/test_app.py
++++ b/test_app.py
+@@ -1,9 +1,37 @@
++import pytest
++
+ from app import attempt
+ 
+-def test_budget_is_exact():
++@pytest.mark.parametrize('max_attempts', [1, 2, 3])
++def test_budget_is_exact(max_attempts):
+     calls=[]
++    errors = []
+     def fail():
+-        calls.append(1); raise RuntimeError('no')
+-    try: attempt(fail, 2)
+-    except RuntimeError: pass
+-    assert len(calls) == 2
++        calls.append(1)
++        errors.append(RuntimeError('no'))
++        raise errors[-1]
++    with pytest.raises(RuntimeError) as exc:
++        attempt(fail, max_attempts)
++    assert len(calls) == max_attempts
++    assert exc.value is errors[-1]
++
++
++@pytest.mark.parametrize('failures', [0, 2])
++def test_success_returns_immediately(failures):
++    calls = []
++    result = object()
++    def operation():
++        calls.append(1)
++        if len(calls) <= failures:
++            raise RuntimeError('retry')
++        return result
++    assert attempt(operation, 3) is result
++    assert len(calls) == failures + 1
++
++
++@pytest.mark.parametrize('max_attempts', [0, -1])
++def test_invalid_budget_does_not_call_operation(max_attempts):
++    calls = []
++    with pytest.raises(ValueError, match='^max_attempts must be positive$'):
++        attempt(lambda: calls.append(1), max_attempts)
++    assert calls == []

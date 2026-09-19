@@ -1,0 +1,44 @@
+diff --git a/__pycache__/app.cpython-314.pyc b/__pycache__/app.cpython-314.pyc
+new file mode 100644
+index 0000000..89c8907
+Binary files /dev/null and b/__pycache__/app.cpython-314.pyc differ
+diff --git a/__pycache__/test_app.cpython-314-pytest-9.1.1.pyc b/__pycache__/test_app.cpython-314-pytest-9.1.1.pyc
+new file mode 100644
+index 0000000..640ed04
+Binary files /dev/null and b/__pycache__/test_app.cpython-314-pytest-9.1.1.pyc differ
+diff --git a/app.py b/app.py
+index dfb4431..c962815 100644
+--- a/app.py
++++ b/app.py
+@@ -1,3 +1,7 @@
+ def apply_overrides(defaults, overrides):
+-    defaults.update(overrides)
+-    return defaults
++    result = dict(defaults)
++    for key, value in overrides.items():
++        if key not in defaults:
++            raise KeyError(key)
++        result[key] = value
++    return result
+diff --git a/test_app.py b/test_app.py
+index 690926f..fcab2c7 100644
+--- a/test_app.py
++++ b/test_app.py
+@@ -5,3 +5,17 @@ def test_returns_fresh_mapping():
+     defaults={'timeout': 10, 'retries': 2}
+     assert apply_overrides(defaults, {'timeout': 20}) == {'timeout':20,'retries':2}
+     assert defaults == {'timeout':10,'retries':2}
++
++def test_empty_overrides_return_fresh_dict():
++    defaults = {'timeout': 10}
++    result = apply_overrides(defaults, {})
++    assert isinstance(result, dict)
++    assert result == defaults
++    assert result is not defaults
++
++def test_unknown_override_raises_without_changing_defaults():
++    defaults = {'timeout': 10}
++    with pytest.raises(KeyError) as error:
++        apply_overrides(defaults, {'timeout': 20, 'unknown': 1})
++    assert error.value.args == ('unknown',)
++    assert defaults == {'timeout': 10}

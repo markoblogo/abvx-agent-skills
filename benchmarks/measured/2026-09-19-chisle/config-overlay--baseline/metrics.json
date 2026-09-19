@@ -1,0 +1,30 @@
+{
+  "case": "config-overlay",
+  "kind": "coding",
+  "arm": "baseline",
+  "returncode": 0,
+  "started_at_utc": "2026-09-19T20:58:52Z",
+  "duration_seconds": 35.661,
+  "usage": {
+    "input_tokens": 52793,
+    "cached_input_tokens": 38272,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 823,
+    "reasoning_output_tokens": 36
+  },
+  "tool_calls": 3,
+  "tool_output_bytes": 1243,
+  "isolation_violations": [],
+  "changed_files": [
+    "__pycache__/app.cpython-314.pyc",
+    "__pycache__/test_app.cpython-314.pyc",
+    "app.py",
+    "test_app.py"
+  ],
+  "changed_lines": 41,
+  "grade": {
+    "passed": true,
+    "information_retained": null,
+    "details": ""
+  }
+}

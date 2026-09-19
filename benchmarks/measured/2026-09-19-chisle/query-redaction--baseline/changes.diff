@@ -1,0 +1,62 @@
+diff --git a/__pycache__/app.cpython-314.pyc b/__pycache__/app.cpython-314.pyc
+new file mode 100644
+index 0000000..5ee3345
+Binary files /dev/null and b/__pycache__/app.cpython-314.pyc differ
+diff --git a/__pycache__/test_app.cpython-314-pytest-9.1.1.pyc b/__pycache__/test_app.cpython-314-pytest-9.1.1.pyc
+new file mode 100644
+index 0000000..fe64f8a
+Binary files /dev/null and b/__pycache__/test_app.cpython-314-pytest-9.1.1.pyc differ
+diff --git a/app.py b/app.py
+index 98f5949..1fd0a27 100644
+--- a/app.py
++++ b/app.py
+@@ -1,7 +1,13 @@
+-from urllib.parse import urlsplit, urlunsplit
++from urllib.parse import unquote_plus, urlsplit, urlunsplit
+ 
+ SENSITIVE = {'token', 'access_token', 'api_key'}
+ 
+ def redact_url(url):
+     parts = urlsplit(url)
+-    return urlunsplit(parts)
++    parameters = []
++    for parameter in parts.query.split('&'):
++        key = parameter.partition('=')[0]
++        if unquote_plus(key).lower() in SENSITIVE:
++            parameter = key + '=REDACTED'
++        parameters.append(parameter)
++    return urlunsplit(parts._replace(query='&'.join(parameters)))
+diff --git a/test_app.py b/test_app.py
+index 377b7ce..39ddcb4 100644
+--- a/test_app.py
++++ b/test_app.py
+@@ -2,3 +2,29 @@ from app import redact_url
+ 
+ def test_redacts_sensitive_query_values():
+     assert redact_url('https://x.test/p?a=1&token=secret#top') == 'https://x.test/p?a=1&token=REDACTED#top'
++
++
++def test_redacts_all_sensitive_keys_case_insensitively_and_keeps_duplicates():
++    url = 'https://x.test/p?Token=one&a=1&ACCESS_TOKEN=two&api_KEY=three&token=four'
++    assert redact_url(url) == (
++        'https://x.test/p?Token=REDACTED&a=1&ACCESS_TOKEN=REDACTED'
++        '&api_KEY=REDACTED&token=REDACTED'
++    )
++
++
++def test_preserves_blank_values_path_fragment_and_query_encoding():
++    url = 'https://x.test/a%2Fb?empty=&flag&token=secret&&q=a%20b&q=c+d#token=visible'
++    assert redact_url(url) == (
++        'https://x.test/a%2Fb?empty=&flag&token=REDACTED&&q=a%20b&q=c+d#token=visible'
++    )
++
++
++def test_redacts_encoded_keys_and_empty_sensitive_values():
++    assert redact_url('/p?%74oken=secret&api_key=&access_token') == (
++        '/p?%74oken=REDACTED&api_key=REDACTED&access_token=REDACTED'
++    )
++
++
++def test_leaves_url_without_sensitive_parameters_unchanged():
++    for url in ('https://x.test/p#top', '/p?a=&a=2&my_token=visible#top'):
++        assert redact_url(url) == url

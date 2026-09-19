@@ -1,0 +1,29 @@
+{
+  "case": "partial-chunk",
+  "kind": "coding",
+  "arm": "baseline",
+  "returncode": 0,
+  "started_at_utc": "2026-09-19T21:03:08Z",
+  "duration_seconds": 37.676,
+  "usage": {
+    "input_tokens": 79606,
+    "cached_input_tokens": 76032,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 583,
+    "reasoning_output_tokens": 0
+  },
+  "tool_calls": 5,
+  "tool_output_bytes": 1200,
+  "isolation_violations": [],
+  "changed_files": [
+    "__pycache__/app.cpython-314.pyc",
+    "__pycache__/test_app.cpython-314-pytest-9.1.1.pyc",
+    "app.py"
+  ],
+  "changed_lines": 2,
+  "grade": {
+    "passed": true,
+    "information_retained": null,
+    "details": ""
+  }
+}

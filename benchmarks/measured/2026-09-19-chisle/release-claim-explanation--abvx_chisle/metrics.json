@@ -1,0 +1,33 @@
+{
+  "case": "release-claim-explanation",
+  "kind": "explanation",
+  "arm": "abvx_chisle",
+  "returncode": 0,
+  "started_at_utc": "2026-09-19T21:06:59Z",
+  "duration_seconds": 16.56,
+  "usage": {
+    "input_tokens": 41397,
+    "cached_input_tokens": 27008,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 318,
+    "reasoning_output_tokens": 0
+  },
+  "tool_calls": 2,
+  "tool_output_bytes": 368,
+  "isolation_violations": [],
+  "changed_files": [],
+  "changed_lines": 0,
+  "grade": {
+    "passed": false,
+    "information_retained": 0,
+    "information_total": 5,
+    "missing_points": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5"
+    ],
+    "evidence_mismatch": []
+  }
+}

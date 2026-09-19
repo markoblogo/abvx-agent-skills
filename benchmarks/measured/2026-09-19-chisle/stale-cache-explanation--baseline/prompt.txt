@@ -1,0 +1,1 @@
+Explain the stale-price incident for an engineer. Return JSON with summary, retained_point_ids, evidence_files, caveat, and next_step. Keep every decisive fact even if the prose is short. Do not change files.
