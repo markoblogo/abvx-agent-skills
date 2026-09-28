@@ -1779,7 +1779,7 @@
       "model_sensitivity": "",
       "composable_with": [],
       "anti_patterns": [],
-      "risks": "- Risk: implementation-coupled tests. Mitigation: require public-interface and refactor-survival checks.\n- Risk: horizontal slicing. Mitigation: enforce one failing test at a time.\n- Risk: overtesting. Mitigation: confirm priority behaviors before writing tests.",
+      "risks": "- Risk: implementation-coupled tests. Mitigation: require public-interface and refactor-survival checks.\n- Risk: horizontal slicing. Mitigation: enforce one failing test at a time.\n- Risk: overtesting. Mitigation: confirm priority behaviors before writing tests.\n- Risk: overstating evidence or release status. Mitigation: report local checks, CI, deployment, and release as separate gates.",
       "path": "skills/test-driven-execution/SKILL.md",
       "card_path": "skills/test-driven-execution/SKILL_CARD.md",
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/test-driven-execution/SKILL.md",
