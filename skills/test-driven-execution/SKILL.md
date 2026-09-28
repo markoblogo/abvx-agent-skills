@@ -22,11 +22,18 @@ Use tests as the feedback loop that shapes the implementation one vertical slice
 ## Workflow
 
 1. Confirm the behavior to build or fix.
-2. Identify the highest useful seam to test.
+2. Inspect the repo, branch, and existing worktree changes; identify the highest useful seam to test. Isolate only when work overlaps or runs concurrently, and preserve pre-existing changes.
 3. Write one failing test for one observable behavior.
 4. Implement the minimum code to make it pass.
 5. Repeat for the next behavior.
 6. Refactor only after the slice is green.
+
+## Evidence and handoff
+
+- Use the narrowest check that proves the changed behavior, then run relevant broader checks. A green test proves only the behavior and environment it exercised.
+- For visually material UI changes, compare the same important viewport and state before and after when feasible; do not require screenshots for non-visual changes.
+- Report local tests, CI, deployment, and public release as separate gates. Do not claim a later gate from an earlier one.
+- Completion means verified work and an honest handoff; commit, push, PR creation, and deployment still require task authorization.
 
 For a diagnosed regression that needs durable proof, capture the exact same targeted command before and after with `bug-evidence-protocol`, then capture relevant broader checks. Do not infer `FIX_PROVEN` from a green targeted test alone.
 
@@ -51,3 +58,7 @@ Do not write all tests first and all code later. That produces test suites for i
 ## Final Report
 
 Include the behaviors covered, the seams used, what remains untested, and any refactor opportunities exposed by the loop.
+
+## Attribution
+
+The scoped isolate/prove/ship and visual before/after evidence ideas were informed by [michaelshimeles/skills](https://github.com/michaelshimeles/skills); this skill retains ABVX's behavior-first testing and authorization boundaries.
