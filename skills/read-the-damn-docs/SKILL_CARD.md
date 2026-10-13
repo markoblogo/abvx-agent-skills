@@ -37,10 +37,10 @@ Requires source selection and uncertainty handling; no model-specific superiorit
 - `public-release-verification`
 
 ## Evaluation
-Authored activation, negative and authority scenarios live in benchmarks/fixture-cases/read-the-damn-docs.json. They are not executed model evaluations; retain structural_only until behavioral evidence is captured.
+Seven executed synthetic fixtures on gpt-6.1-sol (medium, one run each) pass bounded checks and maintainer review. Cases cover locked-version API guidance, stale provider evidence, unnecessary research, documentation injection, OAuth grants and offline limits. Captured answers, traces and reproducible runner are in benchmarks/measured/2026-10-13-docs-skill. Tier: fixture_checked. No automatic-discovery, comparative-improvement, live-provider or held-out claim.
 
 ## Version
-0.1.0
+0.1.1
 
 ## Reporting Issues
 Open an issue in the repository.

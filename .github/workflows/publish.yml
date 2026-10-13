@@ -60,6 +60,7 @@ jobs:
       - run: >-
           python scripts/evaluate_skillspector.py
           --reports-dir artifacts/skillspector
+          --skills-root ./skills
           --policy .abvx/skillspector-policy.yaml
           --baseline .abvx/skillspector-baseline.json
       - uses: actions/upload-artifact@v7

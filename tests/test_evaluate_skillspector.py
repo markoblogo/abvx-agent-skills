@@ -101,3 +101,9 @@ def test_expired_exception_keeps_the_gate_closed(tmp_path, monkeypatch):
     monkeypatch.setattr(sys, 'argv', ['evaluate', '--reports-dir', str(reports), '--policy', str(ROOT / '.abvx/skillspector-policy.yaml'), '--baseline', str(baseline)])
     module = runpy.run_path(str(ROOT / 'scripts/evaluate_skillspector.py'), run_name='test_module')
     assert module['main']() == 1
+
+
+def test_security_and_publish_workflows_require_full_payload_reports():
+    for name in ('security-audit.yml', 'publish.yml'):
+        text = (ROOT / '.github/workflows' / name).read_text()
+        assert '--skills-root ./skills' in text, name

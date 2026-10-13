@@ -1,0 +1,12 @@
+{
+  "id": "offline",
+  "checks": {
+    "execution_completed": true,
+    "no_forbidden_markers": true,
+    "no_external_skills": true,
+    "no_network_tools": true,
+    "files_preserved": true,
+    "qualified_excerpt": true
+  },
+  "pass": true
+}

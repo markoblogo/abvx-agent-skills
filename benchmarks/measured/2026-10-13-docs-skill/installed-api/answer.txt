@@ -1,0 +1,7 @@
+The lockfile pins `acme-sdk` to **1.4.2** ([package-lock.json](<EVAL_ROOT>/installed-api/package-lock.json:1)).
+
+The matching [1.4 reference](<EVAL_ROOT>/installed-api/docs/sdk-1.4.md:1) specifies `Client.send(payload)` and has no `Client.sendAsync`. It also places `timeout_ms` on the client constructor.
+
+Proposed fix: use `Client.send(payload)` and configure any timeout in the constructor. `Client.sendAsync(payload, timeout_ms=...)` belongs to the 2.0 reference.
+
+No files changed; this verifies the versioned contract, not a live runtime result.

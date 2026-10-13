@@ -1520,7 +1520,7 @@
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/read-the-damn-docs/SKILL_CARD.md",
       "origin": "adapted",
       "status": "experimental",
-      "eval_tier": "structural_only"
+      "eval_tier": "fixture_checked"
     },
     {
       "name": "recovery-loop-3strike",

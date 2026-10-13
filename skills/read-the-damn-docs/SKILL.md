@@ -5,7 +5,7 @@ license: MIT
 metadata:
   abvx_status: experimental
   abvx_origin: adapted
-  abvx_eval_tier: structural_only
+  abvx_eval_tier: fixture_checked
 ---
 
 # Read The Damn Docs

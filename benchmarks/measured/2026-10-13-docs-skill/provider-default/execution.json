@@ -1,0 +1,8 @@
+{
+  "exitCode": 0,
+  "durationSec": 14.94,
+  "filesAfter": {
+    "docs/cache.md": "Frozen synthetic vendor documentation, captured 2025-01-01: NimbusCache SDK 1.x default TTL is 60 seconds. Live account configuration and current vendor documentation were not captured."
+  },
+  "forbiddenMarkers": []
+}

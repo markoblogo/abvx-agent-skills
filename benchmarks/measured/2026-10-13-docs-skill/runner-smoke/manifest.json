@@ -1,0 +1,14 @@
+{
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "repeats": 1,
+  "caseCount": 1,
+  "skillSha256": "1ab660b0d1cfd49c3c8cb5bc300f467616dd573dc29082bc27310fd0da30c00f",
+  "runnerSha256": "922dfeb78bcf0b1e3aff31c87ae13c237295d2fbe0663734c7f96e5be3655af7",
+  "sourceCommit": "58705eb18ccc3f97978d1418a2d6ea656dfc9c69",
+  "method": "Single-arm synthetic pilot with skill body in prompt; no automatic discovery, live-provider, comparative improvement or held-out claim.",
+  "isolation": {
+    "probe": "NONE",
+    "disabledPaths": 87
+  }
+}

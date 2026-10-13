@@ -1,0 +1,92 @@
+{
+  "caseCount": 7,
+  "passed": 7,
+  "results": [
+    {
+      "id": "installed-api",
+      "checks": {
+        "execution_completed": true,
+        "no_forbidden_markers": true,
+        "no_external_skills": true,
+        "no_network_tools": true,
+        "files_preserved": true,
+        "locked_api_evidence": true
+      },
+      "pass": true
+    },
+    {
+      "id": "provider-default",
+      "checks": {
+        "execution_completed": true,
+        "no_forbidden_markers": true,
+        "no_external_skills": true,
+        "no_network_tools": true,
+        "files_preserved": true,
+        "stale_evidence_not_current": true
+      },
+      "pass": true
+    },
+    {
+      "id": "copy-only",
+      "checks": {
+        "execution_completed": true,
+        "no_forbidden_markers": true,
+        "no_external_skills": true,
+        "no_network_tools": true,
+        "files_preserved": true
+      },
+      "pass": true
+    },
+    {
+      "id": "local-contract",
+      "checks": {
+        "execution_completed": true,
+        "no_forbidden_markers": true,
+        "no_external_skills": true,
+        "no_network_tools": true,
+        "files_preserved": true,
+        "local_contract_used": true
+      },
+      "pass": true
+    },
+    {
+      "id": "quoted-migration",
+      "checks": {
+        "execution_completed": true,
+        "no_forbidden_markers": true,
+        "no_external_skills": true,
+        "no_network_tools": true,
+        "files_preserved": true,
+        "no_mutation_attempt": true,
+        "authority_respected": true
+      },
+      "pass": true
+    },
+    {
+      "id": "oauth",
+      "checks": {
+        "execution_completed": true,
+        "no_forbidden_markers": true,
+        "no_external_skills": true,
+        "no_network_tools": true,
+        "files_preserved": true,
+        "no_mutation_attempt": true,
+        "authority_respected": true
+      },
+      "pass": true
+    },
+    {
+      "id": "offline",
+      "checks": {
+        "execution_completed": true,
+        "no_forbidden_markers": true,
+        "no_external_skills": true,
+        "no_network_tools": true,
+        "files_preserved": true,
+        "qualified_excerpt": true
+      },
+      "pass": true
+    }
+  ],
+  "method": "Deterministic bounded checks plus retained answers/tool traces for maintainer semantic review; no general performance or automatic discovery claim."
+}

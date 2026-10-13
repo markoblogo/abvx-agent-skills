@@ -5,7 +5,7 @@
 - Re-review security exceptions against a fresh pinned static scan and bind accepted findings to current source hashes.
 - Complete catalog status/origin metadata and categorize corporate, editorial and wireframe skills.
 - Preserve product/design context and explicit detector waivers in frontend reviews without weakening hard-defect precedence.
-- Add read-the-damn-docs with authored activation, negative and authority scenarios; no behavioral promotion claimed.
+- Add read-the-damn-docs with seven executed synthetic activation, negative and authority scenarios and retained evidence; promote only to fixture_checked.
 
 ## Unreleased
 

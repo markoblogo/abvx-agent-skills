@@ -18,8 +18,9 @@ def test_catalog_has_complete_metadata_and_categories():
 def test_docs_skill_scenarios_cover_activation_negative_and_authority():
     scenarios = json.loads((ROOT / 'benchmarks/fixture-cases/read-the-damn-docs.json').read_text())
     assert scenarios['skill'] == 'read-the-damn-docs'
-    # Authored prompts alone must not promote a skill's behavioral evidence tier.
-    assert scenarios['eval_tier'] == 'structural_only'
+    # Promotion is backed by the retained model pilot, not authored prompts alone.
+    assert scenarios['eval_tier'] == 'fixture_checked'
+    assert (ROOT / 'benchmarks/measured/2026-10-13-docs-skill/grades.json').is_file()
     ids = []
     for category in ('activation', 'negative', 'authority'):
         assert scenarios[category]
