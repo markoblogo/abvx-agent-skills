@@ -30,3 +30,7 @@ python scripts/grade_docs_skill_eval.py /tmp/docs-skill-new-run
 Review answers and tool traces after deterministic grading. The grader checks known fixture invariants, not all possible shell/network behavior or semantic correctness. A response check may require maintainer adjudication for a valid alternative wording; preserve failed/invalid results rather than selecting favorable runs.
 
 Captured manifest, cases, prompts, sanitized tool events, answers, execution/file-state records and grades are retained here. Paths are replaced with EVAL_ROOT. The reusable runner was extracted after the full pilot; an additional offline smoke verified that entrypoint. The captured skill hash identifies the content before evidence-tier metadata promotion. No model eval is enabled in CI by default.
+
+## Partial grading and workspace inventories
+
+Use `python scripts/grade_docs_skill_eval.py <smoke-directory> --allow-partial` for --only runs. Partial mode is never promotion-eligible; normal grading still requires all seven cases. Full post-run entry inventories (including unexpected files, directories and symlinks) now complement known-input contents. Retained original workspaces were audited after the run and their inventories attached without re-running or selecting outputs; all seven still pass.

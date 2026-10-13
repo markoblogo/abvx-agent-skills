@@ -30,3 +30,17 @@ def test_docs_skill_scenarios_cover_activation_negative_and_authority():
     assert len(ids) == len(set(ids))
     skill = next(item for item in build_catalog(ROOT / 'skills', ROOT / 'README.md')['skills'] if item['name'] == scenarios['skill'])
     assert skill['eval_tier'] == scenarios['eval_tier']
+
+
+def test_readme_tables_have_headers_and_consistent_cell_counts():
+    lines = (ROOT / 'README.md').read_text().splitlines()
+    width = None
+    for index, line in enumerate(lines):
+        if line.startswith('|'):
+            cells = line.strip().strip('|').split('|')
+            if width is None:
+                assert index + 1 < len(lines) and lines[index + 1].startswith('|---'), f'Orphan table row: {line}'
+                width = len(cells)
+            assert len(cells) == width, line
+        else:
+            width = None

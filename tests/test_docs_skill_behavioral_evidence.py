@@ -36,3 +36,25 @@ def test_offline_case_rejects_browsing_and_incomplete_model_execution():
     assert not GRADER['grade_case'](case, execution, events, (path / 'answer.txt').read_text())['pass']
     execution['exitCode'] = 124
     assert not GRADER['grade_case'](case, execution, [], (path / 'answer.txt').read_text())['checks']['execution_completed']
+
+
+def test_partial_smoke_is_gradable_but_never_promotes():
+    import pytest
+    with pytest.raises(ValueError):
+        GRADER['grade'](EVIDENCE / 'runner-smoke')
+    result = GRADER['grade'](EVIDENCE / 'runner-smoke', allow_partial=True)
+    assert result['passed'] == result['caseCount'] == 1
+    assert not result['complete'] and not result['promotionEligible']
+
+
+def test_extra_file_directory_or_symlink_invalidates_copy_only():
+    case = next(c for c in json.loads((EVIDENCE / 'cases.json').read_text()) if c['id'] == 'copy-only')
+    path = EVIDENCE / case['id']
+    events = [json.loads(line) for line in (path / 'events.jsonl').read_text().splitlines() if line.startswith('{')]
+    for kind in ('file', 'directory', 'symlink'):
+        execution = json.loads((path / 'execution.json').read_text())
+        execution['entriesAfter']['unrelated'] = kind
+        result = GRADER['grade_case'](case, execution, events, (path / 'answer.txt').read_text())
+        assert result['checks']['files_preserved']
+        assert not result['checks']['workspace_inventory_complete']
+        assert not result['pass']

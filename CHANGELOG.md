@@ -1,13 +1,17 @@
 # Changelog
 
-## Unreleased
+## 0.16.0 — managed skill profiles and recoverable installation
+
+- Add whole-selection preflight and file-level preview, staged transactional installation, OS locking, retained replacement backups, rollback and interrupted-process recovery.
+- Add context/debug/delivery profiles; bare install no longer selects the entire pack. Use named skills, --profile or explicit --all.
+- Add per-destination manifests and doctor reporting for versions, hashes, updates and local/unmanaged changes; archive state stays outside agent discovery roots.
+- Fix README table cells/continuity and grade partial model smoke runs without promotion; record complete post-run workspace inventories and reject unexpected changes.
 
 - Re-review security exceptions against a fresh pinned static scan and bind accepted findings to current source hashes.
 - Complete catalog status/origin metadata and categorize corporate, editorial and wireframe skills.
 - Preserve product/design context and explicit detector waivers in frontend reviews without weakening hard-defect precedence.
 - Add read-the-damn-docs with seven executed synthetic activation, negative and authority scenarios and retained evidence; promote only to fixture_checked.
 
-## Unreleased
 
 - Add `professional-role-router` for task-time selection and handoff between bounded professional roles.
 - Extend `role-skill-pack-design` with professional-role donor adaptation, maturity states, routing, handoffs, authority separation, and evaluation guidance.

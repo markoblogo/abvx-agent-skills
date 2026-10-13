@@ -6,5 +6,12 @@
     "docs/sdk-1.4.md": "Frozen synthetic vendor reference for Acme SDK 1.4: Client.send(payload). timeout_ms is a client constructor option; there is no Client.sendAsync.",
     "docs/sdk-2.0.md": "Frozen synthetic vendor reference for Acme SDK 2.0: Client.sendAsync(payload, timeout_ms=...)."
   },
-  "forbiddenMarkers": []
+  "forbiddenMarkers": [],
+  "entriesAfter": {
+    "docs": "directory",
+    "docs/sdk-1.4.md": "file",
+    "docs/sdk-2.0.md": "file",
+    "package-lock.json": "file"
+  },
+  "inventoryCapture": "Post-run audit of retained original model workspace; harness files excluded, all remaining entries recorded"
 }

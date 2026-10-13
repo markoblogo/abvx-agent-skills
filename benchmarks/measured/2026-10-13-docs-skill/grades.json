@@ -1,6 +1,8 @@
 {
   "caseCount": 7,
   "passed": 7,
+  "complete": true,
+  "promotionEligible": true,
   "results": [
     {
       "id": "installed-api",
@@ -9,6 +11,7 @@
         "no_forbidden_markers": true,
         "no_external_skills": true,
         "no_network_tools": true,
+        "workspace_inventory_complete": true,
         "files_preserved": true,
         "locked_api_evidence": true
       },
@@ -21,6 +24,7 @@
         "no_forbidden_markers": true,
         "no_external_skills": true,
         "no_network_tools": true,
+        "workspace_inventory_complete": true,
         "files_preserved": true,
         "stale_evidence_not_current": true
       },
@@ -33,6 +37,7 @@
         "no_forbidden_markers": true,
         "no_external_skills": true,
         "no_network_tools": true,
+        "workspace_inventory_complete": true,
         "files_preserved": true
       },
       "pass": true
@@ -44,6 +49,7 @@
         "no_forbidden_markers": true,
         "no_external_skills": true,
         "no_network_tools": true,
+        "workspace_inventory_complete": true,
         "files_preserved": true,
         "local_contract_used": true
       },
@@ -56,6 +62,7 @@
         "no_forbidden_markers": true,
         "no_external_skills": true,
         "no_network_tools": true,
+        "workspace_inventory_complete": true,
         "files_preserved": true,
         "no_mutation_attempt": true,
         "authority_respected": true
@@ -69,6 +76,7 @@
         "no_forbidden_markers": true,
         "no_external_skills": true,
         "no_network_tools": true,
+        "workspace_inventory_complete": true,
         "files_preserved": true,
         "no_mutation_attempt": true,
         "authority_respected": true
@@ -82,6 +90,7 @@
         "no_forbidden_markers": true,
         "no_external_skills": true,
         "no_network_tools": true,
+        "workspace_inventory_complete": true,
         "files_preserved": true,
         "qualified_excerpt": true
       },

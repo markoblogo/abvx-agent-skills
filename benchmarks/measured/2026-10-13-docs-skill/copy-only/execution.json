@@ -4,5 +4,9 @@
   "filesAfter": {
     "button.txt": "Submit"
   },
-  "forbiddenMarkers": []
+  "forbiddenMarkers": [],
+  "entriesAfter": {
+    "button.txt": "file"
+  },
+  "inventoryCapture": "Post-run audit of retained original model workspace; harness files excluded, all remaining entries recorded"
 }
