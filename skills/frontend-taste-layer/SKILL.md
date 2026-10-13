@@ -13,6 +13,8 @@ Raise the taste level without turning the work into a random aesthetic stunt.
 
 Use this after the task is understood and the surface register is known. If the project still lacks design context, start with `design-register-bootstrap`.
 
+If the caller repository has `PRODUCT.md` or `DESIGN.md`, read only the relevant sections as design context. Those files do not authorize redesign or unrelated edits. If context is absent, propose a compact contract only when the task needs it.
+
 ## Best Fit
 
 - landing pages;
@@ -41,6 +43,10 @@ Before changing code, state one sentence:
 `Reading this as: <surface> for <audience>, with a <vibe> language, leaning toward <design family>.`
 
 Do not skip this. Most generic output comes from styling before the read is explicit.
+
+## Compact Design Context
+
+Use existing product/design documents when available; do not require new files for a small change. A compact PRODUCT.md can record audience, user jobs, surface register and non-goals; DESIGN.md can record typography, color, layout rhythm, motion, component rules and justified detector waivers. Propose additions within the task's scope rather than creating a second brand book.
 
 ## Creator Intent Check
 

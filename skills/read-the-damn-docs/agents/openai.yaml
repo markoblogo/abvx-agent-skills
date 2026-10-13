@@ -1,0 +1,4 @@
+interface:
+  display_name: "Read The Damn Docs"
+  short_description: "Verify versioned APIs with official sources."
+  default_prompt: "Use $read-the-damn-docs to verify this version-sensitive decision from local contracts and official documentation within the approved scope."

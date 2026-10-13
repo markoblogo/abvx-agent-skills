@@ -172,7 +172,8 @@ Some useful repo surfaces are companion contracts rather than installable skill 
 | Job | Install | Use when |
 |---|---|---|
 | Write smaller patches | `minimal-diff-builder` | The agent keeps refactoring too much, widening blast radius, or adding abstractions you did not ask for. |
-| Debug from evidence | `diagnose` | The agent keeps guessing fixes without reproducing the failure and verifying the result. |
+| Debug from evidence | `read-the-damn-docs` | Verifies version-sensitive guidance against local contracts and current official documentation. |
+| `diagnose` | The agent keeps guessing fixes without reproducing the failure and verifying the result. |
 | Prove a regression fix | `bug-evidence-protocol` | A diagnosed bug needs captured same-command red/green evidence, broader checks, Git identity, and an honest fix status. |
 | Harden repeated runtime sprints | `loop-hardening-contract` | Cardputer, browser, CI, or production work needs measured harness stripping, immutable runtime-path predicates, and broken-window revalidation without automatic revert. |
 | Review plans before work | `assumption-excavation`, `pipeline-readiness-gate` | A plan, SET bundle, or spec sounds plausible but may hide assumptions or missing gates. |
@@ -233,6 +234,8 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 
 | Skill | What It Does |
 |---|---|
+| `read-the-damn-docs` | Verifies version-sensitive guidance against local contracts and current official documentation. |
+
 | `diagnose` | Runs a disciplined debugging loop around one reproducible signal, ranked hypotheses, and narrow verification. |
 | `bug-evidence-protocol` | Captures same-command red/green evidence, broader checks, Git/environment identity, route state, and an honest fix classification after diagnosis. |
 | `agent-tool-contract-review` | Reviews MCP tools, CLI commands, SET inputs, AGENTS.md generator outputs, and external-skill adaptation deltas as agent-facing contracts with explicit authority and output boundaries. |
@@ -251,6 +254,9 @@ These skills are grouped by the job they do. The token-economy layer is intentio
 
 | Skill | What It Does |
 |---|---|
+| `corporate-surface` | Establishes restrained corporate UI conventions within the approved design context. |
+| `editorial-surface` | Sets a reading-focused register for editorial surfaces. |
+| `wireframe-preflight` | Checks layout and interaction structure before visual polish. |
 | `design-register-bootstrap` | Establishes compact design context before implementation: `brand` vs `product` register, audience, creator intent, preserve-theirs constraints, anti-references, color strategy, and PRODUCT.md / DESIGN.md direction. |
 | `frontend-taste-layer` | Sets and reviews marketing/editorial visual direction through a design read, creator-intent check, relative composition/motion/density, preservation-first redesign, layout rhythm, and browser evidence; product UI routes to Lazyweb and UX review. |
 | `fluid-interaction-review` | Reviews direct-manipulation physics: 1:1 tracking and grab offset, pointer capture, current-value interruption, velocity handoff, momentum projection, hysteresis, soft boundaries, spatial continuity, and independent motion/transparency/contrast fallbacks. |

@@ -2,6 +2,9 @@
 name: designmd-brand-kit
 description: Create, inspect, and apply DESIGN.md brand kits for brand-aware frontend work. Use when building or reviewing landing pages, frontend UI, pitch pages, redesigns, client audits, brand-matched prototypes, or researching a potential client/company where website identity, design tokens, typography, layout, components, or do/don't guidance should shape the output.
 license: MIT
+metadata:
+  abvx_status: experimental
+  abvx_origin: adapted
 ---
 
 # DesignMD Brand Kit

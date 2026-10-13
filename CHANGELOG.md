@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+- Re-review security exceptions against a fresh pinned static scan and bind accepted findings to current source hashes.
+- Complete catalog status/origin metadata and categorize corporate, editorial and wireframe skills.
+- Preserve product/design context and explicit detector waivers in frontend reviews without weakening hard-defect precedence.
+- Add read-the-damn-docs with authored activation, negative and authority scenarios; no behavioral promotion claimed.
+
+## Unreleased
+
 - Add `professional-role-router` for task-time selection and handoff between bounded professional roles.
 - Extend `role-skill-pack-design` with professional-role donor adaptation, maturity states, routing, handoffs, authority separation, and evaluation guidance.
 - Extend `personal-workspace-router` so isolated personal domains can activate a small set of professional role profiles without broad context or permission inheritance.

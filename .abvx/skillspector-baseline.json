@@ -2,87 +2,92 @@
   "version": 1,
   "findings": [
     {
-      "fingerprint": "RA1:skills/loopops-protocol/SKILL.md:97:97",
+      "fingerprint": "RA1:skills/loopops-protocol/SKILL.md:100:100",
       "reason": "This skill intentionally describes controlled post-loop skill evolution as part of its protocol.",
-      "expires_on": "2026-12-31"
+      "expires_on": "2026-12-31",
+      "source_path": "skills/loopops-protocol/SKILL.md",
+      "source_sha256": "795e223b45b178da30ba4bfe103d29ad7b3878b59adb695528412c47f5f85c4f",
+      "reviewed_on": "2026-10-13"
     },
     {
       "fingerprint": "RA1:skills/loopops-protocol/SKILL_CARD.md:30:30",
       "reason": "The skill card documents the same controlled skill-evolution behavior for reviewer context.",
-      "expires_on": "2026-12-31"
-    },
-    {
-      "fingerprint": "OH1:skills/bug-evidence-protocol/scripts/capture_command.py:48:48",
-      "reason": "The evidence helper invokes fixed Git argv without a shell to record repository identity.",
-      "expires_on": "2026-10-31"
-    },
-    {
-      "fingerprint": "OH1:skills/bug-evidence-protocol/scripts/capture_command.py:90:90",
-      "reason": "The evidence helper runs the explicit user-supplied argv without a shell, with timeout and bounded redacted output.",
-      "expires_on": "2026-10-31"
+      "expires_on": "2026-12-31",
+      "source_path": "skills/loopops-protocol/SKILL_CARD.md",
+      "source_sha256": "b405ed7dafbd9ef8ba0e08095967c6bd101adddcfe7fe533b49751999ae84966",
+      "reviewed_on": "2026-10-13"
     },
     {
       "fingerprint": "AE1:skills/agent-learning-layer-triage/SKILL.md:81:81",
-      "reason": "Reviewed SkillSpector 2.11.0 reference-resolution false positive. Names target artifact types and decision categories for future work; these are not bundled dependencies. See docs/security/skillspector-2.11-reference-review.md.",
+      "reason": "Reviewed SkillSpector 2.11.0 reference-resolution false positive. Names target artifact types and decision categories for future work; these are not bundled dependencies. Re-reviewed against the pinned fresh scan on 2026-10-13; see docs/security/2026-10-13-maintenance-review.md.",
       "source_path": "skills/agent-learning-layer-triage/SKILL.md",
       "source_sha256": "ce100babd5d8420fe796313195b46e80f810494f53302719c9150f412183e736",
-      "expires_on": "2026-10-07"
+      "expires_on": "2026-11-12",
+      "reviewed_on": "2026-10-13"
     },
     {
       "fingerprint": "AE1:skills/assumption-excavation/SKILL.md:17:17",
-      "reason": "Reviewed SkillSpector 2.11.0 reference-resolution false positive. Lists document types to review in a caller repository; SKILL.md is a generic input type, not a hidden dependency. See docs/security/skillspector-2.11-reference-review.md.",
+      "reason": "Reviewed SkillSpector 2.11.0 reference-resolution false positive. Lists document types to review in a caller repository; SKILL.md is a generic input type, not a hidden dependency. Re-reviewed against the pinned fresh scan on 2026-10-13; see docs/security/2026-10-13-maintenance-review.md.",
       "source_path": "skills/assumption-excavation/SKILL.md",
       "source_sha256": "9e0ff9ffee25a28d79190a4c3036ad8bd6e6ce31631b509d3a1f4cd82b1ab584",
-      "expires_on": "2026-10-07"
+      "expires_on": "2026-11-12",
+      "reviewed_on": "2026-10-13"
     },
     {
       "fingerprint": "AE1:skills/book-to-skill/SKILL.md:31:31",
-      "reason": "Reviewed SkillSpector 2.11.0 reference-resolution false positive. Describes generating SKILL.md as an output from approved analysis; the proposed output cannot be an existing scan dependency. See docs/security/skillspector-2.11-reference-review.md.",
+      "reason": "Reviewed SkillSpector 2.11.0 reference-resolution false positive. Describes generating SKILL.md as an output from approved analysis; the proposed output cannot be an existing scan dependency. Re-reviewed against the pinned fresh scan on 2026-10-13; see docs/security/2026-10-13-maintenance-review.md.",
       "source_path": "skills/book-to-skill/SKILL.md",
       "source_sha256": "25ad9f73ca41c2d2d8db148c9254093d75ece99ca3ec3f7827c02a873c43df5f",
-      "expires_on": "2026-10-07"
+      "expires_on": "2026-11-12",
+      "reviewed_on": "2026-10-13"
     },
     {
       "fingerprint": "AE1:skills/delivery-preflight-gate/SKILL.md:24:24",
-      "reason": "Reviewed SkillSpector 2.11.0 reference-resolution false positive. Lists alternative destinations for a reusable lesson; script/tool and pass/fail are prose categories. See docs/security/skillspector-2.11-reference-review.md.",
+      "reason": "Reviewed SkillSpector 2.11.0 reference-resolution false positive. Lists alternative destinations for a reusable lesson; script/tool and pass/fail are prose categories. Re-reviewed against the pinned fresh scan on 2026-10-13; see docs/security/2026-10-13-maintenance-review.md.",
       "source_path": "skills/delivery-preflight-gate/SKILL.md",
       "source_sha256": "fb4ef23b08e6b33010b6b49c55bdc5a2e54d42e786d3089224986346df5ee309",
-      "expires_on": "2026-10-07"
+      "expires_on": "2026-11-12",
+      "reviewed_on": "2026-10-13"
     },
     {
       "fingerprint": "AE1:skills/durable-context-maintenance/SKILL.md:26:26",
-      "reason": "Reviewed SkillSpector 2.11.0 reference-resolution false positive. Lists possible lesson destinations, caller AGENTS.md files, and cleanup risk categories; no uninspected bundled payload is referenced. See docs/security/skillspector-2.11-reference-review.md.",
+      "reason": "Reviewed SkillSpector 2.11.0 reference-resolution false positive. Lists possible lesson destinations, caller AGENTS.md files, and cleanup risk categories; no uninspected bundled payload is referenced. Re-reviewed against the pinned fresh scan on 2026-10-13; see docs/security/2026-10-13-maintenance-review.md.",
       "source_path": "skills/durable-context-maintenance/SKILL.md",
       "source_sha256": "7540162dbede96dc1c6d4dfc8def2cf501130270b3157e38546c98efc1ff4f57",
-      "expires_on": "2026-10-07"
+      "expires_on": "2026-11-12",
+      "reviewed_on": "2026-10-13"
     },
     {
       "fingerprint": "AE1:skills/goal-loop-designer/SKILL.md:57:57",
-      "reason": "Reviewed SkillSpector 2.11.0 reference-resolution false positive. Lists possible lesson destinations, host types, and token/tool budgets; these are generic workflow categories. See docs/security/skillspector-2.11-reference-review.md.",
+      "reason": "Reviewed SkillSpector 2.11.0 reference-resolution false positive. Lists possible lesson destinations, host types, and token/tool budgets; these are generic workflow categories. Re-reviewed against the pinned fresh scan on 2026-10-13; see docs/security/2026-10-13-maintenance-review.md.",
       "source_path": "skills/goal-loop-designer/SKILL.md",
       "source_sha256": "87994d252bcb6dd8759d32fd098f9c90da970d12280b1d2782bf17dc5f1b02b6",
-      "expires_on": "2026-10-07"
+      "expires_on": "2026-11-12",
+      "reviewed_on": "2026-10-13"
     },
     {
       "fingerprint": "AE1:skills/rabbithole-doc-exploration/SKILL.md:17:17",
-      "reason": "Reviewed SkillSpector 2.11.0 reference-resolution false positive. Enumerates optional files in the caller repository to inspect when present; they are user inputs, not required bundled artifacts. See docs/security/skillspector-2.11-reference-review.md.",
+      "reason": "Reviewed SkillSpector 2.11.0 reference-resolution false positive. Enumerates optional files in the caller repository to inspect when present; they are user inputs, not required bundled artifacts. Re-reviewed against the pinned fresh scan on 2026-10-13; see docs/security/2026-10-13-maintenance-review.md.",
       "source_path": "skills/rabbithole-doc-exploration/SKILL.md",
       "source_sha256": "97294ded6286f2a5a8a98b969a01747f0054dbb9183050a835c5ebae05a55870",
-      "expires_on": "2026-10-07"
+      "expires_on": "2026-11-12",
+      "reviewed_on": "2026-10-13"
     },
     {
-      "fingerprint": "AE1:skills/skillopt-evolve-skills/SKILL.md:15:15",
-      "reason": "Reviewed SkillSpector 2.11.0 reference-resolution false positive. Names instruction artifacts to create or edit after layer selection; generic filenames and slash-separated rejection reasons are not bundled dependencies. See docs/security/skillspector-2.11-reference-review.md.",
+      "fingerprint": "AE1:skills/skillopt-evolve-skills/SKILL.md:18:18",
+      "reason": "Reviewed SkillSpector 2.11.0 reference-resolution false positive. Names instruction artifacts to create or edit after layer selection; generic filenames and slash-separated rejection reasons are not bundled dependencies. Re-reviewed against the pinned fresh scan on 2026-10-13; see docs/security/2026-10-13-maintenance-review.md.",
       "source_path": "skills/skillopt-evolve-skills/SKILL.md",
-      "source_sha256": "2aabd2f29aba82ece6197633c196d36c0e6e13a03203135bc87ac496467d0b50",
-      "expires_on": "2026-10-07"
+      "source_sha256": "155eb113313441680c91db7c96e8a490534ae67a7bfcdae7df62a42e6b33c138",
+      "expires_on": "2026-11-12",
+      "reviewed_on": "2026-10-13"
     },
     {
-      "fingerprint": "AE1:skills/skillopt-evolve-skills/SKILL.md:19:19",
-      "reason": "Reviewed SkillSpector 2.11.0 reference-resolution false positive. Names instruction artifacts to create or edit after layer selection; generic filenames and slash-separated rejection reasons are not bundled dependencies. See docs/security/skillspector-2.11-reference-review.md.",
+      "fingerprint": "AE1:skills/skillopt-evolve-skills/SKILL.md:22:22",
+      "reason": "Reviewed SkillSpector 2.11.0 reference-resolution false positive. Names instruction artifacts to create or edit after layer selection; generic filenames and slash-separated rejection reasons are not bundled dependencies. Re-reviewed against the pinned fresh scan on 2026-10-13; see docs/security/2026-10-13-maintenance-review.md.",
       "source_path": "skills/skillopt-evolve-skills/SKILL.md",
-      "source_sha256": "2aabd2f29aba82ece6197633c196d36c0e6e13a03203135bc87ac496467d0b50",
-      "expires_on": "2026-10-07"
+      "source_sha256": "155eb113313441680c91db7c96e8a490534ae67a7bfcdae7df62a42e6b33c138",
+      "expires_on": "2026-11-12",
+      "reviewed_on": "2026-10-13"
     }
   ]
 }

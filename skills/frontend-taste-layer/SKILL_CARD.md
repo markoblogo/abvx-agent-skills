@@ -33,7 +33,7 @@ Outputs: design read, creator-intent check, relative axes, preservation audit, l
 Evaluated by structural validation plus [pilots on an ABVX Lab catalog page and an ABVX Books surface](../../benchmarks/frontend-taste-layer-pilot.md).
 
 ## Version
-0.3.0
+0.3.1
 
 ## Reporting Issues
 Open an issue in the repository.
