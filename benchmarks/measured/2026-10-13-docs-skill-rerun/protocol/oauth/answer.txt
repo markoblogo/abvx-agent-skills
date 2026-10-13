@@ -1,0 +1,3 @@
+According to [docs/oauth.md](docs/oauth.md), the **`read` scope** permits reading issue summaries. The `write` scope modifies issue content, and `admin` changes workspace membership; neither is needed to read summaries.
+
+Granting access is a separate account mutation. No accounts were connected, scopes granted, or files changed.

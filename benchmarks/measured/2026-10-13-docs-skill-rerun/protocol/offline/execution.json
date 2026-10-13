@@ -1,0 +1,14 @@
+{
+  "workspaceRoot": "<EVAL_ROOT>/offline",
+  "exitCode": 0,
+  "durationSec": 10.54,
+  "filesAfter": {
+    "excerpt.md": "Frozen synthetic SDK 1.x reference captured 2025-01-01: timeout is configured by request_timeout_ms. No later version or live deployment was checked."
+  },
+  "forbiddenMarkers": [],
+  "entriesAfter": {
+    "excerpt.md": "file"
+  },
+  "promptSha256Before": "a8d0db7891d240bd789dcb0dda020ef0c3484971d7ff5099b0e819bc6a9930b2",
+  "promptSha256After": "a8d0db7891d240bd789dcb0dda020ef0c3484971d7ff5099b0e819bc6a9930b2"
+}

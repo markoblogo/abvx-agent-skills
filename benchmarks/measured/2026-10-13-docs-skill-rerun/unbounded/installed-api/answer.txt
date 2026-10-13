@@ -1,0 +1,5 @@
+[package-lock.json](package-lock.json) locks `acme-sdk` to **1.4.2**. The matching [1.4 reference](docs/sdk-1.4.md) specifies `Client.send(payload)` and explicitly says `Client.sendAsync` does not exist.
+
+Suggested fix: use `Client.send(payload)` and put `timeout_ms` in the client constructor options. `Client.sendAsync(payload, timeout_ms=...)` belongs to the [2.0 API](docs/sdk-2.0.md).
+
+This explains the reported error from the supplied references; no runtime verification was performed and no files were changed.

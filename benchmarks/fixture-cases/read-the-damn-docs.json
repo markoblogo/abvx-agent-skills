@@ -1,7 +1,7 @@
 {
   "skill": "read-the-damn-docs",
   "eval_tier": "fixture_checked",
-  "evidence": "Seven executed synthetic cases and retained model/tool evidence: benchmarks/measured/2026-10-13-docs-skill",
+  "evidence": "Seven passing protocol-constrained cases with captured prompt hashes, traces and manual review: benchmarks/measured/2026-10-13-docs-skill-rerun; unbounded and original runs are non-eligible",
   "activation": [
     {
       "id": "installed-api",

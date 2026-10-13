@@ -37,10 +37,10 @@ Requires source selection and uncertainty handling; no model-specific superiorit
 - `public-release-verification`
 
 ## Evaluation
-Seven executed synthetic fixtures on gpt-6.1-sol (medium, one run each) pass bounded checks and maintainer review. Cases cover locked-version API guidance, stale provider evidence, unnecessary research, documentation injection, OAuth grants and offline limits. Captured answers, traces and reproducible runner are in benchmarks/measured/2026-10-13-docs-skill. Tier: fixture_checked. No automatic-discovery, comparative-improvement, live-provider or held-out claim.
+A fresh seven-case synthetic rerun with an explicit fixture/tool protocol passes conservative trace checks and maintainer semantic review on gpt-6.1-sol (medium, one run per case). Tier: fixture_checked for these protocol-constrained fixtures only. The preceding unbounded rerun is not promotion-eligible; both are retained in benchmarks/measured/2026-10-13-docs-skill-rerun, including initial grades and evaluator corrections. Original pilot runs still lack pre-run prompt integrity. No OS filesystem isolation, automatic-discovery, unconstrained reliability, comparative-improvement, live-provider or held-out claim.
 
 ## Version
-0.1.1
+0.1.3
 
 ## Reporting Issues
 Open an issue in the repository.

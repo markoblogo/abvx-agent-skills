@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.16.1 — post-release review corrections
+
+- Preserve recreated local skills during repeated recovery without archive collisions; keep doctor reporting when managed paths are files, symlinks or unreadable directories.
+- Restore payloads before retrying journal writes after installation failures.
+- Hash evaluation prompts before/after execution and reject unknown command syntax, indirect script execution, external reads and network attempts.
+- Preserve non-eligible original/unbounded docs-skill runs and execute a new seven-case protocol-constrained rerun with captured prompt hashes and manual review; qualify fixture_checked only for that bounded protocol.
+- Reject zsh executable glob qualifiers, require successful completed reads as source evidence, and label the superseded smoke grade historical.
+
 ## 0.16.0 — managed skill profiles and recoverable installation
 
 - Add whole-selection preflight and file-level preview, staged transactional installation, OS locking, retained replacement backups, rollback and interrupted-process recovery.

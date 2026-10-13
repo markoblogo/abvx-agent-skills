@@ -1,0 +1,24 @@
+{
+  "caseCount": 1,
+  "passed": 0,
+  "complete": false,
+  "promotionEligible": false,
+  "results": [
+    {
+      "id": "offline",
+      "checks": {
+        "execution_completed": true,
+        "no_forbidden_markers": true,
+        "no_external_skills": true,
+        "no_network_tools": true,
+        "tool_actions_bounded": true,
+        "prompt_preserved": false,
+        "workspace_inventory_complete": true,
+        "files_preserved": true,
+        "qualified_excerpt": true
+      },
+      "pass": false
+    }
+  ],
+  "method": "Deterministic bounded checks plus retained answers/tool traces for maintainer semantic review; no general performance or automatic discovery claim."
+}
