@@ -72,7 +72,7 @@ Generated from `docs/catalog.json`.
 | `public-release-verification` | Long-Run Delivery Control | rollout_checked | Prove release status across live, browser, and human gates. | `gh skill install markoblogo/abvx-agent-skills public-release-verification` |
 | `rabbithole-doc-exploration` | Project Context & Onboarding | structural_only | Use a local Rabbithole canvas to explore dense agent docs with human-selected branches. | `gh skill install markoblogo/abvx-agent-skills rabbithole-doc-exploration` |
 | `rapid-grilling` | Discovery, Planning & Delivery | structural_only | Fast one-question-at-a-time alignment for vague ideas and plans. | `gh skill install markoblogo/abvx-agent-skills rapid-grilling` |
-| `read-the-damn-docs` | Coding, Debugging & Architecture | structural_only | Verify versioned APIs with official sources. | `gh skill install markoblogo/abvx-agent-skills read-the-damn-docs` |
+| `read-the-damn-docs` | Coding, Debugging & Architecture | fixture_checked | Verify versioned APIs with official sources. | `gh skill install markoblogo/abvx-agent-skills read-the-damn-docs` |
 | `recovery-loop-3strike` | Long-Run Delivery Control | structural_only | Retry once, fix-spec once, then hand off honestly. | `gh skill install markoblogo/abvx-agent-skills recovery-loop-3strike` |
 | `repo-debugging-ledger` | Coding, Debugging & Architecture | structural_only | Debug repositories with checked hypotheses and loop breakers. | `gh skill install markoblogo/abvx-agent-skills repo-debugging-ledger` |
 | `repo-issue-triage` | Discovery, Planning & Delivery | structural_only | Move issues through a compact state machine toward real action. | `gh skill install markoblogo/abvx-agent-skills repo-issue-triage` |

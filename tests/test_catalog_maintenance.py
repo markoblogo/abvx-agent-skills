@@ -19,7 +19,8 @@ def test_docs_skill_scenarios_cover_activation_negative_and_authority():
     scenarios = json.loads((ROOT / 'benchmarks/fixture-cases/read-the-damn-docs.json').read_text())
     assert scenarios['skill'] == 'read-the-damn-docs'
     # An incomplete harness cannot support metadata promotion.
-    assert scenarios['eval_tier'] == 'structural_only'
+    assert scenarios['eval_tier'] == 'fixture_checked'
+    assert json.loads((ROOT / 'benchmarks/measured/2026-10-13-docs-skill-rerun/protocol/grades.json').read_text())['promotionEligible']
     assert not json.loads((ROOT / 'benchmarks/measured/2026-10-13-docs-skill/grades.json').read_text())['promotionEligible']
     assert (ROOT / 'benchmarks/measured/2026-10-13-docs-skill/grades.json').is_file()
     ids = []

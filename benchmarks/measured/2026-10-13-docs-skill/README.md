@@ -1,6 +1,6 @@
 # Docs skill behavioral pilot 13 October 2026
 
-Seven synthetic fixtures were executed in separate Codex sessions with `gpt-6.1-sol`, medium reasoning, one run per case. The retained answers were manually reviewed, but a subsequent harness review found missing pre-run prompt integrity and incomplete command guards. Under the corrected grader all seven runs are non-passing and not promotion-eligible. The skill remains `structural_only` until a fresh validated run. Historical files are preserved; this is not a model capability failure.
+Seven synthetic fixtures were executed in separate Codex sessions with `gpt-6.1-sol`, medium reasoning, one run per case. The retained answers were manually reviewed, but a subsequent harness review found missing pre-run prompt integrity and incomplete command guards. Under the corrected grader all seven runs are non-passing and not promotion-eligible. These original runs do not support promotion; the later protocol-constrained rerun is documented in ../2026-10-13-docs-skill-rerun/README.md. Historical files are preserved; this is not a model capability failure.
 
 ## Method
 
@@ -37,4 +37,6 @@ Use `python scripts/grade_docs_skill_eval.py <smoke-directory> --allow-partial` 
 
 ## Post-release correction
 
-The original `grades.json` from v0.16.0 remains in Git history. Current grades are recomputed with the stricter grader and deliberately fail on missing prompt provenance; hashes were not fabricated retrospectively. A fresh model rerun was blocked by automatic approval review because escalated execution could expose local files, credentials and network access. No rerun or new behavioral promotion is claimed.
+The original `grades.json` from v0.16.0 remains in Git history. Current grades are recomputed with the stricter grader and deliberately fail on missing prompt provenance; hashes were not fabricated retrospectively. A fresh model rerun was blocked by automatic approval review because escalated execution could expose local files, credentials and network access. The user later explicitly authorized the rerun. See ../2026-10-13-docs-skill-rerun/README.md for both fresh runs and the narrowly qualified promotion; this does not repair the original evidence.
+
+The smoke file `historical-grade-before-review.json` is superseded and retained solely as a historical artifact. `grades.json` is the current score and rejects that run for missing pre-run prompt provenance.

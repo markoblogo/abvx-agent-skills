@@ -1,0 +1,3 @@
+The local reference documents a **60-second default TTL for NimbusCache SDK 1.x**, captured on **2025-01-01**. [docs/cache.md](docs/cache.md)
+
+It does not establish the provider’s current default or live account configuration. With only these materials, I can’t verify the current default or recommend configuration based on it. No files were changed.

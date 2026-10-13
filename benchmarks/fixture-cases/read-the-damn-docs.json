@@ -1,7 +1,7 @@
 {
   "skill": "read-the-damn-docs",
-  "eval_tier": "structural_only",
-  "evidence": "Retained seven-case pilot is not promotion-eligible after harness review; fresh validated run pending",
+  "eval_tier": "fixture_checked",
+  "evidence": "Seven passing protocol-constrained cases with captured prompt hashes, traces and manual review: benchmarks/measured/2026-10-13-docs-skill-rerun; unbounded and original runs are non-eligible",
   "activation": [
     {
       "id": "installed-api",

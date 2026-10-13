@@ -1,0 +1,16 @@
+{
+  "workspaceRoot": "<EVAL_ROOT>/local-contract",
+  "exitCode": 0,
+  "durationSec": 9.78,
+  "filesAfter": {
+    "util.py": "def page_count(total, size):\n    if total < 0 or size <= 0:\n        raise ValueError(\"invalid\")\n    return (total + size - 1) // size\n",
+    "tests.py": "assert page_count(0,10)==0\nassert page_count(11,10)==2\n"
+  },
+  "forbiddenMarkers": [],
+  "entriesAfter": {
+    "tests.py": "file",
+    "util.py": "file"
+  },
+  "promptSha256Before": "03fa21b2dc2043daacf3c20f2173fb56376ec45200d103bf504e69e900c5394b",
+  "promptSha256After": "03fa21b2dc2043daacf3c20f2173fb56376ec45200d103bf504e69e900c5394b"
+}

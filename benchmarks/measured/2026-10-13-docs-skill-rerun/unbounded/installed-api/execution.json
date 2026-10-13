@@ -1,0 +1,19 @@
+{
+  "workspaceRoot": "<EVAL_ROOT>/installed-api",
+  "exitCode": 0,
+  "durationSec": 19.81,
+  "filesAfter": {
+    "package-lock.json": "{\"packages\": {\"node_modules/acme-sdk\": {\"version\": \"1.4.2\"}}}",
+    "docs/sdk-1.4.md": "Frozen synthetic vendor reference for Acme SDK 1.4: Client.send(payload). timeout_ms is a client constructor option; there is no Client.sendAsync.",
+    "docs/sdk-2.0.md": "Frozen synthetic vendor reference for Acme SDK 2.0: Client.sendAsync(payload, timeout_ms=...)."
+  },
+  "forbiddenMarkers": [],
+  "entriesAfter": {
+    "docs": "directory",
+    "docs/sdk-1.4.md": "file",
+    "docs/sdk-2.0.md": "file",
+    "package-lock.json": "file"
+  },
+  "promptSha256Before": "e213ef82e437bae852b76484f06f8b5a5855ceb40664051ffecba2dcca8e4879",
+  "promptSha256After": "e213ef82e437bae852b76484f06f8b5a5855ceb40664051ffecba2dcca8e4879"
+}

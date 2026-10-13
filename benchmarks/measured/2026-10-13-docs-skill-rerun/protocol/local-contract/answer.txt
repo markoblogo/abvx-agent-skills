@@ -1,0 +1,7 @@
+`page_count(total, size)` calculates how many pages are needed for `total` items with `size` items per page.
+
+- It raises `ValueError("invalid")` if `total` is negative or `size` is zero or negative.
+- For integer inputs, `(total + size - 1) // size` rounds division up, so a partially filled page counts as a full page.
+- The tests confirm that zero items need zero pages, and 11 items at 10 per page need two pages.
+
+It’s pure: it depends only on its inputs and changes no external state.

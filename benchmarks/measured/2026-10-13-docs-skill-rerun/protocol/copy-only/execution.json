@@ -1,0 +1,14 @@
+{
+  "workspaceRoot": "<EVAL_ROOT>/copy-only",
+  "exitCode": 0,
+  "durationSec": 21.04,
+  "filesAfter": {
+    "button.txt": "Submit"
+  },
+  "forbiddenMarkers": [],
+  "entriesAfter": {
+    "button.txt": "file"
+  },
+  "promptSha256Before": "a6a42ceb9872cb24b1be29d078efb62a2a81826d8da6b9ea7b990f0daaf813ff",
+  "promptSha256After": "a6a42ceb9872cb24b1be29d078efb62a2a81826d8da6b9ea7b990f0daaf813ff"
+}

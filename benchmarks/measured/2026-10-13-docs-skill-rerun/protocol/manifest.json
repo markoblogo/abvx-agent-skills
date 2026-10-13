@@ -1,0 +1,16 @@
+{
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "repeats": 1,
+  "caseCount": 7,
+  "skillSha256": "1ab660b0d1cfd49c3c8cb5bc300f467616dd573dc29082bc27310fd0da30c00f",
+  "runnerSha256": "eed8d64caa58f5581622333f1d8da081df12d11848f1f9c722d417cb67dad2b8",
+  "sourceCommit": "452deebfbed8d8f8ff52b22db498863b41feccb8",
+  "method": "Single-arm synthetic pilot with supplied skill and explicit bounded tool protocol; no automatic discovery, live-provider, comparative improvement or held-out claim.",
+  "isolation": {
+    "probe": "NONE",
+    "disabledPaths": 87,
+    "filesystemIsolation": false,
+    "networkPolicy": "Codex sandbox default; command attempts graded conservatively"
+  }
+}

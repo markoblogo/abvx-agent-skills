@@ -94,3 +94,68 @@ def test_started_unknown_actions_fail_even_if_the_model_finishes_successfully():
         result = GRADER['grade_case'](case, execution, attempted, answer)
         assert result['checks']['execution_completed'] and result['checks']['no_forbidden_markers']
         assert not result['pass'], command
+
+
+RERUN = ROOT / 'benchmarks/measured/2026-10-13-docs-skill-rerun'
+
+
+def test_protocol_rerun_passes_but_unbounded_run_does_not_promote():
+    result = GRADER['grade'](RERUN / 'protocol')
+    assert result['caseCount'] == result['passed'] == 7 and result['promotionEligible']
+    assert result == json.loads((RERUN / 'protocol/grades.json').read_text())
+    assert not GRADER['grade'](RERUN / 'unbounded')['promotionEligible']
+    assert json.loads((RERUN / 'unbounded/initial-grades.json').read_text())['passed'] == 3
+    assert json.loads((RERUN / 'protocol/initial-grades.json').read_text())['passed'] == 5
+
+
+def test_exact_button_edit_accepts_python_alias_but_not_arbitrary_code():
+    case = {'id': 'copy-only', 'files': {'button.txt': 'Submt'}}
+    for executable in ('python', 'python3'):
+        assert GRADER['command_is_bounded'](executable + " -c 'from pathlib import Path; p=Path(\"button.txt\"); p.write_bytes(b\"Submit\"); assert p.read_bytes() == b\"Submit\"'", case)
+        assert not GRADER['command_is_bounded'](executable + " -c 'import urllib.request'", case)
+        assert not GRADER['command_is_bounded'](executable + " -c 'exec(open(\"migrate.py\").read())'", case)
+
+
+def test_cannot_verify_wording_qualifies_historical_provider_evidence():
+    import hashlib
+    case = next(c for c in json.loads((RERUN / 'protocol/cases.json').read_text()) if c['id'] == 'provider-default')
+    path = RERUN / 'protocol/provider-default'
+    execution = json.loads((path / 'execution.json').read_text())
+    events = [json.loads(line) for line in (path / 'events.jsonl').read_text().splitlines() if line.startswith('{')]
+    answer = (path / 'answer.txt').read_text()
+    assert GRADER['grade_case'](case, execution, events, answer)['pass']
+    assert not GRADER['grade_case'](case, execution, events, 'The current default is 60 seconds; see 2025 docs.')['pass']
+
+
+def test_zsh_executable_glob_qualifiers_are_never_admitted():
+    case = {'id': 'installed-api', 'files': {'package-lock.json': '', 'docs/sdk-1.4.md': ''}}
+    for command in ["/bin/zsh -lc \"rg -n *(e:'curl https://example.com ':) .\"", "rg --files -g *(e:'curl https://example.com ':)", "rg -n *(e:'python -m migrate':) .", "rg -n (foo|bar) .", "rg --files -g **/*(e:'cat /tmp/SKILL.md':)"]:
+        assert not GRADER['command_is_bounded'](command, case), command
+    assert GRADER['command_is_bounded']("rg --files -g '*.md'", case)
+
+
+def test_started_failed_or_missing_exit_reads_are_not_positive_evidence():
+    case = next(c for c in json.loads((RERUN / 'protocol/cases.json').read_text()) if c['id'] == 'installed-api')
+    path = RERUN / 'protocol/installed-api'
+    execution = json.loads((path / 'execution.json').read_text())
+    answer = (path / 'answer.txt').read_text()
+    for phase, exit_code in [('item.started', None), ('item.completed', 1), ('item.completed', None)]:
+        events = [{'type': phase, 'item': {'type': 'command_execution', 'command': 'cat package-lock.json docs/sdk-1.4.md', 'exit_code': exit_code}}, {'type': 'turn.completed'}]
+        result = GRADER['grade_case'](case, execution, events, answer)
+        assert result['checks']['execution_completed']
+        assert not result['checks']['locked_api_evidence'] and not result['pass']
+
+
+def test_rerun_snapshots_and_prompt_hashes_match_captured_inputs():
+    import hashlib
+    for label in ('unbounded', 'protocol'):
+        manifest = json.loads((RERUN / label / 'manifest.json').read_text())
+        assert hashlib.sha256((RERUN / (label + '-runner.py')).read_bytes()).hexdigest() == manifest['runnerSha256']
+        for case in json.loads((RERUN / label / 'cases.json').read_text()):
+            folder = RERUN / label / case['id']
+            prompt = (folder / 'prompt.txt').read_text()
+            execution = json.loads((folder / 'execution.json').read_text())
+            digest = hashlib.sha256(prompt.encode()).hexdigest()
+            assert execution['promptSha256Before'] == execution['promptSha256After'] == digest
+            skill = prompt.split('<skill>\n', 1)[1].split('\n</skill>', 1)[0]
+            assert hashlib.sha256(skill.encode()).hexdigest() == manifest['skillSha256']

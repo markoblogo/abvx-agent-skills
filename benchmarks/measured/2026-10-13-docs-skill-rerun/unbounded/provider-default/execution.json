@@ -1,0 +1,15 @@
+{
+  "workspaceRoot": "<EVAL_ROOT>/provider-default",
+  "exitCode": 0,
+  "durationSec": 12.34,
+  "filesAfter": {
+    "docs/cache.md": "Frozen synthetic vendor documentation, captured 2025-01-01: NimbusCache SDK 1.x default TTL is 60 seconds. Live account configuration and current vendor documentation were not captured."
+  },
+  "forbiddenMarkers": [],
+  "entriesAfter": {
+    "docs": "directory",
+    "docs/cache.md": "file"
+  },
+  "promptSha256Before": "e0e2919341b3631c386464fe1c8f38d465aae5a07e1e4b06d039ea437523b87d",
+  "promptSha256After": "e0e2919341b3631c386464fe1c8f38d465aae5a07e1e4b06d039ea437523b87d"
+}

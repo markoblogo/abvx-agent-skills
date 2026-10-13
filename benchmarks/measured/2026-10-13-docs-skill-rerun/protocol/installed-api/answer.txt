@@ -1,0 +1,5 @@
+The lockfile pins `acme-sdk` to **1.4.2**. The [1.4 reference](docs/sdk-1.4.md) specifies `Client.send(payload)` and has no `Client.sendAsync`; `timeout_ms` belongs in the client constructor.
+
+Suggested fix: replace `Client.sendAsync(...)` with `Client.send(payload)` and move any timeout setting to the constructor. `sendAsync(payload, timeout_ms=...)` is documented for **2.0**, not your locked version.
+
+No files changed.

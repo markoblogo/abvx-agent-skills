@@ -1,0 +1,8 @@
+[`page_count(total, size)`](util.py:1) calculates how many pages are needed for `total` items, with at most `size` items per page.
+
+- It raises `ValueError("invalid")` if `total` is negative or `size` is zero or negative.
+- For integer inputs, `(total + size - 1) // size` rounds division upward, counting a partially filled page.
+
+[`tests.py`](tests.py:1) shows two cases: zero items need zero pages, and 11 items with 10 per page need two pages.
+
+The function is pure: it depends only on its arguments and changes no external state. No files were changed.
