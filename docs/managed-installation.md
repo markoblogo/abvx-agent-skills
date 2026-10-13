@@ -48,7 +48,7 @@ State is stored beside, not inside, the skill discovery root: for `~/.codex/skil
 
 Manifest schema 1 records selected profiles, installed package/skill versions, upstream identity, per-file hashes and executable bits, payload digests and the latest transaction. Hashes prove local equality, not publisher authenticity. Doctor reports `ok`, `modified`, `missing`, package updates available and unmanaged skills; it compares against the locally installed package, not a live registry. Runtime bytecode and .DS_Store are excluded. Unmanaged skills are listed, not claimed verified or automatically adopted.
 
-Backups and journals are retained in the sibling state's transactions directory. They may contain private customized instructions: keep this state private and do not commit it by default. No automatic history deletion or background polling is performed.
+Backups and journals are retained in the sibling state's transactions directory. They may contain private customized instructions: new POSIX state uses a private 0700 directory and 0600 metadata files. Keep this state private and do not commit it by default. No automatic history deletion or background polling is performed.
 
 ## Rollback and recovery
 

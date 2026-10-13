@@ -255,3 +255,14 @@ def test_active_installer_lock_prevents_concurrent_mutation(package, tmp_path):
         assert cli.main(['install', 'diagnose', '-d', str(destination)]) == 2
         assert cli.main(['doctor', '-d', str(destination)]) == 2
     assert not (destination / 'diagnose').exists()
+
+
+def test_new_history_is_private_on_posix(package, tmp_path):
+    import os
+    if os.name == 'nt':
+        pytest.skip('Windows ACL verification is outside the current support evidence')
+    destination = tmp_path / 'installed'
+    assert cli.main(['install', 'diagnose', '-d', str(destination)]) == 0
+    state = tmp_path / '.installed.abvx-skills'
+    assert state.stat().st_mode & 0o777 == 0o700
+    assert (state / 'manifest.json').stat().st_mode & 0o777 == 0o600

@@ -91,7 +91,8 @@ def _write(path, value):
     temporary = path.with_name(path.name + '.tmp')
     if path.is_symlink() or temporary.is_symlink():
         raise InstallError('Unsafe state file')
-    with temporary.open('w') as stream:
+    flags = os.O_CREAT | os.O_TRUNC | os.O_WRONLY | getattr(os, 'O_NOFOLLOW', 0)
+    with os.fdopen(os.open(temporary, flags, 0o600), 'w') as stream:
         json.dump(value, stream, indent=2)
         stream.write('\n')
         stream.flush()
@@ -104,7 +105,7 @@ def locked(destination, create=True):
     state = _state(destination)
     if create:
         destination.mkdir(parents=True, exist_ok=True)
-        state.mkdir(parents=True, exist_ok=True)
+        state.mkdir(mode=0o700, parents=True, exist_ok=True)
     if create and destination.stat().st_dev != state.stat().st_dev:
         raise InstallError('Use a skill subdirectory on the same filesystem as its sibling state')
     flags = (os.O_CREAT if create else 0) | os.O_RDWR | getattr(os, 'O_NOFOLLOW', 0)
