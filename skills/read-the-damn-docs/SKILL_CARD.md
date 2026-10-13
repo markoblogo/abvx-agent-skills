@@ -37,10 +37,10 @@ Requires source selection and uncertainty handling; no model-specific superiorit
 - `public-release-verification`
 
 ## Evaluation
-Seven executed synthetic fixtures on gpt-6.1-sol (medium, one run each) pass bounded checks and maintainer review. Cases cover locked-version API guidance, stale provider evidence, unnecessary research, documentation injection, OAuth grants and offline limits. Captured answers, traces and reproducible runner are in benchmarks/measured/2026-10-13-docs-skill. Tier: fixture_checked. No automatic-discovery, comparative-improvement, live-provider or held-out claim.
+Seven synthetic model runs are retained for manual review, but their original harness omitted pre-run prompt integrity and used incomplete command guards. They are not promotion-eligible. Tier: structural_only pending a fresh validated run. No filesystem isolation, automatic-discovery, comparative-improvement, live-provider or held-out claim.
 
 ## Version
-0.1.1
+0.1.2
 
 ## Reporting Issues
 Open an issue in the repository.

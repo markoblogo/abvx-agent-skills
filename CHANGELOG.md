@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased — post-release review corrections
+
+- Preserve recreated local skills during repeated recovery without archive collisions; keep doctor reporting when managed paths are files, symlinks or unreadable directories.
+- Restore payloads before retrying journal writes after installation failures.
+- Hash evaluation prompts before/after execution and reject unknown command syntax, indirect script execution, external reads and network attempts.
+- Withdraw docs-skill fixture_checked promotion: retained runs lack pre-run prompt integrity and remain non-eligible; preserve their raw evidence and return metadata to structural_only pending a validated rerun.
+
 ## 0.16.0 — managed skill profiles and recoverable installation
 
 - Add whole-selection preflight and file-level preview, staged transactional installation, OS locking, retained replacement backups, rollback and interrupted-process recovery.

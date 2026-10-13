@@ -266,3 +266,52 @@ def test_new_history_is_private_on_posix(package, tmp_path):
     state = tmp_path / '.installed.abvx-skills'
     assert state.stat().st_mode & 0o777 == 0o700
     assert (state / 'manifest.json').stat().st_mode & 0o777 == 0o600
+
+
+def test_repeated_restore_preserves_recreated_new_skill(package, tmp_path, monkeypatch):
+    import json
+    from abvx_agent_skills import installer
+    destination = tmp_path / 'installed'
+    installer.install(package, destination, ['diagnose'])
+    state = installer._state(destination)
+    manifest = installer.read_manifest(destination)
+    folder = state / 'transactions' / manifest['last_transaction']
+    journal = installer._journal(folder)
+    journal['status'] = 'applying'
+    installer._write(folder / 'journal.json', journal)
+    original_write = installer._write
+    def fail_journal(path, value):
+        if Path(path).name == 'journal.json':
+            raise OSError('Interrupted recovery')
+        original_write(path, value)
+    monkeypatch.setattr(installer, '_write', fail_journal)
+    with pytest.raises(OSError):
+        installer.recover(destination)
+    assert (folder / 'replaced/diagnose/SKILL.md').exists()
+    (destination / 'diagnose').mkdir()
+    (destination / 'diagnose/SKILL.md').write_text('Recreated local content')
+    monkeypatch.setattr(installer, '_write', original_write)
+    assert installer.recover(destination) == [folder.name]
+    assert not (destination / 'diagnose').exists()
+    archived = list((folder / 'replaced').glob('diagnose*/SKILL.md'))
+    assert len(archived) == 2
+    assert 'Recreated local content' in [p.read_text() for p in archived]
+    assert installer.recover(destination) == []
+
+
+@pytest.mark.parametrize('kind', ['file', 'symlink', 'dangling', 'nested-symlink'])
+def test_doctor_reports_unsafe_managed_paths_and_continues(package, tmp_path, kind):
+    from abvx_agent_skills import installer
+    destination = tmp_path / 'installed'
+    installer.install(package, destination, ['diagnose', 'minimal-diff-builder'])
+    target = destination / 'diagnose'
+    if kind == 'nested-symlink':
+        (target / 'extra').symlink_to(package)
+    else:
+        shutil.rmtree(target)
+        if kind == 'file':
+            target.write_text('Corrupt directory')
+        else:
+            target.symlink_to(package if kind == 'symlink' else tmp_path / 'absent')
+    report = installer.doctor(package, destination)
+    assert {s['name']: s['status'] for s in report['skills']} == {'diagnose': 'unsafe', 'minimal-diff-builder': 'ok'}

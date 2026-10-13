@@ -205,6 +205,8 @@ def _restore(destination, folder, journal):
         elif op['before'] is None and not staged.exists() and (target.exists() or target.is_symlink()):
             saved = folder / 'replaced' / name
             saved.parent.mkdir(exist_ok=True)
+            if saved.exists() or saved.is_symlink():
+                saved = saved.with_name(name + '-' + uuid.uuid4().hex)
             os.replace(target, saved)
     manifest = _state(destination) / 'manifest.json'
     if journal['had_manifest']:
@@ -270,8 +272,7 @@ def install(source, destination, names, force=False, profile=None):
             _write(folder / 'journal.json', journal)
         except BaseException:
             # Ordinary failures restore the complete set; a killed process uses recover.
-            journal['status'] = 'applying'
-            _write(folder / 'journal.json', journal)
+            # The durable journal already says applying; restore even if writes fail.
             _restore(destination, folder, journal)
             raise
     return tx
@@ -312,12 +313,15 @@ def _doctor(source, destination):
     result = []
     for name, record in sorted(manifest['skills'].items()):
         target = destination / name
-        if not target.exists():
+        if target.is_symlink() or (target.exists() and not target.is_dir()):
+            status = 'unsafe'
+        elif not target.exists():
             status = 'missing'
-        elif payload(target) != record['files']:
-            status = 'modified'
         else:
-            status = 'ok'
+            try:
+                status = 'modified' if payload(target) != record['files'] else 'ok'
+            except (InstallError, OSError):
+                status = 'unsafe'
         packaged = source / name
         update = packaged.is_dir() and payload(packaged) != record['files']
         result.append({'name': name, 'status': status, 'update_available': update,
