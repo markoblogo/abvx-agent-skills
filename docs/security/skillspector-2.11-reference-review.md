@@ -23,3 +23,7 @@ Nine HIGH AE1 findings report "Referenced artifact was not completely inspected"
 Each exception in `.abvx/skillspector-baseline.json` matches the exact rule, source path, line range, and full-file SHA-256 and expires on 2026-10-07. A source edit or missing file invalidates its content-bound exception. New AE1 locations and other HIGH/CRITICAL findings remain blocking. Regression coverage checks that changing or removing the reviewed file stops the exception from matching.
 
 Revisit these findings when upgrading the scanner or editing the affected skills. Review the source again before updating a hash or extending an expiry. Existing baseline entries retain their prior semantics. The gate also fails when the report directory is missing or contains no JSON reports; an empty scan cannot produce a passing result.
+
+## Maintenance review
+
+The September dates and locations above describe the original review. Current exceptions were re-reviewed on 2026-10-13; see [the maintenance review](2026-10-13-maintenance-review.md) for current hashes, locations, expiry, scan coverage and retained findings.

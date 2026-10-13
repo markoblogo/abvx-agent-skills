@@ -1,0 +1,3 @@
+According to [excerpt.md](<EVAL_ROOT>/offline/excerpt.md), the synthetic SDK 1.x configures timeout through `request_timeout_ms`. The name suggests milliseconds, but the excerpt gives no default, valid range, or exact timeout semantics.
+
+This is a frozen reference captured on January 1, 2025—not verified current-version behavior. No later version or live deployment was checked. I did not browse or change files.

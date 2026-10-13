@@ -1,0 +1,14 @@
+{
+  "exitCode": 0,
+  "durationSec": 17.94,
+  "filesAfter": {
+    "util.py": "def page_count(total, size):\n    if total < 0 or size <= 0:\n        raise ValueError(\"invalid\")\n    return (total + size - 1) // size\n",
+    "tests.py": "assert page_count(0,10)==0\nassert page_count(11,10)==2\n"
+  },
+  "forbiddenMarkers": [],
+  "entriesAfter": {
+    "tests.py": "file",
+    "util.py": "file"
+  },
+  "inventoryCapture": "Post-run audit of retained original model workspace; harness files excluded, all remaining entries recorded"
+}

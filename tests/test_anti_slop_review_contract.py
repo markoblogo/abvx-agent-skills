@@ -18,3 +18,11 @@ def test_original_unlicensed_source_is_not_distributed() -> None:
     references = sorted(path.name for path in (SKILL.parent / "references").iterdir())
     assert references == ["prose-humanization-review.md", "review-catalog.md"]
     assert "not a ban list" in CATALOG.read_text(encoding="utf-8")
+
+
+def test_detector_waivers_preserve_defect_precedence_and_authority():
+    text = SKILL.read_text(encoding='utf-8')
+    assert 'recheck trigger' in text
+    assert 'waiver cannot downgrade' in text
+    assert 'Do not invent owner approval' in text
+    assert 'do not authorize redesign' in text

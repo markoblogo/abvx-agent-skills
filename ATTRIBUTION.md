@@ -60,3 +60,5 @@ ABVX Agent Skills are original or adapted workflow artifacts informed by public 
 ## Notes
 
 This repository does not claim endorsement by the projects above. Where ideas are adapted, the ABVX versions are rewritten for Codex-style project work, local validation, and conservative approval gates.
+
+- Local MIT-licensed `read-the-damn-docs` workflow from the user-maintained agent collection: source-first, version-aware documentation checks, rewritten here with portable tools, privacy and authority boundaries.

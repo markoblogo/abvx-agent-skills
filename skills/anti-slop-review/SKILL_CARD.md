@@ -43,7 +43,7 @@ Outputs: at most seven stable findings, bounded corrections, `detect`-mode prose
 Scenario review should distinguish a real visibility/contrast/control/prose-trust defect from an intentional pill, gradient, familiar layout, utility-first design choice, or legitimate author voice.
 
 ## Version
-0.1.1
+0.1.2
 
 ## Reporting Issues
 Open an issue in the repository.

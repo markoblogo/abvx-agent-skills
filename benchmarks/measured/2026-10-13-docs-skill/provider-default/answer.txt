@@ -1,0 +1,3 @@
+The provider’s current cache default cannot be verified from the available material. [docs/cache.md](docs/cache.md) is a frozen snapshot from January 1, 2025: it reports a **60-second default TTL for NimbusCache SDK 1.x**, but contains neither current vendor documentation nor live account configuration.
+
+I would not recommend configuration based on that historical default alone. No files were changed.

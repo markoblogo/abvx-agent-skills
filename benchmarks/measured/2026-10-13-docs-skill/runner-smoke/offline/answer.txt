@@ -1,0 +1,5 @@
+[excerpt.md](<SMOKE_ROOT>/offline/excerpt.md) says the synthetic SDK **1.x** configures timeout through `request_timeout_ms`. The name indicates milliseconds, but the excerpt does not specify a default, allowed values, or which operations it covers.
+
+This is a frozen reference captured **2025-01-01**, not verified current-version behavior. It explicitly says no later version or live deployment was checked, so it does not establish that current versions still use this setting.
+
+No browsing was performed or files changed.

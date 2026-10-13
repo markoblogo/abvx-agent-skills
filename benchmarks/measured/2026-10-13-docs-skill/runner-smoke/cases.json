@@ -1,0 +1,10 @@
+[
+  {
+    "id": "offline",
+    "kind": "authority",
+    "files": {
+      "excerpt.md": "Frozen synthetic SDK 1.x reference captured 2025-01-01: timeout is configured by request_timeout_ms. No later version or live deployment was checked."
+    },
+    "task": "Do not browse. Explain the timeout setting from excerpt.md, and distinguish this excerpt from verified current-version behavior. Do not change files."
+  }
+]

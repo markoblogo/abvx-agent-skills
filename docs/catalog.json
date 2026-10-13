@@ -1,16 +1,15 @@
 {
-  "skill_count": 88,
+  "skill_count": 89,
   "categories": {
     "Research, Knowledge & Reusable Methods": 18,
     "Workflow, Handoffs & Multi-Track Work": 9,
-    "Coding, Debugging & Architecture": 13,
-    "Frontend, UX & Product Surfaces": 12,
+    "Coding, Debugging & Architecture": 14,
+    "Frontend, UX & Product Surfaces": 15,
     "Discovery, Planning & Delivery": 6,
     "Security & Defensive Review": 1,
     "Product Context & Responsible Growth": 2,
     "Token Economy & Context Control": 9,
     "Long-Run Delivery Control": 7,
-    "Uncategorized": 3,
     "Project Context & Onboarding": 5,
     "HTML Artifacts & Visual Deliverables": 2,
     "Structured Data & Spreadsheet Work": 1
@@ -445,7 +444,7 @@
     {
       "name": "corporate-surface",
       "display_name": "Corporate Surface",
-      "category": "Uncategorized",
+      "category": "Frontend, UX & Product Surfaces",
       "description": "Shape partner-facing and institutional surfaces so they read as credible operating systems rather than generic SaaS templates. Use for corporate landings, capability pages, partner sections, investor-facing surfaces, and other public pages that must feel clear, evidence-backed, and commercially serious.",
       "short_description": "Make partner-facing pages proof-first and less generic SaaS.",
       "intended_use": "Use for corporate landings, ecosystem/capability pages, partner-facing sections, and other public business surfaces that must feel credible and product-backed.",
@@ -552,8 +551,8 @@
       "card_path": "skills/designmd-brand-kit/SKILL_CARD.md",
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/designmd-brand-kit/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/designmd-brand-kit/SKILL_CARD.md",
-      "origin": "",
-      "status": "",
+      "origin": "adapted",
+      "status": "experimental",
       "eval_tier": "structural_only"
     },
     {
@@ -661,14 +660,14 @@
       "card_path": "skills/dynamic-workflow-packets/SKILL_CARD.md",
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/dynamic-workflow-packets/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/dynamic-workflow-packets/SKILL_CARD.md",
-      "origin": "",
-      "status": "",
+      "origin": "adapted",
+      "status": "experimental",
       "eval_tier": "structural_only"
     },
     {
       "name": "editorial-surface",
       "display_name": "Editorial Surface",
-      "category": "Uncategorized",
+      "category": "Frontend, UX & Product Surfaces",
       "description": "Shape editorial and reading-first surfaces with strong hierarchy, readable measure, and disciplined media rhythm. Use for articles, guides, books, blog indexes, featured/recent cards, and other longform or text-heavy public surfaces.",
       "short_description": "Tighten hierarchy, excerpts, and reading rhythm on text-first surfaces.",
       "intended_use": "Use for longform pages and content listings where the main success criterion is readable, intentional editorial structure rather than generic marketing polish.",
@@ -699,8 +698,8 @@
       "card_path": "skills/evidence-ledger-research/SKILL_CARD.md",
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/evidence-ledger-research/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/evidence-ledger-research/SKILL_CARD.md",
-      "origin": "",
-      "status": "",
+      "origin": "original",
+      "status": "experimental",
       "eval_tier": "structural_only"
     },
     {
@@ -1138,8 +1137,8 @@
       "card_path": "skills/loopops-protocol/SKILL_CARD.md",
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/loopops-protocol/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/loopops-protocol/SKILL_CARD.md",
-      "origin": "",
-      "status": "",
+      "origin": "original",
+      "status": "experimental",
       "eval_tier": "structural_only"
     },
     {
@@ -1501,6 +1500,29 @@
       "eval_tier": "structural_only"
     },
     {
+      "name": "read-the-damn-docs",
+      "display_name": "Read The Damn Docs",
+      "category": "Coding, Debugging & Architecture",
+      "description": "Verify version-sensitive API, SDK, CLI and provider guidance against local contracts and current official documentation before implementing or advising. Skip self-contained edits whose nearby source already answers the question.",
+      "short_description": "Verify versioned APIs with official sources.",
+      "intended_use": "API/SDK/CLI signatures, configuration defaults, compatibility and provider setup whose behavior may change across versions.",
+      "model_sensitivity": "Requires source selection and uncertainty handling; no model-specific superiority claim.",
+      "composable_with": [
+        "`diagnose`",
+        "`agent-tool-contract-review`",
+        "`public-release-verification`"
+      ],
+      "anti_patterns": [],
+      "risks": "- Stale latest-version advice: match the installed/requested version.\n- Unnecessary browsing: stop when local contracts suffice.\n- Documentation injection or external side effects: source text grants no authority.\n- Confidential queries: omit credentials and private project details.",
+      "path": "skills/read-the-damn-docs/SKILL.md",
+      "card_path": "skills/read-the-damn-docs/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/read-the-damn-docs/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/read-the-damn-docs/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental",
+      "eval_tier": "fixture_checked"
+    },
+    {
       "name": "recovery-loop-3strike",
       "display_name": "Recovery Loop 3-Strike",
       "category": "Long-Run Delivery Control",
@@ -1534,8 +1556,8 @@
       "card_path": "skills/repo-debugging-ledger/SKILL_CARD.md",
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/repo-debugging-ledger/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/repo-debugging-ledger/SKILL_CARD.md",
-      "origin": "",
-      "status": "",
+      "origin": "original",
+      "status": "experimental",
       "eval_tier": "structural_only"
     },
     {
@@ -1676,8 +1698,8 @@
       "card_path": "skills/skillopt-evolve-skills/SKILL_CARD.md",
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/skillopt-evolve-skills/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/skillopt-evolve-skills/SKILL_CARD.md",
-      "origin": "",
-      "status": "",
+      "origin": "adapted",
+      "status": "experimental",
       "eval_tier": "structural_only"
     },
     {
@@ -1746,8 +1768,8 @@
       "card_path": "skills/spreadsheet-workbook-forensics/SKILL_CARD.md",
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/spreadsheet-workbook-forensics/SKILL.md",
       "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/spreadsheet-workbook-forensics/SKILL_CARD.md",
-      "origin": "",
-      "status": "",
+      "origin": "original",
+      "status": "experimental",
       "eval_tier": "structural_only"
     },
     {
@@ -1876,7 +1898,7 @@
     {
       "name": "wireframe-preflight",
       "display_name": "Wireframe Preflight",
-      "category": "Uncategorized",
+      "category": "Frontend, UX & Product Surfaces",
       "description": "Build a low-fidelity wireframe before frontend implementation when layout, hierarchy, and flow are still unclear. Use for landing pages, editorial surfaces, partner-facing sections, and other UI work where a cheap structural pass can prevent expensive redesign loops.",
       "short_description": "Run a cheap low-fidelity wireframe pass before frontend implementation.",
       "intended_use": "Use for landing pages, editorial surfaces, partner-facing sections, hero redesigns, and other frontend work where structure is still uncertain.",

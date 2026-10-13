@@ -8,6 +8,7 @@ import sys
 from pathlib import Path
 
 from .catalog import dump_catalog
+from . import installer
 from .packaged import packaged_skills_root
 from .validator import validate_skills_root
 
@@ -35,31 +36,37 @@ def cmd_list(args: argparse.Namespace) -> int:
     return 0
 
 
-def copy_skill(source: Path, target: Path, force: bool) -> None:
-    if target.exists():
-        if not force:
-            raise FileExistsError(f"Destination already exists: {target}")
-        shutil.rmtree(target)
-    shutil.copytree(source, target)
-
-
 def cmd_install(args: argparse.Namespace) -> int:
-    skills_root = packaged_skills_root()
+    source = packaged_skills_root()
+    options = bool(args.skills) + bool(args.profile) + bool(args.all)
+    if options != 1:
+        raise installer.InstallError("Choose skill names, --profile, or explicit --all")
+    names = args.skills or (installer.PROFILES[args.profile] if args.profile else list_skills(source))
     destination = args.destination.expanduser().resolve()
-    destination.mkdir(parents=True, exist_ok=True)
+    if args.dry_run:
+        selection = installer.plan(source, destination, names, args.force)
+        print(json.dumps({'preview': [{k: op[k] for k in ('name', 'action', 'local_changes', 'added', 'removed', 'changed')} for op in selection]}, indent=2))
+        return 2 if any(op['action'] == 'conflict' for op in selection) else 0
+    tx = installer.install(source, destination, names, args.force, args.profile)
+    print(f"Installed/recorded {len(set(names))} skill(s); transaction {tx}; backups retained")
+    return 0
 
-    names = args.skills or list_skills(skills_root)
-    missing = [name for name in names if not (skills_root / name).is_dir()]
-    if missing:
-        print(f"Unknown skills: {', '.join(sorted(missing))}", file=sys.stderr)
-        return 2
 
-    installed: list[str] = []
-    for name in names:
-        copy_skill(skills_root / name, destination / name, force=args.force)
-        installed.append(name)
+def cmd_profiles(args: argparse.Namespace) -> int:
+    print(json.dumps(installer.PROFILES, indent=2))
+    return 0
 
-    print(f"Installed {len(installed)} skill(s) to {destination}")
+
+def cmd_state(args: argparse.Namespace) -> int:
+    destination = args.destination.expanduser().resolve()
+    if args.command == 'doctor':
+        report = installer.doctor(packaged_skills_root(), destination)
+        print(json.dumps(report, indent=2))
+        return 1 if report['pending_transactions'] or any(s['status'] != 'ok' for s in report['skills']) else 0
+    if args.command == 'rollback':
+        print('Rolled back transaction ' + installer.rollback(destination, args.force))
+    else:
+        print('Recovered transactions: ' + ', '.join(installer.recover(destination)))
     return 0
 
 
@@ -167,7 +174,7 @@ def build_parser() -> argparse.ArgumentParser:
     list_parser.set_defaults(func=cmd_list)
 
     install_parser = subparsers.add_parser("install", help="Install packaged skills")
-    install_parser.add_argument("skills", nargs="*", help="Skill names to install; defaults to all packaged skills")
+    install_parser.add_argument("skills", nargs="*", help="Explicit skill names to install")
     install_parser.add_argument(
         "-d",
         "--destination",
@@ -181,7 +188,19 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Overwrite existing destination directories",
     )
+    install_parser.add_argument('--profile', choices=installer.PROFILES)
+    install_parser.add_argument('--all', action='store_true', help='Explicitly select the entire pack')
+    install_parser.add_argument('--dry-run', action='store_true', help='Read-only full-set preview')
     install_parser.set_defaults(func=cmd_install)
+    profiles_parser = subparsers.add_parser('profiles', help='List the three small starter profiles')
+    profiles_parser.set_defaults(func=cmd_profiles)
+    for command in ('doctor', 'rollback', 'recover'):
+        state_parser = subparsers.add_parser(command)
+        state_parser.add_argument('-d', '--destination', type=Path, default=default_install_dir())
+        if command == 'rollback':
+            state_parser.add_argument('--force', action='store_true', help='Retain post-install edits in history before restoring')
+        state_parser.set_defaults(func=cmd_state)
+
 
     validate_parser = subparsers.add_parser("validate", help="Validate skill structure")
     validate_parser.add_argument(
@@ -242,7 +261,11 @@ def build_parser() -> argparse.ArgumentParser:
 def main(argv: list[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
-    return args.func(args)
+    try:
+        return args.func(args)
+    except (installer.InstallError, OSError, ValueError) as error:
+        print(str(error), file=sys.stderr)
+        return 2
 
 
 if __name__ == "__main__":

@@ -1,0 +1,17 @@
+{
+  "skillSha256": "1ab660b0d1cfd49c3c8cb5bc300f467616dd573dc29082bc27310fd0da30c00f",
+  "sourceCommit": "58705eb18ccc3f97978d1418a2d6ea656dfc9c69",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "repeats": 1,
+  "caseCount": 7,
+  "method": "Single-arm synthetic fixture pilot; skill body provided in every prompt. No automatic discovery, live-provider, with/without improvement or held-out claim. No real production targets or credentials in fixtures.",
+  "cli": "codex-cli 0.162.0-alpha.17.2",
+  "isolation": {
+    "probe": "NONE",
+    "disabledPaths": 87,
+    "appsPluginsSkillSearch": "disabled",
+    "projectInstructions": "disabled"
+  },
+  "captureNote": "Original pilot used the same isolated CLI mechanics in two temporary driver files. The reusable runner was subsequently extracted; one-case smoke is recorded separately. Full-body skill hash identifies the tested structural-only content before metadata promotion."
+}

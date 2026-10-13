@@ -2,11 +2,14 @@
 
 Use this path when you want ABVX skills working in one local environment with minimal setup.
 
-## Install Three Skills
+## Choose One Starter Profile
 
 ```bash
 pip install abvx-agent-skills
-abvx-skills install minimal-diff-builder diagnose token-efficient-execution
+abvx-skills profiles
+abvx-skills install --profile context --dry-run
+abvx-skills install --profile context
+abvx-skills doctor
 ```
 
 If PyPI is temporarily unavailable, use GitVerse's PyPI mirror for that install command only:
@@ -33,9 +36,7 @@ Swap `--agent codex` for `cursor`, `claude-code`, or `gemini-cli` if that is you
 - `token-efficient-execution`: reduce wasted reads and narration
 - `frontend-product-builder`: only if you regularly ship UI
 
-`abvx-skills install` without names installs the entire package. Use the named
-starter set above to keep discovery context small. Installation does not mean
-every skill body is loaded on every turn.
+Choose `context`, `debug`, or `delivery`; names are also supported. Bare install is an error and the full pack requires `--all`. See [managed installation](managed-installation.md) for update previews, local edits, manifest, rollback and recovery.
 
 ## First 10 Minutes
 

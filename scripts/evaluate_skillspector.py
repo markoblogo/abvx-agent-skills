@@ -134,11 +134,22 @@ def main() -> int:
     parser.add_argument("--reports-dir", type=Path, required=True)
     parser.add_argument("--policy", type=Path, required=True)
     parser.add_argument("--baseline", type=Path)
+    parser.add_argument("--skills-root", type=Path, help="Require a report for every skill in this payload")
     args = parser.parse_args()
 
     if not args.reports_dir.is_dir() or not any(args.reports_dir.glob("*.json")):
         print(f"Security gate failed: no JSON reports in {args.reports_dir}")
         return 1
+
+    if args.skills_root is not None:
+        if not args.skills_root.is_dir():
+            print("Security gate failed: skills root is missing")
+            return 1
+        expected = {path.name for path in args.skills_root.iterdir() if path.is_dir() and (path / "SKILL.md").is_file()}
+        reports = {path.stem for path in args.reports_dir.glob("*.json")}
+        if not expected or expected != reports:
+            print(f"Security gate failed: report coverage mismatch; missing={sorted(expected - reports)}, unexpected={sorted(reports - expected)}")
+            return 1
 
     policy = load_yaml(args.policy)
     thresholds = policy.get("thresholds", {})

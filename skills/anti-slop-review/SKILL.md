@@ -21,6 +21,8 @@ For prose requests, choose one mode up front:
 - `detect`: identify named prose patterns with quoted evidence and bounded fixes; do not rewrite the draft;
 - `edit`: make the smallest useful rewrite, then run the post-edit eval before returning it.
 
+If the caller repository has `PRODUCT.md` or `DESIGN.md`, read only the relevant sections as design context. Those files do not authorize redesign or unrelated edits. If context is absent, propose a compact contract only when the task needs it.
+
 ## Authority
 
 Default authority is `read` and `proposal`. Inspect files, screenshots, and browser behavior; report findings. Change code only when the user asked to fix or polish the interface. Do not add dependencies, replace a design system, license fonts/assets, or invent brand/customer claims without authorization.
@@ -167,6 +169,8 @@ Impact: concrete user or product consequence
 Smallest correction: bounded change
 Verification: browser or code check that proves resolution
 ```
+
+For a waived detector finding retain its stable ID, evidence, explicit design-system/owner reason, and a recheck trigger. A waiver cannot downgrade a reproduced accessibility, visibility, interaction or responsive HARD_DEFECT. Do not invent owner approval or treat familiar patterns as automatic failures.
 
 Do not fill seven slots with cosmetic preferences. If there are no actionable findings, return `SHIP_READY_WITHIN_REVIEWED_SCOPE`.
 

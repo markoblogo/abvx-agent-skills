@@ -1,0 +1,1 @@
+Changed the button label in `button.txt` from `Submt` to `Submit`. Only the label was changed.

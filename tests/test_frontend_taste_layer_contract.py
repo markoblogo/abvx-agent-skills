@@ -16,3 +16,11 @@ def test_taste_layer_has_bounded_route_and_review_packet() -> None:
     assert "prefers-reduced-motion" in text
     assert "every visible string" in text
     assert "INSUFFICIENT_VISUAL_EVIDENCE" in text
+
+
+def test_design_context_remains_optional_and_bounded():
+    text = SKILL.read_text(encoding='utf-8')
+    assert 'PRODUCT.md' in text and 'DESIGN.md' in text
+    assert 'do not require new files for a small change' in text
+    assert 'do not authorize redesign' in text
+    assert 'Creator Intent Check' in text

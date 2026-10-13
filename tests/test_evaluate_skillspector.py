@@ -72,3 +72,38 @@ def test_missing_or_empty_reports_cannot_pass_the_security_gate(tmp_path, monkey
     assert module["main"]() == 1
     reports.mkdir()
     assert module["main"]() == 1
+
+
+def test_partial_scan_cannot_pass_with_payload_coverage(tmp_path, monkeypatch):
+    root = tmp_path / 'skills'
+    for name in ('one', 'two'):
+        folder = root / name
+        folder.mkdir(parents=True)
+        (folder / 'SKILL.md').write_text('Example payload')
+    reports = tmp_path / 'reports'
+    reports.mkdir()
+    (reports / 'one.json').write_text(json.dumps({'risk_assessment': {'score': 0}, 'issues': []}))
+    monkeypatch.setattr(sys, 'argv', ['evaluate', '--reports-dir', str(reports), '--skills-root', str(root), '--policy', str(ROOT / '.abvx/skillspector-policy.yaml')])
+    module = runpy.run_path(str(ROOT / 'scripts/evaluate_skillspector.py'), run_name='test_module')
+    assert module['main']() == 1
+    (reports / 'two.json').write_text((reports / 'one.json').read_text())
+    assert module['main']() == 0
+    (reports / 'unrelated.json').write_text((reports / 'one.json').read_text())
+    assert module['main']() == 1
+
+
+def test_expired_exception_keeps_the_gate_closed(tmp_path, monkeypatch):
+    reports = tmp_path / 'reports'
+    reports.mkdir()
+    (reports / 'example.json').write_text(json.dumps({'risk_assessment': {'score': 0}, 'issues': []}))
+    baseline = tmp_path / 'baseline.json'
+    baseline.write_text(json.dumps({'findings': [{'fingerprint': 'AE1:skills/example/SKILL.md:1:1', 'expires_on': '2000-01-01'}]}))
+    monkeypatch.setattr(sys, 'argv', ['evaluate', '--reports-dir', str(reports), '--policy', str(ROOT / '.abvx/skillspector-policy.yaml'), '--baseline', str(baseline)])
+    module = runpy.run_path(str(ROOT / 'scripts/evaluate_skillspector.py'), run_name='test_module')
+    assert module['main']() == 1
+
+
+def test_security_and_publish_workflows_require_full_payload_reports():
+    for name in ('security-audit.yml', 'publish.yml'):
+        text = (ROOT / '.github/workflows' / name).read_text()
+        assert '--skills-root ./skills' in text, name
