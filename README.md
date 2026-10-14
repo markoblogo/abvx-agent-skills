@@ -63,6 +63,19 @@ If you want a scan-friendly text catalog for browsing or indexing, use [CATALOG.
 
 ## External companions
 
+### Video production
+
+[Framewright](https://github.com/markoblogo/framewright) is the standalone video
+methods lab: a workflow-selection skill, tested software-promo and narrated book
+trailer recipes, and retained experiment evidence. Its `video-production-router`
+chooses a method; it does not render, install tools or publish by itself.
+
+Follow the canonical repository's installation instructions. Framewright remains
+external to this pack and its install-all/profiles: no duplicate skill is bundled.
+Its router is currently `structural_only`; the completed video experiments do not
+constitute independent model evaluation of the new router. Anatomy is still a
+visual prototype with a failed sound test, not a validated historical simulator.
+
 ### Decision mapping
 
 [DecisionMap](https://github.com/markoblogo/decision-map) is the standalone companion for complex business, product, market, positioning, and go-to-market decisions. It generates comparable options, explicit assumptions, breakpoints, evidence needs, and revisit triggers. Install it directly from its canonical repository:
