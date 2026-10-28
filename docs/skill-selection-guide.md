@@ -5,10 +5,13 @@ Choose the smallest relevant set. See the [quickstart](solo-dev-quickstart.md) f
 
 - **Need to save tokens?** Start with `rtk-assisted-shell`, `shell-output-compaction`, `token-efficient-execution`, and `lean-context-layout`. Add `compaction-survival` if your sessions run long enough to forget their own state.
 - **Need to check whether context is hurting the run?** Start with `context-degradation-review` before trusting long handoffs, memory summaries, or bloated SET bundles.
-- **Need to choose direct vs review-first vs loop vs human approval before work widens?** Start with [docs/ship-router-contract.md](docs/ship-router-contract.md), then route into the smallest sufficient follow-up skill set.
+- **Need to choose direct vs review-first vs loop vs human approval before work widens?** Start with [ship router contract](ship-router-contract.md), then route into the smallest sufficient follow-up skill set.
 - **Need to debug a repo?** Start with `diagnose`, `repo-debugging-ledger`, and `graph-guided-code-reading`.
 - **Need auditable red-to-green proof?** Add `bug-evidence-protocol` after `diagnose`; use risk-based approval and link recurrent lessons to a `cpat`.
 - **Need code review discipline?** Run a Standards pass with `overengineering-review`, `minimal-diff-builder`, or `architecture-deepening-review`, then a Spec pass with `delivery-baseline-audit` against the issue, PRD, or task contract.
+- **Need independent OpenAI code review?** Use `codex-review-loop` for one read-only reviewer, stable findings and at most three rounds. Missing native reviewer capability is a gap, not independent approval.
+- **Need to write, watch or finish a PR?** Use `pr-write` to create the requested PR, `pr-ci-watch` for bounded CI observation, or `pr-ready` for the full authorized preparation workflow without merging. See [Codex PR workflows](codex-pr-workflows.md) for source installation and explicit examples.
+- **Need to resume unfinished or stale PR work?** Use `pr-takeover` to preserve contributor credit and source work, or `pr-modernize` to reassess whether an old change still belongs. Preserve published history; use a separate rebased continuation when linear history is required.
 - **Need to review an agent-facing tool or external-skill adaptation?** Start with `agent-tool-contract-review` for MCP, CLI, SET inputs, AGENTS.md generator contracts, and source-linked `KEEP`/`ADAPT`/`ADD`/`REJECT` deltas.
 - **Need to surface hidden assumptions before implementation?** Start with `assumption-excavation`, then use `pipeline-readiness-gate` when the work needs a pre/post/ship sequence.
 - **Need competing explanations before review?** Start with `hypothesis-diversification`, then hand off to `evidence-ledger-research`, `confidence-fragility-review`, or a domain validator.

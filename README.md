@@ -38,6 +38,8 @@ Then ask your coding agent:
 Use minimal-diff-builder. Implement the smallest correct fix for this issue.
 ```
 
+For code review and pull request work in Codex, start with the [Codex PR workflow guide](docs/codex-pr-workflows.md). It covers six optional skills, current-source installation, capability checks and the no-merge readiness gate. These skills are available on GitHub `main`; their source publication did not create a new PyPI release.
+
 ## Three Measured Demos
 
 | Job | Skill | Evidence |
@@ -346,6 +348,8 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 
 Optional Codex-native adaptations of selected tstack workflows. See [setup, capability boundaries and evaluation](docs/codex-pr-workflows.md). No automatic merge or other-provider account is required.
 
+Choose `pr-write` for a concise PR, `codex-review-loop` for bounded independent review, or `pr-ready` to carry an authorized task through verification and PR preparation without merging. Add the other skills only when that job arises. The guide includes exact invocation examples and source installation for the complete six-skill set.
+
 | Skill | What It Does |
 |---|---|
 | `codex-review-loop` | Runs bounded independent OpenAI review with stable findings and at most three rounds. |
@@ -394,6 +398,8 @@ Optional Codex-native adaptations of selected tstack workflows. See [setup, capa
 | `spreadsheet-workbook-forensics` | Repairs and edits spreadsheets where workbook structure, formulas, and cell-level verification matter. |
 
 ## Install
+
+Choose the source that contains the skill you need: GitHub `main` includes the [six Codex PR workflows](docs/codex-pr-workflows.md), while a packaged CLI reads only the skills bundled in its installed version. A merged PR does not update PyPI or an existing local installation. Use the source installer in that guide when the installed package does not contain a new skill.
 
 Choose one small profile and preview before applying:
 

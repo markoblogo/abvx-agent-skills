@@ -38,8 +38,18 @@ For teams using the packaged installer:
 
 ```bash
 pip install abvx-agent-skills
-abvx-skills install --destination ./.codex/skills project-context-bootstrap durable-context-maintenance handoff
+abvx-skills install --destination ./.agents/skills project-context-bootstrap durable-context-maintenance handoff
 ```
+
+For Codex, use `.agents/skills` for project discovery and `~/.codex/skills` for the existing user installation path used by this pack. A custom destination only writes files; it does not configure another agent's discovery rules.
+
+## Optional PR Workflow Rollout
+
+Introduce `pr-write` and `codex-review-loop` for a small pilot before adopting `pr-ready`. Add `pr-ci-watch`, `pr-modernize` or `pr-takeover` only for a demonstrated workflow need. Use the [Codex PR workflow guide](codex-pr-workflows.md) to install from current source and check capabilities; the new source skills are not implied by an older installed PyPI package.
+
+Agree on the PR base, required checks, reviewer access and the scope of authorized writes. Keep independent review distinct from self-review, and CI success distinct from human approval. Use one watcher per PR, a shared observation deadline and bounded fix cycles.
+
+The six skills do not merge, deploy or publish releases. `pr-modernize` preserves published history and uses a separate continuation when a linear-history policy requires rebasing. Existing auto-merge or queue state must be handled explicitly before branch updates. Keep team-specific instructions in repository guidance rather than editing every installed skill.
 
 ## Repo Hygiene Pattern
 

@@ -22,10 +22,20 @@ Profiles select only the named workflows; they do not install companion tools or
 For a project-local setup, pass the same destination to each command:
 
 ```sh
-abvx-skills install --profile debug -d ./.codex/skills --dry-run
-abvx-skills install --profile debug -d ./.codex/skills
-abvx-skills doctor -d ./.codex/skills
+abvx-skills install --profile debug -d ./.agents/skills --dry-run
+abvx-skills install --profile debug -d ./.agents/skills
+abvx-skills doctor -d ./.agents/skills
 ```
+
+For Codex project discovery, use `.agents/skills`. The default user destination remains `~/.codex/skills`. Custom destinations do not change an agent's discovery configuration.
+
+## Current Source Versus Installed Package
+
+`abvx-skills` reads its installed package, not GitHub `main`. A source merge does not update PyPI or already installed skills. The six [Codex PR workflows](codex-pr-workflows.md) landed in [PR #77](https://github.com/markoblogo/abvx-agent-skills/pull/77) without a new package release.
+
+Use `scripts/install_codex_pr_workflows.py` from a current repository checkout for that six-skill set. It previews by default and requires `--apply` to install. It uses the same transaction, hash and local-change protections as the packaged installer, with no overwrite switch. It is a source wrapper, not an additional named CLI profile.
+
+The source wrapper records state beside its selected destination. An older packaged CLI's `doctor` compares against its own bundled source and may not recognize skills added later; do not treat that as proof that current-source installation failed. Compare against the checkout that supplied the installation, or install that checkout as the CLI package before using package-relative update checks. See the workflow guide for reproducible setup and verification.
 
 ## Preview and local changes
 
@@ -44,7 +54,7 @@ abvx-skills install --profile context --force
 
 ## Manifest and history
 
-State is stored beside, not inside, the skill discovery root: for `~/.codex/skills`, use `~/.codex/.skills.abvx-skills/manifest.json`. For `/project/.codex/skills`, use `/project/.codex/.skills.abvx-skills/`. The doctor output includes the exact path. Archived SKILL.md files therefore do not become discoverable skills inside the managed destination.
+State is stored beside, not inside, the skill discovery root: for `~/.codex/skills`, use `~/.codex/.skills.abvx-skills/manifest.json`. For `/project/.agents/skills`, use `/project/.agents/.skills.abvx-skills/`. The doctor output includes the exact path. Archived SKILL.md files therefore do not become discoverable skills inside the managed destination.
 
 Manifest schema 1 records selected profiles, installed package/skill versions, upstream identity, per-file hashes and executable bits, payload digests and the latest transaction. Hashes prove local equality, not publisher authenticity. Doctor reports `ok`, `modified`, `missing`, `unsafe` (files, symlinks or unreadable payloads), package updates available and unmanaged skills; it compares against the locally installed package, not a live registry. Runtime bytecode and .DS_Store are excluded. Unmanaged skills are listed, not claimed verified or automatically adopted.
 
