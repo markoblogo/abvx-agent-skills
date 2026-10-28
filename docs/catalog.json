@@ -1399,7 +1399,7 @@
         "Treating a skill file as proof of tools, authorization or completed checks.",
         "Growing a small task into an indefinite review or delivery process."
       ],
-      "risks": "A rebase can lose user work or revive obsolete behavior. Inspect current product intent, isolate dirty work and use a SHA-bound lease.",
+      "risks": "A rebase can lose user work or revive obsolete behavior. Inspect current product intent, isolate dirty work and preserve published history and use a separate branch when rebasing is required.",
       "path": "skills/pr-modernize/SKILL.md",
       "card_path": "skills/pr-modernize/SKILL_CARD.md",
       "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/pr-modernize/SKILL.md",

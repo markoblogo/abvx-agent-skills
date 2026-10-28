@@ -35,17 +35,13 @@ For `REWORK`, continue only if the existing task authorizes that work. For `OBSO
 
 Before updating an existing PR branch, inspect auto-merge and merge-queue state. If either can merge it automatically, stop updates unless changing that state is authorized. Never disable it silently or promise no merge while it remains enabled.
 
-For `MODERNIZE`, rebase onto the freshly fetched actual base. Resolve conflicts according to the goal and current invariants. Stop if resolving them would silently change scope.
+For `MODERNIZE`, preserve the published branch history. Refresh a task-owned existing PR branch by merging its freshly fetched actual base. If repository policy requires linear history or the user explicitly asks for a rebase, prepare the rebased work on a separate local continuation branch; publish that new branch or a replacement PR only when authorized. Leave the original published branch unchanged. Resolve conflicts according to the goal and current invariants, and stop if that would silently change scope.
 
-Compare the original and rebased series with `git range-diff`; inspect the final diff. Check that behavior was neither lost nor reintroduced from an already-landed implementation. Run relevant tests and real runtime verification when the claim needs it.
+For a separate rebased continuation, compare the original and rebased series with `git range-diff`. For a merge-based refresh, inspect the merge resolution and final diff against the current base. Check that behavior was neither lost nor reintroduced from an already-landed implementation. Run relevant tests and real runtime verification when the claim needs it.
 
-A request to update the PR authorizes updating its task-owned branch when ownership is verified; a review-only request does not. When rewriting a published branch, use an explicit lease tied to the previously observed SHA:
+A request to update the PR authorizes updating its task-owned branch when ownership is verified; a review-only request does not. Before a normal push, fetch the published head again and verify that no other contributor's changes would be lost. If the remote moved or the push is rejected, fetch and reassess; never force the update.
 
-```bash
-git push --force-with-lease=refs/heads/<branch>:<observed-sha> <verified-remote> HEAD:refs/heads/<branch>
-```
-
-On lease rejection, fetch and reassess. Never force-push the default branch, bypass protection, change the base, merge, close, or add public comments as a side effect.
+Do not force-push any published branch, push the default branch, bypass protection, change the PR base, merge or close the PR, or add public comments as a side effect. If preserving history cannot satisfy repository policy, report the need for an authorized replacement branch instead of rewriting the source.
 
 ## Report
 
@@ -53,4 +49,4 @@ Give the disposition, PR link, why the goal remains useful or obsolete, meaningf
 
 ## Provenance
 
-Adapt t3dotgg/tstack `modernize` with explicit branch ownership, verified leases and Codex-native tools.
+Adapt t3dotgg/tstack `modernize` with explicit branch ownership, preserved published history and Codex-native tools.

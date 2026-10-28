@@ -350,7 +350,7 @@ Optional Codex-native adaptations of selected tstack workflows. See [setup, capa
 |---|---|
 | `codex-review-loop` | Runs bounded independent OpenAI review with stable findings and at most three rounds. |
 | `pr-ci-watch` | Observes PR checks and review within an explicit time budget; CI alone is not readiness. |
-| `pr-modernize` | Reassesses an old PR before updating its branch with a verified Git lease. |
+| `pr-modernize` | Reassesses an old PR before refreshing it while preserving published branch history. |
 | `pr-takeover` | Continues unfinished work while preserving contributor credit and source branches. |
 | `pr-write` | Creates a concise PR from verified changes while respecting wording-only requests. |
 | `pr-ready` | Takes an authorized task to verified PR readiness without merging. |

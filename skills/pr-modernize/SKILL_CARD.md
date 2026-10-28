@@ -24,7 +24,7 @@ Inputs: the user's goal, repository instructions, scoped Git changes and availab
 Outputs: evidence-backed findings or an explicit PR/workflow state, with unresolved gates and verification limits.
 
 ## Risks and Mitigations
-A rebase can lose user work or revive obsolete behavior. Inspect current product intent, isolate dirty work and use a SHA-bound lease.
+A rebase can lose user work or revive obsolete behavior. Inspect current product intent, isolate dirty work and preserve published history and use a separate branch when rebasing is required.
 
 ## Model Sensitivity
 Depends on Git and repository reasoning, not a particular model or provider; never assumes network or write access.
