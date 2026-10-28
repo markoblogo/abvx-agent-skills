@@ -20,6 +20,7 @@ Generated from `docs/catalog.json`.
 | `brief-first-execution` | Research, Knowledge & Reusable Methods | structural_only | Create one live brief before substantial work starts. | `gh skill install markoblogo/abvx-agent-skills brief-first-execution` |
 | `browser-verification` | Frontend, UX & Product Surfaces | fixture_checked | Verify web changes with real browser automation. | `gh skill install markoblogo/abvx-agent-skills browser-verification` |
 | `bug-evidence-protocol` | Coding, Debugging & Architecture | structural_only | Capture and classify honest red-to-green bug evidence. | `gh skill install markoblogo/abvx-agent-skills bug-evidence-protocol` |
+| `codex-review-loop` | Codex PR Workflows | fixture_checked | Bound code review to evidence and three rounds | `gh skill install markoblogo/abvx-agent-skills codex-review-loop` |
 | `compaction-survival` | Token Economy & Context Control | structural_only | Preserve compact resumable state across long sessions and compaction. | `gh skill install markoblogo/abvx-agent-skills compaction-survival` |
 | `complexity-optimizer` | Coding, Debugging & Architecture | structural_only | Audit and improve complexity without behavior drift. | `gh skill install markoblogo/abvx-agent-skills complexity-optimizer` |
 | `confidence-fragility-review` | Long-Run Delivery Control | structural_only | Check whether confident claims are backed by real evidence. | `gh skill install markoblogo/abvx-agent-skills confidence-fragility-review` |
@@ -64,6 +65,11 @@ Generated from `docs/catalog.json`.
 | `phase-spec-execution` | Long-Run Delivery Control | structural_only | Split large delivery into explicit verified phases. | `gh skill install markoblogo/abvx-agent-skills phase-spec-execution` |
 | `pipeline-readiness-gate` | Workflow, Handoffs & Multi-Track Work | structural_only | Select a compact pre/post/ship gate for agent work. | `gh skill install markoblogo/abvx-agent-skills pipeline-readiness-gate` |
 | `plan-to-issues` | Discovery, Planning & Delivery | structural_only | Break plans into thin end-to-end slices with blockers and criteria. | `gh skill install markoblogo/abvx-agent-skills plan-to-issues` |
+| `pr-ci-watch` | Codex PR Workflows | fixture_checked | Watch PR checks within an explicit time budget | `gh skill install markoblogo/abvx-agent-skills pr-ci-watch` |
+| `pr-modernize` | Codex PR Workflows | fixture_checked | Reassess and safely update an outdated pull request | `gh skill install markoblogo/abvx-agent-skills pr-modernize` |
+| `pr-ready` | Codex PR Workflows | fixture_checked | Prepare and verify a pull request without merging | `gh skill install markoblogo/abvx-agent-skills pr-ready` |
+| `pr-takeover` | Codex PR Workflows | fixture_checked | Continue unfinished work while preserving authorship | `gh skill install markoblogo/abvx-agent-skills pr-takeover` |
+| `pr-write` | Codex PR Workflows | fixture_checked | Write a concise PR from the verified final change | `gh skill install markoblogo/abvx-agent-skills pr-write` |
 | `private-vs-publishable-skill-audit` | Research, Knowledge & Reusable Methods | structural_only | Classify private skill-pack content before publishing any of it. | `gh skill install markoblogo/abvx-agent-skills private-vs-publishable-skill-audit` |
 | `product-context` | Product Context & Responsible Growth | structural_only | Build an evidence-backed product context before go-to-market work. | `gh skill install markoblogo/abvx-agent-skills product-context` |
 | `professional-role-router` | Research, Knowledge & Reusable Methods | structural_only | Route substantial work to the right professional roles. | `gh skill install markoblogo/abvx-agent-skills professional-role-router` |

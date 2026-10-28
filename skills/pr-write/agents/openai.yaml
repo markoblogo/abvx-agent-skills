@@ -1,0 +1,4 @@
+interface:
+  display_name: "PR Write"
+  short_description: "Write a concise PR from the verified final change"
+  default_prompt: "Use $pr-write for the current repository task."

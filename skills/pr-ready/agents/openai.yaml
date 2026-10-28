@@ -1,0 +1,4 @@
+interface:
+  display_name: "PR Ready"
+  short_description: "Prepare and verify a pull request without merging"
+  default_prompt: "Use $pr-ready for the current repository task."

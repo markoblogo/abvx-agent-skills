@@ -1,0 +1,105 @@
+{
+  "skills": [
+    "codex-review-loop",
+    "pr-ci-watch",
+    "pr-modernize",
+    "pr-takeover",
+    "pr-write",
+    "pr-ready"
+  ],
+  "eval_tier": "fixture_checked",
+  "method": "Read-only synthetic model decision fixtures; no live PR mutations or CI observation",
+  "date": "2026-10-28",
+  "cases": [
+    {
+      "id": "ready-stale-head",
+      "skills": [
+        "pr-ready",
+        "codex-review-loop"
+      ],
+      "request": "Prepare this PR for my review without merging.",
+      "input": {
+        "head": "bbb",
+        "green_checks_head": "aaa",
+        "mergeability": "UNKNOWN",
+        "human_approval": "missing",
+        "independent_reviewer": "unavailable",
+        "auto_merge": true,
+        "queue_changes_authorized": false
+      },
+      "expected": "BLOCKED; BLOCKED_INDEPENDENT_REVIEW; stop branch updates, no current-head readiness claim.",
+      "observed": "BLOCKED; BLOCKED_INDEPENDENT_REVIEW; stop branch updates; no readiness claim supported.",
+      "passed": true
+    },
+    {
+      "id": "negative-full-stop",
+      "skills": [
+        "pr-ready",
+        "codex-review-loop"
+      ],
+      "request": "Please fix the punctuation. Full stop.",
+      "input": {},
+      "expected": "Do not activate the PR preparation or independent-review workflow.",
+      "observed": "Neither PR Ready nor Codex Review Loop applies.",
+      "passed": true
+    },
+    {
+      "id": "obsolete-pr",
+      "skills": [
+        "pr-modernize"
+      ],
+      "request": "Modernize PR 17.",
+      "input": {
+        "goal": "already implemented on main",
+        "dirty_work": "unrelated",
+        "author": "another human"
+      },
+      "expected": "OBSOLETE; preserve dirty work, do not rebase, close or update the source branch.",
+      "observed": "OBSOLETE; leave PR and source branch unchanged; preserve dirty work.",
+      "passed": true
+    },
+    {
+      "id": "human-authorship",
+      "skills": [
+        "pr-takeover"
+      ],
+      "request": "Take over PR 22 and prepare a replacement PR.",
+      "input": {
+        "author": "another human",
+        "author_email": "not exposed",
+        "source_pr": "open"
+      },
+      "expected": "Separate continuation; preserve commits and author credit, link source PR; do not invent email or close source.",
+      "observed": "Separate continuation; retain original commits and credit; do not invent email; source stays open.",
+      "passed": true
+    },
+    {
+      "id": "draft-only",
+      "skills": [
+        "pr-write"
+      ],
+      "request": "Draft wording for a PR explaining the bug fix.",
+      "input": {
+        "publication_requested": false
+      },
+      "expected": "Draft only; no staging, commits, push or external PR writes.",
+      "observed": "Draft only; missing bug details prevent factual completion; no writes.",
+      "passed": true
+    },
+    {
+      "id": "connector-snapshot",
+      "skills": [
+        "pr-ci-watch"
+      ],
+      "request": "Watch CI for PR 12.",
+      "input": {
+        "tools": "connector reads only",
+        "watch_operation": false,
+        "required_checks": "unavailable"
+      },
+      "expected": "WATCH_UNAVAILABLE and INCONCLUSIVE; one-time snapshot only, no tight polling or scheduled wakeup.",
+      "observed": "WATCH_UNAVAILABLE; readiness INCONCLUSIVE; no watcher running.",
+      "passed": true
+    }
+  ]
+}

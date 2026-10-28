@@ -342,6 +342,19 @@ For design-heavy repos, pair this section with `design-register-bootstrap` from 
 | `product-context` | Builds a compact, evidence-backed product context with audience, conversion, proof, language, and claim boundaries before go-to-market work. |
 | `bounded-growth-loop` | Designs recurring content, SEO, analytics, or product-review loops with durable state, verification, stop rules, and approval-gated outputs. |
 
+### Codex PR Workflows
+
+Optional Codex-native adaptations of selected tstack workflows. See [setup, capability boundaries and evaluation](docs/codex-pr-workflows.md). No automatic merge or other-provider account is required.
+
+| Skill | What It Does |
+|---|---|
+| `codex-review-loop` | Runs bounded independent OpenAI review with stable findings and at most three rounds. |
+| `pr-ci-watch` | Observes PR checks and review within an explicit time budget; CI alone is not readiness. |
+| `pr-modernize` | Reassesses an old PR before refreshing it while preserving published branch history. |
+| `pr-takeover` | Continues unfinished work while preserving contributor credit and source branches. |
+| `pr-write` | Creates a concise PR from verified changes while respecting wording-only requests. |
+| `pr-ready` | Takes an authorized task to verified PR readiness without merging. |
+
 ### Workflow, Handoffs & Multi-Track Work
 
 | Skill | What It Does |

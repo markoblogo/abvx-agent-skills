@@ -1,0 +1,4 @@
+interface:
+  display_name: "PR Modernize"
+  short_description: "Reassess and safely update an outdated pull request"
+  default_prompt: "Use $pr-modernize for the current repository task."

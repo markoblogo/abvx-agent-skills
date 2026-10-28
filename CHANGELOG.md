@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Add six optional Codex-native PR workflow skills adapted from tstack, with bounded OpenAI review, CI observation, intent-aware modernization, preserved contributor credit, concise PR writing and a no-merge readiness gate.
+- Retain upstream MIT notices in every installable skill, add bounded CI-helper tests and synthetic decision fixtures, and regenerate catalog entries.
+- Add a source-checkout installer that previews the selected skills and preserves local modifications. This change does not publish a new package release.
+
 ## 0.16.1 — post-release review corrections
 
 - Preserve recreated local skills during repeated recovery without archive collisions; keep doctor reporting when managed paths are files, symlinks or unreadable directories.
