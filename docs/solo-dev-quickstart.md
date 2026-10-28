@@ -45,6 +45,20 @@ Choose `context`, `debug`, or `delivery`; names are also supported. Bare install
 3. Add `rtk-assisted-shell` if shell output gets noisy.
 4. Add `handoff` only when sessions start spanning multiple resumptions.
 
+## Add Codex PR Workflows When Needed
+
+For PR writing, start with `pr-write`; for substantial independent review, add `codex-review-loop`. Use `pr-ready` when the task explicitly includes implementation, verification and a PR ready for review without merging. Use `pr-ci-watch`, `pr-modernize` and `pr-takeover` for their specific jobs rather than installing a large default process.
+
+The six skills are available in GitHub `main`. Their introduction did not publish a new PyPI version. Follow the [source installation and capability checks](codex-pr-workflows.md#installation), including preview and project-only options. No Claude or T3 Code installation is needed. Independent review needs native OpenAI subagents; continuous local CI observation needs authenticated `gh`.
+
+Example request after installation:
+
+```text
+Use $pr-ready. Prepare this change as a verified PR for my review, without merging.
+```
+
+The workflow never merges the PR. Unknown checks, unavailable review or existing auto-merge are reported as explicit gaps instead of success.
+
 ## Good Default Pairings
 
 - Debugging: `diagnose` + `repo-debugging-ledger`

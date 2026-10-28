@@ -44,6 +44,8 @@ the new lane will hold more than one narrow edge case over time.
 
 ## Boundary
 
+GitHub source availability, catalog visibility, registry publication and local installation are separate states. The six Codex PR workflows were merged into `main` in [PR #77](https://github.com/markoblogo/abvx-agent-skills/pull/77); that merge did not create a PyPI release or update any user's skills. Use the [current-source installation guide](codex-pr-workflows.md#installation) until the installed distribution includes the selected skills. Do not claim that ABVX Lab has refreshed until that consumer has been checked separately.
+
 - GitHub repo remains the source of truth;
 - ABVX Lab is a public catalog consumer, not a separate editorial source;
 - package metadata should stay compact and install-oriented, not become a full
