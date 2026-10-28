@@ -1,0 +1,4 @@
+interface:
+  display_name: "PR Takeover"
+  short_description: "Continue unfinished work while preserving authorship"
+  default_prompt: "Use $pr-takeover for the current repository task."

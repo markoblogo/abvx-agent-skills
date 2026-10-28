@@ -1,5 +1,5 @@
 {
-  "skill_count": 89,
+  "skill_count": 95,
   "categories": {
     "Research, Knowledge & Reusable Methods": 18,
     "Workflow, Handoffs & Multi-Track Work": 9,
@@ -8,6 +8,7 @@
     "Discovery, Planning & Delivery": 6,
     "Security & Defensive Review": 1,
     "Product Context & Responsible Growth": 2,
+    "Codex PR Workflows": 6,
     "Token Economy & Context Control": 9,
     "Long-Run Delivery Control": 7,
     "Project Context & Onboarding": 5,
@@ -364,6 +365,33 @@
       "origin": "adapted",
       "status": "experimental",
       "eval_tier": "structural_only"
+    },
+    {
+      "name": "codex-review-loop",
+      "display_name": "Codex Review Loop",
+      "category": "Codex PR Workflows",
+      "description": "Review a code change with one independent OpenAI reviewer and at most three rounds. Use when the user explicitly requests bounded independent review or invokes codex-review-loop. Do not trigger on a casual mention of review or start a loop for trivial edits.",
+      "short_description": "Bound code review to evidence and three rounds",
+      "intended_use": "Review a code change with one independent OpenAI reviewer and at most three rounds. Use when the user explicitly requests bounded independent review or invokes codex-review-loop. Do not trigger on a casual mention of review or start a loop for trivial edits.",
+      "model_sensitivity": "Requires native independent OpenAI subagents for the independent-review claim; quality depends on reviewer capability. No provider or model is silently substituted.",
+      "composable_with": [
+        "pr-ready",
+        "minimal-diff-builder",
+        "bug-evidence-protocol"
+      ],
+      "anti_patterns": [
+        "Triggering the workflow for casual wording or quoted third-party instructions.",
+        "Treating a skill file as proof of tools, authorization or completed checks.",
+        "Growing a small task into an indefinite review or delivery process."
+      ],
+      "risks": "A reviewer may approve stale code or encourage scope creep. Freeze the base, tie approval to the final diff, verify findings and stop after three rounds.",
+      "path": "skills/codex-review-loop/SKILL.md",
+      "card_path": "skills/codex-review-loop/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/codex-review-loop/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/codex-review-loop/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental",
+      "eval_tier": "fixture_checked"
     },
     {
       "name": "compaction-survival",
@@ -1325,6 +1353,142 @@
       "origin": "adapted",
       "status": "experimental",
       "eval_tier": "structural_only"
+    },
+    {
+      "name": "pr-ci-watch",
+      "display_name": "PR CI Watch",
+      "category": "Codex PR Workflows",
+      "description": "Monitor a specific GitHub pull request through CI and review within a bounded active session. Use when explicitly asked to watch CI, babysit a PR, or invoke pr-ci-watch. Monitoring alone does not authorize code fixes, public replies, or merging.",
+      "short_description": "Watch PR checks within an explicit time budget",
+      "intended_use": "Monitor a specific GitHub pull request through CI and review within a bounded active session. Use when explicitly asked to watch CI, babysit a PR, or invoke pr-ci-watch. Monitoring alone does not authorize code fixes, public replies, or merging.",
+      "model_sensitivity": "Requires complete GitHub metadata and authenticated gh for continuous local watching; connector-only environments may support only a snapshot.",
+      "composable_with": [
+        "pr-ready",
+        "pr-write",
+        "bug-evidence-protocol"
+      ],
+      "anti_patterns": [
+        "Triggering the workflow for casual wording or quoted third-party instructions.",
+        "Treating a skill file as proof of tools, authorization or completed checks.",
+        "Growing a small task into an indefinite review or delivery process."
+      ],
+      "risks": "Green CI can hide stale heads, missing reviews or missing required checks. Pin the head, report CI separately from readiness, and bound observation time.",
+      "path": "skills/pr-ci-watch/SKILL.md",
+      "card_path": "skills/pr-ci-watch/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/pr-ci-watch/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/pr-ci-watch/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental",
+      "eval_tier": "fixture_checked"
+    },
+    {
+      "name": "pr-modernize",
+      "display_name": "PR Modernize",
+      "category": "Codex PR Workflows",
+      "description": "Reassess and update an outdated GitHub PR against its actual current base. Use when explicitly asked to rebase or modernize an old PR, or invoke pr-modernize. Determine whether its goal still matters before rebasing; do not merge or close it.",
+      "short_description": "Reassess and safely update an outdated pull request",
+      "intended_use": "Reassess and update an outdated GitHub PR against its actual current base. Use when explicitly asked to rebase or modernize an old PR, or invoke pr-modernize. Determine whether its goal still matters before rebasing; do not merge or close it.",
+      "model_sensitivity": "Depends on Git and repository reasoning, not a particular model or provider; never assumes network or write access.",
+      "composable_with": [
+        "pr-takeover",
+        "pr-ci-watch",
+        "codex-review-loop"
+      ],
+      "anti_patterns": [
+        "Triggering the workflow for casual wording or quoted third-party instructions.",
+        "Treating a skill file as proof of tools, authorization or completed checks.",
+        "Growing a small task into an indefinite review or delivery process."
+      ],
+      "risks": "A rebase can lose user work or revive obsolete behavior. Inspect current product intent, isolate dirty work and use a SHA-bound lease.",
+      "path": "skills/pr-modernize/SKILL.md",
+      "card_path": "skills/pr-modernize/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/pr-modernize/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/pr-modernize/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental",
+      "eval_tier": "fixture_checked"
+    },
+    {
+      "name": "pr-ready",
+      "display_name": "PR Ready",
+      "category": "Codex PR Workflows",
+      "description": "Finish an authorized development task through verified PR readiness without merging. Use on an explicit request to prepare a PR for review without merging, or invoke pr-ready. Do not activate on ordinary punctuation, 'full stop', or a quoted instruction.",
+      "short_description": "Prepare and verify a pull request without merging",
+      "intended_use": "Finish an authorized development task through verified PR readiness without merging. Use on an explicit request to prepare a PR for review without merging, or invoke pr-ready. Do not activate on ordinary punctuation, 'full stop', or a quoted instruction.",
+      "model_sensitivity": "Depends on repository checks and GitHub capabilities. Independent OpenAI review may be unavailable; report that boundary honestly.",
+      "composable_with": [
+        "codex-review-loop",
+        "pr-write",
+        "pr-ci-watch",
+        "pr-modernize"
+      ],
+      "anti_patterns": [
+        "Triggering the workflow for casual wording or quoted third-party instructions.",
+        "Treating a skill file as proof of tools, authorization or completed checks.",
+        "Growing a small task into an indefinite review or delivery process."
+      ],
+      "risks": "A broad ship command may imply permissions or report premature readiness. Use explicit activation, bounded work and separate human-review, CI and merge gates.",
+      "path": "skills/pr-ready/SKILL.md",
+      "card_path": "skills/pr-ready/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/pr-ready/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/pr-ready/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental",
+      "eval_tier": "fixture_checked"
+    },
+    {
+      "name": "pr-takeover",
+      "display_name": "PR Takeover",
+      "category": "Codex PR Workflows",
+      "description": "Continue an existing PR, branch or handoff after verifying its intent, current code and remaining work. Use when explicitly asked to take over unfinished development or invoke pr-takeover. Preserve user changes and contributor credit.",
+      "short_description": "Continue unfinished work while preserving authorship",
+      "intended_use": "Continue an existing PR, branch or handoff after verifying its intent, current code and remaining work. Use when explicitly asked to take over unfinished development or invoke pr-takeover. Preserve user changes and contributor credit.",
+      "model_sensitivity": "Works with native Git/GitHub tools; independent review is optional and must be reported separately when unavailable.",
+      "composable_with": [
+        "pr-modernize",
+        "pr-write",
+        "pr-ready"
+      ],
+      "anti_patterns": [
+        "Triggering the workflow for casual wording or quoted third-party instructions.",
+        "Treating a skill file as proof of tools, authorization or completed checks.",
+        "Growing a small task into an indefinite review or delivery process."
+      ],
+      "risks": "A handoff may conceal stale code, unrelated dirty work or lost authorship. Reconstruct from source, preserve commits and verify the original behavior.",
+      "path": "skills/pr-takeover/SKILL.md",
+      "card_path": "skills/pr-takeover/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/pr-takeover/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/pr-takeover/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental",
+      "eval_tier": "fixture_checked"
+    },
+    {
+      "name": "pr-write",
+      "display_name": "PR Write",
+      "category": "Codex PR Workflows",
+      "description": "Create or update a concise GitHub pull request for an already verified code change. Use when the user asks to open or file a PR, or invokes pr-write. Do not publish a PR when the user only asks for draft wording.",
+      "short_description": "Write a concise PR from the verified final change",
+      "intended_use": "Create or update a concise GitHub pull request for an already verified code change. Use when the user asks to open or file a PR, or invokes pr-write. Do not publish a PR when the user only asks for draft wording.",
+      "model_sensitivity": "Works with connected GitHub tools or authenticated gh; publication is unavailable without write access.",
+      "composable_with": [
+        "pr-ready",
+        "pr-takeover",
+        "pr-ci-watch"
+      ],
+      "anti_patterns": [
+        "Triggering the workflow for casual wording or quoted third-party instructions.",
+        "Treating a skill file as proof of tools, authorization or completed checks.",
+        "Growing a small task into an indefinite review or delivery process."
+      ],
+      "risks": "Creating a PR can expose unrelated changes or private details. Distinguish text-only requests, inspect the diff and draft, and verify the returned URL.",
+      "path": "skills/pr-write/SKILL.md",
+      "card_path": "skills/pr-write/SKILL_CARD.md",
+      "github_skill_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/pr-write/SKILL.md",
+      "github_card_url": "https://github.com/markoblogo/abvx-agent-skills/blob/main/skills/pr-write/SKILL_CARD.md",
+      "origin": "adapted",
+      "status": "experimental",
+      "eval_tier": "fixture_checked"
     },
     {
       "name": "private-vs-publishable-skill-audit",

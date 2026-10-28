@@ -4,6 +4,8 @@ ABVX Agent Skills are original or adapted workflow artifacts informed by public 
 
 ## Sources And Inspiration
 
+- Theo Browne `tstack`: bounded OpenAI review, concise PR writing, CI observation, intent-aware PR modernization, authorship-preserving takeover and no-merge PR preparation, rewritten for Codex-native tools with explicit budgets and authority boundaries. MIT, Copyright (c) 2026 Theo Browne; the original notice is retained in each adapted skill under `references/tstack-MIT.txt`. https://github.com/t3dotgg/tstack
+
 - slopus `happy`: MIT-licensed mobile client and CLI used as the external transport for `happy-handoff`; no Happy code is bundled here. https://github.com/slopus/happy
 - User-supplied anti-slop design law: visual defect, coherence, template-repetition, and product-specificity observations, rewritten into the evidence-based `anti-slop-review`. The supplied file contained no author, source, or redistribution license, so its original text is not distributed in this repository.
 - blader `humanizer`: public AI-writing cleanup patterns, adapted into the prose pass of `anti-slop-review` with ABVX no-fabrication, source-boundary, and voice-preservation rules. https://github.com/blader/humanizer

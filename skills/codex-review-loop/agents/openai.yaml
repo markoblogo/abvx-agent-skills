@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Review Loop"
+  short_description: "Bound code review to evidence and three rounds"
+  default_prompt: "Use $codex-review-loop for the current repository task."

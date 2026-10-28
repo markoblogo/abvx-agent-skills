@@ -1,0 +1,4 @@
+interface:
+  display_name: "PR CI Watch"
+  short_description: "Watch PR checks within an explicit time budget"
+  default_prompt: "Use $pr-ci-watch for the current repository task."
